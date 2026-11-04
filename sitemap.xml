@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://contentmatter.co/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://contentmatter.co/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://contentmatter.co/services/service-businesses</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://contentmatter.co/services/restaurants</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://contentmatter.co/services/beauty-clinics</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://contentmatter.co/services/retail-brands</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://contentmatter.co/how-it-works</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://contentmatter.co/plans</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://contentmatter.co/sample-work</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/campaign-record</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://contentmatter.co/matters/service-why</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/service-what</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/service-where</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/service-when</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/service-who</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/restaurants-why</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/restaurants-what</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/restaurants-where</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/restaurants-when</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/restaurants-who</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/beauty-why</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/beauty-what</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/beauty-where</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/beauty-when</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/beauty-who</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/retail-why</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/retail-what</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/retail-where</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/retail-when</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://contentmatter.co/matters/retail-who</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

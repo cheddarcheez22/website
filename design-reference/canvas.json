@@ -1,0 +1,307 @@
+{
+ "v": 3,
+ "attachments": {},
+ "boards": {
+  "Beauty-Clinics.dc.html": {
+   "expand": "fill",
+   "h": 7200,
+   "title": "Beauty and clinics",
+   "w": 1440,
+   "x": 4560,
+   "y": 0
+  },
+  "Main.dc.html": {
+   "expand": "fill",
+   "h": 6000,
+   "title": "Home",
+   "w": 1440,
+   "x": 0,
+   "y": 0
+  },
+  "Matters.dc.html": {
+   "expand": "fill",
+   "h": 4400,
+   "title": "theMATTERS",
+   "w": 1440,
+   "x": 7600,
+   "y": 0
+  },
+  "Restaurants.dc.html": {
+   "expand": "fill",
+   "h": 7200,
+   "title": "Restaurants and food",
+   "w": 1440,
+   "x": 3040,
+   "y": 0
+  },
+  "Retail-Brands.dc.html": {
+   "expand": "fill",
+   "h": 7200,
+   "title": "Local retail and brands",
+   "w": 1440,
+   "x": 6080,
+   "y": 0
+  },
+  "Service-Businesses.dc.html": {
+   "expand": "fill",
+   "h": 7200,
+   "title": "Service businesses",
+   "w": 1440,
+   "x": 1520,
+   "y": 0
+  },
+  "Home-Long.dc.html": {
+   "expand": "fill",
+   "h": 8000,
+   "title": "Home (original long version)",
+   "w": 1440,
+   "x": 0,
+   "y": 6200
+  },
+  "Post-service-why.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Why every missed call is a lost job",
+   "w": 1440,
+   "x": 0,
+   "y": 22200
+  },
+  "Services.dc.html": {
+   "expand": "fill",
+   "h": 3300,
+   "title": "All services",
+   "w": 1440,
+   "x": 0,
+   "y": 18500
+  },
+  "Campaign-Record.dc.html": {
+   "expand": "fill",
+   "h": 2400,
+   "title": "Campaign Record",
+   "w": 1440,
+   "x": 1520,
+   "y": 18500
+  },
+  "How-It-Works.dc.html": {
+   "expand": "fill",
+   "h": 1900,
+   "title": "How it works",
+   "w": 1440,
+   "x": 3040,
+   "y": 18500
+  },
+  "Plans.dc.html": {
+   "expand": "fill",
+   "h": 1800,
+   "title": "Plans",
+   "w": 1440,
+   "x": 4560,
+   "y": 18500
+  },
+  "Sample-Work.dc.html": {
+   "expand": "fill",
+   "h": 1900,
+   "title": "Sample work",
+   "w": 1440,
+   "x": 6080,
+   "y": 18500
+  },
+  "Post-service-what.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: What to track beyond clicks: calls, forms, and booked jobs",
+   "w": 1440,
+   "x": 1520,
+   "y": 22200
+  },
+  "Post-service-where.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Where customers look for a plumber or electrician: Maps, local ads, and yo",
+   "w": 1440,
+   "x": 3040,
+   "y": 22200
+  },
+  "Post-service-when.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: When to run ads: seasons, weather, and emergency demand",
+   "w": 1440,
+   "x": 4560,
+   "y": 22200
+  },
+  "Post-service-who.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Who is actually searching: homeowners, landlords, and urgent buyers",
+   "w": 1440,
+   "x": 6080,
+   "y": 22200
+  },
+  "Post-restaurants-why.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Why repeat guests matter more than new ones",
+   "w": 1440,
+   "x": 0,
+   "y": 26700
+  },
+  "Post-restaurants-what.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: What to track: calls, directions, reservation clicks, and online orders",
+   "w": 1440,
+   "x": 1520,
+   "y": 26700
+  },
+  "Post-restaurants-where.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Where diners decide: Maps, Instagram, delivery apps, and their own communi",
+   "w": 1440,
+   "x": 3040,
+   "y": 26700
+  },
+  "Post-restaurants-when.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: When to push: lunch, weekends, holidays, and new menus",
+   "w": 1440,
+   "x": 4560,
+   "y": 26700
+  },
+  "Post-restaurants-who.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Who your regulars are: locals, office crowds, and families",
+   "w": 1440,
+   "x": 6080,
+   "y": 26700
+  },
+  "Post-beauty-why.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Why reviews matter before a booking",
+   "w": 1440,
+   "x": 0,
+   "y": 31200
+  },
+  "Post-beauty-what.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: What to track: consultations, bookings, calls, and cost per new client",
+   "w": 1440,
+   "x": 1520,
+   "y": 31200
+  },
+  "Post-beauty-where.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Where clients choose: Google search, reviews, and Instagram",
+   "w": 1440,
+   "x": 3040,
+   "y": 31200
+  },
+  "Post-beauty-when.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: When to promote: seasonal treatments, new services, and slow weekdays",
+   "w": 1440,
+   "x": 4560,
+   "y": 31200
+  },
+  "Post-beauty-who.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Who books: new versus returning clients, and what each needs to hear",
+   "w": 1440,
+   "x": 6080,
+   "y": 31200
+  },
+  "Post-retail-why.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Why foot traffic still needs tracking",
+   "w": 1440,
+   "x": 0,
+   "y": 35700
+  },
+  "Post-retail-what.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: What to track: store visits, calls, directions, and online orders",
+   "w": 1440,
+   "x": 1520,
+   "y": 35700
+  },
+  "Post-retail-where.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Where shoppers look: local search, maps, and social",
+   "w": 1440,
+   "x": 3040,
+   "y": 35700
+  },
+  "Post-retail-when.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: When to spend: holidays, openings, and local events",
+   "w": 1440,
+   "x": 4560,
+   "y": 35700
+  },
+  "Post-retail-who.dc.html": {
+   "expand": "fill",
+   "h": 4300,
+   "title": "Post: Who walks in: locals, tourists, and gift shoppers",
+   "w": 1440,
+   "x": 6080,
+   "y": 35700
+  }
+ },
+ "createdOnFiles": {
+  "at": "2026-11-03T18:00:00Z",
+  "v": 1
+ },
+ "designSystems": [],
+ "launch": {
+  "view": "canvas"
+ },
+ "notes": {},
+ "order": [
+  "Main.dc.html",
+  "Service-Businesses.dc.html",
+  "Restaurants.dc.html",
+  "Beauty-Clinics.dc.html",
+  "Retail-Brands.dc.html",
+  "Matters.dc.html",
+  "Home-Long.dc.html",
+  "Post-service-why.dc.html",
+  "Services.dc.html",
+  "Campaign-Record.dc.html",
+  "How-It-Works.dc.html",
+  "Plans.dc.html",
+  "Sample-Work.dc.html",
+  "Post-service-what.dc.html",
+  "Post-service-where.dc.html",
+  "Post-service-when.dc.html",
+  "Post-service-who.dc.html",
+  "Post-restaurants-why.dc.html",
+  "Post-restaurants-what.dc.html",
+  "Post-restaurants-where.dc.html",
+  "Post-restaurants-when.dc.html",
+  "Post-restaurants-who.dc.html",
+  "Post-beauty-why.dc.html",
+  "Post-beauty-what.dc.html",
+  "Post-beauty-where.dc.html",
+  "Post-beauty-when.dc.html",
+  "Post-beauty-who.dc.html",
+  "Post-retail-why.dc.html",
+  "Post-retail-what.dc.html",
+  "Post-retail-where.dc.html",
+  "Post-retail-when.dc.html",
+  "Post-retail-who.dc.html"
+ ],
+ "pages": [],
+ "title": "ContentMatter Site v2"
+}
