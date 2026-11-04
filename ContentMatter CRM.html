@@ -1,0 +1,808 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ContentMatter CRM</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Layout: agency workspace shell. Left rail grouped by work, pipeline, accounts, insight. Content pane with summary first, detail second, drawers for records. Tokens follow the live ContentMatter site: cream, ink, teal, navy, Inter. */
+:root{
+  --bg:#F5F2EA; --card:#FFFFFF; --soft:#EFEBE0; --line:#E0DDD6; --ink:#1A1B1E; --mut:#6B7482;
+  --teal:#3CBFB0; --teal-ink:#1A7A6E; --teal-bg:#DDF2EF; --navy:#2C3340;
+  --good:#2E8B57; --good-bg:#DFF1E6; --warn:#9A6414; --warn-bg:#FBEFD5; --bad:#B8362A; --bad-bg:#F9E0DC; --info:#35639F; --info-bg:#E1EBF8;
+  --shadow:rgba(26,27,30,.14);
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#171B22; --card:#222833; --soft:#2B3240; --line:#364051; --ink:#EDEAE0; --mut:#9AA3B2;
+  --teal:#3CBFB0; --teal-ink:#7FDCD0; --teal-bg:#1D3A38; --navy:#2C3340;
+  --good:#5FC38A; --good-bg:#1F3A2C; --warn:#E0B055; --warn-bg:#3E3220; --bad:#EE8576; --bad-bg:#432622; --info:#86AEE8; --info-bg:#23324A;
+  --shadow:rgba(0,0,0,.4); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#171B22; --card:#222833; --soft:#2B3240; --line:#364051; --ink:#EDEAE0; --mut:#9AA3B2;
+  --teal:#3CBFB0; --teal-ink:#7FDCD0; --teal-bg:#1D3A38; --navy:#2C3340;
+  --good:#5FC38A; --good-bg:#1F3A2C; --warn:#E0B055; --warn-bg:#3E3220; --bad:#EE8576; --bad-bg:#432622; --info:#86AEE8; --info-bg:#23324A;
+  --shadow:rgba(0,0,0,.4); color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+p{margin:0}
+.app{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:100vh}
+.rail{background:var(--card);border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:2px;position:sticky;top:0;height:100vh;overflow:auto}
+.logo{font-weight:900;letter-spacing:-.07em;font-size:22px;padding:2px 10px 12px;line-height:1}
+.logo b{color:var(--teal);font-weight:900}
+.logo small{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--mut);margin-left:6px;text-transform:uppercase}
+.grp{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:14px 10px 4px;font-weight:700}
+.nv{display:flex;align-items:center;gap:10px;border:0;background:none;text-align:left;padding:8px 12px;border-radius:999px;width:100%;font-weight:500}
+.nv:hover{background:var(--soft)}
+.nv[aria-current="page"]{background:var(--teal-bg);color:var(--teal-ink);font-weight:700}
+.nv svg{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nv .ct{margin-left:auto;font-size:11px;background:var(--soft);border-radius:999px;padding:1px 8px;color:var(--mut);font-weight:600}
+.nv .ct.hot{background:var(--bad-bg);color:var(--bad)}
+.main{min-width:0}
+.top{display:flex;gap:10px;align-items:center;padding:12px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5;flex-wrap:wrap}
+.top h1{font-size:15px;font-weight:700;min-width:70px}
+.search{flex:1;min-width:180px;max-width:480px;margin-left:auto;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 14px;color:var(--mut)}
+.search input{border:0;background:none;flex:1;min-width:0;outline:none}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font-weight:600;font-size:13px;white-space:nowrap}
+.btn:hover{border-color:var(--teal)}
+.btn.pri{background:var(--teal);border-color:var(--teal);color:#14201F}
+.btn.pri:hover{filter:brightness(.95)}
+.btn.dk{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.btn.sm{padding:5px 12px;font-size:12px}
+.btn.ghost{background:transparent}
+.btn.danger{color:var(--bad)}
+.menu{display:none}
+.page{padding:24px 24px 56px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.note{background:var(--warn-bg);color:var(--warn);border-radius:12px;padding:8px 14px;font-size:12.5px;font-weight:500}
+h2.pt{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.sub{color:var(--mut);margin-top:4px}
+.head{display:flex;gap:12px;justify-content:space-between;align-items:flex-end;flex-wrap:wrap}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.kpi .v{font-size:26px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.kpi .l{color:var(--mut);font-size:12.5px}
+.kpi .d{font-size:12px;margin-top:4px;color:var(--mut)}
+.kpi .d.bad{color:var(--bad)}.kpi .d.good{color:var(--good)}
+.cols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px}
+.cols.eq{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;min-width:0}
+.card h3{font-size:14px;font-weight:700;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card h3 small{font-weight:500;color:var(--mut);font-size:12px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);text-align:left;font-weight:700;padding:8px 10px;white-space:nowrap}
+td{padding:10px;border-top:1px solid var(--line);vertical-align:top}
+td.nw{white-space:nowrap}
+tr.r{cursor:pointer}
+tr.r:hover td{background:var(--soft)}
+td small,.li small{display:block;color:var(--mut);font-size:12px}
+.tag{display:inline-block;border-radius:999px;padding:2px 10px;font-size:11.5px;font-weight:600;background:var(--soft);white-space:nowrap}
+.tag.g{background:var(--good-bg);color:var(--good)}.tag.w{background:var(--warn-bg);color:var(--warn)}.tag.b{background:var(--bad-bg);color:var(--bad)}.tag.i{background:var(--info-bg);color:var(--info)}.tag.t{background:var(--teal-bg);color:var(--teal-ink)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 13px;font-size:12.5px;font-weight:500}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.on{background:var(--teal-bg);border-color:var(--teal);color:var(--teal-ink);font-weight:600}
+.score{display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.bar{width:48px;height:6px;background:var(--soft);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--teal)}
+.bar.lo i{background:var(--warn)}
+.list{display:flex;flex-direction:column}
+.li{display:flex;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--line)}
+.li:first-child{border-top:0}
+.li .g{flex:1;min-width:0}
+.av{width:34px;height:34px;border-radius:50%;background:var(--teal-bg);color:var(--teal-ink);display:grid;place-items:center;font-weight:700;font-size:12px;flex:none}
+.hb{display:grid;grid-template-columns:120px minmax(0,1fr) 44px;gap:10px;align-items:center;margin:8px 0;font-size:13px}
+.hb div{height:10px;background:var(--soft);border-radius:9px;overflow:hidden}.hb div i{display:block;height:100%;background:var(--teal);border-radius:9px}
+.hb span:last-child{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums}
+.board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(236px,1fr);gap:12px;overflow-x:auto;padding-bottom:8px}
+.colm{background:var(--soft);border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:8px;min-height:240px}
+.colm h4{font-size:12.5px;margin:2px 4px;display:flex;justify-content:space-between;gap:6px}
+.colm h4 span{color:var(--mut);font-weight:500}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;cursor:grab}
+.deal:hover{border-color:var(--teal)}
+.deal.drag{opacity:.4}
+.deal b{font-weight:700}
+.deal small{color:var(--mut);font-size:12px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.fld{display:flex;flex-direction:column;gap:4px;min-width:0}
+.fld.w2{grid-column:span 2}
+.fld.full{grid-column:1/-1}
+.fld label,.lab{font-size:12px;font-weight:600;color:var(--mut)}
+.fld label i{color:var(--bad);font-style:normal}
+input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date],select,textarea{width:100%;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:9px 12px;min-width:0}
+textarea{min-height:76px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:none}
+.ck{display:flex;gap:8px;align-items:center;font-size:13px}
+.ck input{width:16px;height:16px;accent-color:var(--teal)}
+.formwrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;align-items:start}
+.sticky{position:sticky;top:74px;display:flex;flex-direction:column;gap:14px}
+.big{font-size:42px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(520px,100%);background:var(--card);border-left:1px solid var(--line);padding:22px 22px 22px;z-index:30;overflow:auto;display:flex;flex-direction:column;gap:14px;box-shadow:-14px 0 40px var(--shadow)}
+.drawer h3{font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.28);z-index:29}
+.kv{display:grid;grid-template-columns:130px minmax(0,1fr);gap:6px 12px;font-size:13px;margin:0}
+.kv dt{color:var(--mut)}.kv dd{margin:0;overflow-wrap:anywhere}
+.sec{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-top:6px}
+.tl{border-left:2px solid var(--line);margin:0;padding:0 0 0 14px;display:flex;flex-direction:column;gap:10px;list-style:none;font-size:13px}
+.tl small{display:block;color:var(--mut)}
+.pre{background:var(--navy);color:#E8ECF2;border-radius:14px;padding:14px;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;overflow:auto;white-space:pre}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px}
+.msg{padding:12px 14px;border-radius:14px;max-width:680px}
+.msg.u{background:var(--ink);color:var(--bg);align-self:flex-end}
+.msg.a{background:var(--soft)}
+.msg ul{margin:6px 0 0;padding-left:18px}
+.chat{display:flex;flex-direction:column;gap:10px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;z-index:60;font-size:13px;font-weight:500;max-width:90vw}
+.pb h4{font-size:15px;font-weight:700;margin-bottom:8px}
+.pb ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.tpl{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:13px;margin:8px 0}
+.empty{padding:28px;text-align:center;color:var(--mut)}
+@media (max-width:900px){
+  .app{grid-template-columns:minmax(0,1fr)}
+  .rail{position:fixed;left:0;top:0;z-index:40;width:270px;transform:translateX(-100%);transition:transform .2s;box-shadow:12px 0 40px var(--shadow)}
+  .rail.open{transform:none}
+  .menu{display:inline-block}
+  .cols,.cols.eq,.formwrap{grid-template-columns:minmax(0,1fr)}
+  .sticky{position:static}
+  .top,.page{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .search{margin-left:0;max-width:none;order:9;flex-basis:100%}
+  .fld.w2{grid-column:auto}
+}
+@media (prefers-reduced-motion:reduce){.rail{transition:none}}
+</style>
+<!--BODY-->
+<div class="app">
+  <aside class="rail" id="rail" aria-label="Main navigation">
+    <div class="logo">content<b>MATTER</b><small>CRM</small></div>
+    <div id="nav"></div>
+    <div style="margin-top:auto;padding:12px 4px 0;display:flex;gap:6px">
+      <button class="btn" id="theme" style="flex:1">Light or dark</button>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="btn menu" id="menu" aria-label="Open menu">Menu</button>
+      <h1 id="title">Today</h1>
+      <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Search leads, accounts, deals" aria-label="Search leads, accounts, and deals"></label>
+      <button class="btn" data-a="go" data-v="ai">Ask AI</button>
+      <button class="btn pri" data-a="newlead">New lead</button>
+    </header>
+    <main class="page" id="page"></main>
+  </div>
+</div>
+<div id="slot"></div>
+<script>
+(function(){'use strict';
+/* ===== Core: constants, store adapter, sample data ===== */
+const KEY='cm_crm_v1';
+const STAGES=['New inquiry','Audit in progress','Audit sent','Consult booked','Quote sent','Won'];
+const PROB=[10,20,30,50,70,100];
+const SEGMENTS=['Home services (HVAC, plumbing, etc.)','Exterior services (landscaping, roofing, etc.)','Restaurant or cafe','Medical or dental','Beauty or med spa','Local retail','Professional services','E commerce','Events or grand opening','Other'];
+const BUDGETS=['Not running ads yet','Under $1,000','$1,000 to $3,000','$3,000 to $6,000','$6,000 to $12,000','Over $12,000'];
+const SERVICES=['Local SEO and AI search','Google Business Profile and reviews','Google, Meta, and Yelp ads','Websites and landing pages','GA4 and conversion tracking','Email and SMS automation','Campaign sprints and Paid Ads Launch','Restaurant and food add ons'];
+const SOURCES=['Website form','Free audit','Tool hub','Outreach agent','Referral','Contractor referral','Event or networking','Other'];
+const PLANS=['Local Start','Local Grow','Local Plus','Not sure'];
+const OWNERS=['You','Aaron','Contractor'];
+const LSTATUS=['New','Contacted','Audit in progress','Audit sent','Consult booked','Converted','Nurture','Disqualified'];
+const DM=['Yes, sole decision maker','Shared with a partner or team','No, someone else decides'];
+const TL=['This month','1 to 3 months','Later','Unknown'];
+const PLATFORMS=['Google Ads','Meta Ads','Yelp Ads','SEO','Email or SMS','None'];
+const TRACKING=['GA4','Call tracking','Form tracking','Tag Manager','Not sure'];
+const REC=[['brief','Brief and goal'],['creative','Creative notes'],['weekly','Weekly numbers'],['changes','What changed and why'],['closing','Closing summary']];
+const CHECKS=[
+ ['First reply sent inside the reply target','Business type and ad budget captured','Fit score reviewed'],
+ ['Website, social, local search, and ads scored','Tracking check done','AI draft reviewed by a person'],
+ ['Written summary sent inside the audit target','Consult link included','Follow up task set'],
+ ['Consult held and goals confirmed','Budget range and decision maker confirmed','Current tools and tracking noted','Services scoped'],
+ ['Custom quote built from the consult','Campaign Record and 90 day sprint explained','Follow up date set'],
+ ['Agreement signed','Ad accounts shared in the client name','Kickoff booked and portal invite sent','Tracking plan started']];
+
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const H=36e5,DAY=864e5,now=()=>Date.now();
+const dOff=n=>{const d=new Date();d.setHours(9,0,0,0);return d.getTime()+n*DAY};
+const fmtD=t=>t?new Date(t).toLocaleDateString('en-US',{month:'short',day:'numeric'}):'None';
+const dIn=t=>t?new Date(t-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10):'';
+const fromIn=v=>v?new Date(v+'T09:00:00').getTime():null;
+const money=n=>n==null||n===''?'Not set':'$'+Number(n).toLocaleString('en-US');
+const ini=n=>String(n).split(/\s+/).slice(0,2).map(x=>x[0]||'').join('').toUpperCase();
+const segShort=s=>s?String(s).split(' (')[0]:'Not captured';
+const addBiz=(t,n)=>{const d=new Date(t);let c=0;while(c<n){d.setDate(d.getDate()+1);const w=d.getDay();if(w!==0&&w!==6)c++}return d.getTime()};
+function rel(t){const d=t-now(),a=Math.abs(d),h=a/H;const x=h<1?Math.max(1,Math.round(a/6e4))+' min':h<48?Math.round(h)+' hours':Math.round(h/DAY*H)+' days';return d>=0?'in '+x:x+' ago'}
+function age(t){const a=now()-t,h=a/H;return h<1?Math.max(1,Math.round(a/6e4))+'m ago':h<48?Math.round(h)+'h ago':Math.round(h/24)+'d ago'}
+
+/* Data adapter. The engineer replaces load and save with Airtable or HubSpot calls. */
+let S;
+const Store={
+ load(){try{const r=localStorage.getItem(KEY);if(r){const o=JSON.parse(r);if(o&&o.v===1)return o}}catch(e){}return null},
+ save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}},
+ reset(){try{localStorage.removeItem(KEY)}catch(e){}}
+};
+const save=()=>Store.save();
+const nid=()=>S.seq++;
+
+/* ===== Fit score (rubric shown in Settings) ===== */
+function score(l){
+ let s=0;
+ s+={'Not running ads yet':6,'Under $1,000':6,'$1,000 to $3,000':16,'$3,000 to $6,000':22,'$6,000 to $12,000':25,'Over $12,000':25}[l.monthlyBudget]||0;
+ if(l.segment&&l.segment!=='Other')s+=10;
+ const dm=l.decisionMaker||'';s+=dm.startsWith('Yes')?15:dm.startsWith('Shared')?8:0;
+ s+={'This month':15,'1 to 3 months':10,'Later':3}[l.timeline]||0;
+ s+=(l.email&&l.phone)?10:(l.email||l.phone)?5:0;
+ if(l.website)s+=5;
+ if(l.services&&l.services.length)s+=5;
+ const t=l.tracking||[];if(t.length&&(!t.includes('GA4')||!t.includes('Call tracking')))s+=5;
+ s+={'Referral':10,'Contractor referral':8,'Free audit':5,'Tool hub':3}[l.source]||0;
+ return Math.min(100,s);
+}
+const needsEnrich=l=>!l.segment||!l.monthlyBudget||!l.decisionMaker||!l.timeline;
+const scoreCell=l=>{const s=score(l);return `<span class="score"><span class="bar ${s<40?'lo':''}"><i style="width:${s}%"></i></span>${s}</span>`};
+const auditDue=l=>l.auditRequested?addBiz(l.created,S.settings.auditDays):null;
+
+/* ===== Sample data. Every record is made up. ===== */
+function seed(){
+ const L=o=>Object.assign({status:'New',owner:'You',services:[],platforms:[],tracking:[],source:'Website form',consentEmail:true,consentSMS:false,firstTouch:null,auditRequested:false,tags:'',notes:'',log:[]},o);
+ const lg=(t,x)=>({t,x});
+ const leads=[
+ L({id:1,first:'Maya',last:'Ortiz',business:'Juniper Beauty Studio',email:'maya@example.com',phone:'(555) 010 0142',zip:'91801',source:'Website form',created:now()-2*H,auditRequested:true,sourceDetail:'Home page hero form',log:[lg(now()-2*H,'Submitted the website form and asked for a free audit')]}),
+ L({id:2,first:'Daniel',last:'Reyes',role:'Owner',business:'Harbor Table',email:'daniel@example.com',phone:'(555) 010 0177',zip:'91776',segment:SEGMENTS[2],website:'harbortable.example.com',instagram:'@harbortable',monthlyBudget:BUDGETS[2],platforms:['Google Ads'],tracking:['GA4'],decisionMaker:DM[0],timeline:TL[1],source:'Free audit',status:'Audit in progress',auditRequested:true,created:now()-30*H,firstTouch:now()-26*H,services:[SERVICES[4],SERVICES[2]],planInterest:'Local Start',pain:'Spends on Google but cannot tell which ads bring reservations.',nextStep:'Finish audit scorecard',nextDate:dOff(1),audit:{website:62,social:48,local:41,ads:30},log:[lg(now()-30*H,'Requested a free audit from the site'),lg(now()-26*H,'First reply sent')]}),
+ L({id:3,first:'Priya',last:'Nair',role:'Owner',business:'Field and Fern',email:'priya@example.com',phone:'(555) 010 0191',zip:'91748',segment:SEGMENTS[5],instagram:'@fieldandfern',monthlyBudget:BUDGETS[1],source:'Outreach agent',status:'Contacted',created:now()-26*H,firstTouch:now()-20*H,pain:'Asked about pricing after an Instagram DM.',nextStep:'Send audit offer',nextDate:dOff(0),log:[lg(now()-26*H,'Replied to an outreach DM'),lg(now()-20*H,'You answered the pricing question')]}),
+ L({id:4,first:'Tom',last:'Whitaker',business:'Clearview Dental',email:'tom@example.com',phone:'(555) 010 0123',zip:'91801',segment:SEGMENTS[3],monthlyBudget:BUDGETS[3],source:'Tool hub',created:now()-56*H,sourceDetail:'Ad budget calculator',log:[lg(now()-56*H,'Left an email after using a free tool')]}),
+ L({id:5,first:'Alicia',last:'Moreno',role:'Co owner',business:'Marrow Kitchen',email:'alicia@example.com',phone:'(555) 010 0108',zip:'91754',segment:SEGMENTS[2],website:'marrowkitchen.example.com',instagram:'@marrowkitchen',monthlyBudget:BUDGETS[3],platforms:['Google Ads','Meta Ads'],tracking:['GA4'],decisionMaker:DM[0],timeline:TL[0],source:'Referral',referrer:'Existing client',status:'Consult booked',created:now()-6*DAY,firstTouch:now()-6*DAY+2*H,services:[SERVICES[2],SERVICES[4],SERVICES[7]],planInterest:'Local Grow',pain:'Opening a second location and wants every launch campaign documented.',goal:'Fill the new dining room in 60 days',nextStep:'Consult call',nextDate:dOff(1),audit:{website:71,social:66,local:58,ads:44},log:[lg(now()-6*DAY,'Introduced by an existing client'),lg(now()-4*DAY,'Audit sent'),lg(now()-3*DAY,'Consult booked')]}),
+ L({id:6,first:'Sam',last:'Okafor',role:'Owner',business:'Ridgeway Heating and Air',email:'sam@example.com',phone:'(555) 010 0155',zip:'91770',segment:SEGMENTS[0],website:'ridgewayair.example.com',monthlyBudget:BUDGETS[2],decisionMaker:DM[0],timeline:TL[1],source:'Website form',status:'Contacted',created:now()-3*DAY,firstTouch:now()-3*DAY+5*H,auditRequested:true,tracking:['Not sure'],pain:'Phone is the sales counter and missed calls are lost jobs.',nextStep:'Run audit',nextDate:dOff(0),log:[lg(now()-3*DAY,'Website form with audit request'),lg(now()-3*DAY+5*H,'Called and left a voicemail')]}),
+ L({id:7,first:'Lena',last:'Fischer',business:'Lantern Tea Co',email:'lena@example.com',zip:'91801',segment:SEGMENTS[8],monthlyBudget:BUDGETS[1],source:'Outreach agent',status:'Nurture',created:now()-9*DAY,firstTouch:now()-9*DAY+3*H,timeline:TL[2],pain:'Interested in a launch night for a new blend, not ready this quarter.',nextStep:'Check in',nextDate:dOff(21),log:[lg(now()-9*DAY,'Replied to an outreach email')]}),
+ L({id:8,first:'Chris',last:'Ellison',business:'Copper Pot Cafe',email:'chris@example.com',phone:'(555) 010 0166',zip:'91803',source:'Free audit',status:'Audit sent',auditRequested:true,created:now()-4*DAY,firstTouch:now()-4*DAY+4*H,audit:{website:55,social:40,local:36,ads:0},auditSent:now()-2*DAY,nextStep:'Follow up on audit',nextDate:dOff(-1),log:[lg(now()-4*DAY,'Free audit request, no business type given'),lg(now()-2*DAY,'Audit PDF emailed')]}),
+ L({id:9,first:'Jordan',last:'Patel',role:'Owner',business:'Brightside Plumbing',email:'jordan@example.com',phone:'(555) 010 0134',zip:'91731',segment:SEGMENTS[0],website:'brightsideplumbing.example.com',monthlyBudget:BUDGETS[2],platforms:['Google Ads'],currentAgency:'Freelancer',decisionMaker:DM[1],timeline:TL[1],source:'Website form',status:'Audit sent',auditRequested:true,created:now()-5*DAY,firstTouch:now()-5*DAY+3*H,audit:{website:70,social:52,local:64,ads:58},auditSent:now()-3*DAY,pain:'Wants a second opinion on freelancer results.',nextStep:'Follow up on audit',nextDate:dOff(0),log:[lg(now()-5*DAY,'Website form with audit request'),lg(now()-3*DAY,'Audit PDF emailed')]})
+ ];
+ const D=o=>Object.assign({services:[],owner:'You',checks:{},stageSince:now()-2*DAY,lost:false,notes:''},o);
+ const deals=[
+ D({id:201,leadId:5,business:'Marrow Kitchen',contact:'Alicia Moreno',stage:3,services:[SERVICES[2],SERVICES[4],SERVICES[7]],plan:'Local Grow',value:9600,nextStep:'Consult call',nextDate:dOff(1),stageSince:now()-3*DAY}),
+ D({id:202,leadId:2,business:'Harbor Table',contact:'Daniel Reyes',stage:1,services:[SERVICES[4],SERVICES[2]],plan:'Local Start',value:4800,nextStep:'Finish audit scorecard',nextDate:dOff(1),stageSince:now()-26*H}),
+ D({id:203,leadId:9,business:'Brightside Plumbing',contact:'Jordan Patel',stage:2,services:[SERVICES[2],SERVICES[4]],plan:'Local Grow',value:7200,nextStep:'Follow up on audit',nextDate:dOff(0),stageSince:now()-3*DAY}),
+ D({id:204,leadId:8,business:'Copper Pot Cafe',contact:'Chris Ellison',stage:2,services:[SERVICES[1]],plan:'Local Start',value:3600,nextStep:'',nextDate:null,stageSince:now()-2*DAY}),
+ D({id:205,leadId:null,business:'Field and Fern',contact:'Priya Nair',stage:0,services:[SERVICES[3]],plan:'Local Start',value:null,nextStep:'Send audit offer',nextDate:dOff(0),stageSince:now()-20*H}),
+ D({id:206,leadId:null,business:'Peak Roofing',contact:'Ben Alvarez',stage:4,services:[SERVICES[2],SERVICES[0]],plan:'Local Plus',value:14400,nextStep:'Quote follow up',nextDate:dOff(-1),stageSince:now()-5*DAY}),
+ D({id:207,leadId:null,business:'Willow and Pine Boutique',contact:'Ruth Kim',stage:5,services:[SERVICES[3],SERVICES[4]],plan:'Local Start',value:5400,nextStep:'Kickoff',nextDate:dOff(2),stageSince:now()-9*DAY})
+ ];
+ const accounts=[
+ {id:301,name:'Willow and Pine Boutique',contact:'Ruth Kim',segment:SEGMENTS[5],plan:'Local Start',status:'Onboarding',health:92,adSpend:1800,lead:'You',renewal:dOff(80),portal:2,inClientName:true,since:dOff(-9),lastReport:null,risk:''},
+ {id:302,name:'Sunday Table',contact:'Elena Cruz',segment:SEGMENTS[2],plan:'Local Grow',status:'Active',health:84,adSpend:4200,lead:'You',renewal:dOff(27),portal:3,inClientName:true,since:dOff(-110),lastReport:dOff(-28),risk:''},
+ {id:303,name:'Oak Street Studio',contact:'Mia Tran',segment:SEGMENTS[4],plan:'Local Start',status:'Active',health:61,adSpend:2100,lead:'Aaron',renewal:dOff(38),portal:1,inClientName:true,since:dOff(-70),lastReport:dOff(-28),risk:'Report review pending'},
+ {id:304,name:'Mint and Co',contact:'Carl Weber',segment:SEGMENTS[0],plan:'Local Grow',status:'At risk',health:38,adSpend:3000,lead:'You',renewal:dOff(24),portal:2,inClientName:true,since:dOff(-160),lastReport:dOff(-28),risk:'Cost per lead up 31% in two weeks. One request overdue.'},
+ {id:305,name:'Northside Auto Care',contact:'Hector Diaz',segment:SEGMENTS[9],plan:'Local Plus',status:'Active',health:74,adSpend:5500,lead:'Aaron',renewal:dOff(61),portal:4,inClientName:false,since:dOff(-200),lastReport:dOff(-28),risk:'Ad account still in agency name'}
+ ];
+ const campaigns=[
+ {id:401,acct:302,name:'Fall menu launch',goal:'Raise weekday dinner bookings',status:'Live',week:3,weeks:6,rec:{brief:true,creative:true,weekly:true,changes:true,closing:false},lastWeekly:dOff(-3)},
+ {id:402,acct:303,name:'Grand reopening',goal:'120 new clients in 30 days',status:'Live',week:2,weeks:4,rec:{brief:true,creative:true,weekly:true,changes:false,closing:false},lastWeekly:dOff(-9)},
+ {id:403,acct:301,name:'Holiday gift guide',goal:'Online orders up',status:'Setup',week:0,weeks:8,rec:{brief:true,creative:false,weekly:false,changes:false,closing:false},lastWeekly:null},
+ {id:404,acct:304,name:'Spring tune up special',goal:'Booked service calls',status:'Live',week:9,weeks:12,rec:{brief:true,creative:true,weekly:true,changes:true,closing:false},lastWeekly:dOff(-2)},
+ {id:405,acct:305,name:'Summer service push',goal:'200 booked appointments',status:'Closed',week:12,weeks:12,rec:{brief:true,creative:true,weekly:true,changes:true,closing:true},lastWeekly:dOff(-60)}
+ ];
+ const tasks=[
+ {id:501,title:'Reply to Maya Ortiz about her audit request',due:dOff(0),done:false,rel:'Lead',owner:'You'},
+ {id:502,title:'Send Marrow Kitchen consult agenda',due:dOff(0),done:false,rel:'Deal',owner:'You'},
+ {id:503,title:'Follow up with Copper Pot Cafe on the audit',due:dOff(-1),done:false,rel:'Lead',owner:'You'},
+ {id:504,title:'Review Oak Street Studio monthly report draft',due:dOff(1),done:false,rel:'Account',owner:'You'},
+ {id:505,title:'Strategy call with Mint and Co',due:dOff(2),done:false,rel:'Account',owner:'You'},
+ {id:506,title:'Plan launch night scope for Lantern Tea Co',due:dOff(21),done:false,rel:'Lead',owner:'Aaron'},
+ {id:507,title:'Ask Northside Auto Care to move the ad account into their name',due:dOff(3),done:false,rel:'Account',owner:'Aaron'},
+ {id:508,title:'Send Willow and Pine kickoff invite',due:dOff(-2),done:true,rel:'Account',owner:'You'}
+ ];
+ const outreach=[
+ {id:601,to:'Rosa Lin',biz:'Pearl Noodle Bar',channel:'Email',seg:'Restaurant or cafe',msg:'Saw your new patio menu. We run local ads with call and reservation tracking, and every campaign gets a written record you keep. Want a free audit of what is working today?',fit:88,status:'pending'},
+ {id:602,to:'Kevin Duarte',biz:'Duarte Barbershop',channel:'Instagram DM',seg:'Beauty or med spa',msg:'Love the fresh cuts on your feed. We help local shops turn that attention into booked chairs, with tracking so you can see where each booking came from. Open to a free audit?',fit:81,status:'pending'},
+ {id:603,to:'Hana Brooks',biz:'Brooks Pilates',channel:'Email',seg:'Professional services',msg:'Weekend classes are full. Here is how local studios fill weekday slots with ads that are measured by booking. We can send a short written audit in two business days.',fit:76,status:'pending'},
+ {id:604,to:'Marco Silva',biz:'Silva Bakery',channel:'Instagram DM',seg:'Restaurant or cafe',msg:'Congrats on the new storefront. Our free audit scores your local search, tracking, and ads in one written summary. Want us to run it for you?',fit:73,status:'approved'}
+ ];
+ const quotes=[
+ {id:701,dealId:206,business:'Peak Roofing',services:[SERVICES[2],SERVICES[0]],value:14400,status:'Sent',sent:dOff(-5),followUp:dOff(-1)},
+ {id:702,dealId:207,business:'Willow and Pine Boutique',services:[SERVICES[3],SERVICES[4]],value:5400,status:'Accepted',sent:dOff(-14),followUp:null},
+ {id:703,dealId:201,business:'Marrow Kitchen',services:[SERVICES[2],SERVICES[4],SERVICES[7]],value:9600,status:'Draft',sent:null,followUp:null}
+ ];
+ return {v:1,seq:1000,leads,deals,accounts,campaigns,tasks,outreach,quotes,settings:{replyHours:24,auditDays:2,quoteDays:3},ai:[]};
+}
+
+/* ===== UI helpers ===== */
+const IC={
+today:'<path d="M3 11l9-8 9 8M5 10v10h14V10"/>',ai:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>',tasks:'<path d="M9 11l3 3 8-8M20 12v7H4V5h10"/>',
+capture:'<path d="M4 4h16v6H4zM4 14h10v6H4zM18 14v6M15 17h6"/>',leads:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/>',deals:'<rect x="3" y="4" width="5" height="16" rx="1"/><rect x="10" y="4" width="5" height="10" rx="1"/><rect x="17" y="4" width="4" height="13" rx="1"/>',
+outreach:'<path d="M3 11l18-8-8 18-2-8z"/>',audits:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',quotes:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/>',
+accounts:'<path d="M4 21V7l8-4 8 4v14M9 21v-6h6v6"/>',contacts:'<circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6M17 5a3 3 0 010 6M22 20c0-3-2-5-4-5.5"/>',campaigns:'<path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7"/>',
+reports:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',playbook:'<path d="M4 4h12a4 4 0 014 4v12H8a4 4 0 01-4-4zM8 8h8M8 12h8"/>',setup:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>'};
+const NAVS=[['Work',[['today','Today'],['ai','Ask AI'],['tasks','Tasks']]],
+ ['Pipeline',[['capture','Lead capture'],['leads','Leads'],['deals','Deals'],['outreach','Outreach queue'],['audits','Audits'],['quotes','Quotes']]],
+ ['Accounts',[['accounts','Accounts'],['contacts','Contacts'],['campaigns','Campaign Records']]],
+ ['Insight',[['reports','Reports'],['playbook','Playbook']]],
+ ['Admin',[['setup','Settings']]]];
+const TITLES={today:'Today',ai:'Ask AI',tasks:'Tasks',capture:'Lead capture',newlead:'New lead',leads:'Leads',deals:'Deals',outreach:'Outreach queue',audits:'Audits',quotes:'Quotes',accounts:'Accounts',contacts:'Contacts',campaigns:'Campaign Records',reports:'Reports',playbook:'Playbook',setup:'Settings'};
+let view='today',filter='All',Q='',tab='',draft=null,editId=null;
+
+function counts(){return{leads:S.leads.filter(l=>l.status==='New').length,deals:S.deals.filter(d=>d.stage<5&&!d.lost).length,outreach:S.outreach.filter(o=>o.status==='pending').length,audits:auditList().filter(l=>l.status!=='Audit sent'&&l.status!=='Converted').length,tasks:S.tasks.filter(t=>!t.done&&t.due<=dOff(0)).length,quotes:S.quotes.filter(q=>q.status==='Draft'||q.status==='Sent').length,accounts:S.accounts.filter(a=>a.health<50).length}}
+function renderNav(){const c=counts();$('#nav').innerHTML=NAVS.map(([g,it])=>`<div class="grp">${g}</div>`+it.map(([id,l])=>{const n=c[id];return `<button class="nv" data-a="go" data-v="${id}" ${(id===view||(view==='newlead'&&id==='capture'))?'aria-current="page"':''}><svg viewBox="0 0 24 24">${IC[id]}</svg>${l}${n?`<span class="ct ${id==='accounts'||(id==='tasks')?'hot':''}">${n}</span>`:''}</button>`}).join('')).join('')}
+function toast(t){const e=document.createElement('div');e.className='toast';e.setAttribute('role','status');e.textContent=t;document.body.appendChild(e);setTimeout(()=>e.remove(),2600)}
+function drawer(h){$('#slot').innerHTML=`<div class="scrim" data-a="close"></div><aside class="drawer" role="dialog" aria-label="Details">${h}<div style="margin-top:auto;padding-top:8px"><button class="btn" data-a="close">Close</button></div></aside>`;const d=$('.drawer');if(d)d.scrollTop=0}
+const closeDrawer=()=>{$('#slot').innerHTML=''};
+function copy(text,msg){const done=()=>toast(msg||'Copied');try{navigator.clipboard.writeText(text).then(done,()=>fb())}catch(e){fb()}function fb(){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');done()}catch(e){toast('Select the text and copy it')}t.remove()}}
+const tag=(t,c='')=>`<span class="tag ${c}">${esc(t)}</span>`;
+const head=(t,s,r='')=>`<div class="head"><div><h2 class="pt">${t}</h2><p class="sub">${s}</p></div><div class="row">${r}</div></div>`;
+const sample='<div class="note">Example workspace. Every business, person, and number is made up to show the layout. Reset or replace it in Settings.</div>';
+const lead=id=>S.leads.find(l=>l.id===id);
+const fullName=l=>[l.first,l.last].filter(Boolean).join(' ');
+const stTag=s=>({New:'t','Audit in progress':'i','Audit sent':'i',Contacted:'w','Consult booked':'g',Converted:'g',Nurture:'',Disqualified:'b'}[s]||'');
+function auditList(){return S.leads.filter(l=>l.auditRequested||l.audit)}
+function pipeVal(){return S.deals.filter(d=>d.stage<5&&!d.lost)}
+const sum=(a,f)=>a.reduce((x,y)=>x+(f(y)||0),0);
+
+/* ===== Today ===== */
+function vToday(){
+ const open=pipeVal(),val=sum(open,d=>d.value),w=sum(open,d=>(d.value||0)*PROB[d.stage]/100);
+ const wk=S.leads.filter(l=>now()-l.created<7*DAY).length;
+ const unworked=S.leads.filter(l=>l.status==='New'&&!l.firstTouch);
+ const late=unworked.filter(l=>now()-l.created>S.settings.replyHours*H);
+ const aud=auditList().filter(l=>l.status!=='Audit sent'&&l.status!=='Converted'&&l.auditRequested&&!l.auditSent);
+ const overdueAud=aud.filter(l=>auditDue(l)<now());
+ const taskDue=S.tasks.filter(t=>!t.done&&t.due<=dOff(0));
+ const risk=S.accounts.filter(a=>a.health<50);
+ const items=[];
+ late.forEach(l=>items.push({sev:3,t:`${esc(l.business)} has waited over ${S.settings.replyHours} hours`,s:`${esc(fullName(l))} came in ${age(l.created)} from ${esc(l.source)}. First reply target missed.`,go:`data-a="lead" data-id="${l.id}"`,b:'Open lead'}));
+ overdueAud.forEach(l=>items.push({sev:3,t:`Audit for ${esc(l.business)} is overdue`,s:`The site promises a written summary in ${S.settings.auditDays} business days.`,go:'data-a="go" data-v="audits"',b:'Open audits'}));
+ risk.forEach(a=>items.push({sev:3,t:`${esc(a.name)} health fell to ${a.health}`,s:esc(a.risk)||'Review the account.',go:`data-a="account" data-id="${a.id}"`,b:'Review'}));
+ unworked.filter(l=>!late.includes(l)).forEach(l=>items.push({sev:2,t:`New lead: ${esc(l.business)}`,s:`${esc(fullName(l))} via ${esc(l.source)}. Reply target ends ${rel(l.created+S.settings.replyHours*H)}.`,go:`data-a="lead" data-id="${l.id}"`,b:'Reply'}));
+ aud.filter(l=>!overdueAud.includes(l)).forEach(l=>items.push({sev:2,t:`Audit due for ${esc(l.business)}`,s:`Due ${rel(auditDue(l))}.`,go:'data-a="go" data-v="audits"',b:'Open audits'}));
+ S.deals.filter(d=>d.stage<5&&!d.lost&&(!d.nextStep||(d.nextDate&&d.nextDate<dOff(0)))).forEach(d=>items.push({sev:2,t:`${esc(d.business)} needs a next step`,s:d.nextStep?`Planned step "${esc(d.nextStep)}" is past due.`:'No next step is set on this deal.',go:`data-a="deal" data-id="${d.id}"`,b:'Open deal'}));
+ items.sort((a,b)=>b.sev-a.sev);
+ const src={};S.leads.forEach(l=>src[l.source]=(src[l.source]||0)+1);
+ const mx=Math.max(1,...Object.values(src));
+ return sample+head('Good morning','What needs you today, in order.')+`
+ <div class="kpis">
+  <div class="kpi"><div class="v">${money(val)}</div><div class="l">Open pipeline</div><div class="d">${open.length} open deals, internal value</div></div>
+  <div class="kpi"><div class="v">${money(Math.round(w))}</div><div class="l">Weighted forecast</div><div class="d">Stage probability applied</div></div>
+  <div class="kpi"><div class="v">${wk}</div><div class="l">New leads, 7 days</div><div class="d">${S.leads.filter(l=>l.source==='Website form'&&now()-l.created<7*DAY).length} from the website form</div></div>
+  <div class="kpi"><div class="v">${aud.length}</div><div class="l">Audits to send</div><div class="d ${overdueAud.length?'bad':''}">${overdueAud.length?overdueAud.length+' overdue':'None overdue'}</div></div>
+  <div class="kpi"><div class="v">${unworked.length}</div><div class="l">Leads waiting for a reply</div><div class="d ${late.length?'bad':''}">${late.length?late.length+' past target':'All inside target'}</div></div>
+  <div class="kpi"><div class="v">${risk.length}</div><div class="l">Clients at risk</div><div class="d ${risk.length?'bad':'good'}">${taskDue.length} tasks due or overdue</div></div>
+ </div>
+ <div class="cols">
+  <div class="card"><h3>Priority stream <small>Ranked by urgency</small></h3><div class="list">${items.slice(0,7).map(i=>`<div class="li"><div class="g"><b>${i.t}</b><small>${i.s}</small></div><button class="btn sm" ${i.go}>${i.b}</button></div>`).join('')||'<div class="empty">Nothing needs attention.</div>'}</div></div>
+  <div class="card"><h3>Where leads come from <small>All time</small></h3>${Object.entries(src).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div class="hb"><span>${esc(k)}</span><div><i style="width:${v/mx*100}%"></i></div><span>${v}</span></div>`).join('')}</div>
+ </div>
+ <div class="card"><h3>Pipeline by stage <small>${open.length} open deals</small></h3>${STAGES.slice(0,5).map((s,i)=>{const ds=S.deals.filter(d=>d.stage===i&&!d.lost);return `<div class="hb"><span>${s}</span><div><i style="width:${ds.length/Math.max(1,open.length)*100}%"></i></div><span>${ds.length}</span></div>`}).join('')}</div>`;
+}
+
+/* ===== Ask AI (demo answers from live data) ===== */
+const QS=['Which leads should I call first?','Which audits are due?','Which clients are at risk?','Summarize my pipeline','Draft a reply to my newest lead','Which deals have no next step?'];
+function answer(q){
+ const k=q.toLowerCase();
+ if(k.includes('call first')||k.includes('priorit')){const t=S.leads.filter(l=>['New','Contacted','Audit in progress','Audit sent','Consult booked'].includes(l.status)).sort((a,b)=>score(b)-score(a)).slice(0,3);return `<b>Top three by fit score:</b><ul>${t.map(l=>`<li>${esc(fullName(l))}, ${esc(l.business)}. Score ${score(l)}, ${esc(l.status)}.</li>`).join('')}</ul>`}
+ if(k.includes('audit')){const a=auditList().filter(l=>l.auditRequested&&!l.auditSent);return a.length?`<b>${a.length} audits not sent:</b><ul>${a.map(l=>`<li>${esc(l.business)}. Due ${rel(auditDue(l))}.</li>`).join('')}</ul>`:'All audits are sent.'}
+ if(k.includes('risk')){const r=S.accounts.filter(a=>a.health<60);return `<b>Accounts under 60:</b><ul>${r.map(a=>`<li>${esc(a.name)}, health ${a.health}. ${esc(a.risk)}</li>`).join('')}</ul>`}
+ if(k.includes('pipeline')||k.includes('summar')){const o=pipeVal();return `<b>${o.length} open deals.</b> Internal value ${money(sum(o,d=>d.value))}, weighted ${money(Math.round(sum(o,d=>(d.value||0)*PROB[d.stage]/100)))}. Furthest along: ${o.sort((a,b)=>b.stage-a.stage).slice(0,2).map(d=>esc(d.business)+' ('+STAGES[d.stage]+')').join(', ')}.`}
+ if(k.includes('next step')){const d=S.deals.filter(d=>d.stage<5&&!d.lost&&!d.nextStep);return d.length?`<b>No next step:</b><ul>${d.map(x=>`<li>${esc(x.business)} in ${STAGES[x.stage]}.</li>`).join('')}</ul>`:'Every open deal has a next step.'}
+ if(k.includes('draft')||k.includes('reply')){const l=[...S.leads].sort((a,b)=>b.created-a.created)[0];return `<b>Draft for ${esc(l.business)}:</b><div class="tpl">${esc(replyDraft(l))}</div><small>Review and edit before sending.</small>`}
+ return 'Try one of the suggested questions. The full build connects a live model to your records.';
+}
+function replyDraft(l){return `Hi ${l.first||'there'},\n\nThanks for reaching out about ${l.business}. We will review your ads, tracking, and local search and send a written summary within ${S.settings.auditDays} business days. If a short call helps, you can book one here: https://meetings-na2.hubspot.com/content-matter\n\nTalk soon,\nContentMatter`}
+function vAI(){return head('Ask AI','Questions about your leads, deals, accounts, and audits.')+`<div class="card chat"><div class="chips">${QS.map(q=>`<button class="chip" data-a="ask" data-q="${esc(q)}">${esc(q)}</button>`).join('')}</div><div class="chat" id="chat"><div class="msg a">Demo answers built from the records in this workspace. The full build connects a live model.</div>${S.ai.map(m=>`<div class="msg u">${esc(m.q)}</div><div class="msg a">${m.a}</div>`).join('')}</div><form id="askf" class="row"><input id="askq" type="text" placeholder="Ask about your pipeline" aria-label="Ask a question" style="flex:1"><button class="btn pri" type="submit">Ask</button></form></div>`}
+
+/* ===== Leads ===== */
+const LF=['All','New','Needs enrichment','Website form','Outreach agent','Audit in progress','Audit sent','Consult booked','Nurture'];
+function leadRows(){return S.leads.filter(l=>{if(filter==='All')return true;if(filter==='Needs enrichment')return needsEnrich(l);if(SOURCES.includes(filter))return l.source===filter;return l.status===filter}).filter(l=>!Q||(fullName(l)+l.business+(l.zip||'')+l.email).toLowerCase().includes(Q)).sort((a,b)=>b.created-a.created)}
+function vLeads(){
+ const rows=leadRows();
+ return head('Leads',`${rows.length} of ${S.leads.length} leads. Website leads and manual builds land here.`,'<button class="btn" data-a="go" data-v="capture">Lead capture</button><button class="btn pri" data-a="newlead">Build a lead manually</button>')+
+ `<div class="chips">${LF.map(f=>`<button class="chip" data-a="filter" data-f="${f}" aria-pressed="${f===filter}">${f}</button>`).join('')}</div>
+ <div class="card"><div class="tw"><table><thead><tr><th>Lead</th><th>Source</th><th>Zip</th><th>Business type</th><th>Fit</th><th>Status</th><th>Next</th></tr></thead><tbody>${rows.map(l=>{const ad=auditDue(l);return `<tr class="r" data-a="lead" data-id="${l.id}"><td><b>${esc(fullName(l))}</b><small>${esc(l.business)} · ${age(l.created)}</small></td><td class="nw">${esc(l.source)}</td><td>${esc(l.zip||'Not captured')}</td><td>${needsEnrich(l)&&!l.segment?tag('Needs enrichment','w'):esc(segShort(l.segment))}</td><td>${scoreCell(l)}</td><td>${tag(l.status,stTag(l.status))}</td><td class="nw">${l.auditRequested&&!l.auditSent&&ad?`<small style="display:inline">Audit due ${rel(ad)}</small>`:esc(l.nextStep||'No next step')}</td></tr>`}).join('')||'<tr><td colspan="7"><div class="empty">No leads match.</div></td></tr>'}</tbody></table></div></div>`;
+}
+function kvRows(pairs){return `<dl class="kv">${pairs.filter(p=>p[1]!==undefined&&p[1]!==''&&p[1]!==null).map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>`}
+function leadDrawer(id){
+ const l=lead(id);if(!l)return;
+ const miss=[['segment','Business type'],['monthlyBudget','Ad budget'],['decisionMaker','Decision maker'],['timeline','Timeline'],['website','Website']].filter(m=>!l[m[0]]).map(m=>m[1]);
+ const dl=S.deals.find(d=>d.leadId===l.id);
+ drawer(`<div><h3>${esc(fullName(l))}</h3><p class="sub">${esc(l.business)}${l.role?' · '+esc(l.role):''}</p></div>
+ <div class="row">${tag(l.status,stTag(l.status))}${tag(l.source,'t')}${scoreCell(l)}${dl?tag('Deal: '+STAGES[dl.stage],'g'):''}</div>
+ ${miss.length?`<div class="note">Still to capture: ${miss.join(', ')}.</div>`:''}
+ <div class="sec">Contact</div>${kvRows([['Email',esc(l.email)],['Phone',esc(l.phone)],['Mobile',esc(l.mobile)],['Prefers',esc(l.prefContact)],['Best time',esc(l.bestTime)],['Decision maker',esc(l.decisionMaker)]])}
+ <div class="sec">Business</div>${kvRows([['Type',esc(l.segment)],['Zip',esc(l.zip)],['Address',esc([l.address,l.city].filter(Boolean).join(', '))],['Website',esc(l.website)],['Instagram',esc(l.instagram)],['Google profile',esc(l.gbp)],['Locations',esc(l.locations)],['Years open',esc(l.yearsOpen)],['Team size',esc(l.employees)]])}
+ <div class="sec">Marketing today</div>${kvRows([['Ad budget',esc(l.monthlyBudget)],['Running',esc((l.platforms||[]).join(', '))],['Tracking',esc((l.tracking||[]).join(', '))],['Current help',esc(l.currentAgency)],['POS',esc(l.pos)],['Reviews',esc(l.rating)],['Goal',esc(l.goal)],['What to fix',esc(l.pain)]])}
+ <div class="sec">Fit</div>${kvRows([['Services',esc((l.services||[]).join(', '))],['Plan interest',esc(l.planInterest)],['Timeline',esc(l.timeline)],['Owner',esc(l.owner)],['Next step',esc(l.nextStep)+(l.nextDate?' on '+fmtD(l.nextDate):'')],['Source detail',esc(l.sourceDetail)],['Referred by',esc(l.referrer)],['Notes',esc(l.notes)]])}
+ ${l.audit?`<div class="sec">Audit scores</div>${kvRows([['Website',l.audit.website],['Social',l.audit.social],['Local search',l.audit.local],['Ads',l.audit.ads||'No ads']])}`:''}
+ <div class="sec">Activity</div><ul class="tl">${[...l.log].reverse().map(x=>`<li>${esc(x.x)}<small>${fmtD(x.t)}</small></li>`).join('')}</ul>
+ <div class="sec">Actions</div><div class="row">
+ ${!l.firstTouch?`<button class="btn pri" data-a="touch" data-id="${l.id}">Mark first reply sent</button>`:''}
+ <button class="btn" data-a="draft" data-id="${l.id}">Copy reply draft</button>
+ ${l.status!=='Audit in progress'&&l.status!=='Audit sent'?`<button class="btn" data-a="startaudit" data-id="${l.id}">Start audit</button>`:''}
+ ${dl?`<button class="btn" data-a="deal" data-id="${dl.id}">Open deal</button>`:`<button class="btn dk" data-a="convert" data-id="${l.id}">Create deal</button>`}
+ <button class="btn" data-a="edit" data-id="${l.id}">Edit lead</button>
+ <button class="btn" data-a="lstatus" data-id="${l.id}" data-s="Nurture">Move to nurture</button>
+ <button class="btn danger" data-a="lstatus" data-id="${l.id}" data-s="Disqualified">Disqualify</button></div>`);
+}
+
+/* ===== Lead capture: website form and manual build ===== */
+function vCapture(){
+ const snippet=`<form action="https://YOUR_CRM_ENDPOINT/leads" method="POST">
+  <input type="hidden" name="source" value="Website form">
+  <input type="text" name="company_website" tabindex="-1" autocomplete="off" style="display:none">
+  <label>Name <input name="name" required autocomplete="name"></label>
+  <label>Business name <input name="business" required></label>
+  <label>Zip code <input name="zip" inputmode="numeric" pattern="[0-9]{5}" required></label>
+  <label>Email <input name="email" type="email" required></label>
+  <label>Phone <input name="phone" type="tel" required></label>
+  <button type="submit">Get a free audit</button>
+</form>`;
+ return head('Lead capture','Two ways a lead enters the CRM. Both end up in the same Leads list.')+`
+ <div class="cols eq">
+  <div class="card"><h3>1. Website lead gen <small>Short form, five fields</small></h3>
+   <p class="sub" style="margin:0 0 12px">Replaces the name and email box on the home page. Everyone who fills it is an audit request.</p>
+   <form id="wf" class="fgrid">
+    <div class="fld"><label for="w_name">Name <i style="color:var(--bad);font-style:normal">*</i></label><input id="w_name" type="text" required value="Test Owner"></div>
+    <div class="fld"><label for="w_biz">Business name *</label><input id="w_biz" type="text" required value="Sample Bakery"></div>
+    <div class="fld"><label for="w_zip">Zip code *</label><input id="w_zip" type="text" inputmode="numeric" pattern="[0-9]{5}" required value="91801"></div>
+    <div class="fld"><label for="w_email">Email *</label><input id="w_email" type="email" required value="owner@example.com"></div>
+    <div class="fld"><label for="w_phone">Phone *</label><input id="w_phone" type="tel" required value="(555) 010 0199"></div>
+    <div class="fld" style="justify-content:flex-end"><button class="btn pri" type="submit">Send test submission</button></div>
+   </form>
+   <div class="sec" style="margin-top:16px">What happens on each submission</div>
+   <ul style="margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
+    <li>A lead is created with source Website form and status New.</li>
+    <li>The name is split into first and last. The zip is saved for area reporting.</li>
+    <li>An audit due date is set ${S.settings.auditDays} business days out.</li>
+    <li>A task to reply inside ${S.settings.replyHours} hours is added to Today.</li>
+    <li>The lead shows Needs enrichment until business type, budget, decision maker, and timeline are filled in on the first call.</li>
+   </ul>
+   <div class="sec" style="margin-top:16px">Form markup for the site</div>
+   <div class="pre" id="snip">${esc(snippet)}</div>
+   <div class="row" style="margin-top:8px"><button class="btn sm" data-a="copysnip">Copy markup</button><span class="sub">Replace YOUR_CRM_ENDPOINT after the engineer confirms where leads land. The hidden field catches bots.</span></div>
+  </div>
+  <div class="card"><h3>2. Manual build from the dashboard <small>Full CRM record</small></h3>
+   <p class="sub" style="margin:0 0 12px">For calls, referrals, events, and outreach replies. Captures everything the sales team needs in one pass.</p>
+   <div class="list">
+    ${[['Contact','Name, role, email, phone, preferred channel, decision maker'],['Business','Type, address, zip, website, Instagram, Google profile, size'],['Source','Channel, campaign detail, referrer'],['Marketing today','Ad budget, platforms, tracking, current help, POS, reviews, goal'],['Fit','Services, plan interest, timeline, live fit score'],['Handling','Owner, status, next step, consent, tags, notes']].map(([a,b])=>`<div class="li"><div class="g"><b>${a}</b><small>${b}</small></div></div>`).join('')}
+   </div>
+   <div class="row" style="margin-top:14px"><button class="btn pri" data-a="newlead">Build a lead manually</button></div>
+   <p class="sub" style="margin-top:14px">Tip: leads from the website form can be completed later with Edit lead, so both paths end with the same record.</p>
+  </div>
+ </div>
+ <div class="card"><h3>Field map <small>Website form to CRM record</small></h3><div class="tw"><table><thead><tr><th>Website field</th><th>CRM field</th><th>Required</th><th>Why we ask</th></tr></thead><tbody>
+  <tr><td>Name</td><td>First name, last name</td><td>Yes</td><td>Address the reply and match the contact</td></tr>
+  <tr><td>Business name</td><td>Business</td><td>Yes</td><td>Needed to run the audit</td></tr>
+  <tr><td>Zip code</td><td>Zip</td><td>Yes</td><td>Local search and area reporting</td></tr>
+  <tr><td>Email</td><td>Email</td><td>Yes</td><td>Send the written audit summary</td></tr>
+  <tr><td>Phone</td><td>Phone</td><td>Yes</td><td>Call to book the consult</td></tr></tbody></table></div></div>`;
+}
+
+/* Manual form definition */
+const FORM=[
+ ['Contact',[['first','First name','text',null,1],['last','Last name','text'],['role','Title or role','text'],['email','Email','email'],['phone','Phone','tel'],['mobile','Mobile for texts','tel'],['prefContact','Preferred contact','select',['Email','Phone call','Text','Instagram DM']],['bestTime','Best time to reach','text'],['decisionMaker','Decision maker','select',DM]]],
+ ['Business',[['business','Business name','text',null,1],['dba','Also known as','text'],['segment','Business type','select',SEGMENTS],['website','Website','text'],['instagram','Instagram handle','text'],['gbp','Google Business Profile link','text'],['address','Street address','text','w2'],['city','City','text'],['zip','Zip code','text'],['locations','Number of locations','number'],['yearsOpen','Years in business','number'],['employees','Team size','select',['1 to 5','6 to 15','16 to 50','51 or more']],['revenue','Annual revenue range','select',['Under $250,000','$250,000 to $1 million','$1 million to $5 million','Over $5 million']]]],
+ ['Source',[['source','Lead source','select',SOURCES],['sourceDetail','Campaign or form detail','text'],['referrer','Referred by','text']]],
+ ['Marketing today',[['monthlyBudget','Monthly ad budget','select',BUDGETS],['platforms','Running now','multi',PLATFORMS],['tracking','Tracking in place','multi',TRACKING],['currentAgency','Who helps today','select',['No one','Freelancer','Another agency','In house']],['pos','POS or booking system','text'],['rating','Review rating and count','text'],['goal','Goal for the next 90 days','text','w2'],['pain','What are they trying to fix or build?','textarea','full']]],
+ ['Fit',[['services','Services of interest','multi',SERVICES],['planInterest','Plan interest','select',PLANS],['timeline','Timeline to start','select',TL]]],
+ ['Handling',[['owner','Owner','select',OWNERS],['status','Status','select',LSTATUS],['nextStep','Next step','text','w2'],['nextDate','Next step date','date'],['tags','Tags','text'],['consentEmail','OK to email','check'],['consentSMS','OK to text','check'],['notes','Notes','textarea','full']]]
+];
+function newDraft(){return {status:'New',owner:'You',source:'Other',services:[],platforms:[],tracking:[],consentEmail:true,consentSMS:false,nextDate:null}}
+function fieldHTML(f,d){
+ const [k,label,type,opt,req]=f;const v=d[k];const cls='fld'+(opt==='w2'?' w2':opt==='full'?' full':'')+((type==='multi')?' full':'');
+ const lab=`<label for="f_${k}">${label}${req?' <i>*</i>':''}</label>`;
+ if(type==='select')return `<div class="${cls}">${lab}<select id="f_${k}" data-i="${k}"><option value="">Select one</option>${opt.map(o=>`<option ${v===o?'selected':''}>${esc(o)}</option>`).join('')}</select></div>`;
+ if(type==='textarea')return `<div class="${cls}">${lab}<textarea id="f_${k}" data-i="${k}">${esc(v||'')}</textarea></div>`;
+ if(type==='check')return `<div class="${cls}"><label class="ck"><input type="checkbox" id="f_${k}" data-i="${k}" ${v?'checked':''}>${label}</label></div>`;
+ if(type==='multi')return `<div class="${cls}"><span class="lab">${label}</span><div class="chips">${opt.map(o=>`<button type="button" class="chip ${(v||[]).includes(o)?'on':''}" data-a="multi" data-k="${k}" data-o="${esc(o)}">${esc(o)}</button>`).join('')}</div></div>`;
+ const val=type==='date'?dIn(v):(v??'');
+ return `<div class="${cls}">${lab}<input id="f_${k}" type="${type}" data-i="${k}" value="${esc(val)}"></div>`;
+}
+function vNewLead(){
+ const d=draft;
+ return head(editId?'Edit lead':'New lead',editId?'Update the record. The fit score refreshes as you type.':'Build a full record. Only first name, business name, and one way to reach them are required.','<button class="btn" data-a="go" data-v="'+(editId?'leads':'capture')+'">Cancel</button>')+
+ `<div class="formwrap"><div style="display:flex;flex-direction:column;gap:14px">${FORM.map(([sec,fs])=>`<div class="card"><h3>${sec}</h3><div class="fgrid">${fs.map(f=>fieldHTML(f,d)).join('')}</div></div>`).join('')}</div>
+ <div class="sticky"><div class="card"><h3>Fit score <small>Updates live</small></h3><div class="big" id="liveScore">${score(d)}</div><p class="sub" id="liveHint"></p><div class="sec">Why this score</div><div id="liveWhy" class="sub"></div></div>
+ <div class="card"><div class="row"><button class="btn pri" data-a="savelead">Save lead</button><button class="btn dk" data-a="savelead" data-deal="1">Save and create deal</button></div><p class="sub" style="margin-top:8px" id="formErr"></p></div></div></div>`;
+}
+function liveUpdate(){
+ const d=draft;const s=score(d);const e=$('#liveScore');if(!e)return;e.textContent=s;
+ const miss=[['monthlyBudget','ad budget'],['segment','business type'],['decisionMaker','decision maker'],['timeline','timeline'],['website','website']].filter(m=>!d[m[0]]).map(m=>m[1]);
+ $('#liveHint').textContent=s>=70?'Strong fit. Reply first.':s>=40?'Worth a conversation.':'Low until more is known.';
+ $('#liveWhy').textContent=miss.length?'Add '+miss.join(', ')+' to sharpen the score.':'Every scoring field is filled in.';
+}
+
+/* ===== Deals ===== */
+let ownerF='All';
+function vDeals(){
+ const ds=S.deals.filter(d=>!d.lost&&(ownerF==='All'||d.owner===ownerF)).filter(d=>!Q||(d.business+d.contact).toLowerCase().includes(Q));
+ const open=ds.filter(d=>d.stage<5);
+ return head('Deals',`${open.length} open deals, ${money(sum(open,d=>d.value))} internal value. Drag a card to change its stage.`,`<div class="chips">${['All',...OWNERS].map(o=>`<button class="chip" data-a="owner" data-o="${o}" aria-pressed="${o===ownerF}">${o}</button>`).join('')}</div>`)+
+ `<div class="board">${STAGES.map((s,i)=>{const c=ds.filter(d=>d.stage===i);return `<div class="colm" data-stage="${i}"><h4>${s}<span>${c.length} · ${money(sum(c,d=>d.value)).replace('Not set','$0')}</span></h4>${c.map(d=>`<div class="deal" draggable="true" data-id="${d.id}" data-a="deal"><b>${esc(d.business)}</b><div class="chips">${d.plan?tag(d.plan,'t'):''}</div><small>${money(d.value)} first year · ${PROB[d.stage]}% likely</small><small>${d.nextStep?'Next: '+esc(d.nextStep)+(d.nextDate?' · '+fmtD(d.nextDate):''):'<span style="color:var(--bad)">No next step</span>'}</small><small>${Math.max(0,Math.floor((now()-d.stageSince)/DAY))} days in stage · ${esc(d.owner)}</small></div>`).join('')}</div>`}).join('')}</div>`;
+}
+function dealDrawer(id){
+ const d=S.deals.find(x=>x.id===id);if(!d)return;
+ const l=d.leadId?lead(d.leadId):null;
+ const ch=CHECKS[d.stage]||[];
+ const q=S.quotes.find(x=>x.dealId===d.id);
+ drawer(`<div><h3>${esc(d.business)}</h3><p class="sub">${esc(d.contact||'')}${d.plan?' · '+esc(d.plan):''}</p></div>
+ <div class="row">${tag(STAGES[d.stage],'t')}${tag(PROB[d.stage]+'% likely')}${tag(esc(d.owner))}${q?tag('Quote: '+q.status,q.status==='Accepted'?'g':'i'):''}</div>
+ <div class="sec">Before moving past ${STAGES[d.stage]}</div>
+ ${d.stage<5?`<div class="list">${ch.map((c,i)=>`<label class="ck li"><input type="checkbox" data-a="chk" data-id="${d.id}" data-k="${d.stage}:${i}" ${d.checks[d.stage+':'+i]?'checked':''}>${esc(c)}</label>`).join('')}</div>`:'<p class="sub">Deal is won. The account was created in Accounts.</p>'}
+ <div class="sec">Deal details</div>
+ <div class="fgrid">
+  <div class="fld"><label for="dv">Internal value, first year</label><input id="dv" type="number" data-s="deals:${d.id}:value" value="${d.value??''}" placeholder="Not set"></div>
+  <div class="fld"><label for="dp">Plan</label><select id="dp" data-s="deals:${d.id}:plan">${['',...PLANS].map(p=>`<option ${d.plan===p?'selected':''}>${p}</option>`).join('')}</select></div>
+  <div class="fld w2"><label for="dn">Next step</label><input id="dn" type="text" data-s="deals:${d.id}:nextStep" value="${esc(d.nextStep||'')}"></div>
+  <div class="fld"><label for="dd">Next step date</label><input id="dd" type="date" data-s="deals:${d.id}:nextDate" data-t="date" value="${dIn(d.nextDate)}"></div>
+  <div class="fld"><label for="do">Owner</label><select id="do" data-s="deals:${d.id}:owner">${OWNERS.map(o=>`<option ${d.owner===o?'selected':''}>${o}</option>`).join('')}</select></div>
+  <div class="fld full"><label for="dnotes">Notes</label><textarea id="dnotes" data-s="deals:${d.id}:notes">${esc(d.notes||'')}</textarea></div>
+ </div>
+ <div class="row"><b style="font-size:12px">Services</b>${d.services.map(s=>tag(s)).join('')||'<span class="sub">None chosen</span>'}</div>
+ ${l?`<div class="sec">From the lead</div>${kvRows([['Fit score',score(l)],['Goal',esc(l.goal)],['What to fix',esc(l.pain)],['Budget',esc(l.monthlyBudget)],['Current help',esc(l.currentAgency)]])}<div class="row"><button class="btn sm" data-a="lead" data-id="${l.id}">Open lead</button></div>`:''}
+ <div class="sec">Actions</div><div class="row">
+ ${d.stage<5?`<button class="btn pri" data-a="advance" data-id="${d.id}">Move to ${STAGES[d.stage+1]}</button>`:''}
+ ${!q&&d.stage>=3&&d.stage<5?`<button class="btn" data-a="mkquote" data-id="${d.id}">Start custom quote</button>`:''}
+ <button class="btn" data-a="addtask" data-id="${d.id}">Add follow up task</button>
+ ${d.stage<5?`<button class="btn danger" data-a="lose" data-id="${d.id}">Mark lost</button>`:''}</div>`);
+}
+
+/* ===== Accounts, contacts, campaigns ===== */
+function nextSeventh(){const d=new Date();let m=d.getMonth()+(d.getDate()>7?1:0);return new Date(d.getFullYear(),m,7,9).getTime()}
+function vAccounts(){
+ const ac=S.accounts.filter(a=>!Q||a.name.toLowerCase().includes(Q));
+ return sample+head('Accounts','Active clients. Health, renewals, and the monthly report due on the 7th.')+
+ `<div class="kpis"><div class="kpi"><div class="v">${S.accounts.length}</div><div class="l">Active accounts</div><div class="d">Capacity plan: about 10 at full load</div></div>
+ <div class="kpi"><div class="v">${money(sum(S.accounts,a=>a.adSpend))}</div><div class="l">Managed ad spend each month</div></div>
+ <div class="kpi"><div class="v">${S.accounts.filter(a=>a.health<50).length}</div><div class="l">At risk</div></div>
+ <div class="kpi"><div class="v">${S.accounts.filter(a=>a.renewal-now()<45*DAY).length}</div><div class="l">Renewals inside 45 days</div></div>
+ <div class="kpi"><div class="v">${fmtD(nextSeventh())}</div><div class="l">Next monthly report date</div></div></div>
+ <div class="card"><div class="tw"><table><thead><tr><th>Account</th><th>Plan</th><th>Health</th><th>Ad spend</th><th>Renewal</th><th>Lead</th><th>Ad account</th></tr></thead><tbody>${ac.map(a=>`<tr class="r" data-a="account" data-id="${a.id}"><td><b>${esc(a.name)}</b><small>${esc(a.contact)} · ${esc(a.status)}</small></td><td>${tag(a.plan,'t')}</td><td>${tag(String(a.health),a.health<50?'b':a.health<70?'w':'g')}</td><td>${money(a.adSpend)}</td><td class="nw">${fmtD(a.renewal)}</td><td>${esc(a.lead)}</td><td>${a.inClientName?tag('Client name','g'):tag('Move to client','w')}</td></tr>`).join('')}</tbody></table></div></div>`;
+}
+function accountDrawer(id){
+ const a=S.accounts.find(x=>x.id===id);if(!a)return;
+ const cs=S.campaigns.filter(c=>c.acct===a.id);
+ drawer(`<div><h3>${esc(a.name)}</h3><p class="sub">${esc(a.contact)} · ${esc(segShort(a.segment))}</p></div>
+ <div class="row">${tag(a.plan,'t')}${tag('Health '+a.health,a.health<50?'b':a.health<70?'w':'g')}${tag(a.status)}</div>
+ ${a.risk?`<div class="note">${esc(a.risk)}</div>`:''}
+ ${kvRows([['Ad spend',money(a.adSpend)+' each month'],['Renewal',fmtD(a.renewal)],['Client since',fmtD(a.since)],['Last report',a.lastReport?fmtD(a.lastReport):'None yet'],['Next report',fmtD(nextSeventh())+' (by the 7th)'],['Campaign lead',esc(a.lead)],['Portal users',a.portal],['Ad accounts',a.inClientName?'In the client name':'Still in the agency name']])}
+ <div class="sec">Campaign Records</div>${cs.map(c=>`<div class="li"><div class="g"><b>${esc(c.name)}</b><small>${c.status} · ${REC.filter(r=>c.rec[r[0]]).length} of 5 sections written</small></div></div>`).join('')||'<p class="sub">No campaigns yet.</p>'}
+ <div class="row"><button class="btn" data-a="go" data-v="campaigns">Open Campaign Records</button><button class="btn" data-a="acctask" data-id="${a.id}">Add task</button></div>`);
+}
+function vContacts(){
+ const rows=[...S.leads.map(l=>({n:fullName(l),b:l.business,r:l.role,e:l.email,p:l.phone,k:'Lead'})),...S.accounts.map(a=>({n:a.contact,b:a.name,r:'',e:'',p:'',k:'Client'}))].filter(r=>!Q||(r.n+r.b).toLowerCase().includes(Q));
+ return sample+head('Contacts','Everyone you have a record for.')+`<div class="card"><div class="tw"><table><thead><tr><th>Name</th><th>Business</th><th>Role</th><th>Email</th><th>Phone</th><th>Type</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${esc(r.n)}</b></td><td>${esc(r.b)}</td><td>${esc(r.r)}</td><td>${esc(r.e)}</td><td class="nw">${esc(r.p)}</td><td>${tag(r.k,r.k==='Client'?'g':'')}</td></tr>`).join('')}</tbody></table></div></div>`;
+}
+function vCampaigns(){
+ return sample+head('Campaign Records','One written record for every campaign. The client keeps the closing summary.')+
+ `<div class="cols eq">${S.campaigns.map(c=>{const a=S.accounts.find(x=>x.id===c.acct);const done=REC.filter(r=>c.rec[r[0]]).length;const stale=c.status==='Live'&&c.lastWeekly&&now()-c.lastWeekly>7*DAY;return `<div class="card"><h3>${esc(c.name)} ${tag(c.status,c.status==='Live'?'g':c.status==='Setup'?'w':'')}</h3><p class="sub" style="margin:-6px 0 10px">${esc(a?a.name:'')} · ${esc(c.goal)}</p>
+  <div class="hb"><span>Week ${c.week} of ${c.weeks}</span><div><i style="width:${c.week/c.weeks*100}%"></i></div><span>${Math.round(c.week/c.weeks*100)}%</span></div>
+  <div class="chips" style="margin:8px 0">${REC.map(([k,l])=>`<button class="chip ${c.rec[k]?'on':''}" data-a="rec" data-id="${c.id}" data-k="${k}" aria-pressed="${!!c.rec[k]}">${c.rec[k]?'✓ ':''}${l}</button>`).join('')}</div>
+  <small class="sub">${done} of 5 sections written. ${stale?`<b style="color:var(--bad)">Weekly numbers last logged ${age(c.lastWeekly)}.</b>`:c.lastWeekly?'Weekly numbers logged '+age(c.lastWeekly)+'.':'No weekly numbers yet.'}</small></div>`}).join('')}</div>`;
+}
+
+/* ===== Tasks ===== */
+let tf='Open';
+function vTasks(){
+ const ts=S.tasks.filter(t=>tf==='All'||(tf==='Open'?!t.done:t.done)).sort((a,b)=>a.due-b.due);
+ return head('Tasks','Follow ups from leads, deals, and accounts.')+`<div class="chips">${['Open','Done','All'].map(f=>`<button class="chip" data-a="tf" data-f="${f}" aria-pressed="${f===tf}">${f}</button>`).join('')}</div>
+ <form id="tform" class="card row"><input id="tt" type="text" placeholder="New task" aria-label="New task" style="flex:1;min-width:200px"><input id="td" type="date" aria-label="Due date" value="${dIn(dOff(1))}" style="width:auto"><select id="to" aria-label="Owner" style="width:auto">${OWNERS.map(o=>`<option>${o}</option>`).join('')}</select><button class="btn pri" type="submit">Add task</button></form>
+ <div class="card"><div class="list">${ts.map(t=>`<label class="li ck"><input type="checkbox" data-a="done" data-id="${t.id}" ${t.done?'checked':''}><span class="g" style="${t.done?'text-decoration:line-through;color:var(--mut)':''}"><b>${esc(t.title)}</b><small>${esc(t.rel)} · ${esc(t.owner)}</small></span>${t.done?'':t.due<dOff(0)?tag('Overdue '+fmtD(t.due),'b'):t.due<=dOff(0)?tag('Today','w'):tag(fmtD(t.due))}</label>`).join('')||'<div class="empty">No tasks here.</div>'}</div></div>`;
+}
+
+/* ===== Outreach queue ===== */
+function vOutreach(){
+ return head('Outreach queue','The outreach agent writes drafts. Nothing sends until you approve it.')+`<div class="card"><div class="list">${S.outreach.map(o=>`<div class="li" style="align-items:flex-start"><span class="av">${ini(o.to)}</span><div class="g"><b>${esc(o.to)}</b>, ${esc(o.biz)} ${tag(o.channel,'i')} ${tag('Fit '+o.fit,'t')}<small style="margin-top:4px;font-size:13px;color:var(--ink)">${esc(o.msg)}</small>${o.status!=='pending'?`<small style="margin-top:4px">${o.status==='approved'?'Approved, scheduled to send':o.status==='replied'?'Replied, lead created':'Skipped'}</small>`:''}</div><div class="row">${o.status==='pending'?`<button class="btn sm" data-a="oskip" data-id="${o.id}">Skip</button><button class="btn sm pri" data-a="oappr" data-id="${o.id}">Approve</button>`:o.status==='approved'?`<button class="btn sm" data-a="oreply" data-id="${o.id}">Log a reply</button>`:''}</div></div>`).join('')}</div></div>`;
+}
+
+/* ===== Audits ===== */
+function vAudits(){
+ const rows=auditList().sort((a,b)=>(a.auditSent?1:0)-(b.auditSent?1:0)||auditDue(a)-auditDue(b));
+ return head('Audits',`Free audit. A written summary goes back inside ${S.settings.auditDays} business days.`)+`<div class="card"><div class="tw"><table><thead><tr><th>Business</th><th>Website</th><th>Social</th><th>Local search</th><th>Ads</th><th>Due</th><th></th></tr></thead><tbody>${rows.map(l=>{const a=l.audit||{};const due=auditDue(l);const sent=!!l.auditSent;const inp=k=>`<input type="number" min="0" max="100" aria-label="${k} score" style="width:64px;padding:6px 8px" data-s="leads:${l.id}:audit.${k}" value="${a[k]??''}" ${sent?'disabled':''}>`;return `<tr><td><b>${esc(l.business)}</b><small>${esc(fullName(l))}</small></td><td>${inp('website')}</td><td>${inp('social')}</td><td>${inp('local')}</td><td>${inp('ads')}</td><td class="nw">${sent?tag('Sent '+fmtD(l.auditSent),'g'):due<now()?tag('Overdue '+rel(due),'b'):tag('Due '+rel(due),'w')}</td><td>${sent?'':`<button class="btn sm pri" data-a="asent" data-id="${l.id}">Mark sent</button>`}</td></tr>`}).join('')}</tbody></table></div></div>
+ <div class="card"><h3>What the audit covers</h3><p class="sub">Social, website, local search, and ads. Agents draft the scorecard and you review it before the branded PDF is emailed. The summary ends with a link to book a free consultation.</p></div>`;
+}
+
+/* ===== Quotes (internal only, always custom) ===== */
+function vQuotes(){
+ return sample+head('Quotes','Every client gets a custom quote after discovery. Values here are internal and never shown to clients.')+
+ `<div class="kpis"><div class="kpi"><div class="v">${S.quotes.filter(q=>q.status==='Draft').length}</div><div class="l">Drafts</div></div><div class="kpi"><div class="v">${S.quotes.filter(q=>q.status==='Sent').length}</div><div class="l">Sent, waiting</div></div><div class="kpi"><div class="v">${money(sum(S.quotes.filter(q=>q.status==='Sent'),q=>q.value))}</div><div class="l">Out for decision</div></div><div class="kpi"><div class="v">${money(sum(S.quotes.filter(q=>q.status==='Accepted'),q=>q.value))}</div><div class="l">Accepted</div></div></div>
+ <div class="card"><div class="tw"><table><thead><tr><th>Business</th><th>Services in scope</th><th>Internal value</th><th>Status</th><th>Follow up</th><th></th></tr></thead><tbody>${S.quotes.map(q=>`<tr><td><b>${esc(q.business)}</b></td><td>${q.services.map(s=>tag(s)).join(' ')}</td><td>${money(q.value)}</td><td>${tag(q.status,q.status==='Accepted'?'g':q.status==='Sent'?'i':'w')}</td><td class="nw">${q.followUp?(q.followUp<dOff(0)?tag('Overdue '+fmtD(q.followUp),'b'):fmtD(q.followUp)):'None'}</td><td class="nw">${q.status==='Draft'?`<button class="btn sm pri" data-a="qsend" data-id="${q.id}">Mark sent</button>`:q.status==='Sent'?`<button class="btn sm" data-a="qwin" data-id="${q.id}">Mark accepted</button>`:''}</td></tr>`).join('')}</tbody></table></div></div>
+ <div class="card"><h3>Before a quote goes out</h3><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Built from the consult, in the owner's own words for goals and problems.</li><li>Services scoped one by one, with the Campaign Record named as included.</li><li>Ad accounts and analytics stay in the client name.</li><li>90 day sprint explained, with no lock in beyond it.</li><li>Sent within ${S.settings.quoteDays} business days of the consult, with a follow up date set.</li></ul></div>`;
+}
+
+/* ===== Reports ===== */
+function pct(a,b){return b?Math.round(a/b*100)+'%':'No data'}
+function vReports(){
+ const L=S.leads,D=S.deals;
+ const touched=L.filter(l=>l.firstTouch),avgH=touched.length?Math.round(sum(touched,l=>(l.firstTouch-l.created)/H)/touched.length):0;
+ const audited=L.filter(l=>l.auditSent||l.status==='Audit sent'||l.status==='Consult booked').length;
+ const consult=D.filter(d=>d.stage>=3).length,quoted=D.filter(d=>d.stage>=4).length,won=D.filter(d=>d.stage===5).length,lost=D.filter(d=>d.lost).length;
+ const src=SOURCES.map(s=>{const ls=L.filter(l=>l.source===s);return [s,ls.length,ls.filter(l=>['Consult booked','Converted'].includes(l.status)||S.deals.some(d=>d.leadId===l.id&&d.stage>=3)).length,ls.length?Math.round(sum(ls,score)/ls.length):0]}).filter(r=>r[1]);
+ const seg={};L.forEach(l=>{const k=segShort(l.segment);seg[k]=(seg[k]||0)+1});
+ const mx=Math.max(1,...Object.values(seg));
+ return sample+head('Reports','Funnel, speed, and source quality, calculated from the records here.')+
+ `<div class="kpis"><div class="kpi"><div class="v">${avgH} h</div><div class="l">Average time to first reply</div><div class="d ${avgH>S.settings.replyHours?'bad':'good'}">Target ${S.settings.replyHours} h</div></div>
+ <div class="kpi"><div class="v">${pct(audited,L.length)}</div><div class="l">Leads that got an audit</div></div>
+ <div class="kpi"><div class="v">${pct(consult,D.length)}</div><div class="l">Deals that reached a consult</div></div>
+ <div class="kpi"><div class="v">${pct(won,won+lost+D.filter(d=>d.stage>=4&&d.stage<5).length)}</div><div class="l">Quote to win rate</div><div class="d">Early data, small sample</div></div></div>
+ <div class="cols eq"><div class="card"><h3>Funnel</h3>${[['Leads',L.length],['Audit sent',audited],['Consult booked',consult],['Quote sent',quoted],['Won',won]].map(([k,v])=>`<div class="hb"><span>${k}</span><div><i style="width:${v/Math.max(1,L.length)*100}%"></i></div><span>${v}</span></div>`).join('')}</div>
+ <div class="card"><h3>Business types <small>Leads</small></h3>${Object.entries(seg).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div class="hb"><span>${esc(k)}</span><div><i style="width:${v/mx*100}%"></i></div><span>${v}</span></div>`).join('')}</div></div>
+ <div class="card"><h3>Source quality</h3><div class="tw"><table><thead><tr><th>Source</th><th>Leads</th><th>Reached consult</th><th>Average fit score</th></tr></thead><tbody>${src.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${r[1]}</td><td>${r[2]} (${pct(r[2],r[1])})</td><td>${r[3]}</td></tr>`).join('')}</tbody></table></div><p class="sub" style="margin-top:8px">Sample sizes are small. Treat these as early signals, not conclusions.</p></div>`;
+}
+
+/* ===== Playbook ===== */
+const PB={
+ 'Sales motion':()=>`<div class="pb cols eq"><div class="card"><h4>How a deal moves</h4><ul>
+  <li><b>Capture.</b> Website form, free audit page, tool hub, referral, or the outreach agent.</li>
+  <li><b>Reply.</b> First reply inside ${S.settings.replyHours} hours. Fill in business type, budget, and decision maker.</li>
+  <li><b>Audit.</b> Website, social, local search, and ads scored. Written summary inside ${S.settings.auditDays} business days.</li>
+  <li><b>Consult.</b> A short call walks through the audit and confirms goals.</li>
+  <li><b>Custom quote.</b> Built from the consult, sent inside ${S.settings.quoteDays} business days.</li>
+  <li><b>Kickoff.</b> 90 day sprint. Campaign Record opens with the brief and goal.</li>
+  <li><b>Run.</b> Weekly optimization, monthly report by the 7th, quarterly strategy review.</li>
+  <li><b>Grow.</b> Add email and SMS, tracking upgrades, or a campaign sprint for the next moment.</li></ul></div>
+  <div class="card"><h4>Rules of the motion</h4><ul><li>Every price is custom and internal. Share scope, not a price list.</li><li>Never promise results. Promise tracking, a record, and plain reporting.</li><li>Ad accounts and analytics stay in the client name.</li><li>No client name, logo, or result is used without written approval. Sample work is labeled SAMPLE.</li><li>Reply to audit requests first. They asked for the next step.</li></ul>
+  <h4 style="margin-top:14px">Targets</h4><ul><li>First reply: ${S.settings.replyHours} hours</li><li>Audit delivered: ${S.settings.auditDays} business days</li><li>Quote after consult: ${S.settings.quoteDays} business days</li></ul><small class="sub">Change targets in Settings.</small></div></div>`,
+ 'Qualify':()=>`<div class="pb cols eq"><div class="card"><h4>Good fit signs</h4><ul><li>Local business with a real customer base and a way to book, call, or order.</li><li>Already spends on ads, or ready to start with a monthly ad budget.</li><li>The owner or a decision maker joins the audit review call.</li><li>Wants tracking and a written record, not just more clicks.</li><li>Open to ad accounts in their own name.</li></ul></div>
+  <div class="card"><h4>Pause or decline</h4><ul><li>Wants guaranteed results or a promised revenue number.</li><li>No budget for ads and no website, with no plan to build either.</li><li>Wants the agency to own the ad account.</li><li>Needs a one off task, not a campaign or a sprint.</li><li>Decision maker will not join any call.</li></ul></div>
+  <div class="card full"><h4>Five things to know before a quote</h4><ul><li><b>Need.</b> What they are trying to fix or build, in their words.</li><li><b>Budget.</b> Monthly ad budget range and what they spend today.</li><li><b>Authority.</b> Who decides, and who else weighs in.</li><li><b>Timing.</b> When they want to start and why then.</li><li><b>Tracking.</b> What is measured today: calls, forms, bookings, orders.</li></ul></div></div>`,
+ 'Discovery questions':()=>{const Q={'Service businesses':['How many calls come in each week, and how many are answered?','Which jobs make the most money?','Where do calls come from today?','What happens to a missed call?','Which areas do you serve?'],'Restaurants and food':['Where do reservations and orders come from today?','Do you use delivery apps, and what do they cost you?','Which days and hours are slow?','What POS do you use?','How do you bring guests back?'],'Beauty and clinics':['How do clients book today?','What is your no show rate?','How many new clients per month do you want?','What do reviews say about you?','Which services do you most want to fill?'],'Local retail and brands':['Is the goal foot traffic, online orders, or both?','What are your busiest seasons?','Do you have an email or text list?','Which products carry the best margin?','What did past promotions bring in?']};
+  return `<div class="pb cols eq">${Object.entries(Q).map(([k,v])=>`<div class="card"><h4>${k}</h4><ul>${v.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}<div class="card full"><h4>Every call</h4><ul><li>What are you trying to fix or build?</li><li>What campaigns have or have not worked before?</li><li>What assets do you already have: site, listing, photos, list?</li><li>How do you know a customer came from an ad today?</li></ul></div></div>`},
+ 'Call scripts':()=>`<div class="pb cols eq"><div class="card"><h4>Audit review call, 30 minutes</h4><ul><li><b>2 min.</b> Open. Confirm who is on the call and what they hope to learn.</li><li><b>8 min.</b> Walk the scorecard: website, social, local search, ads. Show what is broken, missing, or costing money.</li><li><b>8 min.</b> Pick the top three fixes and what each one changes.</li><li><b>5 min.</b> Explain how we run it: Discovery, Strategy, Execution, Insights, with a Campaign Record for every campaign.</li><li><b>5 min.</b> Agree the next step and book it before the call ends.</li><li><b>2 min.</b> Confirm the recap email and who else should see it.</li></ul></div>
+  <div class="card"><h4>Discovery call, 30 to 45 minutes</h4><ul><li><b>5 min.</b> Business background and the goal for the next 90 days.</li><li><b>10 min.</b> Customers, offers, and what has been tried.</li><li><b>10 min.</b> Tracking and tools today. Who owns the ad accounts?</li><li><b>5 min.</b> Budget range, decision makers, and timing.</li><li><b>5 min.</b> Explain the quote process and set a date to send it.</li></ul></div></div>`,
+ 'Objections':()=>{const O=[['How much does it cost?','They need a number to decide.','Every plan is quoted after discovery because scope depends on goals and ad budget. Start, Grow, and Plus give a sense of scope.','Plans page','What monthly ad budget feels comfortable?'],['We already have a freelancer or agency.','Fear of switching or hurting a relationship.','The free audit is a second opinion. Keep what works. We show where tracking or reporting is thin.','Free audit','Can I see what they report to you each month?'],['Ads did not work before.','A bad past experience, often with weak tracking.','Most failures trace back to missing tracking. The audit shows what was measured and what was not.','Audit scorecard','What did you track last time?'],['I do not have time.','Owners are busy running the business.','We handle setup. You join a discovery call, approve work in the portal, and read one monthly report.','Process page','What is the best weekly time for a short check in?'],['I do not want to be locked in.','Fear of losing accounts and data.','Ad accounts stay in your name, and you can leave with your data and your record. The first commitment is one 90 day sprint.','Plans page note','Would you like to see the Campaign Record format?'],['My budget is small.','Unsure ads are worth it at their size.','Start where it counts most: tracking, your Google profile, then a focused campaign. Scope can be sized to the budget.','Services page','What result would make the first 90 days a success?'],['I need to talk to my partner.','Decision is shared.','Invite them to the audit review call and send a one page recap they can forward.','Recap email','Who else should I include?'],['How do I know it works?','Wants proof before paying.','Every campaign gets tracking by source, weekly numbers, and a written record of what changed and why. Sample work is labeled SAMPLE.','Campaign Record','Which number would you trust most?']];
+  return `<div class="card"><div class="tw"><table><thead><tr><th>They say</th><th>What it usually means</th><th>Response</th><th>Proof</th><th>Ask next</th></tr></thead><tbody>${O.map(r=>`<tr>${r.map((c,i)=>`<td${i===0?' class="nw"':''}>${i===0?'<b>'+c+'</b>':c}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`},
+ 'Email templates':()=>{const T=[['Audit delivered',`Subject: Your free marketing audit for {business}\n\nHi {first_name},\n\nYour audit is attached. It scores your website, social, local search, and ads, and lists the three fixes that matter most.\n\nIf a 20 minute walkthrough helps, book a time here: https://meetings-na2.hubspot.com/content-matter\n\nTalk soon,\nContentMatter`],['Day two follow up',`Subject: Did the audit raise any questions?\n\nHi {first_name},\n\nChecking that the audit for {business} reached you. The tracking section is usually the most useful place to start. Happy to walk through it.\n\nContentMatter`],['After the consult',`Subject: Recap and next step for {business}\n\nHi {first_name},\n\nThanks for the time today. What I heard: {goal}. What we will scope: {services}. I will send a custom quote by {date}.\n\nContentMatter`],['Quote sent',`Subject: Your custom quote for {business}\n\nHi {first_name},\n\nYour quote is attached. It covers {services}, a Campaign Record for every campaign, and a monthly report by the 7th. Ad accounts stay in your name.\n\nWant to walk through it together this week?\n\nContentMatter`],['Gentle nudge',`Subject: Still want to move forward, {first_name}?\n\nHi {first_name},\n\nWanted to check in on the quote for {business}. Tell me what is holding things up and I can adjust the scope.\n\nContentMatter`]];
+  return `<div class="cols eq">${T.map(([t,b],i)=>`<div class="card"><h3>${t} <button class="btn sm" data-a="copytpl" data-i="${i}">Copy</button></h3><div class="tpl" id="tpl${i}">${esc(b)}</div></div>`).join('')}</div>`},
+ 'Services guide':()=>`<div class="card"><div class="tw"><table><thead><tr><th>Service</th><th>What it covers</th><th>Good fit when</th></tr></thead><tbody>
+ <tr><td><b>Local SEO and AI search</b></td><td>Maps ranking, local keywords, on page fixes, listings, AI search visibility</td><td>Customers search near them and the business is hard to find</td></tr>
+ <tr><td><b>Google Business Profile and reviews</b></td><td>Profile and Yelp setup, review generation, review replies, photos and hours</td><td>Few or weak reviews, or an incomplete listing</td></tr>
+ <tr><td><b>Google, Meta, and Yelp ads</b></td><td>Search, Performance Max, local and social campaigns managed weekly</td><td>Has a budget and wants bookings, calls, or orders</td></tr>
+ <tr><td><b>Websites and landing pages</b></td><td>One week launch page or full build, wired for tracking, with CRO and testing</td><td>Slow or unclear site, or a campaign needs a page</td></tr>
+ <tr><td><b>GA4 and conversion tracking</b></td><td>GA4, Tag Manager, call and form tracking by source, attribution</td><td>Cannot say which ads bring customers</td></tr>
+ <tr><td><b>Email and SMS automation</b></td><td>Welcome, reactivation, repeat visit flows, monthly campaigns</td><td>Has a customer list that is not being used</td></tr>
+ <tr><td><b>Campaign sprints and Paid Ads Launch</b></td><td>Two to three week push for a grand opening, launch night, new menu, or season, or a Paid Ads Launch with a 30 day readout</td><td>A specific moment with a date</td></tr>
+ <tr><td><b>Restaurant and food add ons</b></td><td>Guest retention, POS marketing setup, delivery app launch and management</td><td>Restaurants and food brands</td></tr>
+ <tr><td><b>Campaign Record</b></td><td>Written record of every campaign, included with every engagement</td><td>Always. Lead with it.</td></tr></tbody></table></div></div>`
+};
+function vPlaybook(){
+ const keys=Object.keys(PB);if(!keys.includes(tab))tab=keys[0];
+ return head('Playbook','The sales motion, qualification, scripts, objections, and emails in one place.')+`<div class="tabs">${keys.map(k=>`<button class="chip" data-a="tab" data-k="${k}" aria-pressed="${k===tab}">${k}</button>`).join('')}</div>${PB[tab]()}`;
+}
+const TPLS=[];
+
+/* ===== Settings ===== */
+function vSetup(){
+ const rub=[['Monthly ad budget','Up to 25'],['Business type known','10'],['Decision maker','Up to 15'],['Timeline to start','Up to 15'],['Email and phone both captured','10 (5 for one)'],['Has a website','5'],['Services chosen','5'],['Tracking gap found','5'],['Source: referral, contractor, audit, tool hub','10, 8, 5, 3']];
+ return head('Settings','Targets, scoring, and data.')+`<div class="cols eq"><div class="card"><h3>Service targets</h3><div class="fgrid">
+ <div class="fld"><label for="s1">First reply, hours</label><input id="s1" type="number" min="1" data-s="settings::replyHours" value="${S.settings.replyHours}"></div>
+ <div class="fld"><label for="s2">Audit delivered, business days</label><input id="s2" type="number" min="1" data-s="settings::auditDays" value="${S.settings.auditDays}"></div>
+ <div class="fld"><label for="s3">Quote after consult, business days</label><input id="s3" type="number" min="1" data-s="settings::quoteDays" value="${S.settings.quoteDays}"></div></div>
+ <p class="sub" style="margin-top:8px">The audit target matches the promise on the website. The other two are suggested starting points.</p></div>
+ <div class="card"><h3>Fit score rubric <small>Out of 100</small></h3>${rub.map(r=>`<div class="li"><div class="g">${r[0]}</div><b>${r[1]}</b></div>`).join('')}</div></div>
+ <div class="cols eq"><div class="card"><h3>Pipeline stages</h3><ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px">${STAGES.map((s,i)=>`<li>${s} <span class="sub">${PROB[i]}% likely</span></li>`).join('')}</ol></div>
+ <div class="card"><h3>Data</h3><p class="sub">This preview keeps data in this browser only. In the full build, the store connects to the data layer the engineer confirms.</p><div class="row" style="margin-top:10px"><button class="btn" data-a="export">Copy data as JSON</button><button class="btn danger" data-a="reset">Reset sample data</button></div></div></div>
+ <div class="card"><h3>Before real data goes in</h3><ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Put the CRM behind sign in so it is agency only, for example Cloudflare Access or Firebase sign in with a second step.</li><li>Keep tokens in a server layer, never in the page.</li><li>Agents write Draft rows only. A person approves before anything sends or reaches a client.</li><li>Replace the sample data and the demo records.</li></ul></div>`;
+}
+
+const VIEWS={today:vToday,ai:vAI,tasks:vTasks,capture:vCapture,newlead:vNewLead,leads:vLeads,deals:vDeals,outreach:vOutreach,audits:vAudits,quotes:vQuotes,accounts:vAccounts,contacts:vContacts,campaigns:vCampaigns,reports:vReports,playbook:vPlaybook,setup:vSetup};
+
+/* ===== Actions and boot ===== */
+function render(){renderNav();$('#title').textContent=TITLES[view]||'';$('#page').innerHTML=VIEWS[view]();$('#rail').classList.remove('open');if(view==='newlead')liveUpdate()}
+function go(v){view=v;filter='All';if(v!=='newlead'){draft=null;editId=null}closeDrawer();try{if(v!=='newlead')history.replaceState(null,'','#'+v)}catch(e){}render();window.scrollTo(0,0)}
+function logLead(l,x){l.log.push({t:now(),x})}
+function addTask(title,due,rel,owner){S.tasks.push({id:nid(),title,due,done:false,rel,owner:owner||'You'})}
+function createLeadFrom(d,src){
+ const l=Object.assign({id:nid(),created:now(),log:[],firstTouch:null,auditRequested:false},d);
+ l.log.push({t:now(),x:src||'Lead created'});
+ S.leads.push(l);return l;
+}
+function makeDeal(l){
+ const map={'New':0,'Contacted':0,'Audit in progress':1,'Audit sent':2,'Consult booked':3,'Nurture':0};
+ const dl={id:nid(),leadId:l.id,business:l.business,contact:fullName(l),stage:map[l.status]??0,services:l.services||[],plan:l.planInterest&&l.planInterest!=='Not sure'?l.planInterest:'',value:null,owner:l.owner||'You',checks:{},stageSince:now(),lost:false,notes:'',nextStep:l.nextStep||'',nextDate:l.nextDate||null};
+ S.deals.push(dl);l.status='Converted';logLead(l,'Deal created in '+STAGES[dl.stage]);return dl;
+}
+function setDealStage(d,s){
+ d.stage=s;d.stageSince=now();
+ if(s===5&&!S.accounts.some(a=>a.name===d.business)){
+  S.accounts.push({id:nid(),name:d.business,contact:d.contact,segment:(lead(d.leadId)||{}).segment||'',plan:d.plan||'Local Start',status:'Onboarding',health:80,adSpend:0,lead:d.owner,renewal:now()+90*DAY,portal:0,inClientName:true,since:now(),lastReport:null,risk:''});
+  addTask('Book kickoff and send portal invite for '+d.business,dOff(1),'Account',d.owner);
+  toast('Won. Account created and kickoff task added.');
+ }else toast('Moved to '+STAGES[s]);
+ save();
+}
+function setPath(path,val){
+ const [col,id,key]=path.split(':');
+ if(col==='settings'){S.settings[key]=Math.max(1,+val||1);return}
+ const o=S[col].find(x=>x.id===+id);if(!o)return;
+ if(key.includes('.')){const [a,b]=key.split('.');o[a]=o[a]||{};o[a][b]=val===''?null:+val;return}
+ o[key]=val;
+}
+
+const A={
+ go:el=>go(el.dataset.v),
+ close:()=>closeDrawer(),
+ filter:el=>{filter=el.dataset.f;render()},
+ owner:el=>{ownerF=el.dataset.o;render()},
+ tab:el=>{tab=el.dataset.k;render()},
+ tf:el=>{tf=el.dataset.f;render()},
+ lead:el=>leadDrawer(+el.dataset.id),
+ deal:el=>{if(el.classList.contains('deal')&&el.dataset.dragged)return;dealDrawer(+el.dataset.id)},
+ account:el=>accountDrawer(+el.dataset.id),
+ newlead:()=>{draft=newDraft();editId=null;view='newlead';closeDrawer();render();window.scrollTo(0,0)},
+ edit:el=>{const l=lead(+el.dataset.id);draft=JSON.parse(JSON.stringify(l));editId=l.id;view='newlead';closeDrawer();render();window.scrollTo(0,0)},
+ multi:el=>{const k=el.dataset.k,o=el.dataset.o;const a=draft[k]=draft[k]||[];const i=a.indexOf(o);i>=0?a.splice(i,1):a.push(o);el.classList.toggle('on');liveUpdate()},
+ savelead:el=>{
+  const d=draft;const err=$('#formErr');
+  if(!d.first||!d.business){err.textContent='Add a first name and a business name.';err.style.color='var(--bad)';return}
+  if(!d.email&&!d.phone){err.textContent='Add an email or a phone number so you can reach them.';err.style.color='var(--bad)';return}
+  let l;
+  if(editId){l=lead(editId);Object.assign(l,d);logLead(l,'Record updated')}
+  else{l=createLeadFrom(Object.assign({},d,{auditRequested:false}),'Built manually in the dashboard');if(d.nextStep&&d.nextDate)addTask(d.nextStep+' for '+d.business,d.nextDate,'Lead',d.owner)}
+  let dl=null;if(el.dataset.deal&&!S.deals.find(x=>x.leadId===l.id))dl=makeDeal(l);
+  save();toast(dl?'Lead saved and deal created':'Lead saved');draft=null;editId=null;view=dl?'deals':'leads';render();window.scrollTo(0,0);
+ },
+ touch:el=>{const l=lead(+el.dataset.id);l.firstTouch=now();if(l.status==='New')l.status='Contacted';logLead(l,'First reply sent');save();toast('First reply logged');leadDrawer(l.id);render()},
+ draft:el=>copy(replyDraft(lead(+el.dataset.id)),'Reply draft copied'),
+ startaudit:el=>{const l=lead(+el.dataset.id);l.status='Audit in progress';l.auditRequested=true;l.audit=l.audit||{};logLead(l,'Audit started');save();toast('Added to Audits');leadDrawer(l.id);render()},
+ convert:el=>{const l=lead(+el.dataset.id);const d=makeDeal(l);save();toast('Deal created in '+STAGES[d.stage]);closeDrawer();render()},
+ lstatus:el=>{const l=lead(+el.dataset.id);l.status=el.dataset.s;logLead(l,'Status set to '+el.dataset.s);save();toast('Lead moved to '+el.dataset.s);closeDrawer();render()},
+ chk:el=>{const d=S.deals.find(x=>x.id===+el.dataset.id);d.checks[el.dataset.k]=el.checked;save()},
+ advance:el=>{const d=S.deals.find(x=>x.id===+el.dataset.id);setDealStage(d,d.stage+1);dealDrawer(d.id);render()},
+ mkquote:el=>{const d=S.deals.find(x=>x.id===+el.dataset.id);S.quotes.push({id:nid(),dealId:d.id,business:d.business,services:d.services,value:d.value,status:'Draft',sent:null,followUp:null});addTask('Build custom quote for '+d.business,addBiz(now(),S.settings.quoteDays),'Deal',d.owner);save();toast('Quote draft started');dealDrawer(d.id);render()},
+ addtask:el=>{const d=S.deals.find(x=>x.id===+el.dataset.id);addTask('Follow up with '+d.business,dOff(2),'Deal',d.owner);save();toast('Task added');render()},
+ acctask:el=>{const a=S.accounts.find(x=>x.id===+el.dataset.id);addTask('Check in with '+a.name,dOff(2),'Account',a.lead);save();toast('Task added');renderNav()},
+ lose:el=>{const d=S.deals.find(x=>x.id===+el.dataset.id);d.lost=true;save();toast(d.business+' marked lost');closeDrawer();render()},
+ rec:el=>{const c=S.campaigns.find(x=>x.id===+el.dataset.id);c.rec[el.dataset.k]=!c.rec[el.dataset.k];if(el.dataset.k==='weekly'&&c.rec.weekly)c.lastWeekly=now();save();render()},
+ done:el=>{const t=S.tasks.find(x=>x.id===+el.dataset.id);t.done=el.checked;save();render()},
+ oappr:el=>{S.outreach.find(x=>x.id===+el.dataset.id).status='approved';save();toast('Approved. The agent will send on schedule.');render()},
+ oskip:el=>{S.outreach.find(x=>x.id===+el.dataset.id).status='skipped';save();toast('Skipped');render()},
+ oreply:el=>{const o=S.outreach.find(x=>x.id===+el.dataset.id);o.status='replied';const nm=o.to.split(' ');const l=createLeadFrom({first:nm[0],last:nm.slice(1).join(' '),business:o.biz,source:'Outreach agent',status:'New',segment:SEGMENTS.find(s=>s.startsWith(o.seg.split(' ')[0]))||'',owner:'You',services:[],platforms:[],tracking:[],consentEmail:true,sourceDetail:o.channel+' outreach'},'Replied to an outreach '+o.channel);addTask('Reply to '+o.to+' at '+o.biz,dOff(0),'Lead','You');save();toast('Lead created from the reply');render()},
+ asent:el=>{const l=lead(+el.dataset.id);l.auditSent=now();l.status='Audit sent';logLead(l,'Audit emailed');const d=S.deals.find(x=>x.leadId===l.id);if(d&&d.stage<2)setDealStage(d,2);addTask('Follow up on the audit for '+l.business,addBiz(now(),2),'Lead',l.owner);save();toast('Audit marked sent. Follow up task added.');render()},
+ qsend:el=>{const q=S.quotes.find(x=>x.id===+el.dataset.id);q.status='Sent';q.sent=now();q.followUp=addBiz(now(),3);const d=S.deals.find(x=>x.id===q.dealId);if(d&&d.stage<4)setDealStage(d,4);save();toast('Quote marked sent');render()},
+ qwin:el=>{const q=S.quotes.find(x=>x.id===+el.dataset.id);q.status='Accepted';q.followUp=null;const d=S.deals.find(x=>x.id===q.dealId);if(d&&d.stage<5)setDealStage(d,5);save();render()},
+ ask:el=>{const q=el.dataset.q;S.ai.push({q,a:answer(q)});save();render()},
+ copysnip:()=>copy($('#snip').textContent,'Form markup copied'),
+ copytpl:el=>copy($('#tpl'+el.dataset.i).textContent,'Template copied'),
+ export:()=>copy(JSON.stringify(S,null,2),'Data copied as JSON'),
+ reset:()=>{Store.reset();S=seed();save();toast('Sample data restored');render()}
+};
+
+document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(!t)return;const f=A[t.dataset.a];if(f){if(t.tagName==='BUTTON'||t.tagName==='A')e.preventDefault();f(t,e)}});
+document.addEventListener('change',e=>{
+ const t=e.target;
+ if(t.matches('[data-i]')){draft[t.dataset.i]=t.type==='checkbox'?t.checked:t.dataset.i==='nextDate'?fromIn(t.value):(t.type==='number'&&t.value!==''?+t.value:t.value);liveUpdate();return}
+ if(t.matches('[data-s]')){setPath(t.dataset.s,t.dataset.t==='date'?fromIn(t.value):t.value);save();if(t.dataset.s.startsWith('settings')||t.dataset.s.startsWith('leads'))render();else renderNav()}
+});
+document.addEventListener('input',e=>{const t=e.target;if(t.matches('[data-i]')&&t.type!=='checkbox'&&t.tagName!=='SELECT'){draft[t.dataset.i]=t.type==='number'&&t.value!==''?+t.value:t.dataset.i==='nextDate'?fromIn(t.value):t.value;liveUpdate()}});
+document.addEventListener('submit',e=>{
+ e.preventDefault();const f=e.target;
+ if(f.id==='wf'){
+  const name=$('#w_name').value.trim().split(/\s+/);
+  const l=createLeadFrom({first:name[0],last:name.slice(1).join(' '),business:$('#w_biz').value.trim(),zip:$('#w_zip').value.trim(),email:$('#w_email').value.trim(),phone:$('#w_phone').value.trim(),source:'Website form',status:'New',owner:'You',services:[],platforms:[],tracking:[],consentEmail:true,auditRequested:true,sourceDetail:'Website lead form'},'Submitted the website form and asked for a free audit');
+  addTask('Reply to '+fullName(l)+' at '+l.business,now()+S.settings.replyHours*H,'Lead','You');
+  save();renderNav();toast('Test lead created. Open Leads to see it.');
+ }
+ if(f.id==='tform'){const t=$('#tt').value.trim();if(!t)return;addTask(t,fromIn($('#td').value)||dOff(1),'General',$('#to').value);save();render()}
+ if(f.id==='askf'){const q=$('#askq').value.trim();if(!q)return;S.ai.push({q,a:answer(q)});save();render()}
+});
+document.addEventListener('input',e=>{if(e.target.id==='q'){Q=e.target.value.toLowerCase();if(Q&&!['leads','deals','accounts','contacts'].includes(view))view='leads';render();const i=$('#q');i.focus()}});
+$('#menu').onclick=()=>$('#rail').classList.toggle('open');
+$('#theme').onclick=()=>{const r=document.documentElement,dk=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme: dark)').matches);r.dataset.theme=dk?'light':'dark';try{localStorage.setItem('cm_theme',r.dataset.theme)}catch(e){}};
+try{const th=localStorage.getItem('cm_theme');if(th)document.documentElement.dataset.theme=th}catch(e){}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+
+/* drag and drop for deals */
+let dragId=null;
+document.addEventListener('dragstart',e=>{const d=e.target.closest('.deal');if(d){dragId=+d.dataset.id;d.classList.add('drag')}});
+document.addEventListener('dragover',e=>{if(e.target.closest('.colm'))e.preventDefault()});
+document.addEventListener('drop',e=>{const c=e.target.closest('.colm');if(c&&dragId!==null){e.preventDefault();const d=S.deals.find(x=>x.id===dragId);const s=+c.dataset.stage;dragId=null;if(d&&d.stage!==s){setDealStage(d,s);render()}}});
+document.addEventListener('dragend',()=>{dragId=null;$$('.drag').forEach(x=>x.classList.remove('drag'))});
+
+S=Store.load()||seed();
+const h0=(location.hash||'').slice(1);if(VIEWS[h0]&&h0!=='newlead')view=h0;
+render();
+window.addEventListener('hashchange',()=>{const x=location.hash.slice(1);if(VIEWS[x]&&x!==view&&x!=='newlead')go(x)});
+
+})();
+</script>
+
+</body></html>
