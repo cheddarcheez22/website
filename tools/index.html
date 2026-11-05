@@ -1,0 +1,1521 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Free tools for local businesses | content MATTER</title>
+<meta name="description" content="Free calculators, scorecards, and copy writers for restaurants, service businesses, beauty and clinics, and local retail. Built by content MATTER.">
+<meta name="theme-color" content="#F5F2EA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2C3340" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+<style>
+/* content MATTER tokens, generated from the Design System tokens.json. Do not edit by hand. */
+:root{--surface:#F5F2EA;--surface-raised:#FFFFFF;--surface-panel:#ECE7DA;--surface-inverse:#2C3340;--ink:#2C3340;--ink-muted:#5B6270;--ink-inverse:#F5F2EA;--hairline:#DDD7C9;--border-control:#7E8796;--brand:#3CBFB0;--brand-hover:#6BD0C4;--on-brand:#2C3340;--accent-text:#1A7A6E;--accent-on-inverse:#3CBFB0;--focus-ring:#1A7A6E;--status-good:#176C62;--status-good-tint:#DDF2EF;--status-warning:#8A5A0B;--status-warning-tint:#F7EBD3;--status-poor:#B0463A;--status-poor-tint:#F8E3DF;--status-info:#2C3340;--status-info-tint:#E4E7EC;--status-dot-good:#3CBFB0;--status-dot-warning:#E8B45C;--status-dot-poor:#E07A6A;--status-dot-info:#2C3340;--chart-1:#3CBFB0;--chart-2:#2C3340;--chart-3:#E8B45C;--chart-4:#E07A6A;--teal:#3CBFB0;--teal-600:#2A9D8F;--teal-700:#1A7A6E;--navy:#2C3340;--cream:#F5F2EA;--white:#FFFFFF;--black:#000000;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-24:96px;--radius-xs:2px;--radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-pill:9999px;--stroke-hairline:1px;--stroke-control:1.5px;--stroke-rule:4px;--stroke-wordmark:8px;--content-max:1080px;--read-max:680px;--control-height:48px;--icon-md:20px;--font-sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--surface:#2C3340;--surface-raised:#363E4D;--surface-panel:#323A48;--surface-inverse:#222833;--ink:#F5F2EA;--ink-muted:#B7BDC8;--ink-inverse:#F5F2EA;--hairline:#444D5C;--border-control:#8790A0;--accent-text:#3CBFB0;--focus-ring:#3CBFB0;--status-good:#3CBFB0;--status-good-tint:#24464A;--status-warning:#E8B45C;--status-warning-tint:#4A4232;--status-poor:#F0907F;--status-poor-tint:#4D3A3D;--status-info:#A9C3E8;--status-info-tint:#3A4558;--status-dot-info:#A9C3E8;--chart-2:#C9D3E0;color-scheme:dark}}
+:root[data-theme="dark"]{--surface:#2C3340;--surface-raised:#363E4D;--surface-panel:#323A48;--surface-inverse:#222833;--ink:#F5F2EA;--ink-muted:#B7BDC8;--ink-inverse:#F5F2EA;--hairline:#444D5C;--border-control:#8790A0;--accent-text:#3CBFB0;--focus-ring:#3CBFB0;--status-good:#3CBFB0;--status-good-tint:#24464A;--status-warning:#E8B45C;--status-warning-tint:#4A4232;--status-poor:#F0907F;--status-poor-tint:#4D3A3D;--status-info:#A9C3E8;--status-info-tint:#3A4558;--status-dot-info:#A9C3E8;--chart-2:#C9D3E0;color-scheme:dark}
+
+/* content MATTER free tools page. Palette: teal, navy, cream, white. Typeface: Inter only. */
+:root{
+  --teal:var(--brand); --navy:var(--ink); --cream:var(--surface); --white:var(--surface-raised);
+  --line:var(--hairline); --line-strong:var(--border-control);
+  --muted:var(--ink-muted); --teal-soft:var(--status-good-tint); --navy-soft:var(--surface-panel);
+  --r-lg:16px; --r-md:8px; --r-sm:4px;
+  --gut:clamp(16px,4vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--navy);font-family:var(--font-sans);font-size:16px;line-height:1.55;font-weight:400}
+[hidden]{display:none!important}
+a{color:var(--navy);text-decoration-color:var(--teal);text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{text-decoration-color:var(--navy)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+h1{font-weight:900;letter-spacing:-.04em;line-height:1}
+h2{font-weight:900;letter-spacing:-.03em;line-height:1.05}
+p{margin:0}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-inline:var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:var(--cream);border-bottom:2px solid var(--teal)}
+.nav-in{display:flex;align-items:center;gap:20px;min-height:68px}
+.wm{display:inline-flex;align-items:center;line-height:0;text-decoration:none}
+.wm img{height:24px;width:auto}
+.foot .wm img{height:22px}
+.cm-logo--on-dark{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cm-logo--on-light{display:none}:root:not([data-theme="light"]) .cm-logo--on-dark{display:block}}
+:root[data-theme="dark"] .cm-logo--on-light{display:none}
+:root[data-theme="dark"] .cm-logo--on-dark{display:block}
+.links{display:flex;gap:6px;margin-left:auto}
+.links a{font-size:14px;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:999px}
+.links a:hover{background:var(--navy-soft)}
+.links a[aria-current=page]{background:var(--ink);color:var(--surface)}
+.menu-btn{display:none;margin-left:auto;font:inherit;font-weight:700;font-size:14px;padding:8px 16px;border-radius:999px;border:2px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer}
+
+/* buttons */
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/20px var(--font-sans);letter-spacing:.01em;min-height:var(--control-height);padding:12px 24px;border-radius:var(--radius-pill);border:1.5px solid var(--brand);background:var(--brand);color:var(--on-brand);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s}
+.pill:hover{background:var(--brand-hover);border-color:var(--brand-hover);color:var(--on-brand)}
+.pill.accent{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.pill.accent:hover{background:var(--brand-hover);border-color:var(--brand-hover)}
+.pill.ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+.pill.ghost:hover{background:var(--surface-panel);border-color:var(--ink);color:var(--ink)}
+.pill.sm{min-height:36px;padding:8px 16px;font-size:13px}
+.pill[disabled]{opacity:.45;cursor:not-allowed}
+.pill[disabled]:hover{background:var(--brand);border-color:var(--brand)}
+.pill.ghost[disabled]:hover{background:transparent;border-color:var(--ink)}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;align-items:center}
+
+/* labels */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:900;letter-spacing:.3em;text-transform:uppercase}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--teal)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(36px,6vw,88px) clamp(32px,5vw,64px)}
+.hero h1{font-size:clamp(40px,6.2vw,80px);margin:18px 0 20px}
+.lede{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:52ch}
+.hero .btnrow{margin-top:28px}
+.trust{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;font-weight:700}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.hero-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,3vw,32px)}
+.hc-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;color:var(--muted)}
+.hc-top b{font-weight:900;letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--navy)}
+.hc-big{font-size:clamp(52px,7vw,84px);font-weight:900;letter-spacing:-.05em;line-height:1;margin:18px 0 4px}
+.hc-sub{font-size:14px;color:var(--muted)}
+.hc-bars{display:grid;gap:12px;margin-top:22px}
+.hc-row{display:grid;grid-template-columns:96px 1fr 56px;gap:10px;align-items:center;font-size:13px;font-weight:700}
+.hc-row span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hc-bar{height:12px;border-radius:99px;background:var(--hairline);overflow:hidden}
+.hc-bar i{display:block;height:100%;border-radius:99px;background:var(--teal)}
+.hc-foot{display:flex;gap:10px;margin-top:22px}
+.hc-chip{flex:1;border-radius:var(--r-sm);background:var(--cream);padding:12px 14px;font-size:12px;color:var(--muted)}
+.hc-chip b{display:block;font-size:20px;font-weight:900;letter-spacing:-.03em;color:var(--navy)}
+
+/* browse */
+.section{padding-block:clamp(28px,5vw,64px)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:18px;margin-bottom:24px}
+.sec-head h2{font-size:clamp(28px,4vw,48px);max-width:18ch}
+.filters{display:grid;gap:12px;margin-bottom:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chips .lab{font-size:11px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;margin-right:6px;min-width:84px}
+.chip{font:inherit;font-weight:700;font-size:14px;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line-strong);background:var(--white);color:var(--navy);cursor:pointer}
+.chip:hover{border-color:var(--navy)}
+.chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.count{font-size:14px;color:var(--muted);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:24px;text-decoration:none;color:var(--navy);transition:border-color .15s}
+.card:hover{border-color:var(--ink)}
+.card h3{font-size:22px;font-weight:900;letter-spacing:-.025em;line-height:1.1}
+.card p{font-size:15px;color:var(--muted)}
+.card .for{font-size:12px;font-weight:700;color:var(--muted)}
+.card .go{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700}
+.card .go::after{content:" \2192"}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.badge{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--navy-soft)}
+.badge.ai{background:var(--brand);color:var(--on-brand)}
+.empty{padding:32px;border:1.5px dashed var(--line-strong);border-radius:var(--r-lg);text-align:center;color:var(--muted)}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.step{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:24px}
+.step .n{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--brand);color:var(--on-brand);font-weight:900;margin-bottom:14px}
+.step h3{font-size:20px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+
+/* cta */
+.cta{background:var(--surface-inverse);color:var(--ink-inverse);border-radius:var(--r-lg);padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;margin-block:clamp(24px,4vw,48px)}
+.cta h2{font-size:clamp(28px,4.4vw,56px);max-width:18ch}
+.cta p{margin-top:12px;color:var(--ink-inverse);max-width:48ch}
+.cta .pill{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.cta .pill:hover{background:var(--brand-hover);border-color:var(--brand-hover)}
+
+/* tool view */
+.back{display:inline-flex;gap:8px;align-items:center;font-size:14px;font-weight:700;text-decoration:none;padding-block:clamp(20px,3vw,36px) 0}
+.back::before{content:"\2190"}
+.thead{padding-block:18px clamp(20px,3vw,32px);max-width:820px}
+.thead h1{font-size:clamp(34px,5.4vw,68px);margin:14px 0 14px}
+.thead p{font-size:18px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;align-items:start;padding-bottom:40px}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(20px,3vw,32px);min-width:0}
+.panel.res{background:var(--white);position:sticky;top:88px;border-color:var(--navy);border-width:2px}
+.panel.res.free{position:static}
+.panel h2{font-size:11px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px}
+.panel h2:not(:first-child){margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+.fields{display:grid;gap:16px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.hint{font-size:13px;color:var(--muted);margin-top:5px}
+input[type=number],input[type=text],input[type=email],input[type=date],select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:var(--r-sm);background:var(--white);color:var(--navy);min-width:0}
+textarea{resize:vertical;min-height:96px;line-height:1.45}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--focus-ring);outline-offset:1px;border-color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.result-lead{padding-bottom:14px}
+.big{font-weight:900;font-size:clamp(44px,5.4vw,72px);letter-spacing:-.05em;line-height:.95;font-variant-numeric:tabular-nums}
+.result-lead small{display:block;color:var(--muted);font-size:14px;margin-top:8px}
+.kv{display:flex;justify-content:space-between;gap:14px;padding-block:11px;border-top:1px solid var(--line);font-size:15px}
+.kv span:first-child{color:var(--muted)}
+.kv b{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
+.callout{margin-top:16px;padding:14px 16px;border-radius:var(--r-sm);background:var(--teal-soft);border-left:4px solid var(--teal);font-size:15px}
+.callout.watch{background:var(--navy-soft);border-left-color:var(--navy)}
+.callout.demo{background:var(--cream);border-left-color:var(--navy);font-size:14px}
+.example{font-size:13px;color:var(--muted);margin:0 0 14px}
+.minor{font-size:13px;color:var(--muted);margin-top:12px}
+.notice{font-size:14px;font-weight:700;min-height:1.3em;margin-top:8px}
+.range{font-variant-numeric:tabular-nums;font-weight:700}
+
+/* tables */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;padding:6px 8px 10px;white-space:nowrap;border-bottom:2px solid var(--navy)}
+td{padding:6px 8px;border-top:1px solid var(--line);vertical-align:middle}
+td input,td select{padding:9px 10px;font-size:15px;border-radius:10px}
+table.edit{min-width:600px}
+table.edit td input:not(.num){min-width:150px}
+table.edit td input.num{min-width:84px}
+table.edit td select{min-width:150px}
+table.edit td:last-child{width:44px;padding-inline:0;text-align:center}
+.num{text-align:right}
+td input.num{text-align:right}
+.rm{background:none;border:0;color:var(--muted);cursor:pointer;font-size:22px;line-height:1;padding:4px 10px;border-radius:99px}
+.rm:hover{color:var(--ink);background:var(--surface-panel)}
+
+/* bars, badges, quad */
+.bars{display:grid;gap:12px}
+.bar-row{display:grid;grid-template-columns:110px 1fr 46px;gap:10px;align-items:center;font-size:14px}
+.bar-row span:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.bar{height:12px;border-radius:99px;background:var(--hairline);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px;background:var(--teal)}
+.bar i.low{background:var(--status-dot-warning)}
+.gbadge{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.g-Star{background:var(--brand);color:var(--on-brand)}
+.g-Plowhorse{background:var(--teal-soft);color:var(--navy)}
+.g-Puzzle{background:var(--white);color:var(--navy);border:1.5px solid var(--teal)}
+.g-Dog{background:var(--ink);color:var(--surface)}
+.quad{display:grid;gap:10px}
+.q{border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px}
+.q h3{font-size:16px;font-weight:900;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.q .what{font-size:13.5px;color:var(--muted);margin:6px 0}
+.q .names{font-size:14.5px;overflow-wrap:anywhere}
+.asec{margin-bottom:24px}
+.asec h3{font-size:18px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px}
+.arow{display:grid;grid-template-columns:minmax(0,1fr) 120px;gap:14px;align-items:center;padding-block:10px;border-top:1px solid var(--line)}
+.arow label{margin:0;font-weight:400;font-size:15px}
+.arow select{padding:9px 10px;font-size:15px}
+.fixes{margin:0;padding-left:20px;display:grid;gap:12px;font-size:15px}
+.ftag{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--surface);padding:3px 9px;border-radius:99px;margin-right:8px}
+.tips{margin:0;padding-left:20px;display:grid;gap:8px;font-size:15px}
+.checks{display:flex;flex-wrap:wrap;gap:8px 18px;border:0;padding:0;margin:0}
+.checks label{display:flex;gap:8px;align-items:center;font-weight:400;font-size:15px;margin:0}
+.checks input{accent-color:var(--teal);width:18px;height:18px}
+legend{font-size:13px;font-weight:700;margin-bottom:6px;padding:0}
+.rec h3{font-size:15px;margin:18px 0 6px;font-weight:900}
+.rec h3:first-child{margin-top:0}
+.rec .kvr{display:grid;grid-template-columns:120px 1fr;gap:10px;padding-block:6px;font-size:14.5px;border-top:1px solid var(--line)}
+.rec .kvr span:first-child{color:var(--muted)}
+.rec .rtext{white-space:pre-wrap;font-size:14.5px;overflow-wrap:anywhere}
+.rec-title{font-size:clamp(24px,2.6vw,34px);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:4px}
+
+/* AI output */
+.outbox{white-space:pre-wrap;background:var(--cream);border:1.5px solid var(--line-strong);border-radius:var(--r-sm);padding:16px;font-size:15px;min-height:3em;overflow-wrap:anywhere}
+.variant{border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;margin-top:12px}
+.variant h4{font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}
+.variant p{white-space:pre-wrap;font-size:15px;overflow-wrap:anywhere}
+.cc{font-size:12px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--muted)}
+.cc.over{color:var(--navy);background:var(--teal-soft);padding:2px 8px;border-radius:99px}
+.copy-sm{font:inherit;font-size:12px;font-weight:700;border:1.5px solid var(--navy);background:transparent;color:var(--navy);padding:4px 12px;border-radius:99px;cursor:pointer}
+.copy-sm:hover{background:var(--surface-panel)}
+.verdict{display:inline-block;font-weight:900;font-size:24px;letter-spacing:-.02em;padding:8px 18px;border-radius:999px;background:var(--teal-soft)}
+.reclist{margin:8px 0 0;padding-left:20px;display:grid;gap:6px;font-size:15px}
+.reclist .you{font-weight:700}
+.gtitle{font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;margin:18px 0 4px}
+
+/* lead capture */
+.share{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.share h3{font-size:18px;font-weight:900;letter-spacing:-.02em;margin-bottom:4px}
+.share .small{font-size:13.5px;color:var(--muted)}
+.lead{display:grid;gap:10px;margin-top:14px}
+.lead .row2{gap:10px}
+.lead .after{margin-top:6px}
+
+/* footer */
+.foot{border-top:2px solid var(--teal);margin-top:24px;padding-block:32px 48px}
+.foot-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px;align-items:start}
+
+.foot p{font-size:14px;color:var(--muted)}
+.foot .fl{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:14px;font-weight:700}
+
+@media (max-width:1000px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .layout{grid-template-columns:1fr}
+  .panel.res{position:static}
+}
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .cta{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr}
+  .menu-btn{display:inline-block}
+  .nav-in{flex-wrap:wrap;padding-block:10px}
+  .nav-in .pill{display:none}
+  .links{display:none;flex-direction:column;width:100%;margin:0;padding-bottom:10px}
+  .links.open{display:flex}
+  .links a{padding:12px 14px}
+}
+@media (max-width:620px){
+  .grid{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .arow{grid-template-columns:1fr}
+  .rec .kvr{grid-template-columns:1fr;gap:0}
+  .bar-row{grid-template-columns:96px 1fr 42px}
+  .chips .lab{min-width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* share block extras */
+.share .fld{margin-top:14px}
+.share .fld label{font-weight:700;font-size:13px}
+.ai-note{font-size:13px;color:var(--muted);margin-top:12px}
+pre.code{white-space:pre-wrap;word-break:break-word;background:var(--surface-inverse);color:var(--ink-inverse);border-radius:var(--r-sm);padding:16px;font-size:12.5px;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin:0;max-height:320px;overflow:auto}
+.chiplist{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chiplist span{font-size:13px;font-weight:700;background:var(--navy-soft);padding:5px 12px;border-radius:999px}
+.qlist{margin:8px 0 0;padding-left:20px;display:grid;gap:6px;font-size:15px}
+
+/* print report */
+#print-report{display:none}
+@media print{
+  @page{size:letter;margin:16mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{background:#fff!important}
+  body>*:not(#print-report){display:none!important}
+  #print-report{display:block!important;color:var(--navy);font-size:12.5px;line-height:1.5}
+  #print-report .pr-head{display:flex;justify-content:space-between;align-items:baseline}
+  #print-report .wm img{height:26px}
+  #print-report .pr-date{font-size:12px;color:var(--muted);font-weight:700}
+  #print-report .pr-rule{height:2px;background:var(--teal);margin:8px 0 22px}
+  #print-report h1{font-size:34px;margin:10px 0 4px}
+  #print-report .pr-for{font-size:14px;color:var(--muted);margin-bottom:6px}
+  #print-report h2{font-size:10px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;margin:26px 0 12px;padding-top:12px;border-top:1px solid var(--line-strong)}
+  #print-report .pv{font-weight:700}
+  #print-report .big{font-size:46px}
+  #print-report .fields,#print-report .row2{display:block}
+  #print-report .row2>div,#print-report .fld{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:5px 0}
+  #print-report .fld label{margin:0;font-weight:400;color:var(--muted)}
+  #print-report .arow{display:flex;justify-content:space-between;gap:16px}
+  #print-report .arow label{margin:0;font-weight:400}
+  #print-report .scroll{overflow:visible}
+  #print-report table{min-width:0!important}
+  #print-report .kv,#print-report tr,#print-report .q,#print-report .variant,#print-report .arow,#print-report .callout{break-inside:avoid}
+  #print-report .panel,#print-report section{border:0;padding:0;background:none;box-shadow:none}
+  #print-report h2,#print-report h3,#print-report .gtitle{break-after:avoid}
+  #print-report pre.code{max-height:none;overflow:visible;background:var(--surface-inverse);color:var(--ink-inverse)}
+  #print-report .outbox{background:var(--cream)}
+  #print-report .pr-foot{margin-top:30px;padding-top:14px;border-top:2px solid var(--teal);font-size:11.5px}
+  #print-report .pr-foot b{font-weight:700}
+  #print-report .pr-foot p{margin:4px 0;color:var(--muted)}
+}
+
+@media print{:root:not(#cm-print){--surface:#F5F2EA;--surface-raised:#FFFFFF;--surface-panel:#ECE7DA;--surface-inverse:#2C3340;--ink:#2C3340;--ink-muted:#5B6270;--ink-inverse:#F5F2EA;--hairline:#DDD7C9;--border-control:#7E8796;--brand:#3CBFB0;--brand-hover:#6BD0C4;--on-brand:#2C3340;--accent-text:#1A7A6E;--accent-on-inverse:#3CBFB0;--focus-ring:#1A7A6E;--status-good:#176C62;--status-good-tint:#DDF2EF;--status-warning:#8A5A0B;--status-warning-tint:#F7EBD3;--status-poor:#B0463A;--status-poor-tint:#F8E3DF;--status-info:#2C3340;--status-info-tint:#E4E7EC;--status-dot-good:#3CBFB0;--status-dot-warning:#E8B45C;--status-dot-poor:#E07A6A;--status-dot-info:#2C3340;--chart-1:#3CBFB0;--chart-2:#2C3340;--chart-3:#E8B45C;--chart-4:#E07A6A;--teal:#3CBFB0;--teal-600:#2A9D8F;--teal-700:#1A7A6E;--navy:#2C3340;--cream:#F5F2EA;--white:#FFFFFF;--black:#000000;color-scheme:light}.cm-logo--on-dark{display:none!important}.cm-logo--on-light{display:block!important}}
+</style>
+</head>
+<body>
+
+<!-- CONFIG: edit these four values when you deploy. -->
+<script>
+window.CM_CONFIG = {
+  BOOKING_URL: "https://meetings-na2.hubspot.com/content-matter",
+  AUDIT_URL: "/audit",
+  AI_ENDPOINT: "",    // e.g. "https://tools-ai.contentmatter.co/ai". Empty = sample mode.
+  LEAD_ENDPOINT: ""   // e.g. "https://tools-ai.contentmatter.co/lead". Empty = not connected.
+};
+</script>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="wm" href="/" aria-label="content MATTER home"><img class="cm-logo--on-light" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzYuMDMgNzQuNTYiIHdpZHRoPSI0NzYuMDMiIGhlaWdodD0iNzQuNTYiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iY29udGVudE1BVFRFUi4iPjx0aXRsZT5jb250ZW50TUFUVEVSLjwvdGl0bGU+PHBhdGggZmlsbD0iIzJDMzM0MCIgZD0iTTIwLjAgNDcuMTg3NVExNC4zMTI1IDQ3LjE4NzUgMTAuMjY1NjI1IDQ0LjkyMTg3NVE2LjIxODc1IDQyLjY1NjI1IDQuMDc4MTI1IDM4LjYwOTM3NVExLjkzNzUgMzQuNTYyNSAxLjkzNzUgMjkuMTg3NVExLjkzNzUgMjMuODEyNSA0LjA3ODEyNSAxOS43NjU2MjVRNi4yMTg3NSAxNS43MTg3NSAxMC4yNjU2MjUgMTMuNDUzMTI1UTE0LjMxMjUgMTEuMTg3NSAyMC4wIDExLjE4NzVRMjcuMjE4NzUgMTEuMTg3NSAzMS42NzE4NzUgMTQuNzk2ODc1UTM2LjEyNSAxOC40MDYyNSAzNi43MTg3NSAyNC40Njg3NUwyNS4xODc1IDI2LjE4NzVRMjQuMjgxMjUgMjAuNTYyNSAyMC4xODc1IDIwLjU2MjVRMTcuNzE4NzUgMjAuNTYyNSAxNi4yMzQzNzUgMjIuNjg3NVExNC43NSAyNC44MTI1IDE0Ljc1IDI5LjEyNVExNC43NSAzMy40MDYyNSAxNi4yMzQzNzUgMzUuNjA5Mzc1UTE3LjcxODc1IDM3LjgxMjUgMjAuMTg3NSAzNy44MTI1UTI0LjM3NSAzNy44MTI1IDI1LjE4NzUgMzIuMEwzNi43MTg3NSAzMy42ODc1UTM2LjA5Mzc1IDM5LjkwNjI1IDMxLjY4NzUgNDMuNTQ2ODc1UTI3LjI4MTI1IDQ3LjE4NzUgMjAuMCA0Ny4xODc1WiBNNTIuODY1IDQ3LjE4NzVRNDcuMTc3NSA0Ny4xODc1IDQzLjExNSA0NC45MjE4NzVRMzkuMDUyNSA0Mi42NTYyNSAzNi45MTE4NzUgMzguNjA5Mzc1UTM0Ljc3MTI1IDM0LjU2MjUgMzQuNzcxMjUgMjkuMTg3NVEzNC43NzEyNSAyMy44MTI1IDM2LjkxMTg3NSAxOS43NjU2MjVRMzkuMDUyNSAxNS43MTg3NSA0My4xMTUgMTMuNDUzMTI1UTQ3LjE3NzUgMTEuMTg3NSA1Mi44NjUgMTEuMTg3NVE1OC41NTI1IDExLjE4NzUgNjIuNTgzNzUwMDAwMDAwMDEgMTMuNDUzMTI1UTY2LjYxNTAwMDAwMDAwMDAxIDE1LjcxODc1IDY4Ljc1NTYyNTAwMDAwMDAxIDE5Ljc2NTYyNVE3MC44OTYyNTAwMDAwMDAwMSAyMy44MTI1IDcwLjg5NjI1MDAwMDAwMDAxIDI5LjE4NzVRNzAuODk2MjUwMDAwMDAwMDEgMzQuNTYyNSA2OC43NTU2MjUwMDAwMDAwMSAzOC42MDkzNzVRNjYuNjE1MDAwMDAwMDAwMDEgNDIuNjU2MjUgNjIuNTgzNzUwMDAwMDAwMDEgNDQuOTIxODc1UTU4LjU1MjUgNDcuMTg3NSA1Mi44NjUgNDcuMTg3NVpNNTIuODY1IDM3LjgxMjVRNTUuMzAyNSAzNy44MTI1IDU2LjY5MzEyNSAzNS41MTU2MjVRNTguMDgzNzUgMzMuMjE4NzUgNTguMDgzNzUgMjkuMTI1UTU4LjA4Mzc1IDI1LjAgNTYuNjkzMTI1IDIyLjc4MTI1UTU1LjMwMjUgMjAuNTYyNSA1Mi44NjUgMjAuNTYyNVE1MC4zOTYyNSAyMC41NjI1IDQ4Ljk5IDIyLjc4MTI1UTQ3LjU4Mzc1IDI1LjAgNDcuNTgzNzUgMjkuMTI1UTQ3LjU4Mzc1IDMzLjIxODc1IDQ4Ljk5IDM1LjUxNTYyNVE1MC4zOTYyNSAzNy44MTI1IDUyLjg2NSAzNy44MTI1WiBNODIuODIzNzUgMjYuOTM3NVY0Ni41NjI1SDcwLjI2MTI1VjExLjYyNUg4Mi4wNDI1TDgyLjI2MTI1IDE5LjVRODMuNTQyNSAxNS45Mzc1IDg2LjE2NzUgMTMuNTYyNVE4OC43OTI1IDExLjE4NzUgOTMuMjYxMjUgMTEuMTg3NVE5Ni45OCAxMS4xODc1IDk5LjcxNDM3NSAxMi44NzVRMTAyLjQ0ODc1IDE0LjU2MjUgMTAzLjk0ODc1IDE3LjUzMTI1UTEwNS40NDg3NSAyMC41IDEwNS40NDg3NSAyNC4zMTI1VjQ2LjU2MjVIOTIuODg2MjVWMjYuOTM3NVE5Mi44ODYyNSAyNC4zNDM3NSA5MS41NzM3NSAyMi44NTkzNzVROTAuMjYxMjUgMjEuMzc1IDg3Ljg4NjI1IDIxLjM3NVE4NS41NzM3NSAyMS4zNzUgODQuMTk4NzUgMjIuODU5Mzc1UTgyLjgyMzc1IDI0LjM0Mzc1IDgyLjgyMzc1IDI2LjkzNzVaIE0xMjYuNTAxMjUgMTEuNjI1VjIwLjc1SDEyMC41MDEyNVYzNS4zNDM3NVExMjAuNTAxMjUgMzcuNTMxMjUgMTIyLjg3NjI1IDM3LjUzMTI1UTEyMy40Mzg3NSAzNy41MzEyNSAxMjQuNTE2ODc1IDM3LjM5MDYyNVExMjUuNTk1IDM3LjI1IDEyNS45Mzg3NSAzNy4xMjVMMTI3LjQzODc1IDQ2LjA5Mzc1UTEyNS4yODI1IDQ2LjY4NzUgMTIzLjM3NjI1IDQ2Ljg5MDYyNVExMjEuNDcgNDcuMDkzNzUgMTE5Ljc4MjUgNDcuMDkzNzVRMTA3LjkzODc1IDQ3LjA5Mzc1IDEwNy45Mzg3NSAzNi41VjIwLjc1SDEwMy41MDEyNVYxMS42MjVIMTA3LjkzODc1VjMuMzEyNUgxMjAuNTAxMjVWMTEuNjI1WiBNMTQxLjk5MTI0OTk5OTk5OTk4IDQ3LjE4NzVRMTMzLjU4NDk5OTk5OTk5OTk4IDQ3LjE4NzUgMTI4Ljc4ODEyNDk5OTk5OTk4IDQyLjQyMTg3NVExMjMuOTkxMjUgMzcuNjU2MjUgMTIzLjk5MTI1IDI5LjE4NzVRMTIzLjk5MTI1IDIzLjc4MTI1IDEyNi4xNjMxMjQ5OTk5OTk5OCAxOS43MzQzNzVRMTI4LjMzNDk5OTk5OTk5OTk4IDE1LjY4NzUgMTMyLjMwMzc0OTk5OTk5OTk4IDEzLjQzNzVRMTM2LjI3MjQ5OTk5OTk5OTk4IDExLjE4NzUgMTQxLjY3ODc0OTk5OTk5OTk4IDExLjE4NzVRMTQ2Ljk1OTk5OTk5OTk5OTk4IDExLjE4NzUgMTUwLjg2NjI0OTk5OTk5OTk4IDEzLjM1OTM3NVExNTQuNzcyNDk5OTk5OTk5OTggMTUuNTMxMjUgMTU2LjkxMzEyNDk5OTk5OTk4IDE5LjU0Njg3NVExNTkuMDUzNzQ5OTk5OTk5OTggMjMuNTYyNSAxNTkuMDUzNzQ5OTk5OTk5OTggMjkuMTI1VjMyLjBIMTM2LjMwMzc0OTk5OTk5OTk4UTEzNi40Mjg3NDk5OTk5OTk5OCAzNS4yNSAxMzguMDM4MTI0OTk5OTk5OTggMzYuODEyNVExMzkuNjQ3NDk5OTk5OTk5OTggMzguMzc1IDE0Mi4yNDEyNDk5OTk5OTk5OCAzOC4zNzVRMTQ0LjE3ODc0OTk5OTk5OTk4IDM4LjM3NSAxNDUuNTUzNzQ5OTk5OTk5OTggMzcuNTc4MTI1UTE0Ni45Mjg3NDk5OTk5OTk5OCAzNi43ODEyNSAxNDcuNDkxMjQ5OTk5OTk5OTggMzUuMzQzNzVMMTU4LjU1Mzc0OTk5OTk5OTk4IDM2Ljk2ODc1UTE1Ny4yMDk5OTk5OTk5OTk5OCA0MS42ODc1IDE1Mi45NDQzNzQ5OTk5OTk5OCA0NC40Mzc1UTE0OC42Nzg3NDk5OTk5OTk5OCA0Ny4xODc1IDE0MS45OTEyNDk5OTk5OTk5OCA0Ny4xODc1Wk0xMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1SDE0Ny4yMDk5OTk5OTk5OTk5OFExNDYuNjE2MjQ5OTk5OTk5OTggMjAuMCAxNDEuODAzNzQ5OTk5OTk5OTggMjAuMFExMzYuOTkxMjQ5OTk5OTk5OTggMjAuMCAxMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1WiBNMTcwLjg1NjI1IDI2LjkzNzVWNDYuNTYyNUgxNTguMjkzNzVWMTEuNjI1SDE3MC4wNzVMMTcwLjI5Mzc1IDE5LjVRMTcxLjU3NSAxNS45Mzc1IDE3NC4yIDEzLjU2MjVRMTc2LjgyNSAxMS4xODc1IDE4MS4yOTM3NSAxMS4xODc1UTE4NS4wMTI1IDExLjE4NzUgMTg3Ljc0Njg3NSAxMi44NzVRMTkwLjQ4MTI1IDE0LjU2MjUgMTkxLjk4MTI1IDE3LjUzMTI1UTE5My40ODEyNSAyMC41IDE5My40ODEyNSAyNC4zMTI1VjQ2LjU2MjVIMTgwLjkxODc1VjI2LjkzNzVRMTgwLjkxODc1IDI0LjM0Mzc1IDE3OS42MDYyNSAyMi44NTkzNzVRMTc4LjI5Mzc1IDIxLjM3NSAxNzUuOTE4NzUgMjEuMzc1UTE3My42MDYyNSAyMS4zNzUgMTcyLjIzMTI1IDIyLjg1OTM3NVExNzAuODU2MjUgMjQuMzQzNzUgMTcwLjg1NjI1IDI2LjkzNzVaIE0yMTQuNTMzNzUgMTEuNjI1VjIwLjc1SDIwOC41MzM3NVYzNS4zNDM3NVEyMDguNTMzNzUgMzcuNTMxMjUgMjEwLjkwODc1IDM3LjUzMTI1UTIxMS40NzEyNSAzNy41MzEyNSAyMTIuNTQ5Mzc1IDM3LjM5MDYyNVEyMTMuNjI3NSAzNy4yNSAyMTMuOTcxMjUgMzcuMTI1TDIxNS40NzEyNSA0Ni4wOTM3NVEyMTMuMzE1IDQ2LjY4NzUgMjExLjQwODc1IDQ2Ljg5MDYyNVEyMDkuNTAyNSA0Ny4wOTM3NSAyMDcuODE1IDQ3LjA5Mzc1UTE5NS45NzEyNSA0Ny4wOTM3NSAxOTUuOTcxMjUgMzYuNVYyMC43NUgxOTEuNTMzNzVWMTEuNjI1SDE5NS45NzEyNVYzLjMxMjVIMjA4LjUzMzc1VjExLjYyNVoiLz48cGF0aCBmaWxsPSIjM0NCRkIwIiBkPSJNMjEzLjcxMTI1IDQ2LjU2MjVWMC4wSDIzMy42NDg3NUwyMzcuODM2MjUgMTQuNTYyNVEyMzguMzM2MjUgMTYuMjgxMjUgMjM4Ljk0NTYyNSAxOS4wMzEyNVEyMzkuNTU1IDIxLjc4MTI1IDI0MC4xOCAyNC45Njg3NVEyNDAuODA1IDI4LjE1NjI1IDI0MS4zMzYyNSAzMS4yMTg3NVEyNDEuODY3NSAyOC4xNTYyNSAyNDIuNDkyNSAyNC45Njg3NVEyNDMuMTE3NSAyMS43ODEyNSAyNDMuNzI2ODc1IDE5LjAzMTI1UTI0NC4zMzYyNSAxNi4yODEyNSAyNDQuODA1IDE0LjU2MjVMMjQ4LjkzIDAuMEgyNjguODk4NzVWNDYuNTYyNUgyNTYuMTQ4NzVWMjguNTYyNVEyNTYuMTQ4NzUgMjYuNzgxMjUgMjU2LjI0MjUgMjMuNzAzMTI1UTI1Ni4zMzYyNSAyMC42MjUgMjU2LjQ0NTYyNSAxNy4wMTU2MjVRMjU2LjU1NSAxMy40MDYyNSAyNTYuNjE3NSAxMC4wUTI1NS44Njc1IDEzLjUzMTI1IDI1NS4wMDgxMjUgMTcuMDkzNzVRMjU0LjE0ODc1IDIwLjY1NjI1IDI1My4zNTE4NzUgMjMuNjU2MjVRMjUyLjU1NSAyNi42NTYyNSAyNTEuOTkyNSAyOC41NjI1TDI0Ni41ODYyNSA0Ni41NjI1SDIzNi4wODYyNUwyMzAuNTg2MjUgMjguNTYyNVEyMzAuMDIzNzUgMjYuNzUgMjI5LjI0MjUgMjMuODc1UTIyOC40NjEyNSAyMS4wIDIyNy42MTc1IDE3LjYwOTM3NVEyMjYuNzczNzUgMTQuMjE4NzUgMjI2LjAyMzc1IDEwLjc4MTI1UTIyNi4wODYyNSAxNC4wOTM3NSAyMjYuMTggMTcuNTQ2ODc1UTIyNi4yNzM3NSAyMS4wIDIyNi4zNjc1IDIzLjkyMTg3NVEyMjYuNDYxMjUgMjYuODQzNzUgMjI2LjQ2MTI1IDI4LjU2MjVWNDYuNTYyNVogTTI2Ny41NzYyNSA0Ni41NjI1IDI4Mi42NyAwLjBIMjk5LjkyTDMxNS41NzYyNSA0Ni41NjI1SDMwMS4yNjM3NUwyOTguNTc2MjUgMzcuNjI1SDI4NC4yNjM3NUwyODEuNzAxMjUgNDYuNTYyNVpNMjg2Ljk1MTI1IDI4LjE4NzVIMjk1Ljc2Mzc1UTI5NC40ODI1IDIzLjkzNzUgMjkzLjM0MTg3NSAxOS40MjE4NzVRMjkyLjIwMTI1IDE0LjkwNjI1IDI5MS4xNyAxMC4zNDM3NVEyOTAuMjAxMjUgMTQuOTA2MjUgMjg5LjE4NTYyNSAxOS40MjE4NzVRMjg4LjE3IDIzLjkzNzUgMjg2Ljk1MTI1IDI4LjE4NzVaIE0zMDcuMDk3NSAxMC4xODc1VjAuMEgzNDcuNTM1VjEwLjE4NzVIMzMzLjYyODc1VjQ2LjU2MjVIMzIxLjAwMzc1VjEwLjE4NzVaIE0zNDUuMjc1MDAwMDAwMDAwMDMgMTAuMTg3NVYwLjBIMzg1LjcxMjUwMDAwMDAwMDAzVjEwLjE4NzVIMzcxLjgwNjI1MDAwMDAwMDAzVjQ2LjU2MjVIMzU5LjE4MTI1MDAwMDAwMDAzVjEwLjE4NzVaIE0zODQuNzAyNTAwMDAwMDAwMDQgNDYuNTYyNVYwLjBINDE4LjI2NTAwMDAwMDAwMDA0VjEwLjE4NzVIMzk3LjMyNzUwMDAwMDAwMDA0VjE4LjA2MjVINDE2LjUxNTAwMDAwMDAwMDA0VjI4LjBIMzk3LjMyNzUwMDAwMDAwMDA0VjM2LjM3NUg0MTguMTQwMDAwMDAwMDAwMDRWNDYuNTYyNVogTTQxOC4xNjEyNTAwMDAwMDAwNSA0Ni41NjI1VjAuMEg0MzguMjIzNzUwMDAwMDAwMDVRNDQzLjQxMTI1MDAwMDAwMDA1IDAuMCA0NDcuMzAxODc1MDAwMDAwMDUgMS44OTA2MjVRNDUxLjE5MjUwMDAwMDAwMDA1IDMuNzgxMjUgNDUzLjM2NDM3NTAwMDAwMDA1IDcuMzI4MTI1UTQ1NS41MzYyNTAwMDAwMDAwNSAxMC44NzUgNDU1LjUzNjI1MDAwMDAwMDA1IDE1LjgxMjVRNDU1LjUzNjI1MDAwMDAwMDA1IDIwLjY1NjI1IDQ1My40MjY4NzUwMDAwMDAwNSAyNC4wMzEyNVE0NTEuMzE3NTAwMDAwMDAwMDUgMjcuNDA2MjUgNDQ3LjU5ODc1MDAwMDAwMDA1IDI5LjE4NzVMNDU3LjA5ODc1MDAwMDAwMDA1IDQ2LjU2MjVINDQzLjM0ODc1MDAwMDAwMDA1TDQzNS4xNjEyNTAwMDAwMDAwNSAzMS4xODc1SDQzMC43ODYyNTAwMDAwMDAwNVY0Ni41NjI1Wk00MzAuNzg2MjUwMDAwMDAwMDUgMjEuMzc1SDQzNS4yMjM3NTAwMDAwMDAwNVE0MzguNTY3NTAwMDAwMDAwMDUgMjEuMzc1IDQ0MC40NTgxMjUwMDAwMDAwNSAyMC4wOTM3NVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTguODEyNSA0NDIuMzQ4NzUwMDAwMDAwMDUgMTUuODEyNVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTIuODQzNzUgNDQwLjQ1ODEyNTAwMDAwMDA1IDExLjQ4NDM3NVE0MzguNTY3NTAwMDAwMDAwMDUgMTAuMTI1IDQzNS4yMjM3NTAwMDAwMDAwNSAxMC4xMjVINDMwLjc4NjI1MDAwMDAwMDA1WiBNNDY0LjA4ODc1MDAwMDAwMDA2IDQ3LjMxMjVRNDYxLjMzODc1MDAwMDAwMDA2IDQ3LjMxMjUgNDU5LjQ5NTAwMDAwMDAwMDA2IDQ1LjVRNDU3LjY1MTI1MDAwMDAwMDA2IDQzLjY4NzUgNDU3LjY1MTI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ1Ny42NTEyNTAwMDAwMDAwNiAzOC4yNSA0NTkuNDk1MDAwMDAwMDAwMDYgMzYuNDM3NVE0NjEuMzM4NzUwMDAwMDAwMDYgMzQuNjI1IDQ2NC4wODg3NTAwMDAwMDAwNiAzNC42MjVRNDY2LjgzODc1MDAwMDAwMDA2IDM0LjYyNSA0NjguNjgyNTAwMDAwMDAwMDYgMzYuNDM3NVE0NzAuNTI2MjUwMDAwMDAwMDYgMzguMjUgNDcwLjUyNjI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ3MC41MjYyNTAwMDAwMDAwNiA0My42ODc1IDQ2OC42ODI1MDAwMDAwMDAwNiA0NS41UTQ2Ni44Mzg3NTAwMDAwMDAwNiA0Ny4zMTI1IDQ2NC4wODg3NTAwMDAwMDAwNiA0Ny4zMTI1WiIvPjxyZWN0IHg9IjAiIHk9IjY2LjU2IiB3aWR0aD0iNDc2LjAzIiBoZWlnaHQ9IjgiIGZpbGw9IiMyQzMzNDAiLz48L3N2Zz4K" alt=""><img class="cm-logo--on-dark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzYuMDMgNzQuNTYiIHdpZHRoPSI0NzYuMDMiIGhlaWdodD0iNzQuNTYiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iY29udGVudE1BVFRFUi4iPjx0aXRsZT5jb250ZW50TUFUVEVSLjwvdGl0bGU+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwLjAgNDcuMTg3NVExNC4zMTI1IDQ3LjE4NzUgMTAuMjY1NjI1IDQ0LjkyMTg3NVE2LjIxODc1IDQyLjY1NjI1IDQuMDc4MTI1IDM4LjYwOTM3NVExLjkzNzUgMzQuNTYyNSAxLjkzNzUgMjkuMTg3NVExLjkzNzUgMjMuODEyNSA0LjA3ODEyNSAxOS43NjU2MjVRNi4yMTg3NSAxNS43MTg3NSAxMC4yNjU2MjUgMTMuNDUzMTI1UTE0LjMxMjUgMTEuMTg3NSAyMC4wIDExLjE4NzVRMjcuMjE4NzUgMTEuMTg3NSAzMS42NzE4NzUgMTQuNzk2ODc1UTM2LjEyNSAxOC40MDYyNSAzNi43MTg3NSAyNC40Njg3NUwyNS4xODc1IDI2LjE4NzVRMjQuMjgxMjUgMjAuNTYyNSAyMC4xODc1IDIwLjU2MjVRMTcuNzE4NzUgMjAuNTYyNSAxNi4yMzQzNzUgMjIuNjg3NVExNC43NSAyNC44MTI1IDE0Ljc1IDI5LjEyNVExNC43NSAzMy40MDYyNSAxNi4yMzQzNzUgMzUuNjA5Mzc1UTE3LjcxODc1IDM3LjgxMjUgMjAuMTg3NSAzNy44MTI1UTI0LjM3NSAzNy44MTI1IDI1LjE4NzUgMzIuMEwzNi43MTg3NSAzMy42ODc1UTM2LjA5Mzc1IDM5LjkwNjI1IDMxLjY4NzUgNDMuNTQ2ODc1UTI3LjI4MTI1IDQ3LjE4NzUgMjAuMCA0Ny4xODc1WiBNNTIuODY1IDQ3LjE4NzVRNDcuMTc3NSA0Ny4xODc1IDQzLjExNSA0NC45MjE4NzVRMzkuMDUyNSA0Mi42NTYyNSAzNi45MTE4NzUgMzguNjA5Mzc1UTM0Ljc3MTI1IDM0LjU2MjUgMzQuNzcxMjUgMjkuMTg3NVEzNC43NzEyNSAyMy44MTI1IDM2LjkxMTg3NSAxOS43NjU2MjVRMzkuMDUyNSAxNS43MTg3NSA0My4xMTUgMTMuNDUzMTI1UTQ3LjE3NzUgMTEuMTg3NSA1Mi44NjUgMTEuMTg3NVE1OC41NTI1IDExLjE4NzUgNjIuNTgzNzUwMDAwMDAwMDEgMTMuNDUzMTI1UTY2LjYxNTAwMDAwMDAwMDAxIDE1LjcxODc1IDY4Ljc1NTYyNTAwMDAwMDAxIDE5Ljc2NTYyNVE3MC44OTYyNTAwMDAwMDAwMSAyMy44MTI1IDcwLjg5NjI1MDAwMDAwMDAxIDI5LjE4NzVRNzAuODk2MjUwMDAwMDAwMDEgMzQuNTYyNSA2OC43NTU2MjUwMDAwMDAwMSAzOC42MDkzNzVRNjYuNjE1MDAwMDAwMDAwMDEgNDIuNjU2MjUgNjIuNTgzNzUwMDAwMDAwMDEgNDQuOTIxODc1UTU4LjU1MjUgNDcuMTg3NSA1Mi44NjUgNDcuMTg3NVpNNTIuODY1IDM3LjgxMjVRNTUuMzAyNSAzNy44MTI1IDU2LjY5MzEyNSAzNS41MTU2MjVRNTguMDgzNzUgMzMuMjE4NzUgNTguMDgzNzUgMjkuMTI1UTU4LjA4Mzc1IDI1LjAgNTYuNjkzMTI1IDIyLjc4MTI1UTU1LjMwMjUgMjAuNTYyNSA1Mi44NjUgMjAuNTYyNVE1MC4zOTYyNSAyMC41NjI1IDQ4Ljk5IDIyLjc4MTI1UTQ3LjU4Mzc1IDI1LjAgNDcuNTgzNzUgMjkuMTI1UTQ3LjU4Mzc1IDMzLjIxODc1IDQ4Ljk5IDM1LjUxNTYyNVE1MC4zOTYyNSAzNy44MTI1IDUyLjg2NSAzNy44MTI1WiBNODIuODIzNzUgMjYuOTM3NVY0Ni41NjI1SDcwLjI2MTI1VjExLjYyNUg4Mi4wNDI1TDgyLjI2MTI1IDE5LjVRODMuNTQyNSAxNS45Mzc1IDg2LjE2NzUgMTMuNTYyNVE4OC43OTI1IDExLjE4NzUgOTMuMjYxMjUgMTEuMTg3NVE5Ni45OCAxMS4xODc1IDk5LjcxNDM3NSAxMi44NzVRMTAyLjQ0ODc1IDE0LjU2MjUgMTAzLjk0ODc1IDE3LjUzMTI1UTEwNS40NDg3NSAyMC41IDEwNS40NDg3NSAyNC4zMTI1VjQ2LjU2MjVIOTIuODg2MjVWMjYuOTM3NVE5Mi44ODYyNSAyNC4zNDM3NSA5MS41NzM3NSAyMi44NTkzNzVROTAuMjYxMjUgMjEuMzc1IDg3Ljg4NjI1IDIxLjM3NVE4NS41NzM3NSAyMS4zNzUgODQuMTk4NzUgMjIuODU5Mzc1UTgyLjgyMzc1IDI0LjM0Mzc1IDgyLjgyMzc1IDI2LjkzNzVaIE0xMjYuNTAxMjUgMTEuNjI1VjIwLjc1SDEyMC41MDEyNVYzNS4zNDM3NVExMjAuNTAxMjUgMzcuNTMxMjUgMTIyLjg3NjI1IDM3LjUzMTI1UTEyMy40Mzg3NSAzNy41MzEyNSAxMjQuNTE2ODc1IDM3LjM5MDYyNVExMjUuNTk1IDM3LjI1IDEyNS45Mzg3NSAzNy4xMjVMMTI3LjQzODc1IDQ2LjA5Mzc1UTEyNS4yODI1IDQ2LjY4NzUgMTIzLjM3NjI1IDQ2Ljg5MDYyNVExMjEuNDcgNDcuMDkzNzUgMTE5Ljc4MjUgNDcuMDkzNzVRMTA3LjkzODc1IDQ3LjA5Mzc1IDEwNy45Mzg3NSAzNi41VjIwLjc1SDEwMy41MDEyNVYxMS42MjVIMTA3LjkzODc1VjMuMzEyNUgxMjAuNTAxMjVWMTEuNjI1WiBNMTQxLjk5MTI0OTk5OTk5OTk4IDQ3LjE4NzVRMTMzLjU4NDk5OTk5OTk5OTk4IDQ3LjE4NzUgMTI4Ljc4ODEyNDk5OTk5OTk4IDQyLjQyMTg3NVExMjMuOTkxMjUgMzcuNjU2MjUgMTIzLjk5MTI1IDI5LjE4NzVRMTIzLjk5MTI1IDIzLjc4MTI1IDEyNi4xNjMxMjQ5OTk5OTk5OCAxOS43MzQzNzVRMTI4LjMzNDk5OTk5OTk5OTk4IDE1LjY4NzUgMTMyLjMwMzc0OTk5OTk5OTk4IDEzLjQzNzVRMTM2LjI3MjQ5OTk5OTk5OTk4IDExLjE4NzUgMTQxLjY3ODc0OTk5OTk5OTk4IDExLjE4NzVRMTQ2Ljk1OTk5OTk5OTk5OTk4IDExLjE4NzUgMTUwLjg2NjI0OTk5OTk5OTk4IDEzLjM1OTM3NVExNTQuNzcyNDk5OTk5OTk5OTggMTUuNTMxMjUgMTU2LjkxMzEyNDk5OTk5OTk4IDE5LjU0Njg3NVExNTkuMDUzNzQ5OTk5OTk5OTggMjMuNTYyNSAxNTkuMDUzNzQ5OTk5OTk5OTggMjkuMTI1VjMyLjBIMTM2LjMwMzc0OTk5OTk5OTk4UTEzNi40Mjg3NDk5OTk5OTk5OCAzNS4yNSAxMzguMDM4MTI0OTk5OTk5OTggMzYuODEyNVExMzkuNjQ3NDk5OTk5OTk5OTggMzguMzc1IDE0Mi4yNDEyNDk5OTk5OTk5OCAzOC4zNzVRMTQ0LjE3ODc0OTk5OTk5OTk4IDM4LjM3NSAxNDUuNTUzNzQ5OTk5OTk5OTggMzcuNTc4MTI1UTE0Ni45Mjg3NDk5OTk5OTk5OCAzNi43ODEyNSAxNDcuNDkxMjQ5OTk5OTk5OTggMzUuMzQzNzVMMTU4LjU1Mzc0OTk5OTk5OTk4IDM2Ljk2ODc1UTE1Ny4yMDk5OTk5OTk5OTk5OCA0MS42ODc1IDE1Mi45NDQzNzQ5OTk5OTk5OCA0NC40Mzc1UTE0OC42Nzg3NDk5OTk5OTk5OCA0Ny4xODc1IDE0MS45OTEyNDk5OTk5OTk5OCA0Ny4xODc1Wk0xMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1SDE0Ny4yMDk5OTk5OTk5OTk5OFExNDYuNjE2MjQ5OTk5OTk5OTggMjAuMCAxNDEuODAzNzQ5OTk5OTk5OTggMjAuMFExMzYuOTkxMjQ5OTk5OTk5OTggMjAuMCAxMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1WiBNMTcwLjg1NjI1IDI2LjkzNzVWNDYuNTYyNUgxNTguMjkzNzVWMTEuNjI1SDE3MC4wNzVMMTcwLjI5Mzc1IDE5LjVRMTcxLjU3NSAxNS45Mzc1IDE3NC4yIDEzLjU2MjVRMTc2LjgyNSAxMS4xODc1IDE4MS4yOTM3NSAxMS4xODc1UTE4NS4wMTI1IDExLjE4NzUgMTg3Ljc0Njg3NSAxMi44NzVRMTkwLjQ4MTI1IDE0LjU2MjUgMTkxLjk4MTI1IDE3LjUzMTI1UTE5My40ODEyNSAyMC41IDE5My40ODEyNSAyNC4zMTI1VjQ2LjU2MjVIMTgwLjkxODc1VjI2LjkzNzVRMTgwLjkxODc1IDI0LjM0Mzc1IDE3OS42MDYyNSAyMi44NTkzNzVRMTc4LjI5Mzc1IDIxLjM3NSAxNzUuOTE4NzUgMjEuMzc1UTE3My42MDYyNSAyMS4zNzUgMTcyLjIzMTI1IDIyLjg1OTM3NVExNzAuODU2MjUgMjQuMzQzNzUgMTcwLjg1NjI1IDI2LjkzNzVaIE0yMTQuNTMzNzUgMTEuNjI1VjIwLjc1SDIwOC41MzM3NVYzNS4zNDM3NVEyMDguNTMzNzUgMzcuNTMxMjUgMjEwLjkwODc1IDM3LjUzMTI1UTIxMS40NzEyNSAzNy41MzEyNSAyMTIuNTQ5Mzc1IDM3LjM5MDYyNVEyMTMuNjI3NSAzNy4yNSAyMTMuOTcxMjUgMzcuMTI1TDIxNS40NzEyNSA0Ni4wOTM3NVEyMTMuMzE1IDQ2LjY4NzUgMjExLjQwODc1IDQ2Ljg5MDYyNVEyMDkuNTAyNSA0Ny4wOTM3NSAyMDcuODE1IDQ3LjA5Mzc1UTE5NS45NzEyNSA0Ny4wOTM3NSAxOTUuOTcxMjUgMzYuNVYyMC43NUgxOTEuNTMzNzVWMTEuNjI1SDE5NS45NzEyNVYzLjMxMjVIMjA4LjUzMzc1VjExLjYyNVoiLz48cGF0aCBmaWxsPSIjM0NCRkIwIiBkPSJNMjEzLjcxMTI1IDQ2LjU2MjVWMC4wSDIzMy42NDg3NUwyMzcuODM2MjUgMTQuNTYyNVEyMzguMzM2MjUgMTYuMjgxMjUgMjM4Ljk0NTYyNSAxOS4wMzEyNVEyMzkuNTU1IDIxLjc4MTI1IDI0MC4xOCAyNC45Njg3NVEyNDAuODA1IDI4LjE1NjI1IDI0MS4zMzYyNSAzMS4yMTg3NVEyNDEuODY3NSAyOC4xNTYyNSAyNDIuNDkyNSAyNC45Njg3NVEyNDMuMTE3NSAyMS43ODEyNSAyNDMuNzI2ODc1IDE5LjAzMTI1UTI0NC4zMzYyNSAxNi4yODEyNSAyNDQuODA1IDE0LjU2MjVMMjQ4LjkzIDAuMEgyNjguODk4NzVWNDYuNTYyNUgyNTYuMTQ4NzVWMjguNTYyNVEyNTYuMTQ4NzUgMjYuNzgxMjUgMjU2LjI0MjUgMjMuNzAzMTI1UTI1Ni4zMzYyNSAyMC42MjUgMjU2LjQ0NTYyNSAxNy4wMTU2MjVRMjU2LjU1NSAxMy40MDYyNSAyNTYuNjE3NSAxMC4wUTI1NS44Njc1IDEzLjUzMTI1IDI1NS4wMDgxMjUgMTcuMDkzNzVRMjU0LjE0ODc1IDIwLjY1NjI1IDI1My4zNTE4NzUgMjMuNjU2MjVRMjUyLjU1NSAyNi42NTYyNSAyNTEuOTkyNSAyOC41NjI1TDI0Ni41ODYyNSA0Ni41NjI1SDIzNi4wODYyNUwyMzAuNTg2MjUgMjguNTYyNVEyMzAuMDIzNzUgMjYuNzUgMjI5LjI0MjUgMjMuODc1UTIyOC40NjEyNSAyMS4wIDIyNy42MTc1IDE3LjYwOTM3NVEyMjYuNzczNzUgMTQuMjE4NzUgMjI2LjAyMzc1IDEwLjc4MTI1UTIyNi4wODYyNSAxNC4wOTM3NSAyMjYuMTggMTcuNTQ2ODc1UTIyNi4yNzM3NSAyMS4wIDIyNi4zNjc1IDIzLjkyMTg3NVEyMjYuNDYxMjUgMjYuODQzNzUgMjI2LjQ2MTI1IDI4LjU2MjVWNDYuNTYyNVogTTI2Ny41NzYyNSA0Ni41NjI1IDI4Mi42NyAwLjBIMjk5LjkyTDMxNS41NzYyNSA0Ni41NjI1SDMwMS4yNjM3NUwyOTguNTc2MjUgMzcuNjI1SDI4NC4yNjM3NUwyODEuNzAxMjUgNDYuNTYyNVpNMjg2Ljk1MTI1IDI4LjE4NzVIMjk1Ljc2Mzc1UTI5NC40ODI1IDIzLjkzNzUgMjkzLjM0MTg3NSAxOS40MjE4NzVRMjkyLjIwMTI1IDE0LjkwNjI1IDI5MS4xNyAxMC4zNDM3NVEyOTAuMjAxMjUgMTQuOTA2MjUgMjg5LjE4NTYyNSAxOS40MjE4NzVRMjg4LjE3IDIzLjkzNzUgMjg2Ljk1MTI1IDI4LjE4NzVaIE0zMDcuMDk3NSAxMC4xODc1VjAuMEgzNDcuNTM1VjEwLjE4NzVIMzMzLjYyODc1VjQ2LjU2MjVIMzIxLjAwMzc1VjEwLjE4NzVaIE0zNDUuMjc1MDAwMDAwMDAwMDMgMTAuMTg3NVYwLjBIMzg1LjcxMjUwMDAwMDAwMDAzVjEwLjE4NzVIMzcxLjgwNjI1MDAwMDAwMDAzVjQ2LjU2MjVIMzU5LjE4MTI1MDAwMDAwMDAzVjEwLjE4NzVaIE0zODQuNzAyNTAwMDAwMDAwMDQgNDYuNTYyNVYwLjBINDE4LjI2NTAwMDAwMDAwMDA0VjEwLjE4NzVIMzk3LjMyNzUwMDAwMDAwMDA0VjE4LjA2MjVINDE2LjUxNTAwMDAwMDAwMDA0VjI4LjBIMzk3LjMyNzUwMDAwMDAwMDA0VjM2LjM3NUg0MTguMTQwMDAwMDAwMDAwMDRWNDYuNTYyNVogTTQxOC4xNjEyNTAwMDAwMDAwNSA0Ni41NjI1VjAuMEg0MzguMjIzNzUwMDAwMDAwMDVRNDQzLjQxMTI1MDAwMDAwMDA1IDAuMCA0NDcuMzAxODc1MDAwMDAwMDUgMS44OTA2MjVRNDUxLjE5MjUwMDAwMDAwMDA1IDMuNzgxMjUgNDUzLjM2NDM3NTAwMDAwMDA1IDcuMzI4MTI1UTQ1NS41MzYyNTAwMDAwMDAwNSAxMC44NzUgNDU1LjUzNjI1MDAwMDAwMDA1IDE1LjgxMjVRNDU1LjUzNjI1MDAwMDAwMDA1IDIwLjY1NjI1IDQ1My40MjY4NzUwMDAwMDAwNSAyNC4wMzEyNVE0NTEuMzE3NTAwMDAwMDAwMDUgMjcuNDA2MjUgNDQ3LjU5ODc1MDAwMDAwMDA1IDI5LjE4NzVMNDU3LjA5ODc1MDAwMDAwMDA1IDQ2LjU2MjVINDQzLjM0ODc1MDAwMDAwMDA1TDQzNS4xNjEyNTAwMDAwMDAwNSAzMS4xODc1SDQzMC43ODYyNTAwMDAwMDAwNVY0Ni41NjI1Wk00MzAuNzg2MjUwMDAwMDAwMDUgMjEuMzc1SDQzNS4yMjM3NTAwMDAwMDAwNVE0MzguNTY3NTAwMDAwMDAwMDUgMjEuMzc1IDQ0MC40NTgxMjUwMDAwMDAwNSAyMC4wOTM3NVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTguODEyNSA0NDIuMzQ4NzUwMDAwMDAwMDUgMTUuODEyNVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTIuODQzNzUgNDQwLjQ1ODEyNTAwMDAwMDA1IDExLjQ4NDM3NVE0MzguNTY3NTAwMDAwMDAwMDUgMTAuMTI1IDQzNS4yMjM3NTAwMDAwMDAwNSAxMC4xMjVINDMwLjc4NjI1MDAwMDAwMDA1WiBNNDY0LjA4ODc1MDAwMDAwMDA2IDQ3LjMxMjVRNDYxLjMzODc1MDAwMDAwMDA2IDQ3LjMxMjUgNDU5LjQ5NTAwMDAwMDAwMDA2IDQ1LjVRNDU3LjY1MTI1MDAwMDAwMDA2IDQzLjY4NzUgNDU3LjY1MTI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ1Ny42NTEyNTAwMDAwMDAwNiAzOC4yNSA0NTkuNDk1MDAwMDAwMDAwMDYgMzYuNDM3NVE0NjEuMzM4NzUwMDAwMDAwMDYgMzQuNjI1IDQ2NC4wODg3NTAwMDAwMDAwNiAzNC42MjVRNDY2LjgzODc1MDAwMDAwMDA2IDM0LjYyNSA0NjguNjgyNTAwMDAwMDAwMDYgMzYuNDM3NVE0NzAuNTI2MjUwMDAwMDAwMDYgMzguMjUgNDcwLjUyNjI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ3MC41MjYyNTAwMDAwMDAwNiA0My42ODc1IDQ2OC42ODI1MDAwMDAwMDAwNiA0NS41UTQ2Ni44Mzg3NTAwMDAwMDAwNiA0Ny4zMTI1IDQ2NC4wODg3NTAwMDAwMDAwNiA0Ny4zMTI1WiIvPjxyZWN0IHg9IjAiIHk9IjY2LjU2IiB3aWR0aD0iNDc2LjAzIiBoZWlnaHQ9IjgiIGZpbGw9IiMzQ0JGQjAiLz48L3N2Zz4K" alt=""></a>
+    <nav class="links" id="nav-links" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/#campaign-record">Campaign Record</a>
+      <a href="/matters">The Matters</a>
+      <a href="/tools" aria-current="page">Free tools</a>
+    </nav>
+    <a class="pill sm accent" data-audit href="/audit">Free audit</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  </div>
+</header>
+
+<!-- HOME VIEW -->
+<main id="view-home" data-view="home">
+  <section class="wrap hero">
+    <div>
+      <p class="eyebrow">Free tools for local businesses</p>
+      <h1>Know your numbers before you spend on marketing.</h1>
+      <p class="lede">Calculators, scorecards, and copy writers for restaurants, service businesses, beauty and clinics, and local retail. Run them in minutes. No sign up needed.</p>
+      <div class="btnrow">
+        <a class="pill" href="#browse">Browse the tools</a>
+        <a class="pill ghost" data-audit href="/audit">Get the free audit</a>
+      </div>
+      <ul class="trust">
+        <li>Free to run</li>
+        <li>Built for four industries</li>
+        <li>Built by content MATTER</li>
+      </ul>
+    </div>
+    <div class="hero-card" aria-hidden="true">
+      <div class="hc-top"><b>Ad budget planner</b><span>Example numbers</span></div>
+      <div class="hc-big">17</div>
+      <div class="hc-sub">new customers a month from a $1,500 ad budget</div>
+      <div class="hc-bars">
+        <div class="hc-row"><span>Clicks</span><div class="hc-bar"><i style="width:100%"></i></div><span>833</span></div>
+        <div class="hc-row"><span>Leads</span><div class="hc-bar"><i style="width:34%"></i></div><span>67</span></div>
+        <div class="hc-row"><span>Customers</span><div class="hc-bar"><i style="width:17%"></i></div><span>17</span></div>
+      </div>
+      <div class="hc-foot">
+        <div class="hc-chip"><b>$90</b>per customer</div>
+        <div class="hc-chip"><b>2.0x</b>return on ad spend</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="browse">
+    <div class="sec-head">
+      <h2>Pick your business. Pick a tool.</h2>
+      <p class="lede" style="max-width:40ch">Every tool shows the answer as you type. Save or send the result when you are done.</p>
+    </div>
+    <div class="filters">
+      <div class="chips" id="f-ind" role="group" aria-label="Filter by business type"><span class="lab">Business</span></div>
+      <div class="chips" id="f-kind" role="group" aria-label="Filter by tool type"><span class="lab">Type</span></div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="wrap section">
+    <div class="sec-head"><h2>How the tools work</h2></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Enter your numbers</h3><p>Start from the example values, then replace them with your own. Nothing you type leaves this page until you choose to send it.</p></div>
+      <div class="step"><div class="n">2</div><h3>See the answer</h3><p>Calculators and scorecards update as you type. Writers and generators draft copy from your details, ready to edit.</p></div>
+      <div class="step"><div class="n">3</div><h3>Act on it</h3><p>Download a branded PDF report, copy the result, or bring it to a free consultation and we will turn it into a plan.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="cta">
+      <div>
+        <h2>Your numbers matter. Want help acting on them?</h2>
+        <p>Book a free consultation and we will go through your results together, then show you what to fix first.</p>
+      </div>
+      <a class="pill" data-book href="https://meetings-na2.hubspot.com/content-matter" target="_blank" rel="noopener">Book a free consultation</a>
+    </div>
+  </section>
+</main>
+
+<!-- TOOL VIEW -->
+<main id="view-tool" class="wrap" data-view="tool" hidden>
+  <a class="back" href="#browse">All tools</a>
+  <div class="thead">
+    <div class="badges" id="t-tags"></div>
+    <h1 id="t-title"></h1>
+    <p id="t-desc"></p>
+  </div>
+  <div id="t-body"></div>
+  <section class="section" style="padding-top:8px">
+    <div class="sec-head"><h2 style="font-size:clamp(22px,3vw,34px)">Keep going</h2></div>
+    <div class="grid" id="t-next"></div>
+  </section>
+  <div class="cta" style="margin-top:0">
+    <div>
+      <h2>Want this turned into a plan?</h2>
+      <p>Bring your results to a free consultation. We will tell you what to fix first and what to leave alone.</p>
+    </div>
+    <a class="pill" data-book href="https://meetings-na2.hubspot.com/content-matter" target="_blank" rel="noopener">Book a free consultation</a>
+  </div>
+</main>
+
+<div id="print-report" aria-hidden="true"></div>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="wm" href="/" aria-label="content MATTER home"><img class="cm-logo--on-light" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzYuMDMgNzQuNTYiIHdpZHRoPSI0NzYuMDMiIGhlaWdodD0iNzQuNTYiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iY29udGVudE1BVFRFUi4iPjx0aXRsZT5jb250ZW50TUFUVEVSLjwvdGl0bGU+PHBhdGggZmlsbD0iIzJDMzM0MCIgZD0iTTIwLjAgNDcuMTg3NVExNC4zMTI1IDQ3LjE4NzUgMTAuMjY1NjI1IDQ0LjkyMTg3NVE2LjIxODc1IDQyLjY1NjI1IDQuMDc4MTI1IDM4LjYwOTM3NVExLjkzNzUgMzQuNTYyNSAxLjkzNzUgMjkuMTg3NVExLjkzNzUgMjMuODEyNSA0LjA3ODEyNSAxOS43NjU2MjVRNi4yMTg3NSAxNS43MTg3NSAxMC4yNjU2MjUgMTMuNDUzMTI1UTE0LjMxMjUgMTEuMTg3NSAyMC4wIDExLjE4NzVRMjcuMjE4NzUgMTEuMTg3NSAzMS42NzE4NzUgMTQuNzk2ODc1UTM2LjEyNSAxOC40MDYyNSAzNi43MTg3NSAyNC40Njg3NUwyNS4xODc1IDI2LjE4NzVRMjQuMjgxMjUgMjAuNTYyNSAyMC4xODc1IDIwLjU2MjVRMTcuNzE4NzUgMjAuNTYyNSAxNi4yMzQzNzUgMjIuNjg3NVExNC43NSAyNC44MTI1IDE0Ljc1IDI5LjEyNVExNC43NSAzMy40MDYyNSAxNi4yMzQzNzUgMzUuNjA5Mzc1UTE3LjcxODc1IDM3LjgxMjUgMjAuMTg3NSAzNy44MTI1UTI0LjM3NSAzNy44MTI1IDI1LjE4NzUgMzIuMEwzNi43MTg3NSAzMy42ODc1UTM2LjA5Mzc1IDM5LjkwNjI1IDMxLjY4NzUgNDMuNTQ2ODc1UTI3LjI4MTI1IDQ3LjE4NzUgMjAuMCA0Ny4xODc1WiBNNTIuODY1IDQ3LjE4NzVRNDcuMTc3NSA0Ny4xODc1IDQzLjExNSA0NC45MjE4NzVRMzkuMDUyNSA0Mi42NTYyNSAzNi45MTE4NzUgMzguNjA5Mzc1UTM0Ljc3MTI1IDM0LjU2MjUgMzQuNzcxMjUgMjkuMTg3NVEzNC43NzEyNSAyMy44MTI1IDM2LjkxMTg3NSAxOS43NjU2MjVRMzkuMDUyNSAxNS43MTg3NSA0My4xMTUgMTMuNDUzMTI1UTQ3LjE3NzUgMTEuMTg3NSA1Mi44NjUgMTEuMTg3NVE1OC41NTI1IDExLjE4NzUgNjIuNTgzNzUwMDAwMDAwMDEgMTMuNDUzMTI1UTY2LjYxNTAwMDAwMDAwMDAxIDE1LjcxODc1IDY4Ljc1NTYyNTAwMDAwMDAxIDE5Ljc2NTYyNVE3MC44OTYyNTAwMDAwMDAwMSAyMy44MTI1IDcwLjg5NjI1MDAwMDAwMDAxIDI5LjE4NzVRNzAuODk2MjUwMDAwMDAwMDEgMzQuNTYyNSA2OC43NTU2MjUwMDAwMDAwMSAzOC42MDkzNzVRNjYuNjE1MDAwMDAwMDAwMDEgNDIuNjU2MjUgNjIuNTgzNzUwMDAwMDAwMDEgNDQuOTIxODc1UTU4LjU1MjUgNDcuMTg3NSA1Mi44NjUgNDcuMTg3NVpNNTIuODY1IDM3LjgxMjVRNTUuMzAyNSAzNy44MTI1IDU2LjY5MzEyNSAzNS41MTU2MjVRNTguMDgzNzUgMzMuMjE4NzUgNTguMDgzNzUgMjkuMTI1UTU4LjA4Mzc1IDI1LjAgNTYuNjkzMTI1IDIyLjc4MTI1UTU1LjMwMjUgMjAuNTYyNSA1Mi44NjUgMjAuNTYyNVE1MC4zOTYyNSAyMC41NjI1IDQ4Ljk5IDIyLjc4MTI1UTQ3LjU4Mzc1IDI1LjAgNDcuNTgzNzUgMjkuMTI1UTQ3LjU4Mzc1IDMzLjIxODc1IDQ4Ljk5IDM1LjUxNTYyNVE1MC4zOTYyNSAzNy44MTI1IDUyLjg2NSAzNy44MTI1WiBNODIuODIzNzUgMjYuOTM3NVY0Ni41NjI1SDcwLjI2MTI1VjExLjYyNUg4Mi4wNDI1TDgyLjI2MTI1IDE5LjVRODMuNTQyNSAxNS45Mzc1IDg2LjE2NzUgMTMuNTYyNVE4OC43OTI1IDExLjE4NzUgOTMuMjYxMjUgMTEuMTg3NVE5Ni45OCAxMS4xODc1IDk5LjcxNDM3NSAxMi44NzVRMTAyLjQ0ODc1IDE0LjU2MjUgMTAzLjk0ODc1IDE3LjUzMTI1UTEwNS40NDg3NSAyMC41IDEwNS40NDg3NSAyNC4zMTI1VjQ2LjU2MjVIOTIuODg2MjVWMjYuOTM3NVE5Mi44ODYyNSAyNC4zNDM3NSA5MS41NzM3NSAyMi44NTkzNzVROTAuMjYxMjUgMjEuMzc1IDg3Ljg4NjI1IDIxLjM3NVE4NS41NzM3NSAyMS4zNzUgODQuMTk4NzUgMjIuODU5Mzc1UTgyLjgyMzc1IDI0LjM0Mzc1IDgyLjgyMzc1IDI2LjkzNzVaIE0xMjYuNTAxMjUgMTEuNjI1VjIwLjc1SDEyMC41MDEyNVYzNS4zNDM3NVExMjAuNTAxMjUgMzcuNTMxMjUgMTIyLjg3NjI1IDM3LjUzMTI1UTEyMy40Mzg3NSAzNy41MzEyNSAxMjQuNTE2ODc1IDM3LjM5MDYyNVExMjUuNTk1IDM3LjI1IDEyNS45Mzg3NSAzNy4xMjVMMTI3LjQzODc1IDQ2LjA5Mzc1UTEyNS4yODI1IDQ2LjY4NzUgMTIzLjM3NjI1IDQ2Ljg5MDYyNVExMjEuNDcgNDcuMDkzNzUgMTE5Ljc4MjUgNDcuMDkzNzVRMTA3LjkzODc1IDQ3LjA5Mzc1IDEwNy45Mzg3NSAzNi41VjIwLjc1SDEwMy41MDEyNVYxMS42MjVIMTA3LjkzODc1VjMuMzEyNUgxMjAuNTAxMjVWMTEuNjI1WiBNMTQxLjk5MTI0OTk5OTk5OTk4IDQ3LjE4NzVRMTMzLjU4NDk5OTk5OTk5OTk4IDQ3LjE4NzUgMTI4Ljc4ODEyNDk5OTk5OTk4IDQyLjQyMTg3NVExMjMuOTkxMjUgMzcuNjU2MjUgMTIzLjk5MTI1IDI5LjE4NzVRMTIzLjk5MTI1IDIzLjc4MTI1IDEyNi4xNjMxMjQ5OTk5OTk5OCAxOS43MzQzNzVRMTI4LjMzNDk5OTk5OTk5OTk4IDE1LjY4NzUgMTMyLjMwMzc0OTk5OTk5OTk4IDEzLjQzNzVRMTM2LjI3MjQ5OTk5OTk5OTk4IDExLjE4NzUgMTQxLjY3ODc0OTk5OTk5OTk4IDExLjE4NzVRMTQ2Ljk1OTk5OTk5OTk5OTk4IDExLjE4NzUgMTUwLjg2NjI0OTk5OTk5OTk4IDEzLjM1OTM3NVExNTQuNzcyNDk5OTk5OTk5OTggMTUuNTMxMjUgMTU2LjkxMzEyNDk5OTk5OTk4IDE5LjU0Njg3NVExNTkuMDUzNzQ5OTk5OTk5OTggMjMuNTYyNSAxNTkuMDUzNzQ5OTk5OTk5OTggMjkuMTI1VjMyLjBIMTM2LjMwMzc0OTk5OTk5OTk4UTEzNi40Mjg3NDk5OTk5OTk5OCAzNS4yNSAxMzguMDM4MTI0OTk5OTk5OTggMzYuODEyNVExMzkuNjQ3NDk5OTk5OTk5OTggMzguMzc1IDE0Mi4yNDEyNDk5OTk5OTk5OCAzOC4zNzVRMTQ0LjE3ODc0OTk5OTk5OTk4IDM4LjM3NSAxNDUuNTUzNzQ5OTk5OTk5OTggMzcuNTc4MTI1UTE0Ni45Mjg3NDk5OTk5OTk5OCAzNi43ODEyNSAxNDcuNDkxMjQ5OTk5OTk5OTggMzUuMzQzNzVMMTU4LjU1Mzc0OTk5OTk5OTk4IDM2Ljk2ODc1UTE1Ny4yMDk5OTk5OTk5OTk5OCA0MS42ODc1IDE1Mi45NDQzNzQ5OTk5OTk5OCA0NC40Mzc1UTE0OC42Nzg3NDk5OTk5OTk5OCA0Ny4xODc1IDE0MS45OTEyNDk5OTk5OTk5OCA0Ny4xODc1Wk0xMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1SDE0Ny4yMDk5OTk5OTk5OTk5OFExNDYuNjE2MjQ5OTk5OTk5OTggMjAuMCAxNDEuODAzNzQ5OTk5OTk5OTggMjAuMFExMzYuOTkxMjQ5OTk5OTk5OTggMjAuMCAxMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1WiBNMTcwLjg1NjI1IDI2LjkzNzVWNDYuNTYyNUgxNTguMjkzNzVWMTEuNjI1SDE3MC4wNzVMMTcwLjI5Mzc1IDE5LjVRMTcxLjU3NSAxNS45Mzc1IDE3NC4yIDEzLjU2MjVRMTc2LjgyNSAxMS4xODc1IDE4MS4yOTM3NSAxMS4xODc1UTE4NS4wMTI1IDExLjE4NzUgMTg3Ljc0Njg3NSAxMi44NzVRMTkwLjQ4MTI1IDE0LjU2MjUgMTkxLjk4MTI1IDE3LjUzMTI1UTE5My40ODEyNSAyMC41IDE5My40ODEyNSAyNC4zMTI1VjQ2LjU2MjVIMTgwLjkxODc1VjI2LjkzNzVRMTgwLjkxODc1IDI0LjM0Mzc1IDE3OS42MDYyNSAyMi44NTkzNzVRMTc4LjI5Mzc1IDIxLjM3NSAxNzUuOTE4NzUgMjEuMzc1UTE3My42MDYyNSAyMS4zNzUgMTcyLjIzMTI1IDIyLjg1OTM3NVExNzAuODU2MjUgMjQuMzQzNzUgMTcwLjg1NjI1IDI2LjkzNzVaIE0yMTQuNTMzNzUgMTEuNjI1VjIwLjc1SDIwOC41MzM3NVYzNS4zNDM3NVEyMDguNTMzNzUgMzcuNTMxMjUgMjEwLjkwODc1IDM3LjUzMTI1UTIxMS40NzEyNSAzNy41MzEyNSAyMTIuNTQ5Mzc1IDM3LjM5MDYyNVEyMTMuNjI3NSAzNy4yNSAyMTMuOTcxMjUgMzcuMTI1TDIxNS40NzEyNSA0Ni4wOTM3NVEyMTMuMzE1IDQ2LjY4NzUgMjExLjQwODc1IDQ2Ljg5MDYyNVEyMDkuNTAyNSA0Ny4wOTM3NSAyMDcuODE1IDQ3LjA5Mzc1UTE5NS45NzEyNSA0Ny4wOTM3NSAxOTUuOTcxMjUgMzYuNVYyMC43NUgxOTEuNTMzNzVWMTEuNjI1SDE5NS45NzEyNVYzLjMxMjVIMjA4LjUzMzc1VjExLjYyNVoiLz48cGF0aCBmaWxsPSIjM0NCRkIwIiBkPSJNMjEzLjcxMTI1IDQ2LjU2MjVWMC4wSDIzMy42NDg3NUwyMzcuODM2MjUgMTQuNTYyNVEyMzguMzM2MjUgMTYuMjgxMjUgMjM4Ljk0NTYyNSAxOS4wMzEyNVEyMzkuNTU1IDIxLjc4MTI1IDI0MC4xOCAyNC45Njg3NVEyNDAuODA1IDI4LjE1NjI1IDI0MS4zMzYyNSAzMS4yMTg3NVEyNDEuODY3NSAyOC4xNTYyNSAyNDIuNDkyNSAyNC45Njg3NVEyNDMuMTE3NSAyMS43ODEyNSAyNDMuNzI2ODc1IDE5LjAzMTI1UTI0NC4zMzYyNSAxNi4yODEyNSAyNDQuODA1IDE0LjU2MjVMMjQ4LjkzIDAuMEgyNjguODk4NzVWNDYuNTYyNUgyNTYuMTQ4NzVWMjguNTYyNVEyNTYuMTQ4NzUgMjYuNzgxMjUgMjU2LjI0MjUgMjMuNzAzMTI1UTI1Ni4zMzYyNSAyMC42MjUgMjU2LjQ0NTYyNSAxNy4wMTU2MjVRMjU2LjU1NSAxMy40MDYyNSAyNTYuNjE3NSAxMC4wUTI1NS44Njc1IDEzLjUzMTI1IDI1NS4wMDgxMjUgMTcuMDkzNzVRMjU0LjE0ODc1IDIwLjY1NjI1IDI1My4zNTE4NzUgMjMuNjU2MjVRMjUyLjU1NSAyNi42NTYyNSAyNTEuOTkyNSAyOC41NjI1TDI0Ni41ODYyNSA0Ni41NjI1SDIzNi4wODYyNUwyMzAuNTg2MjUgMjguNTYyNVEyMzAuMDIzNzUgMjYuNzUgMjI5LjI0MjUgMjMuODc1UTIyOC40NjEyNSAyMS4wIDIyNy42MTc1IDE3LjYwOTM3NVEyMjYuNzczNzUgMTQuMjE4NzUgMjI2LjAyMzc1IDEwLjc4MTI1UTIyNi4wODYyNSAxNC4wOTM3NSAyMjYuMTggMTcuNTQ2ODc1UTIyNi4yNzM3NSAyMS4wIDIyNi4zNjc1IDIzLjkyMTg3NVEyMjYuNDYxMjUgMjYuODQzNzUgMjI2LjQ2MTI1IDI4LjU2MjVWNDYuNTYyNVogTTI2Ny41NzYyNSA0Ni41NjI1IDI4Mi42NyAwLjBIMjk5LjkyTDMxNS41NzYyNSA0Ni41NjI1SDMwMS4yNjM3NUwyOTguNTc2MjUgMzcuNjI1SDI4NC4yNjM3NUwyODEuNzAxMjUgNDYuNTYyNVpNMjg2Ljk1MTI1IDI4LjE4NzVIMjk1Ljc2Mzc1UTI5NC40ODI1IDIzLjkzNzUgMjkzLjM0MTg3NSAxOS40MjE4NzVRMjkyLjIwMTI1IDE0LjkwNjI1IDI5MS4xNyAxMC4zNDM3NVEyOTAuMjAxMjUgMTQuOTA2MjUgMjg5LjE4NTYyNSAxOS40MjE4NzVRMjg4LjE3IDIzLjkzNzUgMjg2Ljk1MTI1IDI4LjE4NzVaIE0zMDcuMDk3NSAxMC4xODc1VjAuMEgzNDcuNTM1VjEwLjE4NzVIMzMzLjYyODc1VjQ2LjU2MjVIMzIxLjAwMzc1VjEwLjE4NzVaIE0zNDUuMjc1MDAwMDAwMDAwMDMgMTAuMTg3NVYwLjBIMzg1LjcxMjUwMDAwMDAwMDAzVjEwLjE4NzVIMzcxLjgwNjI1MDAwMDAwMDAzVjQ2LjU2MjVIMzU5LjE4MTI1MDAwMDAwMDAzVjEwLjE4NzVaIE0zODQuNzAyNTAwMDAwMDAwMDQgNDYuNTYyNVYwLjBINDE4LjI2NTAwMDAwMDAwMDA0VjEwLjE4NzVIMzk3LjMyNzUwMDAwMDAwMDA0VjE4LjA2MjVINDE2LjUxNTAwMDAwMDAwMDA0VjI4LjBIMzk3LjMyNzUwMDAwMDAwMDA0VjM2LjM3NUg0MTguMTQwMDAwMDAwMDAwMDRWNDYuNTYyNVogTTQxOC4xNjEyNTAwMDAwMDAwNSA0Ni41NjI1VjAuMEg0MzguMjIzNzUwMDAwMDAwMDVRNDQzLjQxMTI1MDAwMDAwMDA1IDAuMCA0NDcuMzAxODc1MDAwMDAwMDUgMS44OTA2MjVRNDUxLjE5MjUwMDAwMDAwMDA1IDMuNzgxMjUgNDUzLjM2NDM3NTAwMDAwMDA1IDcuMzI4MTI1UTQ1NS41MzYyNTAwMDAwMDAwNSAxMC44NzUgNDU1LjUzNjI1MDAwMDAwMDA1IDE1LjgxMjVRNDU1LjUzNjI1MDAwMDAwMDA1IDIwLjY1NjI1IDQ1My40MjY4NzUwMDAwMDAwNSAyNC4wMzEyNVE0NTEuMzE3NTAwMDAwMDAwMDUgMjcuNDA2MjUgNDQ3LjU5ODc1MDAwMDAwMDA1IDI5LjE4NzVMNDU3LjA5ODc1MDAwMDAwMDA1IDQ2LjU2MjVINDQzLjM0ODc1MDAwMDAwMDA1TDQzNS4xNjEyNTAwMDAwMDAwNSAzMS4xODc1SDQzMC43ODYyNTAwMDAwMDAwNVY0Ni41NjI1Wk00MzAuNzg2MjUwMDAwMDAwMDUgMjEuMzc1SDQzNS4yMjM3NTAwMDAwMDAwNVE0MzguNTY3NTAwMDAwMDAwMDUgMjEuMzc1IDQ0MC40NTgxMjUwMDAwMDAwNSAyMC4wOTM3NVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTguODEyNSA0NDIuMzQ4NzUwMDAwMDAwMDUgMTUuODEyNVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTIuODQzNzUgNDQwLjQ1ODEyNTAwMDAwMDA1IDExLjQ4NDM3NVE0MzguNTY3NTAwMDAwMDAwMDUgMTAuMTI1IDQzNS4yMjM3NTAwMDAwMDAwNSAxMC4xMjVINDMwLjc4NjI1MDAwMDAwMDA1WiBNNDY0LjA4ODc1MDAwMDAwMDA2IDQ3LjMxMjVRNDYxLjMzODc1MDAwMDAwMDA2IDQ3LjMxMjUgNDU5LjQ5NTAwMDAwMDAwMDA2IDQ1LjVRNDU3LjY1MTI1MDAwMDAwMDA2IDQzLjY4NzUgNDU3LjY1MTI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ1Ny42NTEyNTAwMDAwMDAwNiAzOC4yNSA0NTkuNDk1MDAwMDAwMDAwMDYgMzYuNDM3NVE0NjEuMzM4NzUwMDAwMDAwMDYgMzQuNjI1IDQ2NC4wODg3NTAwMDAwMDAwNiAzNC42MjVRNDY2LjgzODc1MDAwMDAwMDA2IDM0LjYyNSA0NjguNjgyNTAwMDAwMDAwMDYgMzYuNDM3NVE0NzAuNTI2MjUwMDAwMDAwMDYgMzguMjUgNDcwLjUyNjI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ3MC41MjYyNTAwMDAwMDAwNiA0My42ODc1IDQ2OC42ODI1MDAwMDAwMDAwNiA0NS41UTQ2Ni44Mzg3NTAwMDAwMDAwNiA0Ny4zMTI1IDQ2NC4wODg3NTAwMDAwMDAwNiA0Ny4zMTI1WiIvPjxyZWN0IHg9IjAiIHk9IjY2LjU2IiB3aWR0aD0iNDc2LjAzIiBoZWlnaHQ9IjgiIGZpbGw9IiMyQzMzNDAiLz48L3N2Zz4K" alt=""><img class="cm-logo--on-dark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzYuMDMgNzQuNTYiIHdpZHRoPSI0NzYuMDMiIGhlaWdodD0iNzQuNTYiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iY29udGVudE1BVFRFUi4iPjx0aXRsZT5jb250ZW50TUFUVEVSLjwvdGl0bGU+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwLjAgNDcuMTg3NVExNC4zMTI1IDQ3LjE4NzUgMTAuMjY1NjI1IDQ0LjkyMTg3NVE2LjIxODc1IDQyLjY1NjI1IDQuMDc4MTI1IDM4LjYwOTM3NVExLjkzNzUgMzQuNTYyNSAxLjkzNzUgMjkuMTg3NVExLjkzNzUgMjMuODEyNSA0LjA3ODEyNSAxOS43NjU2MjVRNi4yMTg3NSAxNS43MTg3NSAxMC4yNjU2MjUgMTMuNDUzMTI1UTE0LjMxMjUgMTEuMTg3NSAyMC4wIDExLjE4NzVRMjcuMjE4NzUgMTEuMTg3NSAzMS42NzE4NzUgMTQuNzk2ODc1UTM2LjEyNSAxOC40MDYyNSAzNi43MTg3NSAyNC40Njg3NUwyNS4xODc1IDI2LjE4NzVRMjQuMjgxMjUgMjAuNTYyNSAyMC4xODc1IDIwLjU2MjVRMTcuNzE4NzUgMjAuNTYyNSAxNi4yMzQzNzUgMjIuNjg3NVExNC43NSAyNC44MTI1IDE0Ljc1IDI5LjEyNVExNC43NSAzMy40MDYyNSAxNi4yMzQzNzUgMzUuNjA5Mzc1UTE3LjcxODc1IDM3LjgxMjUgMjAuMTg3NSAzNy44MTI1UTI0LjM3NSAzNy44MTI1IDI1LjE4NzUgMzIuMEwzNi43MTg3NSAzMy42ODc1UTM2LjA5Mzc1IDM5LjkwNjI1IDMxLjY4NzUgNDMuNTQ2ODc1UTI3LjI4MTI1IDQ3LjE4NzUgMjAuMCA0Ny4xODc1WiBNNTIuODY1IDQ3LjE4NzVRNDcuMTc3NSA0Ny4xODc1IDQzLjExNSA0NC45MjE4NzVRMzkuMDUyNSA0Mi42NTYyNSAzNi45MTE4NzUgMzguNjA5Mzc1UTM0Ljc3MTI1IDM0LjU2MjUgMzQuNzcxMjUgMjkuMTg3NVEzNC43NzEyNSAyMy44MTI1IDM2LjkxMTg3NSAxOS43NjU2MjVRMzkuMDUyNSAxNS43MTg3NSA0My4xMTUgMTMuNDUzMTI1UTQ3LjE3NzUgMTEuMTg3NSA1Mi44NjUgMTEuMTg3NVE1OC41NTI1IDExLjE4NzUgNjIuNTgzNzUwMDAwMDAwMDEgMTMuNDUzMTI1UTY2LjYxNTAwMDAwMDAwMDAxIDE1LjcxODc1IDY4Ljc1NTYyNTAwMDAwMDAxIDE5Ljc2NTYyNVE3MC44OTYyNTAwMDAwMDAwMSAyMy44MTI1IDcwLjg5NjI1MDAwMDAwMDAxIDI5LjE4NzVRNzAuODk2MjUwMDAwMDAwMDEgMzQuNTYyNSA2OC43NTU2MjUwMDAwMDAwMSAzOC42MDkzNzVRNjYuNjE1MDAwMDAwMDAwMDEgNDIuNjU2MjUgNjIuNTgzNzUwMDAwMDAwMDEgNDQuOTIxODc1UTU4LjU1MjUgNDcuMTg3NSA1Mi44NjUgNDcuMTg3NVpNNTIuODY1IDM3LjgxMjVRNTUuMzAyNSAzNy44MTI1IDU2LjY5MzEyNSAzNS41MTU2MjVRNTguMDgzNzUgMzMuMjE4NzUgNTguMDgzNzUgMjkuMTI1UTU4LjA4Mzc1IDI1LjAgNTYuNjkzMTI1IDIyLjc4MTI1UTU1LjMwMjUgMjAuNTYyNSA1Mi44NjUgMjAuNTYyNVE1MC4zOTYyNSAyMC41NjI1IDQ4Ljk5IDIyLjc4MTI1UTQ3LjU4Mzc1IDI1LjAgNDcuNTgzNzUgMjkuMTI1UTQ3LjU4Mzc1IDMzLjIxODc1IDQ4Ljk5IDM1LjUxNTYyNVE1MC4zOTYyNSAzNy44MTI1IDUyLjg2NSAzNy44MTI1WiBNODIuODIzNzUgMjYuOTM3NVY0Ni41NjI1SDcwLjI2MTI1VjExLjYyNUg4Mi4wNDI1TDgyLjI2MTI1IDE5LjVRODMuNTQyNSAxNS45Mzc1IDg2LjE2NzUgMTMuNTYyNVE4OC43OTI1IDExLjE4NzUgOTMuMjYxMjUgMTEuMTg3NVE5Ni45OCAxMS4xODc1IDk5LjcxNDM3NSAxMi44NzVRMTAyLjQ0ODc1IDE0LjU2MjUgMTAzLjk0ODc1IDE3LjUzMTI1UTEwNS40NDg3NSAyMC41IDEwNS40NDg3NSAyNC4zMTI1VjQ2LjU2MjVIOTIuODg2MjVWMjYuOTM3NVE5Mi44ODYyNSAyNC4zNDM3NSA5MS41NzM3NSAyMi44NTkzNzVROTAuMjYxMjUgMjEuMzc1IDg3Ljg4NjI1IDIxLjM3NVE4NS41NzM3NSAyMS4zNzUgODQuMTk4NzUgMjIuODU5Mzc1UTgyLjgyMzc1IDI0LjM0Mzc1IDgyLjgyMzc1IDI2LjkzNzVaIE0xMjYuNTAxMjUgMTEuNjI1VjIwLjc1SDEyMC41MDEyNVYzNS4zNDM3NVExMjAuNTAxMjUgMzcuNTMxMjUgMTIyLjg3NjI1IDM3LjUzMTI1UTEyMy40Mzg3NSAzNy41MzEyNSAxMjQuNTE2ODc1IDM3LjM5MDYyNVExMjUuNTk1IDM3LjI1IDEyNS45Mzg3NSAzNy4xMjVMMTI3LjQzODc1IDQ2LjA5Mzc1UTEyNS4yODI1IDQ2LjY4NzUgMTIzLjM3NjI1IDQ2Ljg5MDYyNVExMjEuNDcgNDcuMDkzNzUgMTE5Ljc4MjUgNDcuMDkzNzVRMTA3LjkzODc1IDQ3LjA5Mzc1IDEwNy45Mzg3NSAzNi41VjIwLjc1SDEwMy41MDEyNVYxMS42MjVIMTA3LjkzODc1VjMuMzEyNUgxMjAuNTAxMjVWMTEuNjI1WiBNMTQxLjk5MTI0OTk5OTk5OTk4IDQ3LjE4NzVRMTMzLjU4NDk5OTk5OTk5OTk4IDQ3LjE4NzUgMTI4Ljc4ODEyNDk5OTk5OTk4IDQyLjQyMTg3NVExMjMuOTkxMjUgMzcuNjU2MjUgMTIzLjk5MTI1IDI5LjE4NzVRMTIzLjk5MTI1IDIzLjc4MTI1IDEyNi4xNjMxMjQ5OTk5OTk5OCAxOS43MzQzNzVRMTI4LjMzNDk5OTk5OTk5OTk4IDE1LjY4NzUgMTMyLjMwMzc0OTk5OTk5OTk4IDEzLjQzNzVRMTM2LjI3MjQ5OTk5OTk5OTk4IDExLjE4NzUgMTQxLjY3ODc0OTk5OTk5OTk4IDExLjE4NzVRMTQ2Ljk1OTk5OTk5OTk5OTk4IDExLjE4NzUgMTUwLjg2NjI0OTk5OTk5OTk4IDEzLjM1OTM3NVExNTQuNzcyNDk5OTk5OTk5OTggMTUuNTMxMjUgMTU2LjkxMzEyNDk5OTk5OTk4IDE5LjU0Njg3NVExNTkuMDUzNzQ5OTk5OTk5OTggMjMuNTYyNSAxNTkuMDUzNzQ5OTk5OTk5OTggMjkuMTI1VjMyLjBIMTM2LjMwMzc0OTk5OTk5OTk4UTEzNi40Mjg3NDk5OTk5OTk5OCAzNS4yNSAxMzguMDM4MTI0OTk5OTk5OTggMzYuODEyNVExMzkuNjQ3NDk5OTk5OTk5OTggMzguMzc1IDE0Mi4yNDEyNDk5OTk5OTk5OCAzOC4zNzVRMTQ0LjE3ODc0OTk5OTk5OTk4IDM4LjM3NSAxNDUuNTUzNzQ5OTk5OTk5OTggMzcuNTc4MTI1UTE0Ni45Mjg3NDk5OTk5OTk5OCAzNi43ODEyNSAxNDcuNDkxMjQ5OTk5OTk5OTggMzUuMzQzNzVMMTU4LjU1Mzc0OTk5OTk5OTk4IDM2Ljk2ODc1UTE1Ny4yMDk5OTk5OTk5OTk5OCA0MS42ODc1IDE1Mi45NDQzNzQ5OTk5OTk5OCA0NC40Mzc1UTE0OC42Nzg3NDk5OTk5OTk5OCA0Ny4xODc1IDE0MS45OTEyNDk5OTk5OTk5OCA0Ny4xODc1Wk0xMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1SDE0Ny4yMDk5OTk5OTk5OTk5OFExNDYuNjE2MjQ5OTk5OTk5OTggMjAuMCAxNDEuODAzNzQ5OTk5OTk5OTggMjAuMFExMzYuOTkxMjQ5OTk5OTk5OTggMjAuMCAxMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1WiBNMTcwLjg1NjI1IDI2LjkzNzVWNDYuNTYyNUgxNTguMjkzNzVWMTEuNjI1SDE3MC4wNzVMMTcwLjI5Mzc1IDE5LjVRMTcxLjU3NSAxNS45Mzc1IDE3NC4yIDEzLjU2MjVRMTc2LjgyNSAxMS4xODc1IDE4MS4yOTM3NSAxMS4xODc1UTE4NS4wMTI1IDExLjE4NzUgMTg3Ljc0Njg3NSAxMi44NzVRMTkwLjQ4MTI1IDE0LjU2MjUgMTkxLjk4MTI1IDE3LjUzMTI1UTE5My40ODEyNSAyMC41IDE5My40ODEyNSAyNC4zMTI1VjQ2LjU2MjVIMTgwLjkxODc1VjI2LjkzNzVRMTgwLjkxODc1IDI0LjM0Mzc1IDE3OS42MDYyNSAyMi44NTkzNzVRMTc4LjI5Mzc1IDIxLjM3NSAxNzUuOTE4NzUgMjEuMzc1UTE3My42MDYyNSAyMS4zNzUgMTcyLjIzMTI1IDIyLjg1OTM3NVExNzAuODU2MjUgMjQuMzQzNzUgMTcwLjg1NjI1IDI2LjkzNzVaIE0yMTQuNTMzNzUgMTEuNjI1VjIwLjc1SDIwOC41MzM3NVYzNS4zNDM3NVEyMDguNTMzNzUgMzcuNTMxMjUgMjEwLjkwODc1IDM3LjUzMTI1UTIxMS40NzEyNSAzNy41MzEyNSAyMTIuNTQ5Mzc1IDM3LjM5MDYyNVEyMTMuNjI3NSAzNy4yNSAyMTMuOTcxMjUgMzcuMTI1TDIxNS40NzEyNSA0Ni4wOTM3NVEyMTMuMzE1IDQ2LjY4NzUgMjExLjQwODc1IDQ2Ljg5MDYyNVEyMDkuNTAyNSA0Ny4wOTM3NSAyMDcuODE1IDQ3LjA5Mzc1UTE5NS45NzEyNSA0Ny4wOTM3NSAxOTUuOTcxMjUgMzYuNVYyMC43NUgxOTEuNTMzNzVWMTEuNjI1SDE5NS45NzEyNVYzLjMxMjVIMjA4LjUzMzc1VjExLjYyNVoiLz48cGF0aCBmaWxsPSIjM0NCRkIwIiBkPSJNMjEzLjcxMTI1IDQ2LjU2MjVWMC4wSDIzMy42NDg3NUwyMzcuODM2MjUgMTQuNTYyNVEyMzguMzM2MjUgMTYuMjgxMjUgMjM4Ljk0NTYyNSAxOS4wMzEyNVEyMzkuNTU1IDIxLjc4MTI1IDI0MC4xOCAyNC45Njg3NVEyNDAuODA1IDI4LjE1NjI1IDI0MS4zMzYyNSAzMS4yMTg3NVEyNDEuODY3NSAyOC4xNTYyNSAyNDIuNDkyNSAyNC45Njg3NVEyNDMuMTE3NSAyMS43ODEyNSAyNDMuNzI2ODc1IDE5LjAzMTI1UTI0NC4zMzYyNSAxNi4yODEyNSAyNDQuODA1IDE0LjU2MjVMMjQ4LjkzIDAuMEgyNjguODk4NzVWNDYuNTYyNUgyNTYuMTQ4NzVWMjguNTYyNVEyNTYuMTQ4NzUgMjYuNzgxMjUgMjU2LjI0MjUgMjMuNzAzMTI1UTI1Ni4zMzYyNSAyMC42MjUgMjU2LjQ0NTYyNSAxNy4wMTU2MjVRMjU2LjU1NSAxMy40MDYyNSAyNTYuNjE3NSAxMC4wUTI1NS44Njc1IDEzLjUzMTI1IDI1NS4wMDgxMjUgMTcuMDkzNzVRMjU0LjE0ODc1IDIwLjY1NjI1IDI1My4zNTE4NzUgMjMuNjU2MjVRMjUyLjU1NSAyNi42NTYyNSAyNTEuOTkyNSAyOC41NjI1TDI0Ni41ODYyNSA0Ni41NjI1SDIzNi4wODYyNUwyMzAuNTg2MjUgMjguNTYyNVEyMzAuMDIzNzUgMjYuNzUgMjI5LjI0MjUgMjMuODc1UTIyOC40NjEyNSAyMS4wIDIyNy42MTc1IDE3LjYwOTM3NVEyMjYuNzczNzUgMTQuMjE4NzUgMjI2LjAyMzc1IDEwLjc4MTI1UTIyNi4wODYyNSAxNC4wOTM3NSAyMjYuMTggMTcuNTQ2ODc1UTIyNi4yNzM3NSAyMS4wIDIyNi4zNjc1IDIzLjkyMTg3NVEyMjYuNDYxMjUgMjYuODQzNzUgMjI2LjQ2MTI1IDI4LjU2MjVWNDYuNTYyNVogTTI2Ny41NzYyNSA0Ni41NjI1IDI4Mi42NyAwLjBIMjk5LjkyTDMxNS41NzYyNSA0Ni41NjI1SDMwMS4yNjM3NUwyOTguNTc2MjUgMzcuNjI1SDI4NC4yNjM3NUwyODEuNzAxMjUgNDYuNTYyNVpNMjg2Ljk1MTI1IDI4LjE4NzVIMjk1Ljc2Mzc1UTI5NC40ODI1IDIzLjkzNzUgMjkzLjM0MTg3NSAxOS40MjE4NzVRMjkyLjIwMTI1IDE0LjkwNjI1IDI5MS4xNyAxMC4zNDM3NVEyOTAuMjAxMjUgMTQuOTA2MjUgMjg5LjE4NTYyNSAxOS40MjE4NzVRMjg4LjE3IDIzLjkzNzUgMjg2Ljk1MTI1IDI4LjE4NzVaIE0zMDcuMDk3NSAxMC4xODc1VjAuMEgzNDcuNTM1VjEwLjE4NzVIMzMzLjYyODc1VjQ2LjU2MjVIMzIxLjAwMzc1VjEwLjE4NzVaIE0zNDUuMjc1MDAwMDAwMDAwMDMgMTAuMTg3NVYwLjBIMzg1LjcxMjUwMDAwMDAwMDAzVjEwLjE4NzVIMzcxLjgwNjI1MDAwMDAwMDAzVjQ2LjU2MjVIMzU5LjE4MTI1MDAwMDAwMDAzVjEwLjE4NzVaIE0zODQuNzAyNTAwMDAwMDAwMDQgNDYuNTYyNVYwLjBINDE4LjI2NTAwMDAwMDAwMDA0VjEwLjE4NzVIMzk3LjMyNzUwMDAwMDAwMDA0VjE4LjA2MjVINDE2LjUxNTAwMDAwMDAwMDA0VjI4LjBIMzk3LjMyNzUwMDAwMDAwMDA0VjM2LjM3NUg0MTguMTQwMDAwMDAwMDAwMDRWNDYuNTYyNVogTTQxOC4xNjEyNTAwMDAwMDAwNSA0Ni41NjI1VjAuMEg0MzguMjIzNzUwMDAwMDAwMDVRNDQzLjQxMTI1MDAwMDAwMDA1IDAuMCA0NDcuMzAxODc1MDAwMDAwMDUgMS44OTA2MjVRNDUxLjE5MjUwMDAwMDAwMDA1IDMuNzgxMjUgNDUzLjM2NDM3NTAwMDAwMDA1IDcuMzI4MTI1UTQ1NS41MzYyNTAwMDAwMDAwNSAxMC44NzUgNDU1LjUzNjI1MDAwMDAwMDA1IDE1LjgxMjVRNDU1LjUzNjI1MDAwMDAwMDA1IDIwLjY1NjI1IDQ1My40MjY4NzUwMDAwMDAwNSAyNC4wMzEyNVE0NTEuMzE3NTAwMDAwMDAwMDUgMjcuNDA2MjUgNDQ3LjU5ODc1MDAwMDAwMDA1IDI5LjE4NzVMNDU3LjA5ODc1MDAwMDAwMDA1IDQ2LjU2MjVINDQzLjM0ODc1MDAwMDAwMDA1TDQzNS4xNjEyNTAwMDAwMDAwNSAzMS4xODc1SDQzMC43ODYyNTAwMDAwMDAwNVY0Ni41NjI1Wk00MzAuNzg2MjUwMDAwMDAwMDUgMjEuMzc1SDQzNS4yMjM3NTAwMDAwMDAwNVE0MzguNTY3NTAwMDAwMDAwMDUgMjEuMzc1IDQ0MC40NTgxMjUwMDAwMDAwNSAyMC4wOTM3NVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTguODEyNSA0NDIuMzQ4NzUwMDAwMDAwMDUgMTUuODEyNVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTIuODQzNzUgNDQwLjQ1ODEyNTAwMDAwMDA1IDExLjQ4NDM3NVE0MzguNTY3NTAwMDAwMDAwMDUgMTAuMTI1IDQzNS4yMjM3NTAwMDAwMDAwNSAxMC4xMjVINDMwLjc4NjI1MDAwMDAwMDA1WiBNNDY0LjA4ODc1MDAwMDAwMDA2IDQ3LjMxMjVRNDYxLjMzODc1MDAwMDAwMDA2IDQ3LjMxMjUgNDU5LjQ5NTAwMDAwMDAwMDA2IDQ1LjVRNDU3LjY1MTI1MDAwMDAwMDA2IDQzLjY4NzUgNDU3LjY1MTI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ1Ny42NTEyNTAwMDAwMDAwNiAzOC4yNSA0NTkuNDk1MDAwMDAwMDAwMDYgMzYuNDM3NVE0NjEuMzM4NzUwMDAwMDAwMDYgMzQuNjI1IDQ2NC4wODg3NTAwMDAwMDAwNiAzNC42MjVRNDY2LjgzODc1MDAwMDAwMDA2IDM0LjYyNSA0NjguNjgyNTAwMDAwMDAwMDYgMzYuNDM3NVE0NzAuNTI2MjUwMDAwMDAwMDYgMzguMjUgNDcwLjUyNjI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ3MC41MjYyNTAwMDAwMDAwNiA0My42ODc1IDQ2OC42ODI1MDAwMDAwMDAwNiA0NS41UTQ2Ni44Mzg3NTAwMDAwMDAwNiA0Ny4zMTI1IDQ2NC4wODg3NTAwMDAwMDAwNiA0Ny4zMTI1WiIvPjxyZWN0IHg9IjAiIHk9IjY2LjU2IiB3aWR0aD0iNDc2LjAzIiBoZWlnaHQ9IjgiIGZpbGw9IiMzQ0JGQjAiLz48L3N2Zz4K" alt=""></a>
+      <p style="margin-top:10px">Digital marketing agency for local businesses.</p>
+      <div class="fl"><a href="mailto:hello@contentmatter.co">hello@contentmatter.co</a><a href="/matters">The Matters</a><a data-audit href="/audit">Free audit</a></div>
+    </div>
+    <div>
+      <p>Results are estimates based on the numbers you enter. They are not guarantees, financial advice, or legal advice. Check them against your own books and contracts. Drafts are starting points, so read and edit them before you use them.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- config and helpers ---------- */
+var CFG=Object.assign({BOOKING_URL:'https://meetings-na2.hubspot.com/content-matter',AUDIT_URL:'/audit',AI_ENDPOINT:'',LEAD_ENDPOINT:''},window.CM_CONFIG||{});
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+var usd=function(v,d){d=d==null?2:d;return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:d,maximumFractionDigits:d}).format(isFinite(v)?v:0)};
+var n0=function(v){return Math.round(isFinite(v)?v:0).toLocaleString('en-US')};
+var n1=function(v){return (isFinite(v)?v:0).toFixed(1)};
+var pct=function(v){return n1(v)+'%'};
+var byId=function(id){return document.getElementById(id)};
+var v=function(id){var e=byId(id);var x=e?parseFloat(e.value):0;return isFinite(x)?x:0};
+var sv=function(id){var e=byId(id);return e?String(e.value).trim():''};
+var set=function(id,t){var e=byId(id);if(e)e.textContent=t};
+var wait=function(ms){return new Promise(function(r){setTimeout(r,ms)})};
+
+/* field builders */
+var N=function(id,label,val,o){o=o||{};return '<div class="fld"><label for="'+id+'">'+label+'</label><input id="'+id+'" type="number" inputmode="decimal" min="'+(o.min==null?0:o.min)+'"'+(o.max!=null?' max="'+o.max+'"':'')+' step="'+(o.step||'any')+'" value="'+esc(val)+'">'+(o.hint?'<p class="hint">'+o.hint+'</p>':'')+'</div>'};
+var T=function(id,label,val,o){o=o||{};return '<div class="fld"><label for="'+id+'">'+label+'</label><input id="'+id+'" type="text" autocomplete="off" value="'+esc(val)+'"'+(o.ph?' placeholder="'+esc(o.ph)+'"':'')+'>'+(o.hint?'<p class="hint">'+o.hint+'</p>':'')+'</div>'};
+var A=function(id,label,val,o){o=o||{};return '<div class="fld"><label for="'+id+'">'+label+'</label><textarea id="'+id+'"'+(o.ph?' placeholder="'+esc(o.ph)+'"':'')+'>'+esc(val)+'</textarea>'+(o.hint?'<p class="hint">'+o.hint+'</p>':'')+'</div>'};
+var S=function(id,label,opts,sel,o){o=o||{};return '<div class="fld"><label for="'+id+'">'+label+'</label><select id="'+id+'">'+opts.map(function(x){var a=Array.isArray(x)?x:[x,x];return '<option value="'+esc(a[0])+'"'+(String(a[0])===String(sel)?' selected':'')+'>'+esc(a[1])+'</option>'}).join('')+'</select>'+(o.hint?'<p class="hint">'+o.hint+'</p>':'')+'</div>'};
+var KV=function(label,id){return '<div class="kv"><span>'+label+'</span><b id="'+id+'">0</b></div>'};
+var LEAD=function(big,small){return '<div class="result-lead"><div class="big" id="'+big+'">0</div><small id="'+small+'"></small></div>'};
+var CALL=function(id){return '<div class="callout" id="'+id+'"></div>'};
+var setCall=function(id,text,watch){var e=byId(id);if(!e)return;e.className='callout'+(watch?' watch':'');e.textContent=text};
+
+/* ---------- industries ---------- */
+var IND={service:'Service businesses',food:'Restaurants and food',beauty:'Beauty and clinics',retail:'Local retail and brands'};
+var IND_KEYS=['service','food','beauty','retail'];
+var VOC={
+  service:{act:'request a quote or book',list:'services and prices',typeEx:'house cleaning service',bizEx:'Bright Home Cleaning',cust:'customers'},
+  food:{act:'order online or book a table',list:'menu',typeEx:'ramen shop',bizEx:'Corner Table',cust:'guests'},
+  beauty:{act:'book an appointment',list:'service menu and prices',typeEx:'hair salon',bizEx:'Studio Sol',cust:'clients'},
+  retail:{act:'shop online or find your store hours',list:'product pages',typeEx:'home goods shop',bizEx:'Maple and Main',cust:'customers'}
+};
+var state={ind:'all',kind:'all',summary:function(){return ''},toolTitle:'',toolId:'',noInputs:false};
+try{var _s=localStorage.getItem('cm_ind');if(_s&&(_s==='all'||IND[_s]))state.ind=_s}catch(e){}
+var indDefault=function(){return state.ind!=='all'?state.ind:'service'};
+var indSelect=function(id,sel){return S(id,'Industry',IND_KEYS.map(function(k){return [k,IND[k]]}),sel||indDefault())};
+
+/* ---------- tool registry ---------- */
+var TOOLS=[];
+var ALL=IND_KEYS.slice();
+function addTool(t){TOOLS.push(t)}
+
+/* ---------- layout and lead capture ---------- */
+function leadBlock(){
+  return '<div class="share"><h3>Keep this result</h3>'+
+  '<p class="small">Download a branded report, copy the text, or get a copy by email. Nothing is sent until you press the email button.</p>'+
+  '<div class="fld" style="margin-top:0"><label for="pdf-biz">Business name on the report (optional)</label><input id="pdf-biz" type="text" autocomplete="organization"></div>'+
+  '<div class="btnrow" style="margin-top:12px"><button class="pill sm" type="button" data-pdf>Download PDF report</button><button class="pill ghost sm" type="button" data-copy>Copy result</button></div><p class="notice" data-copy-msg role="status"></p>'+
+  '<form class="lead" novalidate>'+
+    '<div class="row2"><div><label for="ld-name">Name</label><input id="ld-name" type="text" autocomplete="name"></div><div><label for="ld-email">Email</label><input id="ld-email" type="email" autocomplete="email" placeholder="you@yourbusiness.com"></div></div>'+
+    '<button class="pill sm" type="submit">Email me this result</button>'+
+    '<p class="notice" data-lead-msg role="status"></p>'+
+    '<p class="small">We use your email to send this result and to follow up about your business. You can opt out at any time.</p>'+
+  '</form></div>';
+}
+function layout(inp,res,cls){
+  return '<div class="layout"><section class="panel in">'+inp+'</section><aside class="panel res'+(cls?' '+cls:'')+'"><div class="resbox" aria-live="polite">'+res+'</div>'+leadBlock()+'</aside></div>';
+}
+function wireShare(root){
+  var copyBtn=$('[data-copy]',root);
+  if(copyBtn)copyBtn.addEventListener('click',function(){
+    var txt=state.summary();var msg=$('[data-copy-msg]',root);
+    if(!txt){msg.textContent='Nothing to copy yet.';return}
+    var done=function(){msg.textContent='Copied.'};
+    var fallback=function(){var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){msg.textContent='Copy was blocked. Select the result and copy it.'}document.body.removeChild(ta)};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(done,fallback);else fallback();
+  });
+  var pdfBtn=$('[data-pdf]',root);
+  if(pdfBtn)pdfBtn.addEventListener('click',function(){
+    var msg=$('[data-copy-msg]',root);
+    if(!state.summary()){msg.textContent='Run the tool first, then download the report.';return}
+    msg.textContent='';printReport(root);
+  });
+  var f=$('form.lead',root);
+  if(f)f.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var name=$('#ld-name',f).value.trim(),email=$('#ld-email',f).value.trim(),msg=$('[data-lead-msg]',f);
+    if(!/^\S+@\S+\.\S+$/.test(email)){msg.textContent='Enter a valid email address.';return}
+    var payload={name:name,email:email,tool:state.toolTitle,toolId:state.toolId,industry:state.ind,summary:state.summary().slice(0,6000),page:location.href,at:new Date().toISOString()};
+    if(!CFG.LEAD_ENDPOINT){msg.textContent='Thanks. Email delivery is not connected yet on this draft, so copy the result for now.';return}
+    var btn=$('button[type=submit]',f);btn.disabled=true;msg.textContent='Sending...';
+    try{
+      var r=await fetch(CFG.LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      if(!r.ok)throw new Error('bad');
+      msg.innerHTML='Thanks. Check your inbox shortly. Want to talk it through? <a href="'+esc(CFG.BOOKING_URL)+'" target="_blank" rel="noopener">Book a free consultation</a>.';
+      f.reset();
+    }catch(err){msg.textContent='Something went wrong. Copy the result for now and try again later.'}
+    finally{btn.disabled=false}
+  });
+}
+
+/* generic editable table: rows live in an array, onChange recalculates */
+function editTable(root,bodyId,rows,cols,blank,onChange){
+  var body=byId(bodyId);
+  function draw(){
+    body.innerHTML=rows.map(function(r,i){
+      return '<tr>'+cols.map(function(c){
+        var id=bodyId+'-'+i+'-'+c.k;
+        if(c.calc)return '<td class="num" id="'+id+'"></td>';
+        if(c.sel)return '<td><select id="'+id+'" data-i="'+i+'" data-k="'+c.k+'" aria-label="'+esc(c.label)+'">'+c.sel.map(function(o){var a=Array.isArray(o)?o:[o,o];return '<option value="'+esc(a[0])+'"'+(a[0]===r[c.k]?' selected':'')+'>'+esc(a[1])+'</option>'}).join('')+'</select></td>';
+        return '<td><input id="'+id+'" class="'+(c.num?'num':'')+'" type="'+(c.num?'number':'text')+'"'+(c.num?' inputmode="decimal" min="0" step="'+(c.step||'any')+'"':'')+' data-i="'+i+'" data-k="'+c.k+'" value="'+esc(r[c.k])+'" aria-label="'+esc(c.label)+'"></td>';
+      }).join('')+'<td><button class="rm" type="button" data-rm="'+i+'" aria-label="Remove row">&times;</button></td></tr>';
+    }).join('');
+    onChange();
+  }
+  function handle(e){
+    var t=e.target,i=t.getAttribute('data-i');if(i==null)return;
+    var k=t.getAttribute('data-k'),c=cols.filter(function(c){return c.k===k})[0];
+    rows[i][k]=c&&c.num?(parseFloat(t.value)||0):t.value;onChange();
+  }
+  body.addEventListener('input',handle);body.addEventListener('change',handle);
+  body.addEventListener('click',function(e){var b=e.target.closest('[data-rm]');if(!b)return;rows.splice(parseInt(b.getAttribute('data-rm'),10),1);draw()});
+  return {draw:draw,add:function(){rows.push(Object.assign({},blank));draw();var first=cols.filter(function(c){return !c.calc})[0];var el=byId(bodyId+'-'+(rows.length-1)+'-'+first.k);if(el)el.focus()}};
+}
+function bindInputs(root,fn){root.addEventListener('input',fn);root.addEventListener('change',fn);fn()}
+function barRow(label,p,low,right){return '<div class="bar-row"><span>'+esc(label)+'</span><div class="bar"><i class="'+(low?'low':'')+'" style="width:'+Math.max(0,Math.min(100,p))+'%"></i></div><span>'+esc(right)+'</span></div>'}
+
+
+/* ---------- branded PDF report (print layout, saved as PDF from the browser) ---------- */
+function freezeFields(el){
+  $$('table',el).forEach(function(tb){var last=tb.querySelector('thead th:last-child');if(last&&!last.textContent.trim()){$$('tr',tb).forEach(function(tr){var c=tr.lastElementChild;if(c&&(c.querySelector('.rm')||c.tagName==='TH'))c.remove()})}});
+  $$('[hidden],button,form,.rm,.hint,.btnrow,.notice,.example,.minor,[role=status]',el).forEach(function(n){n.remove()});
+  $$('input,select,textarea',el).forEach(function(f){
+    var span=document.createElement('span');span.className='pv';
+    if(f.type==='range'){f.remove();return}
+    if(f.type==='checkbox'){if(!f.checked){var lab=f.closest('label');(lab||f).remove();return}span.textContent='• ';f.replaceWith(span);return}
+    if(f.tagName==='SELECT'){span.textContent=f.options[f.selectedIndex]?f.options[f.selectedIndex].text:''}
+    else if(f.type==='date'){var d=new Date(f.value+'T00:00:00');span.textContent=isNaN(d)?f.value:d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}
+    else span.textContent=f.value;
+    if(!span.textContent.trim()&&f.tagName!=='SELECT'){var wrap=f.closest('.fld');if(wrap){wrap.remove();return}}
+    var td=f.closest('td');if(td&&f.classList.contains('num'))td.classList.add('num');
+    f.replaceWith(span);
+  });
+  $$('select',el).forEach(function(x){x.remove()});
+  $$('[id]',el).forEach(function(n){n.removeAttribute('id')});
+  $$('[aria-live]',el).forEach(function(n){n.removeAttribute('aria-live')});
+}
+function printReport(host){
+  var res=$('.resbox',host),inp=$('.panel.in',host);
+  if(!res)return;
+  var biz=sv('pdf-biz');
+  var r=res.cloneNode(true);freezeFields(r);var h0=r.firstElementChild;if(h0&&h0.tagName==='H2')h0.remove();
+  var inHTML='';
+  if(inp&&!state.noInputs){var c=inp.cloneNode(true);freezeFields(c);
+    /* the first heading of the inputs panel doubles as the section label */
+    inHTML='<h2>Your inputs</h2>'+c.innerHTML.replace(/<h2[^>]*>/,'<h3 class="pr-sub" style="font-size:12px;font-weight:700;margin:0 0 8px">').replace(/<\/h2>/,'</h3>')}
+  var d=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+  byId('print-report').innerHTML=
+    '<div class="pr-head"><span class="wm"><img class="cm-logo--on-light" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzYuMDMgNzQuNTYiIHdpZHRoPSI0NzYuMDMiIGhlaWdodD0iNzQuNTYiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iY29udGVudE1BVFRFUi4iPjx0aXRsZT5jb250ZW50TUFUVEVSLjwvdGl0bGU+PHBhdGggZmlsbD0iIzJDMzM0MCIgZD0iTTIwLjAgNDcuMTg3NVExNC4zMTI1IDQ3LjE4NzUgMTAuMjY1NjI1IDQ0LjkyMTg3NVE2LjIxODc1IDQyLjY1NjI1IDQuMDc4MTI1IDM4LjYwOTM3NVExLjkzNzUgMzQuNTYyNSAxLjkzNzUgMjkuMTg3NVExLjkzNzUgMjMuODEyNSA0LjA3ODEyNSAxOS43NjU2MjVRNi4yMTg3NSAxNS43MTg3NSAxMC4yNjU2MjUgMTMuNDUzMTI1UTE0LjMxMjUgMTEuMTg3NSAyMC4wIDExLjE4NzVRMjcuMjE4NzUgMTEuMTg3NSAzMS42NzE4NzUgMTQuNzk2ODc1UTM2LjEyNSAxOC40MDYyNSAzNi43MTg3NSAyNC40Njg3NUwyNS4xODc1IDI2LjE4NzVRMjQuMjgxMjUgMjAuNTYyNSAyMC4xODc1IDIwLjU2MjVRMTcuNzE4NzUgMjAuNTYyNSAxNi4yMzQzNzUgMjIuNjg3NVExNC43NSAyNC44MTI1IDE0Ljc1IDI5LjEyNVExNC43NSAzMy40MDYyNSAxNi4yMzQzNzUgMzUuNjA5Mzc1UTE3LjcxODc1IDM3LjgxMjUgMjAuMTg3NSAzNy44MTI1UTI0LjM3NSAzNy44MTI1IDI1LjE4NzUgMzIuMEwzNi43MTg3NSAzMy42ODc1UTM2LjA5Mzc1IDM5LjkwNjI1IDMxLjY4NzUgNDMuNTQ2ODc1UTI3LjI4MTI1IDQ3LjE4NzUgMjAuMCA0Ny4xODc1WiBNNTIuODY1IDQ3LjE4NzVRNDcuMTc3NSA0Ny4xODc1IDQzLjExNSA0NC45MjE4NzVRMzkuMDUyNSA0Mi42NTYyNSAzNi45MTE4NzUgMzguNjA5Mzc1UTM0Ljc3MTI1IDM0LjU2MjUgMzQuNzcxMjUgMjkuMTg3NVEzNC43NzEyNSAyMy44MTI1IDM2LjkxMTg3NSAxOS43NjU2MjVRMzkuMDUyNSAxNS43MTg3NSA0My4xMTUgMTMuNDUzMTI1UTQ3LjE3NzUgMTEuMTg3NSA1Mi44NjUgMTEuMTg3NVE1OC41NTI1IDExLjE4NzUgNjIuNTgzNzUwMDAwMDAwMDEgMTMuNDUzMTI1UTY2LjYxNTAwMDAwMDAwMDAxIDE1LjcxODc1IDY4Ljc1NTYyNTAwMDAwMDAxIDE5Ljc2NTYyNVE3MC44OTYyNTAwMDAwMDAwMSAyMy44MTI1IDcwLjg5NjI1MDAwMDAwMDAxIDI5LjE4NzVRNzAuODk2MjUwMDAwMDAwMDEgMzQuNTYyNSA2OC43NTU2MjUwMDAwMDAwMSAzOC42MDkzNzVRNjYuNjE1MDAwMDAwMDAwMDEgNDIuNjU2MjUgNjIuNTgzNzUwMDAwMDAwMDEgNDQuOTIxODc1UTU4LjU1MjUgNDcuMTg3NSA1Mi44NjUgNDcuMTg3NVpNNTIuODY1IDM3LjgxMjVRNTUuMzAyNSAzNy44MTI1IDU2LjY5MzEyNSAzNS41MTU2MjVRNTguMDgzNzUgMzMuMjE4NzUgNTguMDgzNzUgMjkuMTI1UTU4LjA4Mzc1IDI1LjAgNTYuNjkzMTI1IDIyLjc4MTI1UTU1LjMwMjUgMjAuNTYyNSA1Mi44NjUgMjAuNTYyNVE1MC4zOTYyNSAyMC41NjI1IDQ4Ljk5IDIyLjc4MTI1UTQ3LjU4Mzc1IDI1LjAgNDcuNTgzNzUgMjkuMTI1UTQ3LjU4Mzc1IDMzLjIxODc1IDQ4Ljk5IDM1LjUxNTYyNVE1MC4zOTYyNSAzNy44MTI1IDUyLjg2NSAzNy44MTI1WiBNODIuODIzNzUgMjYuOTM3NVY0Ni41NjI1SDcwLjI2MTI1VjExLjYyNUg4Mi4wNDI1TDgyLjI2MTI1IDE5LjVRODMuNTQyNSAxNS45Mzc1IDg2LjE2NzUgMTMuNTYyNVE4OC43OTI1IDExLjE4NzUgOTMuMjYxMjUgMTEuMTg3NVE5Ni45OCAxMS4xODc1IDk5LjcxNDM3NSAxMi44NzVRMTAyLjQ0ODc1IDE0LjU2MjUgMTAzLjk0ODc1IDE3LjUzMTI1UTEwNS40NDg3NSAyMC41IDEwNS40NDg3NSAyNC4zMTI1VjQ2LjU2MjVIOTIuODg2MjVWMjYuOTM3NVE5Mi44ODYyNSAyNC4zNDM3NSA5MS41NzM3NSAyMi44NTkzNzVROTAuMjYxMjUgMjEuMzc1IDg3Ljg4NjI1IDIxLjM3NVE4NS41NzM3NSAyMS4zNzUgODQuMTk4NzUgMjIuODU5Mzc1UTgyLjgyMzc1IDI0LjM0Mzc1IDgyLjgyMzc1IDI2LjkzNzVaIE0xMjYuNTAxMjUgMTEuNjI1VjIwLjc1SDEyMC41MDEyNVYzNS4zNDM3NVExMjAuNTAxMjUgMzcuNTMxMjUgMTIyLjg3NjI1IDM3LjUzMTI1UTEyMy40Mzg3NSAzNy41MzEyNSAxMjQuNTE2ODc1IDM3LjM5MDYyNVExMjUuNTk1IDM3LjI1IDEyNS45Mzg3NSAzNy4xMjVMMTI3LjQzODc1IDQ2LjA5Mzc1UTEyNS4yODI1IDQ2LjY4NzUgMTIzLjM3NjI1IDQ2Ljg5MDYyNVExMjEuNDcgNDcuMDkzNzUgMTE5Ljc4MjUgNDcuMDkzNzVRMTA3LjkzODc1IDQ3LjA5Mzc1IDEwNy45Mzg3NSAzNi41VjIwLjc1SDEwMy41MDEyNVYxMS42MjVIMTA3LjkzODc1VjMuMzEyNUgxMjAuNTAxMjVWMTEuNjI1WiBNMTQxLjk5MTI0OTk5OTk5OTk4IDQ3LjE4NzVRMTMzLjU4NDk5OTk5OTk5OTk4IDQ3LjE4NzUgMTI4Ljc4ODEyNDk5OTk5OTk4IDQyLjQyMTg3NVExMjMuOTkxMjUgMzcuNjU2MjUgMTIzLjk5MTI1IDI5LjE4NzVRMTIzLjk5MTI1IDIzLjc4MTI1IDEyNi4xNjMxMjQ5OTk5OTk5OCAxOS43MzQzNzVRMTI4LjMzNDk5OTk5OTk5OTk4IDE1LjY4NzUgMTMyLjMwMzc0OTk5OTk5OTk4IDEzLjQzNzVRMTM2LjI3MjQ5OTk5OTk5OTk4IDExLjE4NzUgMTQxLjY3ODc0OTk5OTk5OTk4IDExLjE4NzVRMTQ2Ljk1OTk5OTk5OTk5OTk4IDExLjE4NzUgMTUwLjg2NjI0OTk5OTk5OTk4IDEzLjM1OTM3NVExNTQuNzcyNDk5OTk5OTk5OTggMTUuNTMxMjUgMTU2LjkxMzEyNDk5OTk5OTk4IDE5LjU0Njg3NVExNTkuMDUzNzQ5OTk5OTk5OTggMjMuNTYyNSAxNTkuMDUzNzQ5OTk5OTk5OTggMjkuMTI1VjMyLjBIMTM2LjMwMzc0OTk5OTk5OTk4UTEzNi40Mjg3NDk5OTk5OTk5OCAzNS4yNSAxMzguMDM4MTI0OTk5OTk5OTggMzYuODEyNVExMzkuNjQ3NDk5OTk5OTk5OTggMzguMzc1IDE0Mi4yNDEyNDk5OTk5OTk5OCAzOC4zNzVRMTQ0LjE3ODc0OTk5OTk5OTk4IDM4LjM3NSAxNDUuNTUzNzQ5OTk5OTk5OTggMzcuNTc4MTI1UTE0Ni45Mjg3NDk5OTk5OTk5OCAzNi43ODEyNSAxNDcuNDkxMjQ5OTk5OTk5OTggMzUuMzQzNzVMMTU4LjU1Mzc0OTk5OTk5OTk4IDM2Ljk2ODc1UTE1Ny4yMDk5OTk5OTk5OTk5OCA0MS42ODc1IDE1Mi45NDQzNzQ5OTk5OTk5OCA0NC40Mzc1UTE0OC42Nzg3NDk5OTk5OTk5OCA0Ny4xODc1IDE0MS45OTEyNDk5OTk5OTk5OCA0Ny4xODc1Wk0xMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1SDE0Ny4yMDk5OTk5OTk5OTk5OFExNDYuNjE2MjQ5OTk5OTk5OTggMjAuMCAxNDEuODAzNzQ5OTk5OTk5OTggMjAuMFExMzYuOTkxMjQ5OTk5OTk5OTggMjAuMCAxMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1WiBNMTcwLjg1NjI1IDI2LjkzNzVWNDYuNTYyNUgxNTguMjkzNzVWMTEuNjI1SDE3MC4wNzVMMTcwLjI5Mzc1IDE5LjVRMTcxLjU3NSAxNS45Mzc1IDE3NC4yIDEzLjU2MjVRMTc2LjgyNSAxMS4xODc1IDE4MS4yOTM3NSAxMS4xODc1UTE4NS4wMTI1IDExLjE4NzUgMTg3Ljc0Njg3NSAxMi44NzVRMTkwLjQ4MTI1IDE0LjU2MjUgMTkxLjk4MTI1IDE3LjUzMTI1UTE5My40ODEyNSAyMC41IDE5My40ODEyNSAyNC4zMTI1VjQ2LjU2MjVIMTgwLjkxODc1VjI2LjkzNzVRMTgwLjkxODc1IDI0LjM0Mzc1IDE3OS42MDYyNSAyMi44NTkzNzVRMTc4LjI5Mzc1IDIxLjM3NSAxNzUuOTE4NzUgMjEuMzc1UTE3My42MDYyNSAyMS4zNzUgMTcyLjIzMTI1IDIyLjg1OTM3NVExNzAuODU2MjUgMjQuMzQzNzUgMTcwLjg1NjI1IDI2LjkzNzVaIE0yMTQuNTMzNzUgMTEuNjI1VjIwLjc1SDIwOC41MzM3NVYzNS4zNDM3NVEyMDguNTMzNzUgMzcuNTMxMjUgMjEwLjkwODc1IDM3LjUzMTI1UTIxMS40NzEyNSAzNy41MzEyNSAyMTIuNTQ5Mzc1IDM3LjM5MDYyNVEyMTMuNjI3NSAzNy4yNSAyMTMuOTcxMjUgMzcuMTI1TDIxNS40NzEyNSA0Ni4wOTM3NVEyMTMuMzE1IDQ2LjY4NzUgMjExLjQwODc1IDQ2Ljg5MDYyNVEyMDkuNTAyNSA0Ny4wOTM3NSAyMDcuODE1IDQ3LjA5Mzc1UTE5NS45NzEyNSA0Ny4wOTM3NSAxOTUuOTcxMjUgMzYuNVYyMC43NUgxOTEuNTMzNzVWMTEuNjI1SDE5NS45NzEyNVYzLjMxMjVIMjA4LjUzMzc1VjExLjYyNVoiLz48cGF0aCBmaWxsPSIjM0NCRkIwIiBkPSJNMjEzLjcxMTI1IDQ2LjU2MjVWMC4wSDIzMy42NDg3NUwyMzcuODM2MjUgMTQuNTYyNVEyMzguMzM2MjUgMTYuMjgxMjUgMjM4Ljk0NTYyNSAxOS4wMzEyNVEyMzkuNTU1IDIxLjc4MTI1IDI0MC4xOCAyNC45Njg3NVEyNDAuODA1IDI4LjE1NjI1IDI0MS4zMzYyNSAzMS4yMTg3NVEyNDEuODY3NSAyOC4xNTYyNSAyNDIuNDkyNSAyNC45Njg3NVEyNDMuMTE3NSAyMS43ODEyNSAyNDMuNzI2ODc1IDE5LjAzMTI1UTI0NC4zMzYyNSAxNi4yODEyNSAyNDQuODA1IDE0LjU2MjVMMjQ4LjkzIDAuMEgyNjguODk4NzVWNDYuNTYyNUgyNTYuMTQ4NzVWMjguNTYyNVEyNTYuMTQ4NzUgMjYuNzgxMjUgMjU2LjI0MjUgMjMuNzAzMTI1UTI1Ni4zMzYyNSAyMC42MjUgMjU2LjQ0NTYyNSAxNy4wMTU2MjVRMjU2LjU1NSAxMy40MDYyNSAyNTYuNjE3NSAxMC4wUTI1NS44Njc1IDEzLjUzMTI1IDI1NS4wMDgxMjUgMTcuMDkzNzVRMjU0LjE0ODc1IDIwLjY1NjI1IDI1My4zNTE4NzUgMjMuNjU2MjVRMjUyLjU1NSAyNi42NTYyNSAyNTEuOTkyNSAyOC41NjI1TDI0Ni41ODYyNSA0Ni41NjI1SDIzNi4wODYyNUwyMzAuNTg2MjUgMjguNTYyNVEyMzAuMDIzNzUgMjYuNzUgMjI5LjI0MjUgMjMuODc1UTIyOC40NjEyNSAyMS4wIDIyNy42MTc1IDE3LjYwOTM3NVEyMjYuNzczNzUgMTQuMjE4NzUgMjI2LjAyMzc1IDEwLjc4MTI1UTIyNi4wODYyNSAxNC4wOTM3NSAyMjYuMTggMTcuNTQ2ODc1UTIyNi4yNzM3NSAyMS4wIDIyNi4zNjc1IDIzLjkyMTg3NVEyMjYuNDYxMjUgMjYuODQzNzUgMjI2LjQ2MTI1IDI4LjU2MjVWNDYuNTYyNVogTTI2Ny41NzYyNSA0Ni41NjI1IDI4Mi42NyAwLjBIMjk5LjkyTDMxNS41NzYyNSA0Ni41NjI1SDMwMS4yNjM3NUwyOTguNTc2MjUgMzcuNjI1SDI4NC4yNjM3NUwyODEuNzAxMjUgNDYuNTYyNVpNMjg2Ljk1MTI1IDI4LjE4NzVIMjk1Ljc2Mzc1UTI5NC40ODI1IDIzLjkzNzUgMjkzLjM0MTg3NSAxOS40MjE4NzVRMjkyLjIwMTI1IDE0LjkwNjI1IDI5MS4xNyAxMC4zNDM3NVEyOTAuMjAxMjUgMTQuOTA2MjUgMjg5LjE4NTYyNSAxOS40MjE4NzVRMjg4LjE3IDIzLjkzNzUgMjg2Ljk1MTI1IDI4LjE4NzVaIE0zMDcuMDk3NSAxMC4xODc1VjAuMEgzNDcuNTM1VjEwLjE4NzVIMzMzLjYyODc1VjQ2LjU2MjVIMzIxLjAwMzc1VjEwLjE4NzVaIE0zNDUuMjc1MDAwMDAwMDAwMDMgMTAuMTg3NVYwLjBIMzg1LjcxMjUwMDAwMDAwMDAzVjEwLjE4NzVIMzcxLjgwNjI1MDAwMDAwMDAzVjQ2LjU2MjVIMzU5LjE4MTI1MDAwMDAwMDAzVjEwLjE4NzVaIE0zODQuNzAyNTAwMDAwMDAwMDQgNDYuNTYyNVYwLjBINDE4LjI2NTAwMDAwMDAwMDA0VjEwLjE4NzVIMzk3LjMyNzUwMDAwMDAwMDA0VjE4LjA2MjVINDE2LjUxNTAwMDAwMDAwMDA0VjI4LjBIMzk3LjMyNzUwMDAwMDAwMDA0VjM2LjM3NUg0MTguMTQwMDAwMDAwMDAwMDRWNDYuNTYyNVogTTQxOC4xNjEyNTAwMDAwMDAwNSA0Ni41NjI1VjAuMEg0MzguMjIzNzUwMDAwMDAwMDVRNDQzLjQxMTI1MDAwMDAwMDA1IDAuMCA0NDcuMzAxODc1MDAwMDAwMDUgMS44OTA2MjVRNDUxLjE5MjUwMDAwMDAwMDA1IDMuNzgxMjUgNDUzLjM2NDM3NTAwMDAwMDA1IDcuMzI4MTI1UTQ1NS41MzYyNTAwMDAwMDAwNSAxMC44NzUgNDU1LjUzNjI1MDAwMDAwMDA1IDE1LjgxMjVRNDU1LjUzNjI1MDAwMDAwMDA1IDIwLjY1NjI1IDQ1My40MjY4NzUwMDAwMDAwNSAyNC4wMzEyNVE0NTEuMzE3NTAwMDAwMDAwMDUgMjcuNDA2MjUgNDQ3LjU5ODc1MDAwMDAwMDA1IDI5LjE4NzVMNDU3LjA5ODc1MDAwMDAwMDA1IDQ2LjU2MjVINDQzLjM0ODc1MDAwMDAwMDA1TDQzNS4xNjEyNTAwMDAwMDAwNSAzMS4xODc1SDQzMC43ODYyNTAwMDAwMDAwNVY0Ni41NjI1Wk00MzAuNzg2MjUwMDAwMDAwMDUgMjEuMzc1SDQzNS4yMjM3NTAwMDAwMDAwNVE0MzguNTY3NTAwMDAwMDAwMDUgMjEuMzc1IDQ0MC40NTgxMjUwMDAwMDAwNSAyMC4wOTM3NVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTguODEyNSA0NDIuMzQ4NzUwMDAwMDAwMDUgMTUuODEyNVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTIuODQzNzUgNDQwLjQ1ODEyNTAwMDAwMDA1IDExLjQ4NDM3NVE0MzguNTY3NTAwMDAwMDAwMDUgMTAuMTI1IDQzNS4yMjM3NTAwMDAwMDAwNSAxMC4xMjVINDMwLjc4NjI1MDAwMDAwMDA1WiBNNDY0LjA4ODc1MDAwMDAwMDA2IDQ3LjMxMjVRNDYxLjMzODc1MDAwMDAwMDA2IDQ3LjMxMjUgNDU5LjQ5NTAwMDAwMDAwMDA2IDQ1LjVRNDU3LjY1MTI1MDAwMDAwMDA2IDQzLjY4NzUgNDU3LjY1MTI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ1Ny42NTEyNTAwMDAwMDAwNiAzOC4yNSA0NTkuNDk1MDAwMDAwMDAwMDYgMzYuNDM3NVE0NjEuMzM4NzUwMDAwMDAwMDYgMzQuNjI1IDQ2NC4wODg3NTAwMDAwMDAwNiAzNC42MjVRNDY2LjgzODc1MDAwMDAwMDA2IDM0LjYyNSA0NjguNjgyNTAwMDAwMDAwMDYgMzYuNDM3NVE0NzAuNTI2MjUwMDAwMDAwMDYgMzguMjUgNDcwLjUyNjI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ3MC41MjYyNTAwMDAwMDAwNiA0My42ODc1IDQ2OC42ODI1MDAwMDAwMDAwNiA0NS41UTQ2Ni44Mzg3NTAwMDAwMDAwNiA0Ny4zMTI1IDQ2NC4wODg3NTAwMDAwMDAwNiA0Ny4zMTI1WiIvPjxyZWN0IHg9IjAiIHk9IjY2LjU2IiB3aWR0aD0iNDc2LjAzIiBoZWlnaHQ9IjgiIGZpbGw9IiMyQzMzNDAiLz48L3N2Zz4K" alt="contentMATTER."></span><span class="pr-date">'+esc(d)+'</span></div><div class="pr-rule"></div>'+
+    '<p class="eyebrow">Free tools report</p><h1>'+esc(state.toolTitle)+'</h1>'+(biz?'<p class="pr-for">Prepared for '+esc(biz)+'</p>':'')+
+    '<h2>Your results</h2>'+r.innerHTML+inHTML+
+    '<div class="pr-foot"><p><b>Want help acting on this?</b> Book a free consultation: '+esc(CFG.BOOKING_URL)+'</p><p>content MATTER. Digital marketing agency. hello@contentmatter.co</p><p>Results are estimates based on the numbers entered. They are not guarantees, financial advice, or legal advice.</p></div>';
+  var oldTitle=document.title;document.title=state.toolTitle+' report | content MATTER';
+  var done=function(){document.title=oldTitle;byId('print-report').innerHTML='';window.removeEventListener('afterprint',done)};
+  window.addEventListener('afterprint',done);
+  setTimeout(function(){window.print()},60);
+}
+
+/* ---------- engines: live AI endpoint when set, built in engines otherwise ---------- */
+var DEMO={};
+async function runAI(task,input){
+  if(CFG.AI_ENDPOINT){
+    var r=await fetch(CFG.AI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({task:task,input:input})});
+    if(!r.ok){var e=new Error(r.status===429?'rate':'fail');e.code=r.status===429?'rate':'fail';throw e}
+    var data=await r.json();data.demo=false;return data;
+  }
+  await wait(650);
+  var d=DEMO[task](input);d.demo=true;return d;
+}
+var aiErr=function(e){return e&&e.code==='rate'?'Too many requests right now. Try again in a minute.':'Something went wrong. Press the button to try again.'};
+var DEMO_NOTE='<p class="ai-note">Built from your details. Read it and edit it before you use it.</p>';
+function copyButtons(root){
+  root.addEventListener('click',function(e){
+    var b=e.target.closest('[data-copy-text]');if(!b)return;
+    var txt=b.getAttribute('data-copy-text');var old=b.textContent;
+    var ok=function(){b.textContent='Copied';setTimeout(function(){b.textContent=old},1400)};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(ok,function(){});else{var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok()}catch(x){}document.body.removeChild(ta)}
+  });
+}
+function variantHTML(label,text,max,soft){
+  var len=text.length;var over=max&&len>max;
+  return '<div class="variant"><h4><span>'+esc(label)+'</span><span>'+(max?'<span class="cc'+(over?' over':'')+'">'+len+' of '+max+(soft?' suggested':'')+(over?(soft?'. Long.':'. Too long.'):'')+'</span> ':'')+'<button type="button" class="copy-sm" data-copy-text="'+esc(text)+'">Copy</button></span></h4><p>'+esc(text)+'</p></div>';
+}
+
+/* =====================================================
+   CALCULATORS
+   ===================================================== */
+
+/* 1. Ad budget and return planner */
+addTool({id:'ad-budget',title:'Ad budget and return planner',label:'Calculator',ai:false,inds:ALL,
+  short:'Turn a monthly ad budget into clicks, leads, customers, and what each customer costs.',
+  desc:'Enter your budget and your rough conversion rates. See how many customers it should bring and whether the ads pay for themselves. The numbers below are examples, so replace them with yours.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>Your campaign</h2><div class="fields">'+
+      '<div class="row2">'+N('ab-budget','Monthly ad budget ($)',1500,{step:50})+N('ab-cpc','Cost per click ($)',1.8,{step:.05,hint:'Your ad account shows this after the first week.'})+'</div>'+
+      '<div class="row2">'+N('ab-ctl','Clicks that become leads (%)',8,{step:.5,max:100,hint:'A lead is a call, form, or booking request.'})+N('ab-ltc','Leads that become customers (%)',25,{step:1,max:100})+'</div>'+
+      '<div class="row2">'+N('ab-val','Sales per new customer, first 12 months ($)',180,{step:5})+N('ab-m','Gross margin on those sales (%)',60,{step:1,max:100,hint:'What is left after the direct cost of goods or service.'})+'</div></div>',
+      '<h2>What it could bring</h2>'+LEAD('ab-cust','ab-cust-s')+KV('Clicks a month','ab-clicks')+KV('Leads a month','ab-leads')+KV('Cost per lead','ab-cpl')+KV('Cost per new customer','ab-cac')+KV('Sales from new customers','ab-rev')+KV('Return on ad spend','ab-roas')+KV('Break even return','ab-be')+KV('Profit after ad spend','ab-gp')+CALL('ab-note')
+    );
+    var fn=function(){
+      var b=v('ab-budget'),cpc=v('ab-cpc'),ctl=v('ab-ctl')/100,ltc=v('ab-ltc')/100,val=v('ab-val'),m=v('ab-m')/100;
+      var clicks=cpc>0?b/cpc:0,leads=clicks*ctl,cust=leads*ltc,rev=cust*val;
+      var cpl=leads>0?b/leads:0,cac=cust>0?b/cust:0,roas=b>0?rev/b:0,be=m>0?1/m:0,gp=rev*m-b;
+      set('ab-cust',n1(cust));set('ab-cust-s','new customers a month at these rates');
+      set('ab-clicks',n0(clicks));set('ab-leads',n1(leads));set('ab-cpl',cpl?usd(cpl):'n/a');set('ab-cac',cac?usd(cac):'n/a');
+      set('ab-rev',usd(rev,0));set('ab-roas',n1(roas)+'x');set('ab-be',be?n1(be)+'x':'n/a');set('ab-gp',usd(gp,0));
+      if(b<=0)setCall('ab-note','Enter a monthly ad budget to see the result.');
+      else if(gp>=0)setCall('ab-note','Each $1 of ads brings back about '+usd(roas)+' in first year sales. Your break even is '+usd(be)+', so these numbers cover the ad spend. Repeat visits would add to this.');
+      else setCall('ab-note','At these rates the ads cost '+usd(-gp,0)+' more than the profit from first year sales. Test a higher conversion rate, a lower cost per click, or a higher sale value before you scale the budget.',true);
+      state.summary=function(){return 'Ad budget and return planner\nMonthly budget: '+usd(b,0)+'\nNew customers a month: '+n1(cust)+'\nCost per new customer: '+(cac?usd(cac):'n/a')+'\nReturn on ad spend: '+n1(roas)+'x (break even '+(be?n1(be)+'x':'n/a')+')\nProfit after ad spend: '+usd(gp,0)};
+    };
+    bindInputs(root,fn);
+  }});
+
+/* 2. Customer value and break even */
+addTool({id:'customer-value',title:'Customer value and what to pay to win one',label:'Calculator',ai:false,inds:ALL,
+  short:'Work out what a customer is worth over time and the most you can spend to win one.',
+  desc:'A customer who comes back is worth far more than their first sale. Enter how they buy and see their lifetime value, and the most you can afford to spend to get a new one.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>How customers buy</h2><div class="fields">'+
+      '<div class="row2">'+N('cv-sale','Average sale ($)',85,{step:1})+N('cv-visits','Purchases per year',6,{step:.5})+'</div>'+
+      '<div class="row2">'+N('cv-years','Years a customer stays',2,{step:.5})+N('cv-m','Gross margin (%)',60,{step:1,max:100})+'</div>'+
+      '<div class="row2">'+N('cv-share','Share of lifetime profit you will spend to win them (%)',30,{step:5,max:100,hint:'Lower is safer. Higher grows faster with less profit early on.'})+N('cv-cac','What a new customer costs you now ($, optional)',40,{step:1})+'</div></div>',
+      '<h2>What a customer is worth</h2>'+LEAD('cv-ltv','cv-ltv-s')+KV('Lifetime gross profit','cv-gp')+KV('Most you should spend to win one','cv-max')+KV('Your cost per customer now','cv-cur')+KV('Profit back for each $1 spent','cv-ratio')+CALL('cv-note')
+    );
+    var fn=function(){
+      var sale=v('cv-sale'),vis=v('cv-visits'),yrs=v('cv-years'),m=v('cv-m')/100,share=v('cv-share')/100,cac=v('cv-cac');
+      var ltv=sale*vis*yrs,gp=ltv*m,mx=gp*share,ratio=cac>0?gp/cac:0;
+      set('cv-ltv',usd(ltv,0));set('cv-ltv-s','in sales from one customer over their time with you');
+      set('cv-gp',usd(gp,0));set('cv-max',usd(mx,0));set('cv-cur',cac>0?usd(cac,0):'n/a');set('cv-ratio',cac>0?usd(ratio):'n/a');
+      if(cac<=0)setCall('cv-note','Add what a new customer costs you today to compare it with the most you can spend.');
+      else if(cac<=mx)setCall('cv-note','You spend '+usd(cac,0)+' to win a customer who brings about '+usd(gp,0)+' in gross profit. That is inside your limit of '+usd(mx,0)+'. A common rule of thumb is to look for at least $3 of profit back for each $1 spent.');
+      else setCall('cv-note','You spend '+usd(cac,0)+' per customer, which is more than the '+usd(mx,0)+' you set as the limit. Lift repeat purchases, raise prices, or cut acquisition cost before you spend more.',true);
+      state.summary=function(){return 'Customer value\nLifetime sales per customer: '+usd(ltv,0)+'\nLifetime gross profit: '+usd(gp,0)+'\nMost to spend to win a customer: '+usd(mx,0)+'\nCurrent cost per customer: '+(cac>0?usd(cac,0):'n/a')};
+    };
+    bindInputs(root,fn);
+  }});
+
+/* 3. Service price calculator */
+addTool({id:'service-price',title:'Service price calculator',label:'Calculator',ai:false,inds:['service','beauty'],
+  short:'Find the hourly rate you need and the price each service has to be to earn it.',
+  desc:'Start with the pay you want and what the business costs to run. You get the hourly rate you need, then the price for one service after supplies, booking fees, and profit.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>Your hourly rate</h2><div class="fields">'+
+      '<div class="row2">'+N('sp-pay','Pay you want per year ($)',60000,{step:1000})+N('sp-over','Business costs per year ($)',18000,{step:500,hint:'Rent, insurance, software, tools, marketing.'})+'</div>'+
+      '<div class="row2">'+N('sp-weeks','Weeks worked per year',48,{step:1,max:52})+N('sp-hrs','Billable hours per week',22,{step:1,max:80,hint:'Hours with a customer, not total hours worked.'})+'</div></div>'+
+      '<h2>One service</h2><div class="fields">'+
+      '<div class="row2">'+N('sp-time','Time for one service (hours)',1.25,{step:.25})+N('sp-sup','Supplies per service ($)',12,{step:.5})+'</div>'+
+      '<div class="row2">'+N('sp-fee','Booking and card fees (%)',3,{step:.1,max:50})+N('sp-prof','Profit margin you want on top (%)',15,{step:1,max:60})+'</div>'+
+      N('sp-cur','Your current price ($, optional)',120,{step:1})+'</div>',
+      '<h2>Your price</h2>'+LEAD('sp-price','sp-price-s')+KV('Hourly rate you need','sp-rate')+KV('Cost to deliver one service','sp-cost')+KV('Profit on one service','sp-profit')+KV('What you earn per hour at your current price','sp-eff')+CALL('sp-note')
+    );
+    var fn=function(){
+      var pay=v('sp-pay'),over=v('sp-over'),wk=v('sp-weeks'),hr=v('sp-hrs'),t=v('sp-time'),sup=v('sp-sup'),fee=v('sp-fee')/100,prof=v('sp-prof')/100,cur=v('sp-cur');
+      var hours=wk*hr,rate=hours>0?(pay+over)/hours:0,cost=t*rate+sup,den=1-fee-prof,price=den>0?cost/den:0,rounded=Math.ceil(price-1e-9);
+      var eff=t>0?(cur*(1-fee)-sup)/t:0;
+      set('sp-price',usd(rounded,0));set('sp-price-s','suggested price, rounded up to the next dollar');
+      set('sp-rate',usd(rate));set('sp-cost',usd(cost));set('sp-profit',usd(rounded-cost-rounded*fee));
+      set('sp-eff',cur>0?usd(eff):'n/a');
+      if(den<=0)setCall('sp-note','Fees and margin add up to 100 percent or more, so no price can work. Lower one of them.',true);
+      else if(cur>0&&rounded>cur)setCall('sp-note','Your current price of '+usd(cur,0)+' is '+usd(rounded-cur,0)+' under the suggested price. At the current price you earn about '+usd(eff)+' an hour, against the '+usd(rate)+' you need.',true);
+      else if(cur>0)setCall('sp-note','Your current price of '+usd(cur,0)+' covers the rate you need. You earn about '+usd(eff)+' an hour on this service.');
+      else setCall('sp-note','Add your current price to compare it with the suggestion.');
+      state.summary=function(){return 'Service price\nHourly rate needed: '+usd(rate)+'\nCost to deliver: '+usd(cost)+'\nSuggested price: '+usd(rounded,0)+'\nCurrent price: '+(cur>0?usd(cur,0):'n/a')};
+    };
+    bindInputs(root,fn);
+  }});
+
+/* 4. No show cost */
+addTool({id:'no-show-cost',title:'No show cost calculator',label:'Calculator',ai:false,inds:['service','beauty'],
+  short:'See what missed appointments cost each year and what reminders or deposits could win back.',
+  desc:'Every empty slot is lost revenue. Enter your bookings and no show rate to see the yearly cost, then test how much reminders or deposits could recover.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>Your bookings</h2><div class="fields">'+
+      '<div class="row2">'+N('ns-appts','Appointments booked per week',60,{step:1})+N('ns-rate','No show rate (%)',12,{step:.5,max:100})+'</div>'+
+      '<div class="row2">'+N('ns-ticket','Average ticket ($)',85,{step:1})+N('ns-weeks','Weeks open per year',50,{step:1,max:52})+'</div>'+
+      N('ns-cut','How much reminders or deposits could cut no shows (%)',40,{step:5,max:100,hint:'This is your assumption. Test it for 60 days and replace it with what you see.'})+'</div>',
+      '<h2>What it costs</h2>'+LEAD('ns-year','ns-year-s')+KV('Missed appointments a month','ns-month')+KV('Lost revenue a month','ns-lostm')+KV('Recovered each year with a fix','ns-save')+KV('Still lost each year','ns-left')+CALL('ns-note')
+    );
+    var fn=function(){
+      var ap=v('ns-appts'),r=v('ns-rate')/100,tk=v('ns-ticket'),wk=v('ns-weeks'),cut=v('ns-cut')/100;
+      var missedWk=ap*r,lostYr=missedWk*tk*wk,missedMo=missedWk*wk/12,lostMo=lostYr/12,save=lostYr*cut;
+      set('ns-year',usd(lostYr,0));set('ns-year-s','lost revenue each year from no shows');
+      set('ns-month',n1(missedMo));set('ns-lostm',usd(lostMo,0));set('ns-save',usd(save,0));set('ns-left',usd(lostYr-save,0));
+      setCall('ns-note',lostYr>0?'A reminder text the day before and a small deposit for new customers are the two cheapest places to start. At a '+n0(cut*100)+' percent cut you would win back about '+usd(save/12,0)+' a month.':'Enter your bookings to see the result.');
+      state.summary=function(){return 'No show cost\nMissed a month: '+n1(missedMo)+'\nLost revenue a year: '+usd(lostYr,0)+'\nRecovered with a fix: '+usd(save,0)+' a year'};
+    };
+    bindInputs(root,fn);
+  }});
+
+/* 5. Retail markup, margin, discount */
+addTool({id:'retail-margin',title:'Markup, margin, and discount calculator',label:'Calculator',ai:false,inds:['retail'],
+  short:'Price an item from its cost, then see how many more you must sell to make a discount pay.',
+  desc:'Markup is a share of cost and margin is a share of price, and mixing them up is expensive. Set your price, then test a discount to see how much extra volume it needs.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>Your item</h2><div class="fields">'+
+      '<div class="row2">'+N('rm-cost','Cost per item ($)',18,{step:.25})+N('rm-mk','Markup on cost (%)',100,{step:5,hint:'100 percent doubles the cost.'})+'</div>'+
+      '<div class="row2">'+N('rm-units','Units sold per month',200,{step:5})+N('rm-disc','Discount to test (%)',20,{step:1,max:99})+'</div></div>',
+      '<h2>Price and discount</h2>'+LEAD('rm-price','rm-price-s')+KV('Margin on the price','rm-margin')+KV('Profit per item','rm-profit')+KV('Price after the discount','rm-dprice')+KV('Profit per item after discount','rm-dprofit')+KV('Units needed to earn the same profit','rm-need')+KV('Extra sales needed','rm-extra')+CALL('rm-note')
+    );
+    var fn=function(){
+      var c=v('rm-cost'),mk=v('rm-mk')/100,u=v('rm-units'),d=v('rm-disc')/100;
+      var p=c*(1+mk),prof=p-c,mg=p>0?prof/p*100:0,dp=p*(1-d),dprof=dp-c;
+      set('rm-price',usd(p));set('rm-price-s','selling price at '+n0(mk*100)+' percent markup');
+      set('rm-margin',pct(mg));set('rm-profit',usd(prof));set('rm-dprice',usd(dp));set('rm-dprofit',usd(dprof));
+      var need=0,extra=0;
+      if(dprof>0&&prof>0){var mult=prof/dprof;need=u*mult;extra=(mult-1)*100;set('rm-need',n0(need)+' a month');set('rm-extra','+'+n0(extra)+'%');setCall('rm-note','A '+n0(d*100)+' percent discount cuts profit per item from '+usd(prof)+' to '+usd(dprof)+'. You need to sell about '+n0(need-u)+' more items a month just to stand still. If the sale will not bring that many, hold the price.',extra>50)}
+      else{set('rm-need','Never');set('rm-extra','n/a');setCall('rm-note',prof<=0?'Your price is at or below cost, so there is no profit to protect.':'At this discount the item sells for cost or less. No amount of extra volume makes up for it.',true)}
+      state.summary=function(){return 'Markup, margin, and discount\nPrice: '+usd(p)+' (margin '+pct(mg)+')\nProfit per item: '+usd(prof)+'\nAfter '+n0(d*100)+'% discount: '+usd(dprof)+' per item\nUnits needed to match profit: '+(need?n0(need):'never')};
+    };
+    bindInputs(root,fn);
+  }});
+
+/* 6. Plate cost and menu price */
+addTool({id:'plate-cost',title:'Plate cost and menu price',label:'Calculator',ai:false,inds:['food'],
+  short:'Add up every ingredient on a dish and get the menu price that hits your target food cost.',
+  desc:'List what goes on one plate and what you pay for it. You get the plate cost and the menu price that reaches your target food cost. The example dish is made up.',
+  build:function(root){
+    var rows=[{n:'Beef shank',p:42.5,s:5,u:.4},{n:'Fresh noodles',p:18,s:10,u:.4},{n:'Bok choy',p:30,s:25,u:.2},{n:'Broth base',p:36,s:40,u:1},{n:'Chili oil and aromatics',p:12,s:60,u:1}];
+    root.innerHTML=layout(
+      '<h2>Ingredients on one plate</h2><p class="example">For a $42.50 case holding 5 lb of beef, enter 42.50 and 5, then 0.4 if a plate uses 0.4 lb.</p>'+
+      '<div class="scroll"><table class="edit"><thead><tr><th>Ingredient</th><th class="num">Pack price $</th><th class="num">Units in pack</th><th class="num">Units per plate</th><th class="num">Cost</th><th></th></tr></thead><tbody id="pl-body"></tbody></table></div>'+
+      '<p style="margin-top:12px"><button class="pill ghost sm" type="button" id="pl-add">Add ingredient</button></p>'+
+      '<div class="row2" style="margin-top:20px">'+N('pl-waste','Waste and trim allowance (%)',5,{step:1})+N('pl-target','Target food cost (%)',30,{step:1,max:100,hint:'Many full service restaurants aim for 28 to 35.'})+'</div>'+
+      '<div style="margin-top:14px">'+N('pl-price','Current menu price ($, optional)',17.5,{step:.5})+'</div>',
+      '<h2>Your price</h2>'+LEAD('pl-round','pl-round-s')+KV('Plate cost with waste','pl-cost')+KV('Exact price at target','pl-exact')+KV('Your current food cost','pl-cur')+KV('Gross profit per plate now','pl-gp')+CALL('pl-note')
+    );
+    var line=function(r){return r.s>0?r.p/r.s*r.u:0};
+    var calc=function(){
+      var sum=0;rows.forEach(function(r,i){var c=line(r);sum+=c;set('pl-body-'+i+'-calc',usd(c))});
+      var cost=sum*(1+v('pl-waste')/100),target=v('pl-target')/100,exact=target>0?cost/target:0,rounded=Math.ceil(exact*2-1e-9)/2,cur=v('pl-price');
+      set('pl-cost',usd(cost));set('pl-exact',usd(exact));set('pl-round',usd(rounded));set('pl-round-s','suggested menu price, rounded up to the next 50 cents');
+      if(cur>0){var fc=cost/cur*100;set('pl-cur',n1(fc)+'%');set('pl-gp',usd(cur-cost));
+        if(fc>v('pl-target')+.05)setCall('pl-note','This dish runs '+n1(fc-v('pl-target'))+' points over your target. Pricing at '+usd(rounded)+' would bring it back, or trim the plate cost.',true);
+        else setCall('pl-note','This dish is at or under your target food cost. You could hold the price and look at the rest of the menu.');
+      }else{set('pl-cur','n/a');set('pl-gp','n/a');setCall('pl-note','Add your current menu price to compare it with the target.')}
+      state.summary=function(){return 'Plate cost and menu price\nPlate cost with waste: '+usd(cost)+'\nTarget food cost: '+n0(target*100)+'%\nSuggested menu price: '+usd(rounded)};
+    };
+    var tbl=editTable(root,'pl-body',rows,[{k:'n',label:'Ingredient'},{k:'p',num:1,step:.01,label:'Pack price'},{k:'s',num:1,label:'Units in pack'},{k:'u',num:1,label:'Units per plate'},{k:'_c',calc:1}],{n:'',p:0,s:1,u:0},calc);
+    byId('pl-add').addEventListener('click',tbl.add);
+    ['pl-waste','pl-target','pl-price'].forEach(function(id){byId(id).addEventListener('input',calc)});
+    tbl.draw();
+  }});
+
+/* 7. Menu engineering */
+addTool({id:'menu-matrix',title:'Menu engineering matrix',label:'Calculator',ai:false,inds:['food'],
+  short:'Sort every item into star, plowhorse, puzzle, or dog using sales and profit.',
+  desc:'Enter units sold, menu price, and plate cost for each item. Items are sorted by popularity and by profit per plate, using the common 70 percent popularity rule. The example items are made up.',
+  build:function(root){
+    var rows=[{n:'Smash burger',q:310,p:15,c:4.6},{n:'Chicken sandwich',q:240,p:14,c:4.9},{n:'House salad',q:90,p:11,c:2.4},{n:'Fries',q:420,p:6,c:1.2},{n:'Fish tacos',q:110,p:16,c:6.1},{n:'Pasta special',q:70,p:19,c:5.2},{n:'Milkshake',q:130,p:8,c:2.6},{n:'Seasonal entree',q:40,p:29,c:12.5}];
+    var G={Star:'High sales, high profit. Keep the recipe and feature it.',Plowhorse:'High sales, lower profit. Test a small price rise or trim the plate cost.',Puzzle:'Lower sales, high profit. Promote it, rename it, or move it up the menu.',Dog:'Lower sales, lower profit. Rework it or consider removing it.'};
+    root.innerHTML=layout(
+      '<h2>Your menu items</h2><p class="example">Replace the examples with a month of sales from your point of sale report.</p>'+
+      '<div class="scroll"><table class="edit"><thead><tr><th>Item</th><th class="num">Units sold</th><th class="num">Menu price $</th><th class="num">Plate cost $</th><th></th></tr></thead><tbody id="mn-body"></tbody></table></div>'+
+      '<p style="margin-top:12px"><button class="pill ghost sm" type="button" id="mn-add">Add item</button></p>'+
+      '<h2>Item by item</h2><div class="scroll"><table><thead><tr><th>Item</th><th class="num">Share</th><th class="num">Profit per plate</th><th class="num">Total profit</th><th>Group</th></tr></thead><tbody id="mn-out"></tbody></table></div>',
+      '<h2>The four groups</h2><div class="quad" id="mn-quad"></div>'+CALL('mn-note')
+    );
+    var calc=function(){
+      var items=rows.filter(function(r){return r.n.trim()!==''||r.q>0}),total=items.reduce(function(a,r){return a+r.q},0),n=items.length;
+      if(!total||!n){byId('mn-out').innerHTML='';byId('mn-quad').innerHTML='';setCall('mn-note','Add items with units sold to see the matrix.');state.summary=function(){return ''};return}
+      var cut=.7/n,avg=items.reduce(function(a,r){return a+(r.p-r.c)*r.q},0)/total,by={Star:[],Plowhorse:[],Puzzle:[],Dog:[]};
+      var out=items.map(function(r){var sh=r.q/total,cm=r.p-r.c,hp=sh>=cut,hm=cm>=avg,g=hp&&hm?'Star':hp?'Plowhorse':hm?'Puzzle':'Dog';var nm=r.n||'Unnamed item';by[g].push(nm);return {n:nm,sh:sh,cm:cm,tot:cm*r.q,g:g}}).sort(function(a,b){return b.tot-a.tot});
+      byId('mn-out').innerHTML=out.map(function(r){return '<tr><td>'+esc(r.n)+'</td><td class="num">'+n1(r.sh*100)+'%</td><td class="num">'+usd(r.cm)+'</td><td class="num">'+usd(r.tot,0)+'</td><td><span class="gbadge g-'+r.g+'">'+r.g+'</span></td></tr>'}).join('');
+      byId('mn-quad').innerHTML=['Star','Puzzle','Plowhorse','Dog'].map(function(g){return '<div class="q"><h3><span class="gbadge g-'+g+'">'+g+'</span> '+by[g].length+'</h3><p class="what">'+G[g]+'</p><p class="names">'+(by[g].length?by[g].map(esc).join(', '):'None')+'</p></div>'}).join('');
+      setCall('mn-note','An item counts as popular at '+n1(cut*100)+'% of units or more, and as high profit at '+usd(avg)+' per plate or more (your sales weighted average).');
+      state.summary=function(){return 'Menu engineering\n'+['Star','Puzzle','Plowhorse','Dog'].map(function(g){return g+': '+(by[g].join(', ')||'none')}).join('\n')};
+    };
+    var tbl=editTable(root,'mn-body',rows,[{k:'n',label:'Item'},{k:'q',num:1,step:1,label:'Units sold'},{k:'p',num:1,step:.25,label:'Menu price'},{k:'c',num:1,step:.05,label:'Plate cost'}],{n:'',q:0,p:0,c:0},calc);
+    byId('mn-add').addEventListener('click',tbl.add);tbl.draw();
+  }});
+
+/* 8. Delivery true cost */
+addTool({id:'delivery-cost',title:'Delivery true cost calculator',label:'Calculator',ai:false,inds:['food'],
+  short:'See what you keep from each third party order and what moving orders to your own channel is worth.',
+  desc:'Commission is only part of it. Add food cost, packaging, and the promos you fund, and see what is left on each order. The numbers below are examples, so replace them with yours.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>Your third party orders</h2><div class="fields">'+
+      '<div class="row2">'+N('dl-aov','Average order value ($)',32,{step:.5})+N('dl-orders','Platform orders per month',400,{step:10})+'</div>'+
+      '<div class="row2">'+N('dl-comm','Platform commission (%)',25,{step:.5,max:100,hint:'Plans often sit at 15, 25, or 30 percent. Check your contract.'})+N('dl-food','Food cost (% of order)',30,{step:.5,max:100,hint:'Many full service restaurants run 28 to 35.'})+'</div>'+
+      '<div class="row2">'+N('dl-pack','Packaging per order ($)',1.25,{step:.05})+N('dl-promo','Promos you fund per order ($)',1.5,{step:.25,hint:'Average discount or free delivery you pay for.'})+'</div></div>'+
+      '<h2>Your own ordering channel</h2><div class="fields">'+
+      '<div class="row2">'+N('dl-proc','Card processing (%)',2.9,{step:.1})+N('dl-fix','Per transaction fee ($)',.3,{step:.05})+'</div>'+
+      N('dl-ful','Cost to hand off or deliver a direct order ($)',3,{step:.25,hint:'Your own driver, a flat fee delivery service, or staff time for pickup.'})+
+      '<div class="fld"><label for="dl-share">Share of platform orders you could move direct: <span class="range" id="dl-share-o">20%</span></label><input id="dl-share" type="range" min="0" max="100" step="5" value="20"></div></div>',
+      '<h2>What you keep</h2>'+LEAD('dl-tp','dl-tp-s')+KV('Share of each order you keep','dl-pct')+KV('Platform fees paid each month','dl-fees')+KV('You keep per direct order','dl-dr')+KV('Orders moved direct each month','dl-moved')+KV('Extra profit each month','dl-gain')+CALL('dl-note')
+    );
+    var fn=function(){
+      var aov=v('dl-aov'),n=v('dl-orders'),comm=v('dl-comm')/100,food=v('dl-food')/100,pack=v('dl-pack'),promo=v('dl-promo'),proc=v('dl-proc')/100,fix=v('dl-fix'),ful=v('dl-ful'),share=v('dl-share')/100;
+      var tp=aov*(1-comm-food)-pack-promo,dr=aov*(1-proc-food)-fix-pack-ful,fees=n*aov*comm,moved=n*share,gain=moved*(dr-tp);
+      set('dl-share-o',Math.round(share*100)+'%');set('dl-tp',usd(tp));set('dl-tp-s','per third party order, after food, packaging, promos, and commission. Before labor and rent.');
+      set('dl-pct',pct(aov>0?tp/aov*100:0));set('dl-fees',usd(fees,0));set('dl-dr',usd(dr));set('dl-moved',n0(moved));set('dl-gain',usd(gain,0));
+      if(tp<0)setCall('dl-note','You lose '+usd(-tp)+' on every platform order before labor and rent. Look at menu prices on the platform, promos, or the commission plan.',true);
+      else if(gain>0)setCall('dl-note','Moving '+n0(share*100)+'% of platform orders to your own channel keeps about '+usd(gain,0)+' more each month, or '+usd(gain*12,0)+' a year.');
+      else setCall('dl-note','With these numbers a direct order keeps no more than a platform order. Check your handoff or delivery cost.');
+      state.summary=function(){return 'Delivery true cost\nYou keep per platform order: '+usd(tp)+'\nYou keep per direct order: '+usd(dr)+'\nPlatform fees a month: '+usd(fees,0)+'\nExtra profit a month from '+n0(share*100)+'% direct: '+usd(gain,0)};
+    };
+    bindInputs(root,fn);
+  }});
+
+/* =====================================================
+   SCORECARD, STACK, RECORD
+   ===================================================== */
+
+/* 9. Local marketing scorecard */
+var AUDIT=[
+ {k:'Google',s:'Google and local search',items:[
+  {q:'Your Google Business Profile is claimed, with correct hours, phone number, and a link to {act}',w:3,fix:'Claim your Google Business Profile and fill in hours, phone, and your link to {act}. It is the first thing most people see.'},
+  {q:'You added new photos to your profile in the last 90 days',w:2,fix:'Add ten fresh photos of your work, your space, and your entrance. Recent photos show the business is active.'},
+  {q:'You post an update or offer on your profile at least once a month',w:1,fix:'Post one offer or update on your Google profile each month.'},
+  {q:'Your name, address, and phone number match on your website and every listing',w:2,fix:'Make your name, address, and phone number identical everywhere. Mismatches confuse search engines and AI tools.'}]},
+ {k:'Reviews',s:'Reviews and reputation',items:[
+  {q:'Your Google rating is 4.3 or higher',w:3,fix:'Read your recent low reviews, fix the top two complaints at the source, then ask happy {cust} to review.'},
+  {q:'You reply to reviews within a week',w:2,fix:'Reply to every review this week, good or bad. Short and personal is enough.'},
+  {q:'You ask happy {cust} for a review at least once a month',w:2,fix:'Put a review link on receipts, cards, or a follow up text.'},
+  {q:'You received several new reviews in the last 30 days',w:1,fix:'Aim for a steady flow of new reviews. Recent ones count for more than old ones.'}]},
+ {k:'Website',s:'Website and booking',items:[
+  {q:'Your website loads quickly on a phone and your {list} is easy to read',w:3,fix:'Open your site on a phone. Turn your {list} into a readable page instead of a tiny PDF or image.'},
+  {q:'A clear button to {act} sits at the top of your homepage',w:3,fix:'Put one clear button to {act} at the top of your homepage.'},
+  {q:'Someone on a phone can {act} in under a minute',w:2,fix:'Walk through your own booking or ordering flow on a phone and cut every step you can.'},
+  {q:'Your {list} is written as text on the page, not only as an image or PDF',w:1,fix:'Add your {list} as text so Google and AI tools can read it.'}]},
+ {k:'Social',s:'Social and content',items:[
+  {q:'You post at least three times a week',w:2,fix:'Plan three posts a week. Batch them in one sitting so it stays easy.'},
+  {q:'You share a short video every week',w:2,fix:'Film one ten second clip a week of your work, your space, or a result.'},
+  {q:'Your posts tell people what to do next, with one link',w:1,fix:'End each post with one clear next step and a link.'},
+  {q:'You answer comments and messages within a day',w:1,fix:'Check comments and messages once a day and reply while the person is still interested.'}]},
+ {k:'Repeat',s:'Tracking and repeat customers',items:[
+  {q:'You know where your {cust} come from, such as search, social, ads, or referrals',w:3,fix:'Track your sources with tagged links, a how did you hear about us question, or call tracking.'},
+  {q:'You have an email or text list of past {cust}',w:2,fix:'Collect emails or phone numbers at checkout or booking, with permission, and send a monthly update.'},
+  {q:'You sent that list an offer or update in the last 60 days',w:1,fix:'Send your list one offer this month. Past {cust} are your cheapest sales.'},
+  {q:'If you run paid ads, you know what each new customer costs',w:2,fix:'Before spending more on ads, set up tracking so you can see the cost of each new customer.'}]}
+];
+var fillV=function(s,ind){var x=VOC[ind];return s.replace(/\{act\}/g,x.act).replace(/\{list\}/g,x.list).replace(/\{cust\}/g,x.cust)};
+
+/* 30 day plan engine: groups your fixes into four weeks, each with something to measure */
+DEMO.plan=function(inp){
+  var f=(inp.fixes||[]).map(function(x){return typeof x==='string'?{k:'',fix:x}:x});
+  var W=[
+    {t:'Fix the basics',cats:['Google','Website'],m:'Check your Google Business Profile views, calls, and direction requests.'},
+    {t:'Build trust',cats:['Reviews'],m:'Check how many new reviews came in and your average rating.'},
+    {t:'Show up on social',cats:['Social'],m:'Check posts published, saves, and link clicks.'},
+    {t:'Bring people back',cats:['Tracking'],m:'Check the size of your list and what each new customer costs.'}];
+  var used={},weeks=W.map(function(w){var items=f.filter(function(x,idx){return w.cats.some(function(c){return x.k.indexOf(c)===0})}).slice(0,4);items.forEach(function(x){used[f.indexOf(x)]=1});return {w:w,items:items}});
+  var left=f.filter(function(x,idx){return !used[idx]});
+  weeks.forEach(function(wk){while(wk.items.length<3&&left.length)wk.items.push(left.shift())});
+  var head=inp.industry&&IND[inp.industry]?'30 day plan for '+IND[inp.industry].toLowerCase()+(inp.city?' in '+inp.city:'')+'\n\n':'';
+  var out=weeks.map(function(wk,n){
+    var items=wk.items.length?wk.items.map(function(x,i){return (i+1)+'. '+x.fix}).join('\n'):'1. Nothing urgent here. Keep what is working and repeat it.';
+    return 'Week '+(n+1)+': '+wk.w.t+'\n'+items+'\nMeasure: '+wk.w.m;
+  });
+  return {text:head+out.join('\n\n')};
+};
+
+addTool({id:'scorecard',title:'Local marketing scorecard',label:'Scorecard',ai:true,inds:ALL,
+  short:'Twenty quick questions across Google, reviews, website, social, and repeat customers, with your fixes ranked.',
+  desc:'Twenty questions about how people find you, trust you, and come back. You get a score for each area and the fixes to make first, then a 30 day plan. It takes about five minutes.',
+  build:function(root){
+    var ind=indDefault();
+    root.innerHTML=layout(
+      '<h2>About your business</h2><div class="fields"><div class="row2">'+indSelect('sc-ind',ind)+T('sc-city','City or neighborhood','',{ph:'Your city'})+'</div></div>'+
+      '<h2>Your answers</h2><div id="sc-form"></div>',
+      '<h2>Your score</h2>'+LEAD('sc-score','sc-label')+'<div class="bars" id="sc-secs"></div><h2>Fix these first</h2><ol class="fixes" id="sc-fixes"><li>Your top fixes show up here as you answer.</li></ol>'
+    );
+    var form=byId('sc-form');
+    function drawForm(){
+      var cur={};$$('select[data-s]',form).forEach(function(s){cur[s.id]=s.value});
+      var k=byId('sc-ind').value;
+      form.innerHTML=AUDIT.map(function(sec,si){return '<div class="asec"><h3>'+esc(sec.s)+'</h3>'+sec.items.map(function(it,ii){var id='sq'+si+'_'+ii;return '<div class="arow"><label for="'+id+'">'+esc(fillV(it.q,k))+'</label><select id="'+id+'" data-s="'+si+'" data-i="'+ii+'"><option value="">Choose</option><option value="2">Yes</option><option value="1">Partly</option><option value="0">No</option></select></div>'}).join('')+'</div>'}).join('');
+      Object.keys(cur).forEach(function(id){var e=byId(id);if(e)e.value=cur[id]});
+    }
+    var AN={2:'Yes',1:'Partly',0:'No'};
+    function st(){
+      var k=byId('sc-ind').value,answered=0,earned=0,poss=0,secs=[],fixes=[],lines=[];
+      AUDIT.forEach(function(sec,si){var e=0,p=0;sec.items.forEach(function(it,ii){var raw=byId('sq'+si+'_'+ii).value;if(raw==='')return;var a=parseInt(raw,10);answered++;e+=it.w*a/2;p+=it.w;lines.push(sec.k+': '+fillV(it.q,k)+' = '+AN[a]);if(a<2)fixes.push({k:sec.s,fix:fillV(it.fix,k),pr:it.w*(2-a)})});earned+=e;poss+=p;secs.push({k:sec.s,pct:p>0?e/p*100:null})});
+      fixes.sort(function(a,b){return b.pr-a.pr});
+      return {answered:answered,score:poss>0?earned/poss*100:null,secs:secs,fixes:fixes,lines:lines};
+    }
+    function calc(){
+      var s=st();
+      if(s.score==null){set('sc-score','n/a');set('sc-label','Answer a few questions to see your score.')}
+      else{var band=s.score>=80?'Strong foundation':s.score>=60?'Solid, with gaps to close':s.score>=40?'Leaving customers on the table':'Start with the basics';set('sc-score',Math.round(s.score)+' / 100');set('sc-label',band+'. Based on '+s.answered+' of 20 answers.')}
+      byId('sc-secs').innerHTML=s.secs.map(function(x){var has=x.pct!=null;return barRow(x.k.split(' and ')[0],has?x.pct:0,has&&x.pct<50,has?Math.round(x.pct)+'%':'n/a')}).join('');
+      byId('sc-fixes').innerHTML=s.fixes.length?s.fixes.slice(0,5).map(function(f){return '<li><span class="ftag">'+esc(f.k.split(' and ')[0])+'</span>'+esc(f.fix)+'</li>'}).join(''):(s.answered?'<li>No gaps in the areas you answered. Nice work.</li>':'<li>Your top fixes show up here as you answer.</li>');
+      state.summary=function(){
+        return 'Local marketing scorecard\nScore: '+(s.score==null?'n/a':Math.round(s.score)+' / 100')+'\n'+s.secs.map(function(x){return x.k+': '+(x.pct==null?'n/a':Math.round(x.pct)+'%')}).join('\n')+'\n\nFix first:\n'+s.fixes.slice(0,5).map(function(f,i){return (i+1)+'. '+f.fix}).join('\n')+(planText?'\n\n30 day plan:\n'+planText:'');
+      };
+      byId('sc-plan-go').disabled=s.answered<5;
+    }
+    var planText='';
+    /* plan block sits under the form */
+    var planHTML='<div class="share" style="margin-top:8px"><h2 style="border:0;padding:0;margin:0 0 12px">Turn this into a 30 day plan</h2><p class="example">Answer at least five questions first. The plan is built from your top fixes.</p><div class="btnrow" style="margin-top:0"><button class="pill" type="button" id="sc-plan-go" disabled>Write my 30 day plan</button></div><p class="notice" id="sc-plan-msg" role="status"></p><div id="sc-plan-note"></div><div class="outbox" id="sc-plan" hidden></div></div>';
+    byId('sc-form').insertAdjacentHTML('afterend',planHTML);
+    byId('sc-plan-go').addEventListener('click',async function(){
+      var s=st(),msg=byId('sc-plan-msg'),out=byId('sc-plan'),btn=this;
+      btn.disabled=true;msg.textContent='Writing your plan...';
+      try{
+        var r=await runAI('plan',{industry:byId('sc-ind').value,city:sv('sc-city'),answers:s.lines,fixes:s.fixes.map(function(f){return {k:f.k,fix:f.fix}})});
+        planText=r.text||'';out.hidden=false;out.textContent=planText;byId('sc-plan-note').innerHTML=r.demo?DEMO_NOTE:'';msg.textContent='';calc();
+      }catch(e){msg.textContent=aiErr(e)}
+      finally{btn.disabled=st().answered<5}
+    });
+    drawForm();
+    byId('sc-ind').addEventListener('change',function(){drawForm();calc()});
+    root.addEventListener('change',calc);root.addEventListener('input',function(e){if(e.target.id==='sc-city')return;calc()});
+    calc();
+  }});
+
+/* 10. Tech stack checker */
+addTool({id:'tech-stack',title:'Tech stack checker',label:'Checker',ai:false,inds:ALL,
+  short:'List the tools you pay for, what they cost, and whether they connect. See overlaps and gaps.',
+  desc:'List every tool you pay for to run the business, what it costs, and whether it talks to your main system. You see the total, the overlaps, and the tools working on their own. The example tools are made up.',
+  build:function(root){
+    var FUNCS=['Main system (POS or booking)','Online ordering or booking','Website','Email and text marketing','Reviews and reputation','Loyalty or rewards','Scheduling and payroll','Accounting and inventory','Social scheduling','Other'];
+    var LINKS=[['main','This is the main system'],['yes','Yes'],['no','No'],['unsure','Not sure']];
+    var rows=[
+      {f:FUNCS[0],n:'Main system',c:165,k:'main'},{f:FUNCS[1],n:'Booking tool',c:99,k:'no'},{f:FUNCS[3],n:'Email tool',c:60,k:'no'},{f:FUNCS[3],n:'Text message tool',c:45,k:'unsure'},
+      {f:FUNCS[5],n:'Rewards app',c:75,k:'no'},{f:FUNCS[2],n:'Site builder',c:40,k:'yes'},{f:FUNCS[6],n:'Payroll tool',c:80,k:'yes'}];
+    root.innerHTML=layout(
+      '<h2>Your tools</h2><div class="scroll"><table class="edit" style="min-width:760px"><thead><tr><th>What it does</th><th>Tool name</th><th class="num">Cost per month $</th><th>Connects to main system?</th><th></th></tr></thead><tbody id="ts-body"></tbody></table></div>'+
+      '<p style="margin-top:12px"><button class="pill ghost sm" type="button" id="ts-add">Add tool</button></p>'+
+      '<div style="margin-top:20px">'+N('ts-sales','Monthly sales ($, optional)',60000,{step:1000,hint:'Used to show tech spend as a share of sales.'})+'</div>',
+      '<h2>What you pay</h2>'+LEAD('ts-total','ts-total-s')+KV('Tech spend as a share of sales','ts-share')+KV('Tools that connect','ts-conn')+KV('Tools not connected','ts-disc')+'<h2>Spend by job</h2><div class="bars" id="ts-bars"></div><h2>What to look at</h2><ul class="tips" id="ts-flags"></ul>'
+    );
+    var calc=function(){
+      var rs=rows.filter(function(r){return r.c>0||r.n.trim()!==''}),total=rs.reduce(function(a,r){return a+r.c},0),sales=v('ts-sales');
+      set('ts-total',usd(total,0));set('ts-total-s','per month across '+rs.length+' tools, '+usd(total*12,0)+' a year');
+      set('ts-share',sales>0?n1(total/sales*100)+'%':'n/a');
+      var others=rs.filter(function(r){return r.k!=='main'}),linked=others.filter(function(r){return r.k==='yes'}),disc=others.filter(function(r){return r.k==='no'}),dc=disc.reduce(function(a,r){return a+r.c},0);
+      set('ts-conn',linked.length+' of '+others.length);set('ts-disc',usd(dc,0)+' a month');
+      var by={};rs.forEach(function(r){by[r.f]=(by[r.f]||0)+r.c});var keys=Object.keys(by).sort(function(a,b){return by[b]-by[a]}),mx=keys.length?by[keys[0]]:0;
+      byId('ts-bars').innerHTML=keys.map(function(k){return '<div class="bar-row" style="grid-template-columns:140px 1fr 64px"><span>'+esc(k.split(' (')[0])+'</span><div class="bar"><i style="width:'+(mx>0?by[k]/mx*100:0)+'%"></i></div><span>'+usd(by[k],0)+'</span></div>'}).join('');
+      var flags=[];
+      FUNCS.forEach(function(f){if(f==='Other')return;var g=rs.filter(function(r){return r.f===f});if(g.length>1){var sum=g.reduce(function(a,r){return a+r.c},0),m=Math.max.apply(null,g.map(function(r){return r.c}));flags.push('<b>Overlap in '+esc(f.split(' (')[0].toLowerCase())+':</b> you pay for '+g.length+' tools. Keeping only the priciest one would save at least '+usd(sum-m,0)+' a month.')}});
+      if(disc.length)flags.push('<b>'+disc.length+' tool'+(disc.length>1?'s':'')+' not connected</b> ('+usd(dc,0)+' a month). Ask each vendor for an integration or a scheduled export, so numbers do not live in separate places.');
+      var un=others.filter(function(r){return r.k==='unsure'}).length;
+      if(un)flags.push('<b>'+un+' tool'+(un>1?'s':'')+' marked not sure.</b> Find out whether they connect, since that decides whether you can see sales and campaigns together.');
+      if(others.length)flags.push('<b>Before you renew anything,</b> ask your main system vendor which of these jobs it already covers. Online ordering, loyalty, and email are common add ons.');
+      byId('ts-flags').innerHTML=flags.length?flags.map(function(f){return '<li>'+f+'</li>'}).join(''):'<li>Add your tools to see overlaps and gaps.</li>';
+      state.summary=function(){return 'Tech stack\nTotal: '+usd(total,0)+' a month ('+usd(total*12,0)+' a year)\nNot connected: '+usd(dc,0)+' a month\n'+rs.map(function(r){return '- '+r.f+': '+(r.n||'unnamed')+' '+usd(r.c,0)}).join('\n')};
+    };
+    var tbl=editTable(root,'ts-body',rows,[{k:'f',sel:FUNCS,label:'What it does'},{k:'n',label:'Tool name'},{k:'c',num:1,step:1,label:'Cost per month'},{k:'k',sel:LINKS,label:'Connects to main system'}],{f:'Other',n:'',c:0,k:'no'},calc);
+    byId('ts-add').addEventListener('click',tbl.add);byId('ts-sales').addEventListener('input',calc);tbl.draw();
+  }});
+
+/* 11. Campaign Record builder */
+addTool({id:'campaign-record',title:'Campaign Record builder',label:'Builder',ai:false,inds:ALL,noInputsInReport:true,
+  short:'Turn a brief, weekly numbers, and notes into a written record you can keep and reuse.',
+  desc:'A campaign is easier to learn from when it is written down. Fill in the brief, add your weekly numbers, and keep a clean record of what you did, what changed, and what happened. The example is made up.',
+  build:function(root){
+    var GOALS=['More bookings or orders','Grand opening or launch','Seasonal promotion','Event or special night','Win back past customers','New product or service'];
+    var CH=['Google Ads','Meta ads','Instagram or TikTok posts','Email','Text messages','In person event','Local partners'];
+    var rec={biz:'Sample Studio (example)',name:'Spring launch',goal:GOALS[0],start:'2026-03-02',end:'2026-03-29',budget:1000,metric:'Bookings',target:150,
+      aud:'Neighbors within three miles, weekday and weekend regulars, and past customers who have not booked in 60 days.',
+      offer:'Free add on with any online booking over $30 during launch month. Message: now open, book this week.',ch:['Google Ads','Instagram or TikTok posts','Email'],
+      creative:'Short clips of the space and the finished work. Photos of the two best sellers. Same offer line on every ad and post.',
+      changed:'Paused the weakest ad group after week one and moved the budget to search ads. Added a second offer line to the email in week three.',
+      close:'Search ads brought the cheapest bookings, and the short clips drove the most saves and shares. Next time start search ads on day one and send the email list offer a week earlier.'};
+    var weeks=[{l:'Week 1',s:220,r:31,n:'Launch posts and search ads live'},{l:'Week 2',s:240,r:38,n:'Paused weak ad group'},{l:'Week 3',s:235,r:47,n:'Added second offer line to email'},{l:'Week 4',s:200,r:52,n:'Best week'}];
+    root.innerHTML=layout(
+      '<h2>The brief</h2><div class="fields">'+
+      '<div class="row2">'+T('rc-biz','Business',rec.biz)+T('rc-name','Campaign name',rec.name)+'</div>'+
+      '<div class="row2">'+S('rc-goal','Goal',GOALS,rec.goal)+N('rc-budget','Budget ($)',rec.budget,{step:50})+'</div>'+
+      '<div class="row2"><div class="fld"><label for="rc-start">Start date</label><input id="rc-start" type="date" value="'+rec.start+'"></div><div class="fld"><label for="rc-end">End date</label><input id="rc-end" type="date" value="'+rec.end+'"></div></div>'+
+      '<div class="row2">'+T('rc-metric','What counts as a result',rec.metric)+N('rc-target','Target number of results',rec.target,{step:1})+'</div>'+
+      A('rc-aud','Audience',rec.aud)+A('rc-offer','Offer and message',rec.offer)+
+      '<fieldset class="checks" id="rc-ch"><legend>Channels used</legend>'+CH.map(function(c,i){return '<label><input type="checkbox" id="rc-c'+i+'" value="'+esc(c)+'"'+(rec.ch.indexOf(c)>-1?' checked':'')+'>'+esc(c)+'</label>'}).join('')+'</fieldset>'+
+      A('rc-creative','Creative notes',rec.creative)+'</div>'+
+      '<h2>Weekly numbers</h2><div class="scroll"><table class="edit" style="min-width:640px"><thead><tr><th>Week</th><th class="num">Spend $</th><th class="num">Results</th><th>Notes</th><th></th></tr></thead><tbody id="rc-weeks"></tbody></table></div>'+
+      '<p style="margin-top:12px"><button class="pill ghost sm" type="button" id="rc-addweek">Add week</button></p>'+
+      '<div class="fields" style="margin-top:22px">'+A('rc-changed','What changed along the way',rec.changed)+A('rc-close','Closing summary',rec.close)+'</div>',
+      '<h2>Your record</h2><div class="rec" id="rc-preview"></div><div class="btnrow"><button class="pill sm" type="button" id="rc-dl">Save as file</button></div><p class="notice" id="rc-msg" role="status"></p>'
+    );
+    var fd=function(x){if(!x)return 'Not set';var d=new Date(x+'T00:00:00');return isNaN(d)?x:d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})};
+    var blank=function(x){return String(x||'').trim()||'Not filled in'};
+    function read(){rec.biz=sv('rc-biz');rec.name=sv('rc-name');rec.goal=byId('rc-goal').value;rec.budget=v('rc-budget');rec.start=byId('rc-start').value;rec.end=byId('rc-end').value;rec.metric=sv('rc-metric');rec.target=v('rc-target');rec.aud=byId('rc-aud').value;rec.offer=byId('rc-offer').value;rec.creative=byId('rc-creative').value;rec.changed=byId('rc-changed').value;rec.close=byId('rc-close').value;rec.ch=CH.filter(function(c,i){return byId('rc-c'+i).checked})}
+    function secs(){
+      var spend=weeks.reduce(function(a,w){return a+w.s},0),res=weeks.reduce(function(a,w){return a+w.r},0),cpr=res>0?spend/res:0,p=rec.target>0?res/rec.target*100:0;
+      return [
+        {h:'Brief and goal',rows:[['Business',blank(rec.biz)],['Campaign',blank(rec.name)],['Goal',rec.goal],['Dates',fd(rec.start)+' to '+fd(rec.end)],['Budget',usd(rec.budget,0)],['Success target',rec.target+' '+(rec.metric||'results').toLowerCase()],['Audience',blank(rec.aud)],['Offer and message',blank(rec.offer)],['Channels',rec.ch.length?rec.ch.join(', '):'Not set']]},
+        {h:'Creative notes',text:blank(rec.creative)},
+        {h:'Weekly numbers',table:{head:['Week','Spend','Results','Cost per result','Notes'],rows:weeks.map(function(w){return [blank(w.l),usd(w.s,0),String(w.r),w.r>0?usd(w.s/w.r):'n/a',w.n||'']}),foot:['Total',usd(spend,0),String(res),res>0?usd(cpr):'n/a',n0(p)+'% of target']}},
+        {h:'What changed',text:blank(rec.changed)},{h:'Closing summary',text:blank(rec.close)}];
+    }
+    function html(ss){
+      return '<p class="rec-title">'+esc(blank(rec.name))+'</p><p class="minor" style="margin:0 0 14px">Campaign Record</p>'+ss.map(function(s){
+        var b='';
+        if(s.rows)b=s.rows.map(function(r){return '<div class="kvr"><span>'+esc(r[0])+'</span><span>'+esc(r[1])+'</span></div>'}).join('');
+        else if(s.text!=null)b='<p class="rtext">'+esc(s.text)+'</p>';
+        else{var t=s.table;b='<div class="scroll"><table><thead><tr>'+t.head.map(function(h,i){return '<th'+(i>0&&i<4?' class="num"':'')+'>'+esc(h)+'</th>'}).join('')+'</tr></thead><tbody>'+t.rows.map(function(r){return '<tr>'+r.map(function(c,i){return '<td'+(i>0&&i<4?' class="num"':'')+'>'+esc(c)+'</td>'}).join('')+'</tr>'}).join('')+'<tr>'+t.foot.map(function(c,i){return '<td'+(i>0&&i<4?' class="num"':'')+'><b>'+esc(c)+'</b></td>'}).join('')+'</tr></tbody></table></div>'}
+        return '<h3>'+esc(s.h)+'</h3>'+b}).join('');
+    }
+    function text(ss){
+      var o=['# '+blank(rec.name),'Campaign Record',''];
+      ss.forEach(function(s){o.push('## '+s.h);if(s.rows)s.rows.forEach(function(r){o.push('- '+r[0]+': '+r[1])});else if(s.text!=null)o.push(s.text);else{var t=s.table;o.push('| '+t.head.join(' | ')+' |');o.push('| '+t.head.map(function(){return '---'}).join(' | ')+' |');t.rows.forEach(function(r){o.push('| '+r.join(' | ')+' |')});o.push('| '+t.foot.map(function(c){return '**'+c+'**'}).join(' | ')+' |')}o.push('')});
+      return o.join('\n');
+    }
+    function render(){read();var ss=secs();byId('rc-preview').innerHTML=html(ss);var tx=text(ss);state.summary=function(){return tx}}
+    var tbl=editTable(root,'rc-weeks',weeks,[{k:'l',label:'Week label'},{k:'s',num:1,step:1,label:'Spend'},{k:'r',num:1,step:1,label:'Results'},{k:'n',label:'Notes'}],{l:'Week',s:0,r:0,n:''},render);
+    byId('rc-addweek').addEventListener('click',function(){weeks.push({l:'Week '+(weeks.length+1),s:0,r:0,n:''});tbl.draw()});
+    root.addEventListener('input',function(e){if(!e.target.closest('#rc-weeks'))render()});root.addEventListener('change',function(e){if(!e.target.closest('#rc-weeks'))render()});
+    byId('rc-dl').addEventListener('click',function(){
+      try{var b=new Blob([state.summary()],{type:'text/markdown'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='campaign-record.md';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(a.href)},500);set('rc-msg','Saved.')}
+      catch(e){set('rc-msg','Saving is not available here. Use Copy result instead.')}
+    });
+    tbl.draw();
+  }});
+
+/* =====================================================
+   WRITERS AND GENERATORS
+   Built in engines run in the browser. If CM_CONFIG.AI_ENDPOINT is set,
+   the same tools call that endpoint for live AI drafts instead.
+   ===================================================== */
+var clip=function(s,n){s=String(s||'').trim();if(s.length<=n)return s;var c=s.slice(0,n);var i=c.lastIndexOf(' ');return (i>n*.6?c.slice(0,i):c).replace(/[,.;:\s]+$/,'')};
+var firstSentence=function(s){var m=String(s||'').trim().match(/^[^.!?\n]+[.!?]?/);return m?m[0].trim():''};
+var cap=function(s){s=String(s||'').trim();return s.charAt(0).toUpperCase()+s.slice(1)};
+var low=function(s){s=String(s||'').trim();return s.charAt(0).toLowerCase()+s.slice(1)};
+var noEnd=function(s){return String(s||'').trim().replace(/[.!?\s]+$/,'')};
+var SMALLW={a:1,an:1,and:1,at:1,for:1,in:1,of:1,on:1,or:1,the:1,to:1,with:1};
+var titleCase=function(s){return String(s||'').split(' ').map(function(w,i){var l=w.toLowerCase();if(i>0&&SMALLW[l])return l;return w.charAt(0).toUpperCase()+w.slice(1)}).join(' ')};
+var uniq=function(a){var seen={};return a.filter(function(x){var k=String(x).toLowerCase();if(!x||seen[k])return false;seen[k]=1;return true})};
+var fitFirst=function(c,max,count){return uniq(c.map(function(x){return String(x||'').replace(/\s+/g,' ').trim()})).filter(function(x){return x&&x.length<=max}).slice(0,count)};
+var pick=function(arr,n){return arr[((n||0)%arr.length+arr.length)%arr.length]};
+var hasAny=function(text,words){return words.some(function(w){return text.indexOf(w)>-1})};
+var indOf=function(k){return IND[k]?k:'service'};
+
+/* ---------- 12. AI search readiness checker with schema generator ---------- */
+var READY=[
+ {k:'Profiles',items:[
+  {q:'Your Google Business Profile is claimed and complete, with hours, services, and photos',w:3,fix:'Finish your Google Business Profile: hours, services, prices, and recent photos. AI assistants and maps pull from it first.'},
+  {q:'Your name, address, and phone number are identical on your website and every listing',w:3,fix:'Make your name, address, and phone number exactly the same on your website, Google, Apple Maps, Bing, Yelp, and social profiles.'},
+  {q:'You are listed on Apple Maps, Bing Places, and Yelp, plus the main directories for your industry',w:2,fix:'Claim Apple Maps, Bing Places, and Yelp, plus the top directories for your industry. Assistants cross check several sources.'},
+  {q:'Your social profiles use the same business name and link to your website',w:1,fix:'Use the same business name and bio on every social profile, and link each one to your website.'}]},
+ {k:'Reputation',items:[
+  {q:'You have 20 or more Google reviews, and several from the last 60 days',w:3,fix:'Ask every happy customer for a Google review and aim for steady new ones each month. Volume and recency both matter.'},
+  {q:'Your reviews mention specific services or products by name',w:1,fix:'When you ask for reviews, suggest customers name what they bought or booked. Specific reviews help match you to specific questions.'},
+  {q:'You reply to reviews, so the page shows an active business',w:1,fix:'Reply to recent reviews. It shows the business is active and adds your own words to the page.'}]},
+ {k:'Website',items:[
+  {q:'Your services, prices or price ranges, and hours are written as text on your website',w:2,fix:'Put your services, prices or ranges, and hours on your site as plain text, not only in images or PDFs.'},
+  {q:'Your website has LocalBusiness structured data (schema)',w:2,fix:'Add LocalBusiness structured data to your site. This tool generates the code for you below.'},
+  {q:'You have an FAQ page that answers common questions in plain language',w:2,fix:'Publish an FAQ page that answers the questions customers really ask, one question per section. Use the list below.'},
+  {q:'You have an About page that says who you serve, where, and since when',w:1,fix:'Write a short About page that says what you do, who you serve, which areas you cover, and how long you have been in business.'},
+  {q:'Your site does not block search crawlers in its robots.txt file',w:1,fix:'Ask your web builder to check that robots.txt does not block search engines from your key pages.'}]},
+ {k:'Mentions',items:[
+  {q:'Local blogs, news, or community pages have mentioned your business in the last year',w:2,fix:'Earn local mentions: sponsor an event, partner with a neighboring business, or offer a local writer a story. Mentions build the trust signals assistants look for.'}]}
+];
+var SCHEMA_TYPES={
+ food:['Restaurant','CafeOrCoffeeShop','Bakery','BarOrPub','FoodEstablishment'],
+ beauty:['BeautySalon','HairSalon','NailSalon','DaySpa','HealthAndBeautyBusiness','MedicalClinic','Dentist'],
+ service:['LocalBusiness','ProfessionalService','HomeAndConstructionBusiness','Plumber','Electrician','HVACBusiness','AutoRepair'],
+ retail:['Store','ClothingStore','HomeGoodsStore','FurnitureStore','JewelryStore','PetStore','Florist','GroceryStore']
+};
+function customerQuestions(ind,type,city){
+  var t=type||VOC[ind].typeEx,c=city||'your area',q=['What is the best '+t+' in '+c+'?',cap(t)+' near me: who is open now?','Who do locals recommend for '+t+' in '+c+'?','How much does '+(/^[aeiou]/i.test(t)?'an ':'a ')+t+' cost in '+c+'?'];
+  var extra={
+    service:['Do you offer free quotes?','How long does a typical job take?','Are you licensed and insured?','Which areas near '+c+' do you serve?','How do I book?'],
+    food:['Do you take reservations?','Do you offer takeout or delivery?','What are your most popular dishes?','Is there parking nearby?','Do you have vegetarian or gluten free options?'],
+    beauty:['How do I book an appointment?','How much does a first visit cost?','Do you take walk ins?','What is your cancellation policy?','What products do you use?'],
+    retail:['What are your store hours?','Do you offer local pickup?','Do you have it in stock?','Do you ship?','What is your return policy?']
+  }[ind];
+  return q.concat(extra);
+}
+addTool({id:'ai-readiness',title:'AI search readiness checker',label:'Checker',ai:true,inds:ALL,
+  short:'Score how ready your business is to be found by AI assistants, then generate the schema code and FAQ list that help.',
+  desc:'More people ask AI assistants where to eat, who to hire, and where to shop. Assistants lean on your Google profile, reviews, listings, and website. Score yours, then copy the structured data code and the customer questions to publish.',
+  build:function(root){
+    var ind=indDefault();
+    root.innerHTML=layout(
+      '<h2>Your business</h2><div class="fields">'+indSelect('ar-ind',ind)+
+      T('ar-name','Business name','',{ph:VOC[ind].bizEx})+
+      '<div class="row2">'+T('ar-type','Type of business','',{ph:VOC[ind].typeEx})+T('ar-city','City or neighborhood','',{ph:'Your city'})+'</div></div>'+
+      '<h2>Your answers</h2><div id="ar-form"></div>',
+      '<h2>Your readiness score</h2>'+LEAD('ar-score','ar-label')+'<div class="bars" id="ar-secs"></div><h2>Fix these first</h2><ol class="fixes" id="ar-fixes"><li>Your top fixes show up here as you answer.</li></ol>',
+      'free');
+    var form=byId('ar-form');
+    form.innerHTML=READY.map(function(sec,si){return '<div class="asec"><h3>'+esc(sec.k)+'</h3>'+sec.items.map(function(it,ii){var id='aq'+si+'_'+ii;return '<div class="arow"><label for="'+id+'">'+esc(it.q)+'</label><select id="'+id+'"><option value="">Choose</option><option value="2">Yes</option><option value="1">Partly</option><option value="0">No</option></select></div>'}).join('')+'</div>'}).join('');
+    /* generator panel below the layout */
+    var gen=document.createElement('section');gen.className='panel';gen.style.marginBottom='40px';
+    gen.innerHTML='<h2>Schema code generator</h2><p class="example">Structured data tells search engines and AI assistants exactly who you are. Fill in what you know, then paste the code into your site head. Ask your web builder if you are not sure where it goes.</p>'+
+      '<div class="fields"><div class="row2">'+S('ar-stype','Business type for schema',SCHEMA_TYPES[ind],SCHEMA_TYPES[ind][0])+T('ar-url','Website address','',{ph:'https://yourbusiness.com'})+'</div>'+
+      '<div class="row2">'+T('ar-street','Street address','')+T('ar-phone','Phone','',{ph:'(555) 555 0100'})+'</div>'+
+      '<div class="row2">'+T('ar-region','State','',{ph:'CA'})+T('ar-zip','Postal code','')+'</div>'+
+      '<div class="row2">'+T('ar-hours','Opening hours','',{ph:'Mo-Fr 09:00-17:00; Sa 10:00-14:00',hint:'Use day codes Mo Tu We Th Fr Sa Su, 24 hour times, separated by semicolons.'})+T('ar-price','Price range','',{ph:'$$'})+'</div>'+
+      T('ar-social','Social profile links (optional)','',{ph:'Separate links with commas'})+'</div>'+
+      '<h2 style="margin-top:24px">Your code</h2><pre class="code" id="ar-code"></pre><div class="btnrow"><button class="pill sm" type="button" data-copy-text-from="ar-code">Copy code</button></div>'+
+      '<h2>Questions your customers ask AI assistants</h2><p class="example">Answer each one in plain text on your website, such as an FAQ page with one question per section.</p><ol class="qlist" id="ar-q"></ol><div class="btnrow"><button class="pill ghost sm" type="button" data-copy-text-from="ar-q">Copy the questions</button></div>';
+    root.appendChild(gen);
+    gen.addEventListener('click',function(e){var b=e.target.closest('[data-copy-text-from]');if(!b)return;var el=byId(b.getAttribute('data-copy-text-from'));var t=el.tagName==='OL'?$$('li',el).map(function(x){return x.textContent}).join('\n'):el.textContent;var old=b.textContent;var ok=function(){b.textContent='Copied';setTimeout(function(){b.textContent=old},1400)};if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,function(){});else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok()}catch(x){}document.body.removeChild(ta)}});
+    var AN={2:'Yes',1:'Partly',0:'No'};
+    function st(){
+      var answered=0,earned=0,poss=0,secs=[],fixes=[],lines=[];
+      READY.forEach(function(sec,si){var e=0,p=0;sec.items.forEach(function(it,ii){var raw=byId('aq'+si+'_'+ii).value;if(raw==='')return;var a=parseInt(raw,10);answered++;e+=it.w*a/2;p+=it.w;lines.push(sec.k+': '+it.q+' = '+AN[a]);if(a<2)fixes.push({k:sec.k,fix:it.fix,pr:it.w*(2-a)})});earned+=e;poss+=p;secs.push({k:sec.k,pct:p>0?e/p*100:null})});
+      fixes.sort(function(a,b){return b.pr-a.pr});
+      return {answered:answered,total:READY.reduce(function(a,s){return a+s.items.length},0),score:poss>0?earned/poss*100:null,secs:secs,fixes:fixes,lines:lines};
+    }
+    function schema(){
+      var type=byId('ar-stype').value,name=sv('ar-name'),o={'@context':'https://schema.org','@type':type};
+      if(name)o.name=name;
+      var url=sv('ar-url');if(url)o.url=url;
+      var ph=sv('ar-phone');if(ph)o.telephone=ph;
+      var pr=sv('ar-price');if(pr)o.priceRange=pr;
+      var addr={'@type':'PostalAddress'},any=false;
+      [['streetAddress','ar-street'],['addressLocality','ar-city'],['addressRegion','ar-region'],['postalCode','ar-zip']].forEach(function(p){var x=sv(p[1]);if(x){addr[p[0]]=x;any=true}});
+      if(any){addr.addressCountry='US';o.address=addr}
+      var hrs=sv('ar-hours');if(hrs)o.openingHours=hrs.split(/;|\n/).map(function(x){return x.trim()}).filter(Boolean);
+      var soc=sv('ar-social');if(soc)o.sameAs=soc.split(/[,\s]+/).filter(Boolean);
+      return '<script type="application/ld+json">\n'+JSON.stringify(o,null,2)+'\n<'+'/script>';
+    }
+    function calc(){
+      var s=st(),ind=byId('ar-ind').value,type=sv('ar-type'),city=sv('ar-city');
+      if(s.score==null){set('ar-score','n/a');set('ar-label','Answer a few questions to see your score.')}
+      else{var band=s.score>=80?'Well set up for AI search':s.score>=60?'A solid base with gaps':s.score>=40?'Easy to miss':'Hard for assistants to find';set('ar-score',Math.round(s.score)+' / 100');set('ar-label',band+'. Based on '+s.answered+' of '+s.total+' answers.')}
+      byId('ar-secs').innerHTML=s.secs.map(function(x){var has=x.pct!=null;return barRow(x.k,has?x.pct:0,has&&x.pct<50,has?Math.round(x.pct)+'%':'n/a')}).join('');
+      byId('ar-fixes').innerHTML=s.fixes.length?s.fixes.slice(0,5).map(function(f){return '<li><span class="ftag">'+esc(f.k)+'</span>'+esc(f.fix)+'</li>'}).join(''):(s.answered?'<li>No gaps in the areas you answered. Nice work.</li>':'<li>Your top fixes show up here as you answer.</li>');
+      var code=schema();byId('ar-code').textContent=code;
+      var qs=customerQuestions(ind,type,city);byId('ar-q').innerHTML=qs.map(function(x){return '<li>'+esc(x)+'</li>'}).join('');
+      state.summary=function(){return 'AI search readiness\nBusiness: '+(sv('ar-name')||'n/a')+'\nScore: '+(s.score==null?'n/a':Math.round(s.score)+' / 100')+'\n'+s.secs.map(function(x){return x.k+': '+(x.pct==null?'n/a':Math.round(x.pct)+'%')}).join('\n')+'\n\nFix first:\n'+s.fixes.slice(0,5).map(function(f,i){return (i+1)+'. '+f.fix}).join('\n')+'\n\nQuestions to answer on your site:\n'+qs.map(function(x){return '- '+x}).join('\n')};
+    }
+    byId('ar-ind').addEventListener('change',function(){
+      var k=byId('ar-ind').value,st=byId('ar-stype');st.innerHTML=SCHEMA_TYPES[k].map(function(t){return '<option>'+esc(t)+'</option>'}).join('');
+      byId('ar-type').placeholder=VOC[k].typeEx;byId('ar-name').placeholder=VOC[k].bizEx;
+    });
+    root.addEventListener('input',calc);root.addEventListener('change',calc);calc();
+  }});
+
+/* ---------- 13. Review reply writer ---------- */
+var REV_POS=[
+ ['staff',['friendly','staff','server','team','helpful','kind','owner','manager','stylist','technician','barber','therapist','nurse','doctor','welcoming','attentive','professional'],'We will pass this on to the team.'],
+ ['quality',['delicious','tasty','fresh','amazing','best','flavor','quality','perfect','beautiful','love','great job','excellent'],'It makes our day to hear that you loved it.'],
+ ['speed',['fast','quick','on time','prompt','timely','efficient'],'We know your time matters, so it is great to hear things moved smoothly.'],
+ ['value',['price','value','worth','affordable','deal','reasonable'],'We work hard to make every visit worth it, so thank you for noticing.'],
+ ['clean',['clean','spotless','tidy'],'A clean, comfortable space matters to us, and we are glad you noticed.'],
+ ['vibe',['atmosphere','vibe','cozy','ambiance','decor','music','relaxing'],'We love that the space made you feel at home.']
+];
+var REV_NEG=[
+ ['wait',['wait','slow','late','long time','forever','delay','waited'],'We are sorry about the wait, and we will share this with the team.'],
+ ['staff',['rude','unfriendly','attitude','ignored','dismissive','unprofessional','disrespect'],'We are sorry you did not feel looked after, and we will share your feedback with the team.'],
+ ['price',['expensive','overpriced','overcharged','charged','too much','cost'],'We understand price matters, and we want every customer to feel they got fair value.'],
+ ['mistake',['wrong','mistake','missing','incorrect','forgot','error','mix up'],'We are sorry we got that wrong.'],
+ ['quality',['cold','stale','bland','poor','bad','broke','damaged','disappointing','not good','mediocre'],'We are sorry the quality was not up to our standard.'],
+ ['clean',['dirty','messy','unclean','smell','filthy'],'We are sorry about the state of the space. Cleanliness matters to us.']
+];
+DEMO.review=function(i){
+  var biz=i.business||'our team',who=i.reviewer?i.reviewer:'',r=parseInt(i.rating,10)||5,txt=String(i.review||'').toLowerCase();
+  var contact=i.contact?i.contact:'',tone=i.tone,vr=i.variant||0;
+  var tones=['Warm','Professional','Short and direct'];
+  if(vr)tone=tones[(Math.max(0,tones.indexOf(tone))+vr)%3];
+  var posHits=REV_POS.filter(function(t){return hasAny(txt,t[1])}),negHits=REV_NEG.filter(function(t){return hasAny(txt,t[1])});
+  var snip=noEnd(clip(firstSentence(i.review),80));
+  var pos=r>=4,mixed=r===3;
+  var greet={Warm:who?'Hi '+who+',':'Hi there,',Professional:who?'Dear '+who+',':'Hello,','Short and direct':''}[tone];
+  var detail=[],op,cl,sign;
+  var OP={
+    posWarm:['Thank you so much for the kind review!','Wow, thank you for such lovely words!','Thank you for taking the time to share this!'],
+    posPro:['Thank you for your review and for choosing '+biz+'.','We appreciate you taking the time to share your feedback.','Thank you for your thoughtful feedback.'],
+    posShort:['Thank you!','Thanks for the great review.','Really appreciate this.'],
+    negWarm:['Thank you for telling us about this, and we are truly sorry.','Thank you for sharing this with us. We are sorry it was not the experience you hoped for.','We are so sorry to read this.'],
+    negPro:['Thank you for your feedback. We are sorry your experience did not meet expectations.','We appreciate you bringing this to our attention and apologize for the experience.','Thank you for sharing your concerns.'],
+    negShort:['Thanks for the honest feedback, and sorry we fell short.','We hear you, and we are sorry.','Sorry about this.'],
+    midWarm:['Thank you for the honest feedback. We really value it.','Thanks for sharing this with us, the good and the not so good.'],
+    midPro:['Thank you for your balanced feedback.','We appreciate your honest review.'],
+    midShort:['Thanks for the honest review.','Appreciate the feedback.']
+  };
+  var key=(pos?'pos':mixed?'mid':'neg')+(tone==='Warm'?'Warm':tone==='Professional'?'Pro':'Short');
+  op=pick(OP[key],vr);
+  if(pos||mixed){
+    if(posHits.length)detail=posHits.slice(0,pos?2:1).map(function(t){return t[2]});
+    else if(pos&&snip.length>14)detail=['It means a lot to hear "'+snip+'".'];
+    else if(pos)detail=['We are so glad you had a great experience.'];
+  }
+  if(!pos){
+    if(negHits.length)detail=detail.concat(negHits.slice(0,2).map(function(t){return t[2]}));
+    else detail.push('We are sorry your experience fell short of what we want for every visit.');
+  }
+  if(!pos&&tone==='Short and direct')detail=detail.slice(0,1);
+  if(i.offer&&!pos)detail.push(cap(noEnd(i.offer))+'.');
+  var CL;
+  if(pos){CL={Warm:['We cannot wait to see you again soon.','Hope to see you again very soon.','Come back anytime, we would love to have you.'],Professional:['We look forward to serving you again.','We hope to welcome you back.','Please reach out any time if we can help with anything.'],'Short and direct':['See you next time.','Hope to see you soon.','Come back soon.']}}
+  else{CL={Warm:[contact?'We would love the chance to make it right. Please reach out to '+contact+' and we will take care of you.':'We would love the chance to make it right.'],Professional:[contact?'Please contact '+contact+' so we can look into this and resolve it.':'We would welcome the chance to resolve this with you.'],'Short and direct':[contact?'Please contact '+contact+' so we can make it right.':'Please reach out so we can make it right.']}}
+  cl=pick(CL[tone],vr);
+  sign={Warm:'The team at '+biz,Professional:'Sincerely,\n'+biz,'Short and direct':biz}[tone];
+  var body=op+' '+detail.join(' ')+' '+cl;
+  return {text:(greet?greet+'\n\n':'')+body.replace(/\s+/g,' ').trim()+'\n\n'+sign};
+};
+addTool({id:'review-reply',title:'Review reply writer',label:'Writer',ai:true,inds:ALL,
+  short:'Paste a customer review and get a reply that picks up what they actually said, from a thank you to a hard apology.',
+  desc:'Replying to reviews helps your reputation and your local search. Paste the review, pick a tone, and get a reply that responds to the specific points in it. Edit it, then post it.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>The review</h2><div class="fields">'+indSelect('rr-ind',indDefault())+
+      '<div class="row2">'+T('rr-biz','Your business name','',{ph:VOC[indDefault()].bizEx})+T('rr-who','Reviewer first name (optional)','')+'</div>'+
+      '<div class="row2">'+S('rr-rating','Star rating',[[5,'5 stars'],[4,'4 stars'],[3,'3 stars'],[2,'2 stars'],[1,'1 star']],5)+S('rr-tone','Tone',['Warm','Professional','Short and direct'],'Warm')+'</div>'+
+      A('rr-text','Paste the review','',{ph:'Great service and the staff were so friendly...'})+
+      '<div class="row2">'+T('rr-offer','How you will make it right (optional)','',{ph:'We would like to offer a free redo'})+T('rr-contact','Contact for unhappy customers (optional)','',{ph:'hello@yourbusiness.com'})+'</div></div>'+
+      '<div class="btnrow"><button class="pill" type="button" id="rr-go" disabled>Write my reply</button></div><p class="notice" id="rr-msg" role="status"></p>'+
+      '<p class="minor">Only reply to real reviews from real customers. Never offer anything in exchange for a changed review, since most review sites ban it.</p>',
+      '<h2>Your reply</h2><div id="rr-empty"><p style="color:var(--muted)">Paste a review and press the button. Your draft appears here.</p></div><div id="rr-out" hidden><div class="outbox" id="rr-box"></div><div class="btnrow"><button class="pill ghost sm" type="button" id="rr-cp">Copy reply</button><button class="pill ghost sm" type="button" id="rr-again">Write another version</button></div><div id="rr-demo"></div></div>','free'
+    );
+    var sync=function(){byId('rr-go').disabled=!sv('rr-text')||!sv('rr-biz')};
+    ['rr-biz','rr-text'].forEach(function(id){byId(id).addEventListener('input',sync)});
+    var variant=0;
+    async function go(){
+      var msg=byId('rr-msg'),btn=byId('rr-go');btn.disabled=true;msg.textContent='Writing...';
+      try{
+        var r=await runAI('review',{business:sv('rr-biz'),reviewer:sv('rr-who'),rating:byId('rr-rating').value,review:byId('rr-text').value,tone:byId('rr-tone').value,offer:sv('rr-offer'),contact:sv('rr-contact'),industry:byId('rr-ind').value,variant:variant});
+        byId('rr-box').textContent=r.text||'';byId('rr-empty').hidden=true;byId('rr-out').hidden=false;byId('rr-demo').innerHTML=r.demo?DEMO_NOTE:'';msg.textContent='';
+        state.summary=function(){return r.text||''};
+      }catch(e){msg.textContent=aiErr(e)}
+      finally{sync()}
+    }
+    byId('rr-go').addEventListener('click',function(){variant=0;go()});
+    byId('rr-again').addEventListener('click',function(){variant++;go()});
+    byId('rr-cp').addEventListener('click',function(){var t=byId('rr-box').textContent;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){set('rr-msg','Copied.')},function(){set('rr-msg','Copy was blocked. Select the text and copy it.')})});
+    sync();
+  }});
+
+/* ---------- 14. Promo writer ---------- */
+var DEF_CTA={service:'Request a quote today',food:'Order or book today',beauty:'Book your visit today',retail:'Stop by or shop online today'};
+var TAGS={service:['supportlocal','smallbusiness','localservice'],food:['foodie','eatlocal','supportlocal'],beauty:['selfcare','beautyservices','shoplocal'],retail:['shoplocal','smallbusiness','localshop']};
+var PHOTO={
+ service:'A before and after pair, or a short clip of the finished job, with the offer on screen for the last two seconds.',
+ food:'A close up of the best looking dish or drink, shot in natural light, then a quick pan across the room.',
+ beauty:'A short clip of the finished result, with the booking offer on screen for the last two seconds.',
+ retail:'A tidy flat lay or a short clip of the featured item in use, with the price or offer on screen.'
+};
+function offerType(o){
+  o=String(o||'').toLowerCase();
+  if(/%|percent|\boff\b|discount|save/.test(o))return 'deal';
+  if(/\bfree\b|complimentary|on us/.test(o))return 'free';
+  if(/buy one|bogo|\b2 for\b|two for|bundle|combo/.test(o))return 'bundle';
+  if(/grand opening|now open|opening|launch|\bnew\b/.test(o))return 'launch';
+  if(/event|night|party|live|tasting|workshop|class|pop up|popup/.test(o))return 'event';
+  return 'update';
+}
+var HOOKS={
+ deal:{Friendly:['A little something to say thank you.','Good news for your wallet.','Treat yourself, we have a deal for you.'],Bold:['Deal alert.','This is the one you have been waiting for.','Do not sleep on this.'],'Calm and professional':['A limited offer for our customers.','An offer we would like to share with you.','A seasonal offer from our team.']},
+ free:{Friendly:['Free is always a good idea.','We are giving something away.','Something on us this time.'],Bold:['Free. No catch.','You get something for nothing.','Free, and not for long.'],'Calm and professional':['A complimentary offer for our customers.','We would like to offer you something extra.','An added benefit for our customers.']},
+ bundle:{Friendly:['Two is better than one.','Bring a friend, double the fun.','A pair that pays off.'],Bold:['Double up.','More for you, same visit.','Bundle up and save.'],'Calm and professional':['A bundle offer for our customers.','A package offer worth a look.','Combine and save on your next visit.']},
+ launch:{Friendly:['Big news. We are excited to share this.','Something new is here.','Come say hello.'],Bold:['It is here.','New, and ready for you.','The wait is over.'],'Calm and professional':['We are pleased to announce something new.','A new addition from our team.','An update we would like to share.']},
+ event:{Friendly:['Save the date, we would love to see you.','Plans this week? Now you have some.','Join us for something fun.'],Bold:['One night only.','You do not want to miss this.','Mark your calendar.'],'Calm and professional':['You are invited.','We would like to invite you to an upcoming event.','Please join us.']},
+ update:{Friendly:['Quick update from us.','News from our corner.','A little something to share.'],Bold:['Heads up.','Big news.','Listen up.'],'Calm and professional':['An update from our team.','A short update for our customers.','Something we would like to share.']}
+};
+function hashtags(i){
+  var ind=indOf(i.industry),tags=[],city=String(i.location||'').replace(/[^a-z0-9]/gi,'');
+  if(city)tags.push(city);
+  var typeTag=String(i.businessType||'').toLowerCase().replace(/[^a-z0-9 ]/g,'').split(/\s+/).filter(Boolean).join('');
+  if(city&&typeTag)tags.push(city+typeTag);
+  if(typeTag&&typeTag.length<24)tags.push(typeTag);
+  TAGS[ind].forEach(function(t){tags.push(t)});
+  var b=String(i.business||'').replace(/[^a-z0-9]/gi,'');if(b&&b.length<22)tags.push(b);
+  return uniq(tags).slice(0,7).map(function(t){return '#'+t}).join(' ');
+}
+DEMO.promo=function(i){
+  var ind=indOf(i.industry),biz=i.business,offer=noEnd(cap(i.offer)),when=noEnd(i.when||''),aud=noEnd(i.audience||''),tone=HOOKS.deal[i.tone]?i.tone:'Friendly';
+  var cta=noEnd(i.cta||DEF_CTA[ind]),type=offerType(i.offer),hooks=HOOKS[type][tone];
+  var whenLine=when?' Available '+low(when)+'.':'',audLine=aud?' Made for '+low(aud)+'.':'';
+  var urgent=when?'Do not wait. '+cap(when)+' only.':'';
+  var tags=hashtags(i),v=[];
+  if(i.format==='Text message'){
+    var tail=' '+cap(cta)+'. Reply STOP to opt out.';
+    var build=function(head,wh){return head+(wh?' '+cap(when)+'.':'')+tail};
+    var ps=[
+      function(wh){return build(biz+': '+offer+'.',wh)},
+      function(wh){return build(offer+' at '+biz+'.',wh)},
+      function(wh){return build('Hi from '+biz+'. '+offer+'.',wh)}
+    ];
+    v=ps.map(function(f,k){var t=f(!!when);if(t.length>160)t=f(false);if(t.length>160){t=(function(){var room=160-tail.length-biz.length-4;return biz+': '+clip(offer,Math.max(20,room))+'.'+tail})()}return {label:'Version '+(k+1),text:t,max:160}});
+  }else if(i.format==='Email'){
+    var subs=fitFirst([
+      clip(offer,58),
+      when?cap(when)+': '+clip(offer,40):biz+': '+clip(offer,44),
+      type==='deal'?'A little something from '+biz:type==='event'?'You are invited: '+clip(offer,36):'News from '+biz
+    ],60,3);
+    v=subs.map(function(s,k){return {label:'Subject line '+(k+1),text:s,max:60}});
+    v.push({label:'Preview text',text:clip(offer+'.'+(when?' '+cap(when)+'.':'')+' '+cta+'.',90),max:90});
+    var body='Hi there,\n\n'+pick(hooks,0)+'\n\n'+offer+'.'+whenLine+audLine+'\n\n'+cap(cta)+'.\n\nThank you for being part of '+biz+'.\n\n'+biz+(urgent?'\n\nP.S. '+urgent:'');
+    v.push({label:'Email body',text:body});
+  }else{
+    v=[
+      {label:'Caption 1 (hook first)',text:pick(hooks,0)+'\n\n'+offer+'.'+whenLine+audLine+'\n\n'+cap(cta)+'.\n\n'+tags},
+      {label:'Caption 2 (question)',text:(type==='event'?'Free this week?':type==='launch'?'Have you seen what is new?':'Looking for a reason to stop by?')+'\n\n'+offer+'.'+whenLine+'\n\nTag someone you would bring.\n'+cap(cta)+'.\n\n'+tags},
+      {label:'Caption 3 (short)',text:offer+'.'+(when?' '+cap(when)+'.':'')+'\n'+cap(cta)+'.\n\n'+tags}
+    ];
+    v.push({label:'Photo or video idea',text:PHOTO[ind]});
+  }
+  return {variants:v};
+};
+addTool({id:'promo-writer',title:'Promo post, email, and text writer',label:'Writer',ai:true,inds:ALL,
+  short:'Turn an offer into an Instagram caption, an email, or a text message that fits the format and your tone.',
+  desc:'Tell us what you are promoting and who it is for. Pick a format and get versions to edit, with hooks matched to the kind of offer, hashtags, subject lines, and character counts where they matter.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>Your promotion</h2><div class="fields">'+indSelect('pw-ind',indDefault())+
+      '<div class="row2">'+T('pw-biz','Business name','',{ph:VOC[indDefault()].bizEx})+S('pw-format','Format',['Instagram caption','Email','Text message'],'Instagram caption')+'</div>'+
+      '<div class="row2">'+T('pw-type','Type of business (optional)','',{ph:VOC[indDefault()].typeEx})+T('pw-loc','City (optional)','',{ph:'Your city'})+'</div>'+
+      A('pw-offer','What are you promoting?','',{ph:'20 percent off first visits this month'})+
+      '<div class="row2">'+T('pw-when','When (optional)','',{ph:'through Sunday'})+T('pw-aud','Who it is for (optional)','',{ph:'new customers near the shop'})+'</div>'+
+      '<div class="row2">'+S('pw-tone','Tone',['Friendly','Bold','Calm and professional'],'Friendly')+T('pw-cta','Call to action (optional)','',{ph:'Book at yourbusiness.com'})+'</div></div>'+
+      '<div class="btnrow"><button class="pill" type="button" id="pw-go" disabled>Write it</button></div><p class="notice" id="pw-msg" role="status"></p>'+
+      '<p class="minor">Only send texts and marketing emails to people who agreed to hear from you, and include a way to opt out.</p>',
+      '<h2>Your drafts</h2><div id="pw-empty"><p style="color:var(--muted)">Fill in the promotion and press the button. Your drafts appear here.</p></div><div id="pw-out" hidden></div>','free'
+    );
+    copyButtons(root);
+    var sync=function(){byId('pw-go').disabled=!sv('pw-biz')||!sv('pw-offer')};
+    ['pw-biz','pw-offer'].forEach(function(id){byId(id).addEventListener('input',sync)});
+    byId('pw-go').addEventListener('click',async function(){
+      var msg=byId('pw-msg'),btn=this;btn.disabled=true;msg.textContent='Writing...';
+      try{
+        var r=await runAI('promo',{business:sv('pw-biz'),format:byId('pw-format').value,offer:byId('pw-offer').value,when:sv('pw-when'),audience:sv('pw-aud'),tone:byId('pw-tone').value,cta:sv('pw-cta'),industry:byId('pw-ind').value,businessType:sv('pw-type'),location:sv('pw-loc')});
+        var vs=Array.isArray(r.variants)?r.variants:[];
+        byId('pw-out').innerHTML=vs.map(function(x){return variantHTML(x.label||'Draft',x.text||'',x.max||0,false)}).join('')+(r.demo?DEMO_NOTE:'');
+        byId('pw-empty').hidden=true;byId('pw-out').hidden=false;msg.textContent='';
+        state.summary=function(){return vs.map(function(x){return (x.label||'Draft')+'\n'+x.text}).join('\n\n')};
+      }catch(e){msg.textContent=aiErr(e)}
+      finally{sync()}
+    });
+    sync();
+  }});
+
+/* ---------- 15. Ad copy writer ---------- */
+var AD_CTA={service:['Request a Quote','Book a Visit','Call Today'],food:['Order Online','Book a Table','Order for Pickup'],beauty:['Book Your Visit','Book Online Today','See Open Times'],retail:['Shop Now','Visit Us Today','Shop Local Today']};
+var META_BTN={service:'Get quote, or Learn more',food:'Order now, or Book now',beauty:'Book now',retail:'Shop now'};
+var NEG_BASE=['free','jobs','hiring','salary','diy','how to','course','training','template'];
+var NEG_IND={food:['recipe','calories','nutrition'],beauty:['school','license','at home'],service:['parts','manual','kit'],retail:['wholesale','manufacturer','supplier']};
+DEMO.adcopy=function(i){
+  var ind=indOf(i.industry),biz=i.business,svc=noEnd(i.service),loc=noEnd(i.location||''),off=noEnd(i.offer||''),dif=noEnd(i.differentiator||'');
+  var ctas=AD_CTA[ind],kw=svc.toLowerCase(),G=[];
+  if(i.platform==='Google search ads'){
+    var kwH=[svc,loc?svc+' in '+loc:'',loc?'Local '+svc:'',loc?loc+' '+svc:''];
+    var heads=fitFirst(uniq([].concat(
+      kwH.slice(0,3).map(titleCase),[titleCase(biz)],
+      [off,dif].map(titleCase),
+      ctas,
+      [loc?'Serving '+loc:'',svc?'Trusted '+svc:'']
+    )).map(function(x){return x}),30,12).slice(0,9);
+    var descs=fitFirst([
+      biz+': '+svc+(loc?' in '+loc:'')+'. '+(off?cap(off)+'.':ctas[0]+'.'),
+      (dif?cap(dif)+'. ':'')+cap(svc)+(loc?' in '+loc:'')+' from '+biz+'.',
+      (off?cap(off)+'. ':'')+ctas[0]+' with '+biz+' today.',
+      cap(svc)+(loc?' in '+loc:'')+'. '+(dif?cap(dif)+'.':'Contact '+biz+' today.'),
+      biz+': '+svc+'. '+ctas[1]+'.',
+      cap(svc)+(loc?' in '+loc:'')+'? '+ctas[0]+' with '+biz+'.'
+    ].map(function(x){return x.replace(/\.\./g,'.').replace(/\s+/g,' ')}),90,4);
+    var kws=uniq([kw,kw+' near me',loc?kw+' in '+loc:'',loc?'best '+kw+' '+loc:'',loc?loc+' '+kw:''].concat(
+      {service:[kw+' cost',kw+' quote','affordable '+kw],food:[kw+' open now',kw+' delivery',kw+' takeout',kw+' reservations'],beauty:[kw+' appointment',kw+' prices','best '+kw],retail:[kw+' store',kw+' open now','buy '+kw+' local']}[ind]
+    )).slice(0,10);
+    var negs=NEG_BASE.concat(NEG_IND[ind]);
+    G=[{title:'Headlines (30 characters each)',max:30,items:heads},{title:'Descriptions (90 characters each)',max:90,items:descs},
+       {title:'Keyword ideas (start with phrase match)',compact:true,items:kws},{title:'Negative keywords to add',compact:true,items:negs}];
+  }else{
+    var prim=[
+      (off?cap(off)+'. ':'')+biz+': '+svc+(loc?' in '+loc:'')+'.'+(dif?' '+cap(dif)+'.':''),
+      cap(svc)+(loc?' in '+loc:'')+'? '+(dif?cap(dif)+'. ':'')+(off?cap(off)+'.':'See how '+biz+' can help.'),
+      'New to '+biz+'? '+(off?cap(off)+'. ':'')+(loc?'Serving '+loc+'. ':'')+'Tap to learn more.'
+    ].map(function(x){return x.replace(/\.\./g,'.').replace(/\s+/g,' ').trim()});
+    var heads2=fitFirst([off,svc+(loc?' in '+loc:''),ctas[0],biz+': '+svc,dif].map(titleCase),40,4);
+    G=[{title:'Primary text (about 125 characters shows before See more)',max:125,soft:true,items:prim},{title:'Headlines (40 characters each)',max:40,items:heads2},
+       {title:'Call to action button',compact:true,items:[META_BTN[ind]]},{title:'Creative idea',compact:true,items:[PHOTO[ind]]}];
+  }
+  return {groups:G};
+};
+addTool({id:'ad-copy',title:'Ad copy writer',label:'Writer',ai:true,inds:ALL,
+  short:'Write Google search ads and Meta ads that fit the character limits, with keyword and negative keyword ideas.',
+  desc:'Give us what you sell, where, and your best offer. You get headline and description options with live character counts, so nothing gets cut off, plus keyword ideas and negative keywords for Google.',
+  build:function(root){
+    root.innerHTML=layout(
+      '<h2>Your ad</h2><div class="fields">'+indSelect('ac-ind',indDefault())+
+      '<div class="row2">'+T('ac-biz','Business name','',{ph:VOC[indDefault()].bizEx})+S('ac-plat','Platform',['Google search ads','Meta ads (Facebook and Instagram)'],'Google search ads')+'</div>'+
+      '<div class="row2">'+T('ac-svc','What you sell or do','',{ph:VOC[indDefault()].typeEx})+T('ac-loc','Where (optional)','',{ph:'Your city'})+'</div>'+
+      T('ac-off','Your offer (optional)','',{ph:'First visit 20 percent off'})+
+      T('ac-dif','What makes you different (optional)','',{ph:'Family owned since 2012'})+'</div>'+
+      '<div class="btnrow"><button class="pill" type="button" id="ac-go" disabled>Write my ads</button></div><p class="notice" id="ac-msg" role="status"></p>'+
+      '<p class="minor">Only claim what is true and what you can deliver. Ad platforms review ads, and some claims need proof.</p>',
+      '<h2>Your ad copy</h2><div id="ac-empty"><p style="color:var(--muted)">Fill in the details and press the button. Your options appear here.</p></div><div id="ac-out" hidden></div>','free'
+    );
+    copyButtons(root);
+    var sync=function(){byId('ac-go').disabled=!sv('ac-biz')||!sv('ac-svc')};
+    ['ac-biz','ac-svc'].forEach(function(id){byId(id).addEventListener('input',sync)});
+    byId('ac-go').addEventListener('click',async function(){
+      var msg=byId('ac-msg'),btn=this;btn.disabled=true;msg.textContent='Writing...';
+      try{
+        var plat=byId('ac-plat').value.indexOf('Google')===0?'Google search ads':'Meta ads';
+        var r=await runAI('adcopy',{business:sv('ac-biz'),platform:plat,service:sv('ac-svc'),location:sv('ac-loc'),offer:sv('ac-off'),differentiator:sv('ac-dif'),industry:byId('ac-ind').value});
+        var gs=Array.isArray(r.groups)?r.groups:[];
+        byId('ac-out').innerHTML=gs.map(function(g){
+          if(g.compact)return variantHTML(g.title.split(' (')[0],(g.items||[]).join('\n'),0);
+          return '<p class="gtitle">'+esc(g.title)+'</p>'+(g.items&&g.items.length?g.items.map(function(t,k){return variantHTML((g.title.split(' (')[0].replace(/s$/,''))+' '+(k+1),t,g.max,g.soft)}).join(''):'<p class="minor">Add more detail to get options that fit.</p>')
+        }).join('')+(r.demo?DEMO_NOTE:'');
+        byId('ac-empty').hidden=true;byId('ac-out').hidden=false;msg.textContent='';
+        state.summary=function(){return gs.map(function(g){return g.title+'\n'+(g.items||[]).map(function(t){return '- '+t}).join('\n')}).join('\n\n')};
+      }catch(e){msg.textContent=aiErr(e)}
+      finally{sync()}
+    });
+    sync();
+  }});
+
+/* =====================================================
+   HUB, ROUTING, START
+   ===================================================== */
+var toolIndsLabel=function(t){return t.inds.length===4?'For all four business types':'For '+t.inds.map(function(k){return IND[k].toLowerCase()}).join(' and ')};
+function visibleTools(){
+  return TOOLS.filter(function(t){
+    var okI=state.ind==='all'||t.inds.indexOf(state.ind)>-1;
+    var okK=state.kind==='all'||(state.kind==='ai'?t.ai:!t.ai);
+    return okI&&okK;
+  });
+}
+function cardHTML(t){
+  return '<a class="card" href="#t/'+t.id+'"><div class="badges"><span class="badge">'+esc(t.label)+'</span>'+(t.ai&&CFG.AI_ENDPOINT?'<span class="badge ai">AI</span>':'')+'</div><h3>'+esc(t.title)+'</h3><p>'+esc(t.short)+'</p><span class="for">'+esc(toolIndsLabel(t))+'</span><span class="go">Open the tool</span></a>';
+}
+function drawFilters(){
+  var fi=byId('f-ind'),fk=byId('f-kind');
+  var chip=function(group,val,label,on){return '<button type="button" class="chip" data-'+group+'="'+val+'" aria-pressed="'+(on?'true':'false')+'">'+esc(label)+'</button>'};
+  fi.innerHTML='<span class="lab">Business</span>'+chip('ind','all','All businesses',state.ind==='all')+IND_KEYS.map(function(k){return chip('ind',k,IND[k],state.ind===k)}).join('');
+  fk.innerHTML='<span class="lab">Type</span>'+chip('kind','all','All tools',state.kind==='all')+chip('kind','calc','Calculators and planners',state.kind==='calc')+chip('kind','ai','Writers and generators',state.kind==='ai');
+}
+function drawGrid(){
+  var list=visibleTools();
+  byId('count').textContent='Showing '+list.length+' of '+TOOLS.length+' tools';
+  byId('grid').innerHTML=list.length?list.map(cardHTML).join(''):'<div class="empty" style="grid-column:1/-1">No tools match those filters yet. Try another business type.</div>';
+}
+byId('f-ind').addEventListener('click',function(e){var b=e.target.closest('[data-ind]');if(!b)return;state.ind=b.getAttribute('data-ind');try{localStorage.setItem('cm_ind',state.ind)}catch(x){}drawFilters();drawGrid()});
+byId('f-kind').addEventListener('click',function(e){var b=e.target.closest('[data-kind]');if(!b)return;state.kind=b.getAttribute('data-kind');drawFilters();drawGrid()});
+
+function showTool(id){
+  var t=TOOLS.filter(function(x){return x.id===id})[0];
+  if(!t){location.hash='#browse';return}
+  state.toolId=t.id;state.toolTitle=t.title;state.noInputs=!!t.noInputsInReport;state.summary=function(){return ''};
+  byId('t-tags').innerHTML='<span class="badge">'+esc(t.label)+'</span>'+(t.ai&&CFG.AI_ENDPOINT?'<span class="badge ai">AI</span>':'')+'<span class="badge">'+esc(toolIndsLabel(t))+'</span>';
+  byId('t-title').textContent=t.title;byId('t-desc').textContent=t.desc;
+  var host=document.createElement('div');byId('t-body').replaceChildren(host);
+  t.build(host);wireShare(host);
+  var i=TOOLS.indexOf(t),rest=TOOLS.slice(i+1).concat(TOOLS.slice(0,i)).filter(function(x){return state.ind==='all'||x.inds.indexOf(state.ind)>-1}).slice(0,3);
+  byId('t-next').innerHTML=rest.map(cardHTML).join('');
+  document.title=t.title+' | content MATTER';
+}
+function route(){
+  var h=location.hash||'';
+  var home=byId('view-home'),tool=byId('view-tool');
+  if(h.indexOf('#t/')===0){
+    home.hidden=true;tool.hidden=false;showTool(h.slice(3));window.scrollTo(0,0);
+  }else{
+    tool.hidden=true;home.hidden=false;document.title='Free tools for local businesses | content MATTER';
+    drawFilters();drawGrid();
+    if(h==='#browse'){var el=byId('browse');if(el)el.scrollIntoView()}else window.scrollTo(0,0);
+  }
+  byId('nav-links').classList.remove('open');byId('menu-btn').setAttribute('aria-expanded','false');
+}
+window.addEventListener('hashchange',route);
+
+/* menu, outbound links */
+byId('menu-btn').addEventListener('click',function(){var o=byId('nav-links').classList.toggle('open');this.setAttribute('aria-expanded',o?'true':'false')});
+$$('[data-audit]').forEach(function(a){a.setAttribute('href',CFG.AUDIT_URL)});
+$$('[data-book]').forEach(function(a){a.setAttribute('href',CFG.BOOKING_URL)});
+
+route();
+})();
+</script>
+</body>
+</html>

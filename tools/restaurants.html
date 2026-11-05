@@ -1,0 +1,1063 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ContentMatter Restaurant Tools</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+<style>
+/* content MATTER tokens, generated from the Design System tokens.json. Do not edit by hand. */
+:root{--surface:#F5F2EA;--surface-raised:#FFFFFF;--surface-panel:#ECE7DA;--surface-inverse:#2C3340;--ink:#2C3340;--ink-muted:#5B6270;--ink-inverse:#F5F2EA;--hairline:#DDD7C9;--border-control:#7E8796;--brand:#3CBFB0;--brand-hover:#6BD0C4;--on-brand:#2C3340;--accent-text:#1A7A6E;--accent-on-inverse:#3CBFB0;--focus-ring:#1A7A6E;--status-good:#176C62;--status-good-tint:#DDF2EF;--status-warning:#8A5A0B;--status-warning-tint:#F7EBD3;--status-poor:#B0463A;--status-poor-tint:#F8E3DF;--status-info:#2C3340;--status-info-tint:#E4E7EC;--status-dot-good:#3CBFB0;--status-dot-warning:#E8B45C;--status-dot-poor:#E07A6A;--status-dot-info:#2C3340;--chart-1:#3CBFB0;--chart-2:#2C3340;--chart-3:#E8B45C;--chart-4:#E07A6A;--teal:#3CBFB0;--teal-600:#2A9D8F;--teal-700:#1A7A6E;--navy:#2C3340;--cream:#F5F2EA;--white:#FFFFFF;--black:#000000;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-24:96px;--radius-xs:2px;--radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-pill:9999px;--stroke-hairline:1px;--stroke-control:1.5px;--stroke-rule:4px;--stroke-wordmark:8px;--content-max:1080px;--read-max:680px;--control-height:48px;--icon-md:20px;--font-sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--surface:#2C3340;--surface-raised:#363E4D;--surface-panel:#323A48;--surface-inverse:#222833;--ink:#F5F2EA;--ink-muted:#B7BDC8;--ink-inverse:#F5F2EA;--hairline:#444D5C;--border-control:#8790A0;--accent-text:#3CBFB0;--focus-ring:#3CBFB0;--status-good:#3CBFB0;--status-good-tint:#24464A;--status-warning:#E8B45C;--status-warning-tint:#4A4232;--status-poor:#F0907F;--status-poor-tint:#4D3A3D;--status-info:#A9C3E8;--status-info-tint:#3A4558;--status-dot-info:#A9C3E8;--chart-2:#C9D3E0;color-scheme:dark}}
+:root[data-theme="dark"]{--surface:#2C3340;--surface-raised:#363E4D;--surface-panel:#323A48;--surface-inverse:#222833;--ink:#F5F2EA;--ink-muted:#B7BDC8;--ink-inverse:#F5F2EA;--hairline:#444D5C;--border-control:#8790A0;--accent-text:#3CBFB0;--focus-ring:#3CBFB0;--status-good:#3CBFB0;--status-good-tint:#24464A;--status-warning:#E8B45C;--status-warning-tint:#4A4232;--status-poor:#F0907F;--status-poor-tint:#4D3A3D;--status-info:#A9C3E8;--status-info-tint:#3A4558;--status-dot-info:#A9C3E8;--chart-2:#C9D3E0;color-scheme:dark}
+:root{
+  --ground:var(--surface); --panel:var(--surface-raised); --accent:var(--brand); --accent-ink:var(--accent-text);
+  --soft:var(--hairline); --muted:var(--ink-muted); --field-bg:var(--surface-inverse); --field-fg:var(--ink-inverse);
+  --accent-soft:var(--status-good-tint); --warn:var(--status-poor); --warn-soft:var(--status-poor-tint);
+  --gold:var(--status-warning); --gold-soft:var(--status-warning-tint);
+  --face:var(--font-sans); --gut:clamp(16px,3.3333vw,40px); --rule:1px;
+}
+/* Restaurant Tools on the content MATTER Design System: Tool Hub cards, cm-btn pills, FormField inputs, flat, Inter 400/700/900. */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font-family:var(--face);font-size:16px;line-height:1.5;font-weight:400;
+  padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px));padding-block:0}
+a{color:var(--accent-ink);text-underline-offset:3px}
+.wrap{max-width:1400px;margin:0 auto;counter-reset:grp}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+h1,h2,h3{font-family:inherit;margin:0;text-wrap:balance}
+h1{font-weight:900;line-height:.95;letter-spacing:-.04em}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;border-bottom:2px solid var(--brand);flex-wrap:wrap}
+.mark{display:inline-flex;align-items:center;gap:10px;line-height:0;text-decoration:none;color:var(--ink)}
+.mark img{height:24px;width:auto}
+.mark small{font:900 11px/16px var(--font-sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-muted)}
+.cm-logo--on-dark{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cm-logo--on-light{display:none}:root:not([data-theme="light"]) .cm-logo--on-dark{display:block}}
+:root[data-theme="dark"] .cm-logo--on-light{display:none}
+:root[data-theme="dark"] .cm-logo--on-dark{display:block}
+.top-link{font-size:12px;font-weight:900;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.top-link:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+
+/* shared small label */
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:12px;line-height:16px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;margin:0;color:var(--ink)}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--brand);flex:none}
+
+/* home hero: broad statement in 9 columns, narrow support in 3 */
+.hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:28px;padding-block:clamp(32px,5vw,80px) clamp(32px,4.5vw,64px);border-bottom:1px solid var(--hairline)}
+.hero .eyebrow{grid-column:1/-1;grid-row:1}
+.hero h1{grid-column:1/10;grid-row:2;font-size:clamp(46px,7.6vw,118px)}
+.hero .lede{grid-column:10/-1;grid-row:2;align-self:end;font-size:17px;margin:0;color:var(--ink)}
+.hero .hero-act{grid-column:10/-1;grid-row:3;justify-self:start}
+
+/* groups: index rail + ruled matrix */
+.group{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:16px;padding-block:28px 8px;counter-increment:grp}
+.group h2{grid-column:1/4;align-self:start;font-size:12px;font-weight:900;letter-spacing:.25em;text-transform:uppercase;line-height:1.4}
+.group h2::before{content:counter(grp,decimal-leading-zero);display:block;color:var(--accent-text);margin-bottom:6px}
+.grid{grid-column:4/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:12px;padding:24px;min-width:0;color:var(--ink);text-decoration:none;background:var(--surface-raised);border:1px solid var(--hairline);border-radius:var(--radius-md);transition:border-color .15s}
+.card h3{font-size:22px;font-weight:900;letter-spacing:-.025em;line-height:1.1}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+a.card:hover{border-color:var(--ink)}
+.card .go{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700;color:var(--accent-text)}
+.card .go::after{content:" \2192"}
+.tag{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;font-size:11px;line-height:16px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:var(--radius-pill);background:var(--surface-panel);color:var(--ink)}
+.tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);flex:none}
+.tag.soon{background:var(--status-warning-tint);color:var(--status-warning)}
+.tag.soon::before{background:currentColor}
+
+/* closing black field */
+.cta{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:24px;align-items:end;background:var(--surface-inverse);color:var(--ink-inverse);border-radius:var(--radius-lg);padding:clamp(32px,5vw,64px) var(--gut);margin-top:48px}
+.cta h2{grid-column:1/10;font-size:clamp(32px,4.4vw,56px);font-weight:900;line-height:1;letter-spacing:-.04em}
+.cta .btn{grid-column:10/-1;justify-self:start}
+
+/* buttons and controls */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 15px/20px var(--font-sans);letter-spacing:.01em;min-height:var(--control-height);padding:12px 24px;border:1.5px solid var(--brand);border-radius:var(--radius-pill);background:var(--brand);color:var(--on-brand);cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{background:var(--brand-hover);border-color:var(--brand-hover)}
+.btn.ghost{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn.ghost:hover{background:var(--surface-panel)}
+.btn.small{min-height:36px;padding:8px 16px;font-size:13px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn[disabled]:hover{background:var(--brand);border-color:var(--brand)}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.hint{font-size:13px;color:var(--muted);margin:5px 0 0;font-weight:400}
+input[type=number],input[type=text],input[type=email],input[type=date],select,textarea{width:100%;font:inherit;font-size:16px;min-height:var(--control-height);padding:12px 14px;border:1.5px solid var(--border-control);border-radius:var(--radius-sm);background:var(--surface-raised);color:var(--ink);min-width:0}
+textarea{resize:vertical;min-height:84px;line-height:1.45}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--focus-ring);outline-offset:1px;border-color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.row2{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.notice{font-size:14px;font-weight:700;color:var(--ink);min-height:1.3em;margin:0}
+
+/* tool pages: rail left, content from column 4 */
+.tool{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);align-content:start}
+.tool>*{grid-column:4/-1}
+.tool::before{content:"";grid-column:1/-1;grid-row:2;border-top:1px solid var(--hairline);margin-bottom:28px}
+.tool>.back{grid-column:1/4;grid-row:1;align-self:start;position:sticky;top:0;padding-block:clamp(24px,4vw,56px) 0;font-size:12px;font-weight:900;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.tool>.back::before{content:"\2190  "}
+.tool>.back:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.tool-head{grid-row:1;padding-block:clamp(24px,4vw,56px) clamp(24px,3vw,40px)}
+.tool-head h1{font-size:clamp(40px,6.4vw,92px);margin-top:16px}
+.tool-head p{max-width:62ch}
+.tool-head p:not(.eyebrow){margin:18px 0 0;font-size:17px}
+.layout{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);column-gap:var(--gut);row-gap:28px;align-items:start;padding-bottom:48px}
+.panel{background:none;border:0;padding:0;min-width:0}
+.panel h2{font-size:12px;font-weight:900;letter-spacing:.25em;text-transform:uppercase;padding-top:12px;border-top:1px solid var(--hairline);margin-bottom:16px}
+.fields{display:grid;gap:16px}
+.result{position:sticky;top:12px;background:var(--surface-raised);border:2px solid var(--ink);border-radius:var(--radius-lg);padding:clamp(20px,3vw,32px)}
+.result>h2:first-child{border-top:0;padding-top:0}
+
+.big{font-weight:900;font-size:clamp(44px,5vw,76px);letter-spacing:-.04em;line-height:.95;font-variant-numeric:tabular-nums}
+.lead-stat{padding-bottom:16px}
+.lead-stat small{display:block;color:var(--muted);font-size:14px;margin-top:8px}
+.kv{display:flex;justify-content:space-between;gap:14px;padding-block:11px;border-top:1px solid var(--hairline);font-size:15px}
+.kv span:first-child{color:var(--muted)}
+.kv b{font-variant-numeric:tabular-nums;text-align:right;font-weight:700}
+.callout{margin-top:16px;padding:14px 16px;border-radius:var(--radius-sm);border-left:4px solid var(--brand);background:var(--status-good-tint);font-size:15px}
+.callout.bad{border-left-color:var(--warn);background:var(--warn-soft);color:var(--ink)}
+.range{font-variant-numeric:tabular-nums;font-weight:700}
+.example{font-size:13px;color:var(--muted);margin:0 0 14px}
+.minor{font-size:13px;color:var(--muted);margin:12px 0 0}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+
+/* tables */
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-muted);padding:6px 8px 10px;font-weight:900;white-space:nowrap;border-bottom:2px solid var(--ink)}
+td{padding:6px 8px;border-top:1px solid var(--soft);vertical-align:middle}
+td input,td select{min-height:40px;padding:8px 10px;font-size:15px}
+table.edit td input:not(.num){min-width:150px}
+table.edit td input.num{min-width:80px}
+table.edit{min-width:600px}
+.num{text-align:right}
+.rm{background:none;border:0;color:var(--muted);cursor:pointer;font-size:22px;line-height:1;padding:4px 10px;border-radius:var(--radius-pill)}
+.rm:hover{color:var(--ink);background:var(--panel)}
+.sel-sm{padding:8px 10px;font-size:15px}
+
+/* badges, groups, bars */
+.badge{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:var(--radius-pill)}
+.b-Star{background:var(--brand);color:var(--on-brand)}
+.b-Plowhorse{background:var(--gold-soft);color:var(--gold)}
+.b-Puzzle{background:var(--surface-raised);color:var(--ink);border:1.5px solid var(--brand)}
+.b-Dog{background:var(--warn-soft);color:var(--warn)}
+.quad{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q{border:1px solid var(--hairline);border-radius:var(--radius-md);padding:14px 16px;min-width:0}
+.q h3{font-size:20px;font-weight:900;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.q .what{font-size:14px;color:var(--muted);margin:6px 0 8px}
+.q .names{font-size:15px;overflow-wrap:anywhere}
+.asec{margin-bottom:24px}
+.asec h3{font-size:20px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px}
+.arow{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:12px;align-items:center;padding-block:10px;border-top:1px solid var(--soft)}
+.arow label{margin:0;font-weight:400;font-size:15px}
+.arow select{padding:8px 10px;font-size:15px}
+.bars{display:grid;gap:10px}
+.bar-row{display:grid;grid-template-columns:92px 1fr 42px;gap:10px;align-items:center;font-size:14px}
+.bar-row span:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.bar{height:12px;border-radius:var(--radius-pill);background:var(--hairline);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:var(--radius-pill);background:var(--status-dot-good)}
+.bar i.low{background:var(--status-dot-poor)}
+.fixes{margin:0;padding-left:20px;display:grid;gap:12px;font-size:15px}
+.ftag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--surface);padding:3px 9px;border-radius:var(--radius-pill);margin-right:8px}
+.outbox{white-space:pre-wrap;background:var(--surface-panel);border:1.5px solid var(--border-control);border-radius:var(--radius-sm);padding:16px;font-size:15px;min-height:3em;overflow-wrap:anywhere}
+.mailme{display:grid;gap:8px;margin-top:20px;padding-top:14px;border-top:1px solid var(--hairline)}
+.mailme label{margin:0}
+.checks{display:flex;flex-wrap:wrap;gap:8px 18px}
+.checks label{display:flex;gap:8px;align-items:center;font-weight:400;font-size:15px;margin:0}
+.checks input{accent-color:var(--accent);width:18px;height:18px}
+.verdict{display:inline-block;font-weight:900;font-size:24px;letter-spacing:-.02em;padding:8px 18px;border-radius:var(--radius-pill)}
+.verdict.good{background:var(--status-good-tint);color:var(--status-good)}
+.verdict.mid{background:var(--gold-soft);color:var(--gold)}
+.verdict.bad{background:var(--warn-soft);color:var(--warn)}
+.reclist{margin:8px 0 0;padding-left:20px;display:grid;gap:6px;font-size:15px}
+.reclist .you{font-weight:700}
+.tips{margin:0;padding-left:20px;display:grid;gap:8px;font-size:15px}
+.rec h3{font-size:16px;margin:20px 0 6px;font-weight:900;letter-spacing:0}
+.rec h3:first-child{margin-top:0}
+.rec .kvr{display:grid;grid-template-columns:130px 1fr;gap:10px;padding-block:5px;font-size:15px;border-top:1px solid var(--soft)}
+.rec .kvr span:first-child{color:var(--muted)}
+.rec .rtext{white-space:pre-wrap;font-size:15px;margin:0;overflow-wrap:anywhere}
+.rec-title{font-size:clamp(26px,3vw,40px);font-weight:900;letter-spacing:-.03em;line-height:1;margin:0 0 6px}
+
+/* footer */
+.foot{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:12px;border-top:1px solid var(--hairline);padding-block:20px 36px;font-size:14px}
+.foot>div:first-child{grid-column:1/7}
+.foot>div:last-child{grid-column:7/-1;color:var(--muted);border-left:1px solid var(--hairline);padding-left:var(--gut)}
+
+@media (max-width:1050px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .result{position:static}
+}
+@media (max-width:700px){
+  .hero .eyebrow,.hero h1,.hero .lede,.hero .hero-act{grid-column:1/-1;grid-row:auto}
+  .group h2{grid-column:1/-1}
+  .grid{grid-column:1/-1;grid-template-columns:1fr}
+  .tool>*{grid-column:1/-1}
+  .tool::before{display:none}
+  .tool>.back{grid-column:1/-1;grid-row:auto;position:static;padding-block:20px 0}
+  .tool-head{grid-row:auto;border-bottom:1px solid var(--hairline);margin-bottom:24px}
+  .cta h2,.cta .btn{grid-column:1/-1}
+  .foot>div:first-child,.foot>div:last-child{grid-column:1/-1}
+  .foot>div:last-child{border-left:0;padding-left:0;border-top:1px solid var(--hairline);padding-top:12px}
+  .quad{grid-template-columns:1fr}
+}
+@media (max-width:480px){.row2{grid-template-columns:1fr}.arow{grid-template-columns:1fr}.rec .kvr{grid-template-columns:1fr;gap:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#home" aria-label="content MATTER Restaurant Tools home"><img class="cm-logo--on-light" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzYuMDMgNzQuNTYiIHdpZHRoPSI0NzYuMDMiIGhlaWdodD0iNzQuNTYiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iY29udGVudE1BVFRFUi4iPjx0aXRsZT5jb250ZW50TUFUVEVSLjwvdGl0bGU+PHBhdGggZmlsbD0iIzJDMzM0MCIgZD0iTTIwLjAgNDcuMTg3NVExNC4zMTI1IDQ3LjE4NzUgMTAuMjY1NjI1IDQ0LjkyMTg3NVE2LjIxODc1IDQyLjY1NjI1IDQuMDc4MTI1IDM4LjYwOTM3NVExLjkzNzUgMzQuNTYyNSAxLjkzNzUgMjkuMTg3NVExLjkzNzUgMjMuODEyNSA0LjA3ODEyNSAxOS43NjU2MjVRNi4yMTg3NSAxNS43MTg3NSAxMC4yNjU2MjUgMTMuNDUzMTI1UTE0LjMxMjUgMTEuMTg3NSAyMC4wIDExLjE4NzVRMjcuMjE4NzUgMTEuMTg3NSAzMS42NzE4NzUgMTQuNzk2ODc1UTM2LjEyNSAxOC40MDYyNSAzNi43MTg3NSAyNC40Njg3NUwyNS4xODc1IDI2LjE4NzVRMjQuMjgxMjUgMjAuNTYyNSAyMC4xODc1IDIwLjU2MjVRMTcuNzE4NzUgMjAuNTYyNSAxNi4yMzQzNzUgMjIuNjg3NVExNC43NSAyNC44MTI1IDE0Ljc1IDI5LjEyNVExNC43NSAzMy40MDYyNSAxNi4yMzQzNzUgMzUuNjA5Mzc1UTE3LjcxODc1IDM3LjgxMjUgMjAuMTg3NSAzNy44MTI1UTI0LjM3NSAzNy44MTI1IDI1LjE4NzUgMzIuMEwzNi43MTg3NSAzMy42ODc1UTM2LjA5Mzc1IDM5LjkwNjI1IDMxLjY4NzUgNDMuNTQ2ODc1UTI3LjI4MTI1IDQ3LjE4NzUgMjAuMCA0Ny4xODc1WiBNNTIuODY1IDQ3LjE4NzVRNDcuMTc3NSA0Ny4xODc1IDQzLjExNSA0NC45MjE4NzVRMzkuMDUyNSA0Mi42NTYyNSAzNi45MTE4NzUgMzguNjA5Mzc1UTM0Ljc3MTI1IDM0LjU2MjUgMzQuNzcxMjUgMjkuMTg3NVEzNC43NzEyNSAyMy44MTI1IDM2LjkxMTg3NSAxOS43NjU2MjVRMzkuMDUyNSAxNS43MTg3NSA0My4xMTUgMTMuNDUzMTI1UTQ3LjE3NzUgMTEuMTg3NSA1Mi44NjUgMTEuMTg3NVE1OC41NTI1IDExLjE4NzUgNjIuNTgzNzUwMDAwMDAwMDEgMTMuNDUzMTI1UTY2LjYxNTAwMDAwMDAwMDAxIDE1LjcxODc1IDY4Ljc1NTYyNTAwMDAwMDAxIDE5Ljc2NTYyNVE3MC44OTYyNTAwMDAwMDAwMSAyMy44MTI1IDcwLjg5NjI1MDAwMDAwMDAxIDI5LjE4NzVRNzAuODk2MjUwMDAwMDAwMDEgMzQuNTYyNSA2OC43NTU2MjUwMDAwMDAwMSAzOC42MDkzNzVRNjYuNjE1MDAwMDAwMDAwMDEgNDIuNjU2MjUgNjIuNTgzNzUwMDAwMDAwMDEgNDQuOTIxODc1UTU4LjU1MjUgNDcuMTg3NSA1Mi44NjUgNDcuMTg3NVpNNTIuODY1IDM3LjgxMjVRNTUuMzAyNSAzNy44MTI1IDU2LjY5MzEyNSAzNS41MTU2MjVRNTguMDgzNzUgMzMuMjE4NzUgNTguMDgzNzUgMjkuMTI1UTU4LjA4Mzc1IDI1LjAgNTYuNjkzMTI1IDIyLjc4MTI1UTU1LjMwMjUgMjAuNTYyNSA1Mi44NjUgMjAuNTYyNVE1MC4zOTYyNSAyMC41NjI1IDQ4Ljk5IDIyLjc4MTI1UTQ3LjU4Mzc1IDI1LjAgNDcuNTgzNzUgMjkuMTI1UTQ3LjU4Mzc1IDMzLjIxODc1IDQ4Ljk5IDM1LjUxNTYyNVE1MC4zOTYyNSAzNy44MTI1IDUyLjg2NSAzNy44MTI1WiBNODIuODIzNzUgMjYuOTM3NVY0Ni41NjI1SDcwLjI2MTI1VjExLjYyNUg4Mi4wNDI1TDgyLjI2MTI1IDE5LjVRODMuNTQyNSAxNS45Mzc1IDg2LjE2NzUgMTMuNTYyNVE4OC43OTI1IDExLjE4NzUgOTMuMjYxMjUgMTEuMTg3NVE5Ni45OCAxMS4xODc1IDk5LjcxNDM3NSAxMi44NzVRMTAyLjQ0ODc1IDE0LjU2MjUgMTAzLjk0ODc1IDE3LjUzMTI1UTEwNS40NDg3NSAyMC41IDEwNS40NDg3NSAyNC4zMTI1VjQ2LjU2MjVIOTIuODg2MjVWMjYuOTM3NVE5Mi44ODYyNSAyNC4zNDM3NSA5MS41NzM3NSAyMi44NTkzNzVROTAuMjYxMjUgMjEuMzc1IDg3Ljg4NjI1IDIxLjM3NVE4NS41NzM3NSAyMS4zNzUgODQuMTk4NzUgMjIuODU5Mzc1UTgyLjgyMzc1IDI0LjM0Mzc1IDgyLjgyMzc1IDI2LjkzNzVaIE0xMjYuNTAxMjUgMTEuNjI1VjIwLjc1SDEyMC41MDEyNVYzNS4zNDM3NVExMjAuNTAxMjUgMzcuNTMxMjUgMTIyLjg3NjI1IDM3LjUzMTI1UTEyMy40Mzg3NSAzNy41MzEyNSAxMjQuNTE2ODc1IDM3LjM5MDYyNVExMjUuNTk1IDM3LjI1IDEyNS45Mzg3NSAzNy4xMjVMMTI3LjQzODc1IDQ2LjA5Mzc1UTEyNS4yODI1IDQ2LjY4NzUgMTIzLjM3NjI1IDQ2Ljg5MDYyNVExMjEuNDcgNDcuMDkzNzUgMTE5Ljc4MjUgNDcuMDkzNzVRMTA3LjkzODc1IDQ3LjA5Mzc1IDEwNy45Mzg3NSAzNi41VjIwLjc1SDEwMy41MDEyNVYxMS42MjVIMTA3LjkzODc1VjMuMzEyNUgxMjAuNTAxMjVWMTEuNjI1WiBNMTQxLjk5MTI0OTk5OTk5OTk4IDQ3LjE4NzVRMTMzLjU4NDk5OTk5OTk5OTk4IDQ3LjE4NzUgMTI4Ljc4ODEyNDk5OTk5OTk4IDQyLjQyMTg3NVExMjMuOTkxMjUgMzcuNjU2MjUgMTIzLjk5MTI1IDI5LjE4NzVRMTIzLjk5MTI1IDIzLjc4MTI1IDEyNi4xNjMxMjQ5OTk5OTk5OCAxOS43MzQzNzVRMTI4LjMzNDk5OTk5OTk5OTk4IDE1LjY4NzUgMTMyLjMwMzc0OTk5OTk5OTk4IDEzLjQzNzVRMTM2LjI3MjQ5OTk5OTk5OTk4IDExLjE4NzUgMTQxLjY3ODc0OTk5OTk5OTk4IDExLjE4NzVRMTQ2Ljk1OTk5OTk5OTk5OTk4IDExLjE4NzUgMTUwLjg2NjI0OTk5OTk5OTk4IDEzLjM1OTM3NVExNTQuNzcyNDk5OTk5OTk5OTggMTUuNTMxMjUgMTU2LjkxMzEyNDk5OTk5OTk4IDE5LjU0Njg3NVExNTkuMDUzNzQ5OTk5OTk5OTggMjMuNTYyNSAxNTkuMDUzNzQ5OTk5OTk5OTggMjkuMTI1VjMyLjBIMTM2LjMwMzc0OTk5OTk5OTk4UTEzNi40Mjg3NDk5OTk5OTk5OCAzNS4yNSAxMzguMDM4MTI0OTk5OTk5OTggMzYuODEyNVExMzkuNjQ3NDk5OTk5OTk5OTggMzguMzc1IDE0Mi4yNDEyNDk5OTk5OTk5OCAzOC4zNzVRMTQ0LjE3ODc0OTk5OTk5OTk4IDM4LjM3NSAxNDUuNTUzNzQ5OTk5OTk5OTggMzcuNTc4MTI1UTE0Ni45Mjg3NDk5OTk5OTk5OCAzNi43ODEyNSAxNDcuNDkxMjQ5OTk5OTk5OTggMzUuMzQzNzVMMTU4LjU1Mzc0OTk5OTk5OTk4IDM2Ljk2ODc1UTE1Ny4yMDk5OTk5OTk5OTk5OCA0MS42ODc1IDE1Mi45NDQzNzQ5OTk5OTk5OCA0NC40Mzc1UTE0OC42Nzg3NDk5OTk5OTk5OCA0Ny4xODc1IDE0MS45OTEyNDk5OTk5OTk5OCA0Ny4xODc1Wk0xMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1SDE0Ny4yMDk5OTk5OTk5OTk5OFExNDYuNjE2MjQ5OTk5OTk5OTggMjAuMCAxNDEuODAzNzQ5OTk5OTk5OTggMjAuMFExMzYuOTkxMjQ5OTk5OTk5OTggMjAuMCAxMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1WiBNMTcwLjg1NjI1IDI2LjkzNzVWNDYuNTYyNUgxNTguMjkzNzVWMTEuNjI1SDE3MC4wNzVMMTcwLjI5Mzc1IDE5LjVRMTcxLjU3NSAxNS45Mzc1IDE3NC4yIDEzLjU2MjVRMTc2LjgyNSAxMS4xODc1IDE4MS4yOTM3NSAxMS4xODc1UTE4NS4wMTI1IDExLjE4NzUgMTg3Ljc0Njg3NSAxMi44NzVRMTkwLjQ4MTI1IDE0LjU2MjUgMTkxLjk4MTI1IDE3LjUzMTI1UTE5My40ODEyNSAyMC41IDE5My40ODEyNSAyNC4zMTI1VjQ2LjU2MjVIMTgwLjkxODc1VjI2LjkzNzVRMTgwLjkxODc1IDI0LjM0Mzc1IDE3OS42MDYyNSAyMi44NTkzNzVRMTc4LjI5Mzc1IDIxLjM3NSAxNzUuOTE4NzUgMjEuMzc1UTE3My42MDYyNSAyMS4zNzUgMTcyLjIzMTI1IDIyLjg1OTM3NVExNzAuODU2MjUgMjQuMzQzNzUgMTcwLjg1NjI1IDI2LjkzNzVaIE0yMTQuNTMzNzUgMTEuNjI1VjIwLjc1SDIwOC41MzM3NVYzNS4zNDM3NVEyMDguNTMzNzUgMzcuNTMxMjUgMjEwLjkwODc1IDM3LjUzMTI1UTIxMS40NzEyNSAzNy41MzEyNSAyMTIuNTQ5Mzc1IDM3LjM5MDYyNVEyMTMuNjI3NSAzNy4yNSAyMTMuOTcxMjUgMzcuMTI1TDIxNS40NzEyNSA0Ni4wOTM3NVEyMTMuMzE1IDQ2LjY4NzUgMjExLjQwODc1IDQ2Ljg5MDYyNVEyMDkuNTAyNSA0Ny4wOTM3NSAyMDcuODE1IDQ3LjA5Mzc1UTE5NS45NzEyNSA0Ny4wOTM3NSAxOTUuOTcxMjUgMzYuNVYyMC43NUgxOTEuNTMzNzVWMTEuNjI1SDE5NS45NzEyNVYzLjMxMjVIMjA4LjUzMzc1VjExLjYyNVoiLz48cGF0aCBmaWxsPSIjM0NCRkIwIiBkPSJNMjEzLjcxMTI1IDQ2LjU2MjVWMC4wSDIzMy42NDg3NUwyMzcuODM2MjUgMTQuNTYyNVEyMzguMzM2MjUgMTYuMjgxMjUgMjM4Ljk0NTYyNSAxOS4wMzEyNVEyMzkuNTU1IDIxLjc4MTI1IDI0MC4xOCAyNC45Njg3NVEyNDAuODA1IDI4LjE1NjI1IDI0MS4zMzYyNSAzMS4yMTg3NVEyNDEuODY3NSAyOC4xNTYyNSAyNDIuNDkyNSAyNC45Njg3NVEyNDMuMTE3NSAyMS43ODEyNSAyNDMuNzI2ODc1IDE5LjAzMTI1UTI0NC4zMzYyNSAxNi4yODEyNSAyNDQuODA1IDE0LjU2MjVMMjQ4LjkzIDAuMEgyNjguODk4NzVWNDYuNTYyNUgyNTYuMTQ4NzVWMjguNTYyNVEyNTYuMTQ4NzUgMjYuNzgxMjUgMjU2LjI0MjUgMjMuNzAzMTI1UTI1Ni4zMzYyNSAyMC42MjUgMjU2LjQ0NTYyNSAxNy4wMTU2MjVRMjU2LjU1NSAxMy40MDYyNSAyNTYuNjE3NSAxMC4wUTI1NS44Njc1IDEzLjUzMTI1IDI1NS4wMDgxMjUgMTcuMDkzNzVRMjU0LjE0ODc1IDIwLjY1NjI1IDI1My4zNTE4NzUgMjMuNjU2MjVRMjUyLjU1NSAyNi42NTYyNSAyNTEuOTkyNSAyOC41NjI1TDI0Ni41ODYyNSA0Ni41NjI1SDIzNi4wODYyNUwyMzAuNTg2MjUgMjguNTYyNVEyMzAuMDIzNzUgMjYuNzUgMjI5LjI0MjUgMjMuODc1UTIyOC40NjEyNSAyMS4wIDIyNy42MTc1IDE3LjYwOTM3NVEyMjYuNzczNzUgMTQuMjE4NzUgMjI2LjAyMzc1IDEwLjc4MTI1UTIyNi4wODYyNSAxNC4wOTM3NSAyMjYuMTggMTcuNTQ2ODc1UTIyNi4yNzM3NSAyMS4wIDIyNi4zNjc1IDIzLjkyMTg3NVEyMjYuNDYxMjUgMjYuODQzNzUgMjI2LjQ2MTI1IDI4LjU2MjVWNDYuNTYyNVogTTI2Ny41NzYyNSA0Ni41NjI1IDI4Mi42NyAwLjBIMjk5LjkyTDMxNS41NzYyNSA0Ni41NjI1SDMwMS4yNjM3NUwyOTguNTc2MjUgMzcuNjI1SDI4NC4yNjM3NUwyODEuNzAxMjUgNDYuNTYyNVpNMjg2Ljk1MTI1IDI4LjE4NzVIMjk1Ljc2Mzc1UTI5NC40ODI1IDIzLjkzNzUgMjkzLjM0MTg3NSAxOS40MjE4NzVRMjkyLjIwMTI1IDE0LjkwNjI1IDI5MS4xNyAxMC4zNDM3NVEyOTAuMjAxMjUgMTQuOTA2MjUgMjg5LjE4NTYyNSAxOS40MjE4NzVRMjg4LjE3IDIzLjkzNzUgMjg2Ljk1MTI1IDI4LjE4NzVaIE0zMDcuMDk3NSAxMC4xODc1VjAuMEgzNDcuNTM1VjEwLjE4NzVIMzMzLjYyODc1VjQ2LjU2MjVIMzIxLjAwMzc1VjEwLjE4NzVaIE0zNDUuMjc1MDAwMDAwMDAwMDMgMTAuMTg3NVYwLjBIMzg1LjcxMjUwMDAwMDAwMDAzVjEwLjE4NzVIMzcxLjgwNjI1MDAwMDAwMDAzVjQ2LjU2MjVIMzU5LjE4MTI1MDAwMDAwMDAzVjEwLjE4NzVaIE0zODQuNzAyNTAwMDAwMDAwMDQgNDYuNTYyNVYwLjBINDE4LjI2NTAwMDAwMDAwMDA0VjEwLjE4NzVIMzk3LjMyNzUwMDAwMDAwMDA0VjE4LjA2MjVINDE2LjUxNTAwMDAwMDAwMDA0VjI4LjBIMzk3LjMyNzUwMDAwMDAwMDA0VjM2LjM3NUg0MTguMTQwMDAwMDAwMDAwMDRWNDYuNTYyNVogTTQxOC4xNjEyNTAwMDAwMDAwNSA0Ni41NjI1VjAuMEg0MzguMjIzNzUwMDAwMDAwMDVRNDQzLjQxMTI1MDAwMDAwMDA1IDAuMCA0NDcuMzAxODc1MDAwMDAwMDUgMS44OTA2MjVRNDUxLjE5MjUwMDAwMDAwMDA1IDMuNzgxMjUgNDUzLjM2NDM3NTAwMDAwMDA1IDcuMzI4MTI1UTQ1NS41MzYyNTAwMDAwMDAwNSAxMC44NzUgNDU1LjUzNjI1MDAwMDAwMDA1IDE1LjgxMjVRNDU1LjUzNjI1MDAwMDAwMDA1IDIwLjY1NjI1IDQ1My40MjY4NzUwMDAwMDAwNSAyNC4wMzEyNVE0NTEuMzE3NTAwMDAwMDAwMDUgMjcuNDA2MjUgNDQ3LjU5ODc1MDAwMDAwMDA1IDI5LjE4NzVMNDU3LjA5ODc1MDAwMDAwMDA1IDQ2LjU2MjVINDQzLjM0ODc1MDAwMDAwMDA1TDQzNS4xNjEyNTAwMDAwMDAwNSAzMS4xODc1SDQzMC43ODYyNTAwMDAwMDAwNVY0Ni41NjI1Wk00MzAuNzg2MjUwMDAwMDAwMDUgMjEuMzc1SDQzNS4yMjM3NTAwMDAwMDAwNVE0MzguNTY3NTAwMDAwMDAwMDUgMjEuMzc1IDQ0MC40NTgxMjUwMDAwMDAwNSAyMC4wOTM3NVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTguODEyNSA0NDIuMzQ4NzUwMDAwMDAwMDUgMTUuODEyNVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTIuODQzNzUgNDQwLjQ1ODEyNTAwMDAwMDA1IDExLjQ4NDM3NVE0MzguNTY3NTAwMDAwMDAwMDUgMTAuMTI1IDQzNS4yMjM3NTAwMDAwMDAwNSAxMC4xMjVINDMwLjc4NjI1MDAwMDAwMDA1WiBNNDY0LjA4ODc1MDAwMDAwMDA2IDQ3LjMxMjVRNDYxLjMzODc1MDAwMDAwMDA2IDQ3LjMxMjUgNDU5LjQ5NTAwMDAwMDAwMDA2IDQ1LjVRNDU3LjY1MTI1MDAwMDAwMDA2IDQzLjY4NzUgNDU3LjY1MTI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ1Ny42NTEyNTAwMDAwMDAwNiAzOC4yNSA0NTkuNDk1MDAwMDAwMDAwMDYgMzYuNDM3NVE0NjEuMzM4NzUwMDAwMDAwMDYgMzQuNjI1IDQ2NC4wODg3NTAwMDAwMDAwNiAzNC42MjVRNDY2LjgzODc1MDAwMDAwMDA2IDM0LjYyNSA0NjguNjgyNTAwMDAwMDAwMDYgMzYuNDM3NVE0NzAuNTI2MjUwMDAwMDAwMDYgMzguMjUgNDcwLjUyNjI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ3MC41MjYyNTAwMDAwMDAwNiA0My42ODc1IDQ2OC42ODI1MDAwMDAwMDAwNiA0NS41UTQ2Ni44Mzg3NTAwMDAwMDAwNiA0Ny4zMTI1IDQ2NC4wODg3NTAwMDAwMDAwNiA0Ny4zMTI1WiIvPjxyZWN0IHg9IjAiIHk9IjY2LjU2IiB3aWR0aD0iNDc2LjAzIiBoZWlnaHQ9IjgiIGZpbGw9IiMyQzMzNDAiLz48L3N2Zz4K" alt=""><img class="cm-logo--on-dark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzYuMDMgNzQuNTYiIHdpZHRoPSI0NzYuMDMiIGhlaWdodD0iNzQuNTYiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iY29udGVudE1BVFRFUi4iPjx0aXRsZT5jb250ZW50TUFUVEVSLjwvdGl0bGU+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwLjAgNDcuMTg3NVExNC4zMTI1IDQ3LjE4NzUgMTAuMjY1NjI1IDQ0LjkyMTg3NVE2LjIxODc1IDQyLjY1NjI1IDQuMDc4MTI1IDM4LjYwOTM3NVExLjkzNzUgMzQuNTYyNSAxLjkzNzUgMjkuMTg3NVExLjkzNzUgMjMuODEyNSA0LjA3ODEyNSAxOS43NjU2MjVRNi4yMTg3NSAxNS43MTg3NSAxMC4yNjU2MjUgMTMuNDUzMTI1UTE0LjMxMjUgMTEuMTg3NSAyMC4wIDExLjE4NzVRMjcuMjE4NzUgMTEuMTg3NSAzMS42NzE4NzUgMTQuNzk2ODc1UTM2LjEyNSAxOC40MDYyNSAzNi43MTg3NSAyNC40Njg3NUwyNS4xODc1IDI2LjE4NzVRMjQuMjgxMjUgMjAuNTYyNSAyMC4xODc1IDIwLjU2MjVRMTcuNzE4NzUgMjAuNTYyNSAxNi4yMzQzNzUgMjIuNjg3NVExNC43NSAyNC44MTI1IDE0Ljc1IDI5LjEyNVExNC43NSAzMy40MDYyNSAxNi4yMzQzNzUgMzUuNjA5Mzc1UTE3LjcxODc1IDM3LjgxMjUgMjAuMTg3NSAzNy44MTI1UTI0LjM3NSAzNy44MTI1IDI1LjE4NzUgMzIuMEwzNi43MTg3NSAzMy42ODc1UTM2LjA5Mzc1IDM5LjkwNjI1IDMxLjY4NzUgNDMuNTQ2ODc1UTI3LjI4MTI1IDQ3LjE4NzUgMjAuMCA0Ny4xODc1WiBNNTIuODY1IDQ3LjE4NzVRNDcuMTc3NSA0Ny4xODc1IDQzLjExNSA0NC45MjE4NzVRMzkuMDUyNSA0Mi42NTYyNSAzNi45MTE4NzUgMzguNjA5Mzc1UTM0Ljc3MTI1IDM0LjU2MjUgMzQuNzcxMjUgMjkuMTg3NVEzNC43NzEyNSAyMy44MTI1IDM2LjkxMTg3NSAxOS43NjU2MjVRMzkuMDUyNSAxNS43MTg3NSA0My4xMTUgMTMuNDUzMTI1UTQ3LjE3NzUgMTEuMTg3NSA1Mi44NjUgMTEuMTg3NVE1OC41NTI1IDExLjE4NzUgNjIuNTgzNzUwMDAwMDAwMDEgMTMuNDUzMTI1UTY2LjYxNTAwMDAwMDAwMDAxIDE1LjcxODc1IDY4Ljc1NTYyNTAwMDAwMDAxIDE5Ljc2NTYyNVE3MC44OTYyNTAwMDAwMDAwMSAyMy44MTI1IDcwLjg5NjI1MDAwMDAwMDAxIDI5LjE4NzVRNzAuODk2MjUwMDAwMDAwMDEgMzQuNTYyNSA2OC43NTU2MjUwMDAwMDAwMSAzOC42MDkzNzVRNjYuNjE1MDAwMDAwMDAwMDEgNDIuNjU2MjUgNjIuNTgzNzUwMDAwMDAwMDEgNDQuOTIxODc1UTU4LjU1MjUgNDcuMTg3NSA1Mi44NjUgNDcuMTg3NVpNNTIuODY1IDM3LjgxMjVRNTUuMzAyNSAzNy44MTI1IDU2LjY5MzEyNSAzNS41MTU2MjVRNTguMDgzNzUgMzMuMjE4NzUgNTguMDgzNzUgMjkuMTI1UTU4LjA4Mzc1IDI1LjAgNTYuNjkzMTI1IDIyLjc4MTI1UTU1LjMwMjUgMjAuNTYyNSA1Mi44NjUgMjAuNTYyNVE1MC4zOTYyNSAyMC41NjI1IDQ4Ljk5IDIyLjc4MTI1UTQ3LjU4Mzc1IDI1LjAgNDcuNTgzNzUgMjkuMTI1UTQ3LjU4Mzc1IDMzLjIxODc1IDQ4Ljk5IDM1LjUxNTYyNVE1MC4zOTYyNSAzNy44MTI1IDUyLjg2NSAzNy44MTI1WiBNODIuODIzNzUgMjYuOTM3NVY0Ni41NjI1SDcwLjI2MTI1VjExLjYyNUg4Mi4wNDI1TDgyLjI2MTI1IDE5LjVRODMuNTQyNSAxNS45Mzc1IDg2LjE2NzUgMTMuNTYyNVE4OC43OTI1IDExLjE4NzUgOTMuMjYxMjUgMTEuMTg3NVE5Ni45OCAxMS4xODc1IDk5LjcxNDM3NSAxMi44NzVRMTAyLjQ0ODc1IDE0LjU2MjUgMTAzLjk0ODc1IDE3LjUzMTI1UTEwNS40NDg3NSAyMC41IDEwNS40NDg3NSAyNC4zMTI1VjQ2LjU2MjVIOTIuODg2MjVWMjYuOTM3NVE5Mi44ODYyNSAyNC4zNDM3NSA5MS41NzM3NSAyMi44NTkzNzVROTAuMjYxMjUgMjEuMzc1IDg3Ljg4NjI1IDIxLjM3NVE4NS41NzM3NSAyMS4zNzUgODQuMTk4NzUgMjIuODU5Mzc1UTgyLjgyMzc1IDI0LjM0Mzc1IDgyLjgyMzc1IDI2LjkzNzVaIE0xMjYuNTAxMjUgMTEuNjI1VjIwLjc1SDEyMC41MDEyNVYzNS4zNDM3NVExMjAuNTAxMjUgMzcuNTMxMjUgMTIyLjg3NjI1IDM3LjUzMTI1UTEyMy40Mzg3NSAzNy41MzEyNSAxMjQuNTE2ODc1IDM3LjM5MDYyNVExMjUuNTk1IDM3LjI1IDEyNS45Mzg3NSAzNy4xMjVMMTI3LjQzODc1IDQ2LjA5Mzc1UTEyNS4yODI1IDQ2LjY4NzUgMTIzLjM3NjI1IDQ2Ljg5MDYyNVExMjEuNDcgNDcuMDkzNzUgMTE5Ljc4MjUgNDcuMDkzNzVRMTA3LjkzODc1IDQ3LjA5Mzc1IDEwNy45Mzg3NSAzNi41VjIwLjc1SDEwMy41MDEyNVYxMS42MjVIMTA3LjkzODc1VjMuMzEyNUgxMjAuNTAxMjVWMTEuNjI1WiBNMTQxLjk5MTI0OTk5OTk5OTk4IDQ3LjE4NzVRMTMzLjU4NDk5OTk5OTk5OTk4IDQ3LjE4NzUgMTI4Ljc4ODEyNDk5OTk5OTk4IDQyLjQyMTg3NVExMjMuOTkxMjUgMzcuNjU2MjUgMTIzLjk5MTI1IDI5LjE4NzVRMTIzLjk5MTI1IDIzLjc4MTI1IDEyNi4xNjMxMjQ5OTk5OTk5OCAxOS43MzQzNzVRMTI4LjMzNDk5OTk5OTk5OTk4IDE1LjY4NzUgMTMyLjMwMzc0OTk5OTk5OTk4IDEzLjQzNzVRMTM2LjI3MjQ5OTk5OTk5OTk4IDExLjE4NzUgMTQxLjY3ODc0OTk5OTk5OTk4IDExLjE4NzVRMTQ2Ljk1OTk5OTk5OTk5OTk4IDExLjE4NzUgMTUwLjg2NjI0OTk5OTk5OTk4IDEzLjM1OTM3NVExNTQuNzcyNDk5OTk5OTk5OTggMTUuNTMxMjUgMTU2LjkxMzEyNDk5OTk5OTk4IDE5LjU0Njg3NVExNTkuMDUzNzQ5OTk5OTk5OTggMjMuNTYyNSAxNTkuMDUzNzQ5OTk5OTk5OTggMjkuMTI1VjMyLjBIMTM2LjMwMzc0OTk5OTk5OTk4UTEzNi40Mjg3NDk5OTk5OTk5OCAzNS4yNSAxMzguMDM4MTI0OTk5OTk5OTggMzYuODEyNVExMzkuNjQ3NDk5OTk5OTk5OTggMzguMzc1IDE0Mi4yNDEyNDk5OTk5OTk5OCAzOC4zNzVRMTQ0LjE3ODc0OTk5OTk5OTk4IDM4LjM3NSAxNDUuNTUzNzQ5OTk5OTk5OTggMzcuNTc4MTI1UTE0Ni45Mjg3NDk5OTk5OTk5OCAzNi43ODEyNSAxNDcuNDkxMjQ5OTk5OTk5OTggMzUuMzQzNzVMMTU4LjU1Mzc0OTk5OTk5OTk4IDM2Ljk2ODc1UTE1Ny4yMDk5OTk5OTk5OTk5OCA0MS42ODc1IDE1Mi45NDQzNzQ5OTk5OTk5OCA0NC40Mzc1UTE0OC42Nzg3NDk5OTk5OTk5OCA0Ny4xODc1IDE0MS45OTEyNDk5OTk5OTk5OCA0Ny4xODc1Wk0xMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1SDE0Ny4yMDk5OTk5OTk5OTk5OFExNDYuNjE2MjQ5OTk5OTk5OTggMjAuMCAxNDEuODAzNzQ5OTk5OTk5OTggMjAuMFExMzYuOTkxMjQ5OTk5OTk5OTggMjAuMCAxMzYuMzk3NDk5OTk5OTk5OTggMjUuMTI1WiBNMTcwLjg1NjI1IDI2LjkzNzVWNDYuNTYyNUgxNTguMjkzNzVWMTEuNjI1SDE3MC4wNzVMMTcwLjI5Mzc1IDE5LjVRMTcxLjU3NSAxNS45Mzc1IDE3NC4yIDEzLjU2MjVRMTc2LjgyNSAxMS4xODc1IDE4MS4yOTM3NSAxMS4xODc1UTE4NS4wMTI1IDExLjE4NzUgMTg3Ljc0Njg3NSAxMi44NzVRMTkwLjQ4MTI1IDE0LjU2MjUgMTkxLjk4MTI1IDE3LjUzMTI1UTE5My40ODEyNSAyMC41IDE5My40ODEyNSAyNC4zMTI1VjQ2LjU2MjVIMTgwLjkxODc1VjI2LjkzNzVRMTgwLjkxODc1IDI0LjM0Mzc1IDE3OS42MDYyNSAyMi44NTkzNzVRMTc4LjI5Mzc1IDIxLjM3NSAxNzUuOTE4NzUgMjEuMzc1UTE3My42MDYyNSAyMS4zNzUgMTcyLjIzMTI1IDIyLjg1OTM3NVExNzAuODU2MjUgMjQuMzQzNzUgMTcwLjg1NjI1IDI2LjkzNzVaIE0yMTQuNTMzNzUgMTEuNjI1VjIwLjc1SDIwOC41MzM3NVYzNS4zNDM3NVEyMDguNTMzNzUgMzcuNTMxMjUgMjEwLjkwODc1IDM3LjUzMTI1UTIxMS40NzEyNSAzNy41MzEyNSAyMTIuNTQ5Mzc1IDM3LjM5MDYyNVEyMTMuNjI3NSAzNy4yNSAyMTMuOTcxMjUgMzcuMTI1TDIxNS40NzEyNSA0Ni4wOTM3NVEyMTMuMzE1IDQ2LjY4NzUgMjExLjQwODc1IDQ2Ljg5MDYyNVEyMDkuNTAyNSA0Ny4wOTM3NSAyMDcuODE1IDQ3LjA5Mzc1UTE5NS45NzEyNSA0Ny4wOTM3NSAxOTUuOTcxMjUgMzYuNVYyMC43NUgxOTEuNTMzNzVWMTEuNjI1SDE5NS45NzEyNVYzLjMxMjVIMjA4LjUzMzc1VjExLjYyNVoiLz48cGF0aCBmaWxsPSIjM0NCRkIwIiBkPSJNMjEzLjcxMTI1IDQ2LjU2MjVWMC4wSDIzMy42NDg3NUwyMzcuODM2MjUgMTQuNTYyNVEyMzguMzM2MjUgMTYuMjgxMjUgMjM4Ljk0NTYyNSAxOS4wMzEyNVEyMzkuNTU1IDIxLjc4MTI1IDI0MC4xOCAyNC45Njg3NVEyNDAuODA1IDI4LjE1NjI1IDI0MS4zMzYyNSAzMS4yMTg3NVEyNDEuODY3NSAyOC4xNTYyNSAyNDIuNDkyNSAyNC45Njg3NVEyNDMuMTE3NSAyMS43ODEyNSAyNDMuNzI2ODc1IDE5LjAzMTI1UTI0NC4zMzYyNSAxNi4yODEyNSAyNDQuODA1IDE0LjU2MjVMMjQ4LjkzIDAuMEgyNjguODk4NzVWNDYuNTYyNUgyNTYuMTQ4NzVWMjguNTYyNVEyNTYuMTQ4NzUgMjYuNzgxMjUgMjU2LjI0MjUgMjMuNzAzMTI1UTI1Ni4zMzYyNSAyMC42MjUgMjU2LjQ0NTYyNSAxNy4wMTU2MjVRMjU2LjU1NSAxMy40MDYyNSAyNTYuNjE3NSAxMC4wUTI1NS44Njc1IDEzLjUzMTI1IDI1NS4wMDgxMjUgMTcuMDkzNzVRMjU0LjE0ODc1IDIwLjY1NjI1IDI1My4zNTE4NzUgMjMuNjU2MjVRMjUyLjU1NSAyNi42NTYyNSAyNTEuOTkyNSAyOC41NjI1TDI0Ni41ODYyNSA0Ni41NjI1SDIzNi4wODYyNUwyMzAuNTg2MjUgMjguNTYyNVEyMzAuMDIzNzUgMjYuNzUgMjI5LjI0MjUgMjMuODc1UTIyOC40NjEyNSAyMS4wIDIyNy42MTc1IDE3LjYwOTM3NVEyMjYuNzczNzUgMTQuMjE4NzUgMjI2LjAyMzc1IDEwLjc4MTI1UTIyNi4wODYyNSAxNC4wOTM3NSAyMjYuMTggMTcuNTQ2ODc1UTIyNi4yNzM3NSAyMS4wIDIyNi4zNjc1IDIzLjkyMTg3NVEyMjYuNDYxMjUgMjYuODQzNzUgMjI2LjQ2MTI1IDI4LjU2MjVWNDYuNTYyNVogTTI2Ny41NzYyNSA0Ni41NjI1IDI4Mi42NyAwLjBIMjk5LjkyTDMxNS41NzYyNSA0Ni41NjI1SDMwMS4yNjM3NUwyOTguNTc2MjUgMzcuNjI1SDI4NC4yNjM3NUwyODEuNzAxMjUgNDYuNTYyNVpNMjg2Ljk1MTI1IDI4LjE4NzVIMjk1Ljc2Mzc1UTI5NC40ODI1IDIzLjkzNzUgMjkzLjM0MTg3NSAxOS40MjE4NzVRMjkyLjIwMTI1IDE0LjkwNjI1IDI5MS4xNyAxMC4zNDM3NVEyOTAuMjAxMjUgMTQuOTA2MjUgMjg5LjE4NTYyNSAxOS40MjE4NzVRMjg4LjE3IDIzLjkzNzUgMjg2Ljk1MTI1IDI4LjE4NzVaIE0zMDcuMDk3NSAxMC4xODc1VjAuMEgzNDcuNTM1VjEwLjE4NzVIMzMzLjYyODc1VjQ2LjU2MjVIMzIxLjAwMzc1VjEwLjE4NzVaIE0zNDUuMjc1MDAwMDAwMDAwMDMgMTAuMTg3NVYwLjBIMzg1LjcxMjUwMDAwMDAwMDAzVjEwLjE4NzVIMzcxLjgwNjI1MDAwMDAwMDAzVjQ2LjU2MjVIMzU5LjE4MTI1MDAwMDAwMDAzVjEwLjE4NzVaIE0zODQuNzAyNTAwMDAwMDAwMDQgNDYuNTYyNVYwLjBINDE4LjI2NTAwMDAwMDAwMDA0VjEwLjE4NzVIMzk3LjMyNzUwMDAwMDAwMDA0VjE4LjA2MjVINDE2LjUxNTAwMDAwMDAwMDA0VjI4LjBIMzk3LjMyNzUwMDAwMDAwMDA0VjM2LjM3NUg0MTguMTQwMDAwMDAwMDAwMDRWNDYuNTYyNVogTTQxOC4xNjEyNTAwMDAwMDAwNSA0Ni41NjI1VjAuMEg0MzguMjIzNzUwMDAwMDAwMDVRNDQzLjQxMTI1MDAwMDAwMDA1IDAuMCA0NDcuMzAxODc1MDAwMDAwMDUgMS44OTA2MjVRNDUxLjE5MjUwMDAwMDAwMDA1IDMuNzgxMjUgNDUzLjM2NDM3NTAwMDAwMDA1IDcuMzI4MTI1UTQ1NS41MzYyNTAwMDAwMDAwNSAxMC44NzUgNDU1LjUzNjI1MDAwMDAwMDA1IDE1LjgxMjVRNDU1LjUzNjI1MDAwMDAwMDA1IDIwLjY1NjI1IDQ1My40MjY4NzUwMDAwMDAwNSAyNC4wMzEyNVE0NTEuMzE3NTAwMDAwMDAwMDUgMjcuNDA2MjUgNDQ3LjU5ODc1MDAwMDAwMDA1IDI5LjE4NzVMNDU3LjA5ODc1MDAwMDAwMDA1IDQ2LjU2MjVINDQzLjM0ODc1MDAwMDAwMDA1TDQzNS4xNjEyNTAwMDAwMDAwNSAzMS4xODc1SDQzMC43ODYyNTAwMDAwMDAwNVY0Ni41NjI1Wk00MzAuNzg2MjUwMDAwMDAwMDUgMjEuMzc1SDQzNS4yMjM3NTAwMDAwMDAwNVE0MzguNTY3NTAwMDAwMDAwMDUgMjEuMzc1IDQ0MC40NTgxMjUwMDAwMDAwNSAyMC4wOTM3NVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTguODEyNSA0NDIuMzQ4NzUwMDAwMDAwMDUgMTUuODEyNVE0NDIuMzQ4NzUwMDAwMDAwMDUgMTIuODQzNzUgNDQwLjQ1ODEyNTAwMDAwMDA1IDExLjQ4NDM3NVE0MzguNTY3NTAwMDAwMDAwMDUgMTAuMTI1IDQzNS4yMjM3NTAwMDAwMDAwNSAxMC4xMjVINDMwLjc4NjI1MDAwMDAwMDA1WiBNNDY0LjA4ODc1MDAwMDAwMDA2IDQ3LjMxMjVRNDYxLjMzODc1MDAwMDAwMDA2IDQ3LjMxMjUgNDU5LjQ5NTAwMDAwMDAwMDA2IDQ1LjVRNDU3LjY1MTI1MDAwMDAwMDA2IDQzLjY4NzUgNDU3LjY1MTI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ1Ny42NTEyNTAwMDAwMDAwNiAzOC4yNSA0NTkuNDk1MDAwMDAwMDAwMDYgMzYuNDM3NVE0NjEuMzM4NzUwMDAwMDAwMDYgMzQuNjI1IDQ2NC4wODg3NTAwMDAwMDAwNiAzNC42MjVRNDY2LjgzODc1MDAwMDAwMDA2IDM0LjYyNSA0NjguNjgyNTAwMDAwMDAwMDYgMzYuNDM3NVE0NzAuNTI2MjUwMDAwMDAwMDYgMzguMjUgNDcwLjUyNjI1MDAwMDAwMDA2IDQwLjk2ODc1UTQ3MC41MjYyNTAwMDAwMDAwNiA0My42ODc1IDQ2OC42ODI1MDAwMDAwMDAwNiA0NS41UTQ2Ni44Mzg3NTAwMDAwMDAwNiA0Ny4zMTI1IDQ2NC4wODg3NTAwMDAwMDAwNiA0Ny4zMTI1WiIvPjxyZWN0IHg9IjAiIHk9IjY2LjU2IiB3aWR0aD0iNDc2LjAzIiBoZWlnaHQ9IjgiIGZpbGw9IiMzQ0JGQjAiLz48L3N2Zz4K" alt=""></a>
+    <a class="top-link" href="#home">Restaurant tools</a>
+  </header>
+
+  <!-- HOME -->
+  <main data-view="home">
+    <section class="hero">
+      <p class="eyebrow">Free tools for restaurants, food, and drink</p>
+      <h1>Know your numbers before you spend a dollar on marketing.</h1>
+      <p class="lede">Work out what delivery really costs you, price your menu from the plate up, and see which dishes earn their spot. Seven free tools, no sign up needed.</p>
+      <a class="btn hero-act" href="#audit">Start the free audit</a>
+    </section>
+
+    <section class="group">
+      <h2>Menu and profit</h2>
+      <div class="grid">
+        <a class="card" href="#plate"><span class="tag live">Live</span><h3>Plate cost and menu price</h3><p>Add up every ingredient on a dish and get the menu price that hits your target food cost.</p><span class="go">Open the calculator</span></a>
+        <a class="card" href="#menu"><span class="tag live">Live</span><h3>Menu engineering matrix</h3><p>Sort every item into star, plowhorse, puzzle, or dog using sales and margin.</p><span class="go">Open the matrix</span></a>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Delivery and fees</h2>
+      <div class="grid">
+        <a class="card" href="#delivery"><span class="tag live">Live</span><h3>Delivery true cost calculator</h3><p>See what you keep from each third party order, and what moving orders to your own channel is worth.</p><span class="go">Open the calculator</span></a>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Marketing and visibility</h2>
+      <div class="grid">
+        <a class="card" href="#audit"><span class="tag live">Live</span><h3>Restaurant marketing audit</h3><p>Twenty quick questions across Google, reviews, website, social, and repeat guests, with the fixes ranked.</p><span class="go">Start the audit</span></a>
+        <a class="card" href="#visibility"><span class="tag live">Live</span><h3>AI visibility checker</h3><p>Ask an AI assistant who it recommends in your area, and see whether your restaurant comes up.</p><span class="go">Run the check</span></a>
+        <a class="card" href="#record"><span class="tag live">Live</span><h3>Campaign Record builder</h3><p>Turn a brief, weekly numbers, and notes into a written record you can keep and reuse.</p><span class="go">Build a record</span></a>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Tech stack</h2>
+      <div class="grid">
+        <a class="card" href="#stack"><span class="tag live">Live</span><h3>Tech stack checker</h3><p>List your POS, ordering, reservations, and loyalty tools with their costs, then see overlaps and gaps.</p><span class="go">Check my stack</span></a>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Want help turning these numbers into more orders?</h2>
+      <a class="btn" href="https://meetings-na2.hubspot.com/content-matter" target="_blank" rel="noopener">Book a free consultation</a>
+    </section>
+  </main>
+
+  <!-- DELIVERY -->
+  <main class="tool" data-view="delivery" hidden>
+    <a class="back" href="#home">All tools</a>
+    <div class="tool-head">
+      <p class="eyebrow">Delivery and fees</p>
+      <h1>Delivery true cost calculator</h1>
+      <p>Commission is only part of it. Add food cost, packaging, and the promos you fund, and see what is left on each order. The numbers below are examples, so replace them with yours.</p>
+    </div>
+    <div class="layout">
+      <section class="panel" aria-labelledby="dh1">
+        <h2 id="dh1">Your third party orders</h2>
+        <div class="fields">
+          <div class="row2">
+            <div><label for="d-aov">Average order value ($)</label><input id="d-aov" type="number" inputmode="decimal" min="0" step="0.5" value="32"></div>
+            <div><label for="d-orders">Platform orders per month</label><input id="d-orders" type="number" inputmode="numeric" min="0" step="10" value="400"></div>
+          </div>
+          <div class="row2">
+            <div><label for="d-comm">Platform commission (%)</label><input id="d-comm" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="25"><p class="hint">Marketplace plans often sit at 15, 25, or 30 percent. Check your contract.</p></div>
+            <div><label for="d-food">Food cost (% of order)</label><input id="d-food" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="30"><p class="hint">Most full service restaurants run 28 to 35 percent.</p></div>
+          </div>
+          <div class="row2">
+            <div><label for="d-pack">Packaging per order ($)</label><input id="d-pack" type="number" inputmode="decimal" min="0" step="0.05" value="1.25"></div>
+            <div><label for="d-promo">Promos you fund per order ($)</label><input id="d-promo" type="number" inputmode="decimal" min="0" step="0.25" value="1.50"><p class="hint">Average discount or free delivery you pay for.</p></div>
+          </div>
+        </div>
+        <h2 style="margin-top:26px" id="dh2">Your own ordering channel</h2>
+        <div class="fields">
+          <div class="row2">
+            <div><label for="d-proc">Card processing (%)</label><input id="d-proc" type="number" inputmode="decimal" min="0" step="0.1" value="2.9"></div>
+            <div><label for="d-fix">Per transaction fee ($)</label><input id="d-fix" type="number" inputmode="decimal" min="0" step="0.05" value="0.30"></div>
+          </div>
+          <div><label for="d-ful">Cost to hand off or deliver a direct order ($)</label><input id="d-ful" type="number" inputmode="decimal" min="0" step="0.25" value="3.00"><p class="hint">Your own driver, a delivery service flat fee, or staff time for pickup.</p></div>
+          <div><label for="d-share">Share of platform orders you could move direct: <span class="range" id="d-share-out">20%</span></label><input id="d-share" type="range" min="0" max="100" step="5" value="20"></div>
+        </div>
+      </section>
+      <aside class="panel result" aria-live="polite">
+        <h2>What you keep</h2>
+        <div class="lead-stat"><div class="big" id="d-tp">$0</div><small>per third party order, after food, packaging, promos, and commission. Before labor and rent.</small></div>
+        <div class="kv"><span>Share of each order you keep</span><b id="d-tp-pct">0%</b></div>
+        <div class="kv"><span>Platform fees paid each month</span><b id="d-fees">$0</b></div>
+        <div class="kv"><span>You keep per direct order</span><b id="d-dr">$0</b></div>
+        <div class="kv"><span>Orders moved direct each month</span><b id="d-moved">0</b></div>
+        <div class="kv"><span>Extra profit each month</span><b id="d-gain">$0</b></div>
+        <div class="callout" id="d-note"></div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- PLATE -->
+  <main class="tool" data-view="plate" hidden>
+    <a class="back" href="#home">All tools</a>
+    <div class="tool-head">
+      <p class="eyebrow">Menu and profit</p>
+      <h1>Plate cost and menu price</h1>
+      <p>List what goes on one plate and what you pay for it. You get the plate cost and the menu price that reaches your target food cost.</p>
+    </div>
+    <div class="layout">
+      <section class="panel" aria-labelledby="ph1">
+        <h2 id="ph1">Ingredients on one plate</h2>
+        <p class="example">Example dish. For a $42.50 case holding 5 lb of beef, enter 42.50 and 5, then 0.4 if a plate uses 0.4 lb.</p>
+        <div class="scroll">
+          <table class="edit" id="plate-table">
+            <thead><tr><th>Ingredient</th><th class="num">Pack price $</th><th class="num">Units in pack</th><th class="num">Units per plate</th><th class="num">Cost</th><th></th></tr></thead>
+            <tbody id="plate-body"></tbody>
+          </table>
+        </div>
+        <p style="margin:12px 0 0"><button class="btn ghost small" type="button" id="plate-add">Add ingredient</button></p>
+        <div class="row2" style="margin-top:20px">
+          <div><label for="p-waste">Waste and trim allowance (%)</label><input id="p-waste" type="number" inputmode="decimal" min="0" step="1" value="5"></div>
+          <div><label for="p-target">Target food cost (%)</label><input id="p-target" type="number" inputmode="decimal" min="1" max="100" step="1" value="30"><p class="hint">Most full service restaurants aim for 28 to 35.</p></div>
+        </div>
+        <div style="margin-top:14px"><label for="p-price">Current menu price ($, optional)</label><input id="p-price" type="number" inputmode="decimal" min="0" step="0.5" value="17.50"></div>
+      </section>
+      <aside class="panel result" aria-live="polite">
+        <h2>Your price</h2>
+        <div class="lead-stat"><div class="big" id="p-round">$0</div><small>suggested menu price, rounded up to the next 50 cents</small></div>
+        <div class="kv"><span>Plate cost with waste</span><b id="p-cost">$0</b></div>
+        <div class="kv"><span>Exact price at target</span><b id="p-exact">$0</b></div>
+        <div class="kv"><span>Your current food cost</span><b id="p-cur">n/a</b></div>
+        <div class="kv"><span>Gross profit per plate now</span><b id="p-gp">n/a</b></div>
+        <div class="callout" id="p-note"></div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- MENU ENGINEERING -->
+  <main class="tool" data-view="menu" hidden>
+    <a class="back" href="#home">All tools</a>
+    <div class="tool-head">
+      <p class="eyebrow">Menu and profit</p>
+      <h1>Menu engineering matrix</h1>
+      <p>Enter units sold, menu price, and plate cost for each item. Items are sorted by popularity and by profit per plate, using the common 70 percent popularity rule.</p>
+    </div>
+    <section class="panel" aria-labelledby="mh1" style="margin-bottom:18px">
+      <h2 id="mh1">Your menu items</h2>
+      <p class="example">Example items. Replace them with a month of sales from your point of sale report.</p>
+      <div class="scroll">
+        <table class="edit" id="menu-table">
+          <thead><tr><th>Item</th><th class="num">Units sold</th><th class="num">Menu price $</th><th class="num">Plate cost $</th><th></th></tr></thead>
+          <tbody id="menu-body"></tbody>
+        </table>
+      </div>
+      <p style="margin:12px 0 0"><button class="btn ghost small" type="button" id="menu-add">Add item</button></p>
+    </section>
+    <section class="panel" aria-live="polite" style="margin-bottom:18px">
+      <h2>The four groups</h2>
+      <div class="quad" id="quad"></div>
+      <div class="callout" id="m-note"></div>
+    </section>
+    <section class="panel" style="margin-bottom:20px">
+      <h2>Item by item</h2>
+      <div class="scroll">
+        <table id="menu-out">
+          <thead><tr><th>Item</th><th class="num">Share of sales</th><th class="num">Profit per plate</th><th class="num">Total profit</th><th>Group</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- AUDIT -->
+  <main class="tool" data-view="audit" hidden>
+    <a class="back" href="#home">All tools</a>
+    <div class="tool-head">
+      <p class="eyebrow">Marketing and visibility</p>
+      <h1>Restaurant marketing audit</h1>
+      <p>Twenty quick questions about how guests find you, trust you, and come back. You get a score for each area and the fixes to make first. It takes about five minutes.</p>
+    </div>
+    <div class="layout">
+      <section class="panel" aria-labelledby="ah1">
+        <h2 id="ah1">Your answers</h2>
+        <div id="audit-form"></div>
+      </section>
+      <aside class="panel result" aria-live="polite">
+        <h2>Your score</h2>
+        <div class="lead-stat"><div class="big" id="a-score">n/a</div><small id="a-label">Answer a few questions to see your score.</small></div>
+        <div class="bars" id="a-secs"></div>
+        <h2 style="margin-top:22px">Fix these first</h2>
+        <ol class="fixes" id="a-fixes"><li>Your top fixes show up here as you answer.</li></ol>
+        <form class="mailme" novalidate>
+          <label for="m-audit">Email me a copy of this report</label>
+          <input id="m-audit" type="email" autocomplete="email" placeholder="you@yourrestaurant.com">
+          <button class="btn small" type="submit">Send my report</button>
+          <p class="notice" role="status"></p>
+        </form>
+      </aside>
+    </div>
+    <section class="panel" id="a-ai" hidden style="margin-bottom:20px">
+      <h2>Turn this into a 30 day plan</h2>
+      <p class="example">Claude reads your answers and writes a week by week plan. Answer at least five questions first.</p>
+      <div class="row2">
+        <div><label for="a-type">Type of restaurant</label><input id="a-type" type="text" placeholder="Family run noodle shop"></div>
+        <div><label for="a-city">City or neighborhood</label><input id="a-city" type="text" placeholder="San Gabriel, CA"></div>
+      </div>
+      <div class="btnrow"><button class="btn" type="button" id="a-plan-go">Write my 30 day plan</button><button class="btn ghost" type="button" id="a-plan-stop" hidden>Stop</button></div>
+      <p class="notice" id="a-plan-msg" role="status"></p>
+      <div class="outbox" id="a-plan" hidden></div>
+    </section>
+  </main>
+
+  <!-- AI VISIBILITY -->
+  <main class="tool" data-view="visibility" hidden>
+    <a class="back" href="#home">All tools</a>
+    <div class="tool-head">
+      <p class="eyebrow">Marketing and visibility</p>
+      <h1>AI visibility checker</h1>
+      <p>More diners now ask AI assistants where to eat. Enter your restaurant and the question a guest might ask, and Claude answers it. You see whether you come up, and who does instead.</p>
+    </div>
+    <div id="v-unavailable" class="panel" hidden style="margin-bottom:18px"><p style="margin:0">This check needs Claude, which is not available in this view. Open the page in the Claude app to run it. The checklist below still applies.</p></div>
+    <div class="layout" id="v-layout">
+      <section class="panel" aria-labelledby="vh1">
+        <h2 id="vh1">Your restaurant</h2>
+        <div class="fields">
+          <div><label for="v-name">Restaurant name</label><input id="v-name" type="text" placeholder="Your restaurant name" autocomplete="off"></div>
+          <div class="row2">
+            <div><label for="v-type">Type of food</label><input id="v-type" type="text" value="ramen shop" autocomplete="off"></div>
+            <div><label for="v-city">City or neighborhood</label><input id="v-city" type="text" value="Pasadena, CA" autocomplete="off"></div>
+          </div>
+          <div><label for="v-query">The question a guest asks</label><input id="v-query" type="text"><p class="hint">Edit it to match how your guests really search.</p></div>
+        </div>
+        <div class="btnrow"><button class="btn" type="button" id="v-go" disabled>Check with Claude</button><button class="btn ghost" type="button" id="v-stop" hidden>Stop</button></div>
+        <p class="notice" id="v-msg" role="status"></p>
+        <p class="minor">Claude answers from what it has learned, without searching the web live. Other assistants may give different answers, and any answer can contain mistakes. Treat this as a signal, not a ranking.</p>
+      </section>
+      <aside class="panel result" aria-live="polite">
+        <h2>What Claude says</h2>
+        <div id="v-empty"><p style="margin:0;color:var(--muted)">Fill in your restaurant name and press check. Results appear here.</p></div>
+        <div id="v-out" hidden>
+          <div class="lead-stat"><span class="verdict" id="v-verdict"></span><small id="v-verdict-note"></small></div>
+          <div class="kv" style="display:block"><span style="color:var(--muted)">Who Claude would recommend</span><ol class="reclist" id="v-recs"></ol></div>
+          <div class="kv" style="display:block"><span style="color:var(--muted)">What Claude knows about you</span><p id="v-know" style="margin:6px 0 0;font-size:14.5px"></p></div>
+        </div>
+        <form class="mailme" novalidate>
+          <label for="m-vis">Email me this result</label>
+          <input id="m-vis" type="email" autocomplete="email" placeholder="you@yourrestaurant.com">
+          <button class="btn small" type="submit">Send my result</button>
+          <p class="notice" role="status"></p>
+        </form>
+      </aside>
+    </div>
+    <section class="panel" style="margin-bottom:20px">
+      <h2>What helps AI assistants recommend you</h2>
+      <ol class="tips">
+        <li>Claim and complete your Google Business Profile, with hours, menu, and photos.</li>
+        <li>Keep your name, address, and phone number identical on every site and app.</li>
+        <li>Collect fresh reviews, and encourage guests to name the dishes they loved.</li>
+        <li>Put your full menu on your website as text, not only as an image or PDF.</li>
+        <li>Get mentioned by local food writers, neighborhood guides, and community pages.</li>
+        <li>Ask your web builder to add restaurant structured data (schema) to your site.</li>
+      </ol>
+      <p class="minor"><a href="#audit">Run the marketing audit</a> to see which of these you have covered.</p>
+    </section>
+  </main>
+
+  <!-- CAMPAIGN RECORD -->
+  <main class="tool" data-view="record" hidden>
+    <a class="back" href="#home">All tools</a>
+    <div class="tool-head">
+      <p class="eyebrow">Marketing and visibility</p>
+      <h1>Campaign Record builder</h1>
+      <p>A campaign is easier to learn from when it is written down. Fill in the brief, add your weekly numbers, and keep a clean record of what you did, what changed, and what happened. The example below is made up, so replace it with your own.</p>
+    </div>
+    <div class="layout">
+      <section class="panel" aria-labelledby="rh1">
+        <h2 id="rh1">The brief</h2>
+        <div class="fields">
+          <div class="row2">
+            <div><label for="r-biz">Business</label><input id="r-biz" type="text" data-rk="biz"></div>
+            <div><label for="r-name">Campaign name</label><input id="r-name" type="text" data-rk="name"></div>
+          </div>
+          <div class="row2">
+            <div><label for="r-goal">Goal</label><select id="r-goal" data-rk="goal"></select></div>
+            <div><label for="r-budget">Budget ($)</label><input id="r-budget" type="number" inputmode="decimal" min="0" step="50" data-rk="budget"></div>
+          </div>
+          <div class="row2">
+            <div><label for="r-start">Start date</label><input id="r-start" type="date" data-rk="start"></div>
+            <div><label for="r-end">End date</label><input id="r-end" type="date" data-rk="end"></div>
+          </div>
+          <div class="row2">
+            <div><label for="r-metric">What counts as a result</label><input id="r-metric" type="text" data-rk="metric" placeholder="Online orders"></div>
+            <div><label for="r-target">Target number of results</label><input id="r-target" type="number" inputmode="numeric" min="0" step="1" data-rk="target"></div>
+          </div>
+          <div><label for="r-aud">Audience</label><textarea id="r-aud" data-rk="aud"></textarea></div>
+          <div><label for="r-offer">Offer and message</label><textarea id="r-offer" data-rk="offer"></textarea></div>
+          <fieldset style="border:0;padding:0;margin:0;min-width:0"><legend style="font-size:13px;font-weight:700;margin-bottom:6px;padding:0">Channels used</legend><div class="checks" id="r-channels"></div></fieldset>
+          <div><label for="r-creative">Creative notes</label><textarea id="r-creative" data-rk="creative"></textarea></div>
+        </div>
+        <h2 style="margin-top:26px" id="rh2">Weekly numbers</h2>
+        <div class="scroll">
+          <table class="edit" style="min-width:560px">
+            <thead><tr><th>Week</th><th class="num">Spend $</th><th class="num">Results</th><th>Notes</th><th></th></tr></thead>
+            <tbody id="r-weeks"></tbody>
+          </table>
+        </div>
+        <p style="margin:12px 0 0"><button class="btn ghost small" type="button" id="r-addweek">Add week</button></p>
+        <div class="fields" style="margin-top:22px">
+          <div><label for="r-changed">What changed along the way</label><textarea id="r-changed" data-rk="changed"></textarea></div>
+          <div><label for="r-close">Closing summary</label><textarea id="r-close" data-rk="close"></textarea></div>
+        </div>
+      </section>
+      <aside class="panel" aria-live="polite">
+        <h2>Your record</h2>
+        <div class="rec" id="r-preview"></div>
+        <div class="btnrow">
+          <button class="btn" type="button" id="r-copy">Copy record</button>
+          <button class="btn ghost" type="button" id="r-dl" hidden>Save as file</button>
+        </div>
+        <p class="notice" id="r-msg" role="status"></p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- TECH STACK -->
+  <main class="tool" data-view="stack" hidden>
+    <a class="back" href="#home">All tools</a>
+    <div class="tool-head">
+      <p class="eyebrow">Tech stack</p>
+      <h1>Tech stack checker</h1>
+      <p>List every tool you pay for to run the restaurant, what it costs, and whether it talks to your point of sale. You see the total, the overlaps, and the tools working on their own. The example tools are made up, so replace them with yours.</p>
+    </div>
+    <div class="layout">
+      <section class="panel" aria-labelledby="sh1">
+        <h2 id="sh1">Your tools</h2>
+        <div class="scroll">
+          <table class="edit" style="min-width:640px">
+            <thead><tr><th>What it does</th><th>Tool name</th><th class="num">Cost per month $</th><th>Connects to POS?</th><th></th></tr></thead>
+            <tbody id="s-body"></tbody>
+          </table>
+        </div>
+        <p style="margin:12px 0 0"><button class="btn ghost small" type="button" id="s-add">Add tool</button></p>
+        <div style="margin-top:20px"><label for="s-sales">Monthly sales ($, optional)</label><input id="s-sales" type="number" inputmode="decimal" min="0" step="1000" value="60000"><p class="hint">Used to show tech spend as a share of sales.</p></div>
+      </section>
+      <aside class="panel result" aria-live="polite">
+        <h2>What you pay</h2>
+        <div class="lead-stat"><div class="big" id="s-total">$0</div><small>per month across <span id="s-count">0</span> tools, <span id="s-annual">$0</span> a year</small></div>
+        <div class="kv"><span>Tech spend as a share of sales</span><b id="s-share">n/a</b></div>
+        <div class="kv"><span>Tools that connect to your POS</span><b id="s-conn">0 of 0</b></div>
+        <div class="kv"><span>Tools not connected</span><b id="s-disc">$0 a month</b></div>
+        <h2 style="margin-top:20px">Spend by job</h2>
+        <div class="bars" id="s-bars"></div>
+        <h2 style="margin-top:20px">What to look at</h2>
+        <ul class="tips" id="s-flags"></ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div>ContentMatter, marketing for restaurants and local food and drink businesses.</div>
+    <div>Ranges shown are typical, not guarantees. Check them against your own contracts and books. Draft: email forms are not connected yet.</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var usd=function(v,d){d=d==null?2:d;return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:d,maximumFractionDigits:d}).format(isFinite(v)?v:0)};
+  var $=function(id){return document.getElementById(id)};
+  var val=function(id){var v=parseFloat($(id).value);return isFinite(v)?v:0};
+  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+
+  /* routing */
+  var VIEWS=['home','delivery','plate','menu','audit','visibility','record','stack'];
+  function route(){
+    var h=(location.hash||'').replace('#','');
+    var v=VIEWS.indexOf(h)>-1?h:'home';
+    document.querySelectorAll('[data-view]').forEach(function(el){el.hidden=el.getAttribute('data-view')!==v});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);
+
+  /* email me a copy (placeholder, not connected) */
+  document.querySelectorAll('form.mailme').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var ok=/^\S+@\S+\.\S+$/.test(f.querySelector('input').value.trim());
+      f.querySelector('.notice').textContent=ok?'Thanks. Email delivery is not connected yet in this draft.':'Enter a valid email address.';
+    });
+  });
+
+  /* delivery */
+  function calcDelivery(){
+    var aov=val('d-aov'),n=val('d-orders'),comm=val('d-comm')/100,food=val('d-food')/100,
+        pack=val('d-pack'),promo=val('d-promo'),proc=val('d-proc')/100,fix=val('d-fix'),
+        ful=val('d-ful'),share=val('d-share')/100;
+    var tp=aov*(1-comm-food)-pack-promo;
+    var dr=aov*(1-proc-food)-fix-pack-ful;
+    var fees=n*aov*comm, moved=n*share, gain=moved*(dr-tp);
+    $('d-share-out').textContent=Math.round(share*100)+'%';
+    $('d-tp').textContent=usd(tp);
+    $('d-tp-pct').textContent=(aov>0?tp/aov*100:0).toFixed(1)+'%';
+    $('d-fees').textContent=usd(fees,0);
+    $('d-dr').textContent=usd(dr);
+    $('d-moved').textContent=Math.round(moved).toLocaleString('en-US');
+    $('d-gain').textContent=usd(gain,0);
+    var note=$('d-note');note.classList.remove('bad');
+    if(tp<0){note.classList.add('bad');note.textContent='You lose '+usd(-tp)+' on every platform order before labor and rent. Look at menu prices on the platform, promos, or the commission plan.';}
+    else if(gain>0){note.textContent='Moving '+Math.round(share*100)+'% of platform orders to your own channel keeps about '+usd(gain,0)+' more each month, or '+usd(gain*12,0)+' a year.';}
+    else{note.textContent='With these numbers, a direct order keeps no more than a platform order. Check your handoff or delivery cost.';}
+  }
+  ['d-aov','d-orders','d-comm','d-food','d-pack','d-promo','d-proc','d-fix','d-ful','d-share'].forEach(function(id){$(id).addEventListener('input',calcDelivery)});
+
+  /* plate */
+  var plate=[
+    {n:'Beef shank',p:42.5,s:5,u:0.4},
+    {n:'Fresh noodles',p:18,s:10,u:0.4},
+    {n:'Bok choy',p:30,s:25,u:0.2},
+    {n:'Broth base',p:36,s:40,u:1},
+    {n:'Chili oil and aromatics',p:12,s:60,u:1}
+  ];
+  function lineCost(r){return r.s>0?r.p/r.s*r.u:0}
+  function renderPlate(){
+    $('plate-body').innerHTML=plate.map(function(r,i){
+      return '<tr>'+
+        '<td><input type="text" id="pl'+i+'n" data-i="'+i+'" data-k="n" value="'+esc(r.n)+'" aria-label="Ingredient name"></td>'+
+        '<td><input class="num" type="number" inputmode="decimal" min="0" step="0.01" id="pl'+i+'p" data-i="'+i+'" data-k="p" value="'+r.p+'" aria-label="Pack price"></td>'+
+        '<td><input class="num" type="number" inputmode="decimal" min="0" step="any" id="pl'+i+'s" data-i="'+i+'" data-k="s" value="'+r.s+'" aria-label="Units in pack"></td>'+
+        '<td><input class="num" type="number" inputmode="decimal" min="0" step="any" id="pl'+i+'u" data-i="'+i+'" data-k="u" value="'+r.u+'" aria-label="Units per plate"></td>'+
+        '<td class="num" id="pl'+i+'c">'+usd(lineCost(r))+'</td>'+
+        '<td><button class="rm" type="button" data-rm="'+i+'" aria-label="Remove ingredient">&times;</button></td></tr>';
+    }).join('');
+    calcPlate();
+  }
+  function calcPlate(){
+    var sum=0;
+    plate.forEach(function(r,i){var c=lineCost(r);sum+=c;var el=$('pl'+i+'c');if(el)el.textContent=usd(c)});
+    var cost=sum*(1+val('p-waste')/100), target=val('p-target')/100;
+    var exact=target>0?cost/target:0, rounded=Math.ceil(exact*2-1e-9)/2, cur=val('p-price');
+    $('p-cost').textContent=usd(cost);
+    $('p-exact').textContent=usd(exact);
+    $('p-round').textContent=usd(rounded);
+    var note=$('p-note');note.classList.remove('bad');
+    if(cur>0){
+      var fc=cost/cur*100;
+      $('p-cur').textContent=fc.toFixed(1)+'%';
+      $('p-gp').textContent=usd(cur-cost);
+      if(fc>val('p-target')+0.05){note.classList.add('bad');note.textContent='This dish runs '+(fc-val('p-target')).toFixed(1)+' points over your target. Pricing at '+usd(rounded)+' would bring it back, or trim the plate cost.';}
+      else{note.textContent='This dish is at or under your target food cost. You could hold the price and look at the rest of the menu.';}
+    }else{
+      $('p-cur').textContent='n/a';$('p-gp').textContent='n/a';
+      note.textContent='Add your current menu price to compare it with the target.';
+    }
+  }
+  $('plate-body').addEventListener('input',function(e){
+    var t=e.target,i=t.getAttribute('data-i');if(i==null)return;
+    var k=t.getAttribute('data-k');plate[i][k]=k==='n'?t.value:(parseFloat(t.value)||0);calcPlate();
+  });
+  $('plate-body').addEventListener('click',function(e){
+    var b=e.target.closest('[data-rm]');if(!b)return;
+    plate.splice(parseInt(b.getAttribute('data-rm'),10),1);renderPlate();
+  });
+  $('plate-add').addEventListener('click',function(){plate.push({n:'',p:0,s:1,u:0});renderPlate();var last=$('pl'+(plate.length-1)+'n');if(last)last.focus()});
+  ['p-waste','p-target','p-price'].forEach(function(id){$(id).addEventListener('input',calcPlate)});
+
+  /* menu engineering */
+  var menu=[
+    {n:'Smash burger',q:310,p:15,c:4.6},
+    {n:'Chicken sandwich',q:240,p:14,c:4.9},
+    {n:'House salad',q:90,p:11,c:2.4},
+    {n:'Fries',q:420,p:6,c:1.2},
+    {n:'Fish tacos',q:110,p:16,c:6.1},
+    {n:'Pasta special',q:70,p:19,c:5.2},
+    {n:'Milkshake',q:130,p:8,c:2.6},
+    {n:'Seasonal entree',q:40,p:29,c:12.5}
+  ];
+  var GROUPS={
+    Star:'High sales, high profit. Keep the recipe, feature it on the menu.',
+    Plowhorse:'High sales, lower profit. Test a small price rise or trim the plate cost.',
+    Puzzle:'Lower sales, high profit. Promote it, rename it, or move it up the menu.',
+    Dog:'Lower sales, lower profit. Rework it or consider removing it.'
+  };
+  function renderMenu(){
+    $('menu-body').innerHTML=menu.map(function(r,i){
+      return '<tr>'+
+        '<td><input type="text" id="mn'+i+'n" data-i="'+i+'" data-k="n" value="'+esc(r.n)+'" aria-label="Item name"></td>'+
+        '<td><input class="num" type="number" inputmode="numeric" min="0" step="1" id="mn'+i+'q" data-i="'+i+'" data-k="q" value="'+r.q+'" aria-label="Units sold"></td>'+
+        '<td><input class="num" type="number" inputmode="decimal" min="0" step="0.25" id="mn'+i+'p" data-i="'+i+'" data-k="p" value="'+r.p+'" aria-label="Menu price"></td>'+
+        '<td><input class="num" type="number" inputmode="decimal" min="0" step="0.05" id="mn'+i+'c" data-i="'+i+'" data-k="c" value="'+r.c+'" aria-label="Plate cost"></td>'+
+        '<td><button class="rm" type="button" data-rm="'+i+'" aria-label="Remove item">&times;</button></td></tr>';
+    }).join('');
+    calcMenu();
+  }
+  function calcMenu(){
+    var items=menu.filter(function(r){return r.n.trim()!==''||r.q>0});
+    var total=items.reduce(function(a,r){return a+r.q},0), n=items.length;
+    var tbody=document.querySelector('#menu-out tbody'), quad=$('quad'), note=$('m-note');
+    if(!total||!n){tbody.innerHTML='';quad.innerHTML='';note.textContent='Add items with units sold to see the matrix.';return}
+    var popCut=0.7/n;
+    var avgCM=items.reduce(function(a,r){return a+(r.p-r.c)*r.q},0)/total;
+    var by={Star:[],Plowhorse:[],Puzzle:[],Dog:[]};
+    var rows=items.map(function(r){
+      var share=r.q/total, cm=r.p-r.c, hiP=share>=popCut, hiM=cm>=avgCM;
+      var g=hiP&&hiM?'Star':hiP?'Plowhorse':hiM?'Puzzle':'Dog';
+      by[g].push(r.n||'Unnamed item');
+      return {n:r.n||'Unnamed item',share:share,cm:cm,tot:cm*r.q,g:g};
+    });
+    rows.sort(function(a,b){return b.tot-a.tot});
+    tbody.innerHTML=rows.map(function(r){
+      return '<tr><td>'+esc(r.n)+'</td><td class="num">'+(r.share*100).toFixed(1)+'%</td><td class="num">'+usd(r.cm)+'</td><td class="num">'+usd(r.tot,0)+'</td><td><span class="badge b-'+r.g+'">'+r.g+'</span></td></tr>';
+    }).join('');
+    quad.innerHTML=['Star','Puzzle','Plowhorse','Dog'].map(function(g){
+      return '<div class="q"><h3><span class="badge b-'+g+'">'+g+'</span> '+by[g].length+'</h3><p class="what">'+GROUPS[g]+'</p><p class="names" style="margin:0">'+(by[g].length?by[g].map(esc).join(', '):'None')+'</p></div>';
+    }).join('');
+    note.textContent='An item counts as popular at '+(popCut*100).toFixed(1)+'% of units or more, and as high profit at '+usd(avgCM)+' per plate or more (your sales weighted average).';
+  }
+  $('menu-body').addEventListener('input',function(e){
+    var t=e.target,i=t.getAttribute('data-i');if(i==null)return;
+    var k=t.getAttribute('data-k');menu[i][k]=k==='n'?t.value:(parseFloat(t.value)||0);calcMenu();
+  });
+  $('menu-body').addEventListener('click',function(e){
+    var b=e.target.closest('[data-rm]');if(!b)return;
+    menu.splice(parseInt(b.getAttribute('data-rm'),10),1);renderMenu();
+  });
+  $('menu-add').addEventListener('click',function(){menu.push({n:'',q:0,p:0,c:0});renderMenu();var last=$('mn'+(menu.length-1)+'n');if(last)last.focus()});
+
+  /* ---------- Claude capabilities (absent means the feature hides) ---------- */
+  var sampleFn=null, dlFn=null;
+  function claudeUse(name){
+    try{ if(window.claude&&window.claude.use) return Promise.resolve(window.claude.use(name)).catch(function(){return null}); }catch(e){}
+    return Promise.resolve(null);
+  }
+  function sampleMsg(e){
+    var c=e&&e.code;
+    if(c==='cancelled')return '';
+    if(c==='not_granted'||c==='sampling_disabled'||c==='capability_disabled'||c==='not_declared')return 'Claude is not available for this page right now.';
+    if(c==='rate_limited')return 'Too many requests. Try again in a minute.';
+    if(c==='invalid_json')return 'Claude answered in a format this page could not read. Press the button to try again.';
+    return 'Something went wrong. Press the button to try again.';
+  }
+  var pct0=function(v){return Math.round(v)+'%'};
+
+  /* ---------- Marketing audit ---------- */
+  var AUDIT=[
+    {k:'Google',s:'Google and local search',items:[
+      {q:'Your Google Business Profile is claimed, with correct hours, phone number, and a menu link',w:3,fix:'Claim your Google Business Profile and fill in hours, phone, menu link, and your order or booking link. It is the first thing most diners see.'},
+      {q:'You added new photos to your profile in the last 90 days',w:2,fix:'Add ten fresh photos of your best dishes, the room, and the entrance. Recent photos show guests the place is active.'},
+      {q:'You post an update or offer on your profile at least once a month',w:1,fix:'Post one offer or event on your Google profile each month.'},
+      {q:'Your name, address, and phone number match on your website, Yelp, and delivery apps',w:2,fix:'Make your name, address, and phone number identical everywhere. Mismatches confuse search engines and AI tools.'}]},
+    {k:'Reviews',s:'Reviews and reputation',items:[
+      {q:'Your Google rating is 4.3 or higher',w:3,fix:'Read your recent low reviews and fix the top two complaints at the source, then ask happy guests to review.'},
+      {q:'You reply to reviews within a week',w:2,fix:'Reply to every review this week, good or bad. Short and personal is enough.'},
+      {q:'You ask happy guests for a review at least once a month',w:2,fix:'Put a review link on receipts, table cards, or a follow up text.'},
+      {q:'You received several new reviews in the last 30 days',w:1,fix:'Aim for a steady flow of new reviews. Recent ones count for more than old ones.'}]},
+    {k:'Website',s:'Website and ordering',items:[
+      {q:'Your website loads quickly on a phone and the menu is easy to read',w:3,fix:'Open your site on a phone. Make the menu a readable page instead of a tiny PDF.'},
+      {q:'An order online or book a table button sits at the top of your homepage',w:3,fix:'Put one clear button for ordering or booking at the top of your homepage.'},
+      {q:'Guests can order directly from you, not only through delivery apps',w:2,fix:'Set up direct ordering and promote it on receipts and bags. You keep more of every sale.'},
+      {q:'Your menu is written as text on the page, not only as an image',w:1,fix:'Add your menu as text so Google and AI tools can read your dishes and prices.'}]},
+    {k:'Social',s:'Social and content',items:[
+      {q:'You post at least three times a week',w:2,fix:'Plan three posts a week. Batch them in one sitting so it stays easy.'},
+      {q:'You share a short video of the food or the room every week',w:2,fix:'Film one ten second clip a week of a dish being finished or the room at its busiest.'},
+      {q:'Your posts tell people what to do next, such as order, book, or visit',w:1,fix:'End each post with one clear next step and a link.'},
+      {q:'You answer comments and messages within a day',w:1,fix:'Check comments and messages once a day and reply while the guest is still interested.'}]},
+    {k:'Repeat guests',s:'Tracking and repeat guests',items:[
+      {q:'You know where your orders and bookings come from',w:3,fix:'Track your sources with tagged order links, a how did you hear about us question, or call tracking.'},
+      {q:'You have an email or text list of regular guests',w:2,fix:'Collect emails or phone numbers at checkout, with permission, and send a monthly offer.'},
+      {q:'You sent a campaign to that list in the last 60 days',w:1,fix:'Send your list one offer this month. Regulars are your cheapest orders.'},
+      {q:'You run paid ads and know what each order or booking costs',w:2,fix:'Before spending more on ads, set up tracking so you can see the cost of each order.'}]}
+  ];
+  var ANSWER={2:'Yes',1:'Partly',0:'No'};
+  $('audit-form').innerHTML=AUDIT.map(function(sec,si){
+    return '<div class="asec"><h3>'+esc(sec.s)+'</h3>'+sec.items.map(function(it,ii){
+      var id='aq'+si+'_'+ii;
+      return '<div class="arow"><label for="'+id+'">'+esc(it.q)+'</label><select id="'+id+'" data-s="'+si+'" data-i="'+ii+'"><option value="">Choose</option><option value="2">Yes</option><option value="1">Partly</option><option value="0">No</option></select></div>';
+    }).join('')+'</div>';
+  }).join('');
+  function auditState(){
+    var answered=0,earned=0,possible=0,secs=[],fixes=[],lines=[];
+    AUDIT.forEach(function(sec,si){
+      var e=0,p=0;
+      sec.items.forEach(function(it,ii){
+        var raw=$('aq'+si+'_'+ii).value;
+        if(raw==='')return;
+        var v=parseInt(raw,10);answered++;e+=it.w*v/2;p+=it.w;
+        lines.push(sec.k+': '+it.q+' = '+ANSWER[v]);
+        if(v<2)fixes.push({k:sec.k,fix:it.fix,pr:it.w*(2-v)});
+      });
+      earned+=e;possible+=p;secs.push({k:sec.k,pct:p>0?e/p*100:null});
+    });
+    return {answered:answered,score:possible>0?earned/possible*100:null,secs:secs,fixes:fixes,lines:lines};
+  }
+  function calcAudit(){
+    var st=auditState();
+    if(st.score==null){
+      $('a-score').textContent='n/a';$('a-label').textContent='Answer a few questions to see your score.';
+    }else{
+      $('a-score').textContent=Math.round(st.score)+' / 100';
+      var band=st.score>=80?'Strong foundation':st.score>=60?'Solid, with gaps to close':st.score>=40?'Leaving guests on the table':'Start with the basics';
+      $('a-label').textContent=band+'. Based on '+st.answered+' of 20 answers.';
+    }
+    $('a-secs').innerHTML=st.secs.map(function(s){
+      var has=s.pct!=null;
+      return '<div class="bar-row"><span>'+esc(s.k)+'</span><div class="bar"><i class="'+(has&&s.pct<50?'low':'')+'" style="width:'+(has?s.pct:0)+'%"></i></div><span>'+(has?pct0(s.pct):'n/a')+'</span></div>';
+    }).join('');
+    st.fixes.sort(function(a,b){return b.pr-a.pr});
+    var top=st.fixes.slice(0,5);
+    $('a-fixes').innerHTML=top.length?top.map(function(f){return '<li><span class="ftag">'+esc(f.k)+'</span>'+esc(f.fix)+'</li>'}).join(''):(st.answered?'<li>No gaps in the areas you answered. Nice work.</li>':'<li>Your top fixes show up here as you answer.</li>');
+  }
+  $('audit-form').addEventListener('change',calcAudit);
+
+  var planCtl=null;
+  $('a-plan-go').addEventListener('click',async function(){
+    if(!sampleFn)return;
+    var st=auditState(), msg=$('a-plan-msg'), out=$('a-plan');
+    if(st.answered<5){msg.textContent='Answer at least five audit questions first.';return}
+    var type=$('a-type').value.trim()||'restaurant', city=$('a-city').value.trim()||'a local neighborhood';
+    var prompt='You are a practical marketing advisor for independent restaurants. Business: '+type+' in '+city+'.\n\nAudit answers:\n'+st.lines.join('\n')+
+      '\n\nWrite a 30 day action plan for the owner. Use four short weekly sections titled Week 1 to Week 4, each with three or four concrete actions, ordered by impact. Fix the gaps in the answers above first. Use plain words for a busy owner and keep it under 350 words. Do not use dashes or em dashes.';
+    planCtl=new AbortController();
+    $('a-plan-go').disabled=true;$('a-plan-stop').hidden=false;out.hidden=false;out.textContent='Thinking...';msg.textContent='';
+    try{
+      await sampleFn(prompt,{signal:planCtl.signal,onText:function(u){out.textContent=u.text}});
+    }catch(e){
+      var m=sampleMsg(e);
+      if(e&&e.text)out.textContent=e.text;else out.hidden=true;
+      msg.textContent=m;
+    }finally{$('a-plan-go').disabled=false;$('a-plan-stop').hidden=true;}
+  });
+  $('a-plan-stop').addEventListener('click',function(){if(planCtl)planCtl.abort()});
+
+  /* ---------- AI visibility ---------- */
+  var queryDirty=false;
+  function syncQuery(){
+    if(!queryDirty){
+      var t=$('v-type').value.trim(), c=$('v-city').value.trim();
+      $('v-query').value=t&&c?'best '+t+' in '+c:(t?'best '+t+' near me':'');
+    }
+    $('v-go').disabled=!sampleFn||!$('v-name').value.trim()||!$('v-query').value.trim()||!$('v-city').value.trim();
+  }
+  $('v-query').addEventListener('input',function(){queryDirty=true;syncQuery()});
+  ['v-name','v-type','v-city'].forEach(function(id){$(id).addEventListener('input',syncQuery)});
+  var norm=function(s){return String(s).toLowerCase().replace(/[^a-z0-9]/g,'')};
+  var visCtl=null;
+  $('v-go').addEventListener('click',async function(){
+    if(!sampleFn)return;
+    var name=$('v-name').value.trim(), city=$('v-city').value.trim(), q=$('v-query').value.trim(), msg=$('v-msg');
+    var prompt='A diner asks an AI assistant: "'+q+'"\n\nAnswer from what you know, as that assistant would. Do not invent restaurants. Reply with only JSON in this exact shape:\n'+
+      '{"recommendations":[{"name":"","why":""}],"knowsRestaurant":false,"whatYouKnow":""}\n\n'+
+      'Rules: in recommendations list up to 6 real restaurants you are reasonably sure exist near '+city+', most relevant first, with a short reason each. List fewer, or none, if you are unsure. Then say whether you know the restaurant "'+name+'" in '+city+'. If you do, set knowsRestaurant to true and summarize in one or two sentences what you know. If you do not, set it to false and leave whatYouKnow empty.';
+    visCtl=new AbortController();
+    $('v-go').disabled=true;$('v-stop').hidden=false;msg.textContent='Thinking...';
+    try{
+      var r=await sampleFn.json(prompt,{signal:visCtl.signal,modelTier:'default'});
+      var recs=Array.isArray(r&&r.recommendations)?r.recommendations.filter(function(x){return x&&x.name}).slice(0,6):[];
+      var key=norm(name), hit=recs.some(function(x){var k=norm(x.name);return k&&(k.indexOf(key)>-1||key.indexOf(k)>-1)});
+      var knows=!!(r&&r.knowsRestaurant), know=r&&r.whatYouKnow?String(r.whatYouKnow):'';
+      var v=$('v-verdict'), vn=$('v-verdict-note');
+      if(hit){v.className='verdict good';v.textContent='Recommended';vn.textContent='Claude named you when asked "'+q+'".'}
+      else if(knows){v.className='verdict mid';v.textContent='Known, not recommended';vn.textContent='Claude knows of you but did not name you for "'+q+'".'}
+      else{v.className='verdict bad';v.textContent='Not found';vn.textContent='Claude did not name you or show it knows you for "'+q+'".'}
+      $('v-recs').innerHTML=recs.length?recs.map(function(x){var k=norm(x.name),you=k&&(k.indexOf(key)>-1||key.indexOf(k)>-1);return '<li'+(you?' class="you"':'')+'><b>'+esc(x.name)+(you?' (you)':'')+'</b>'+(x.why?': '+esc(x.why):'')+'</li>'}).join(''):'<li>Claude did not name any restaurants for this question.</li>';
+      $('v-know').textContent=knows&&know?know:'Claude did not show specific knowledge of this restaurant.';
+      $('v-empty').hidden=true;$('v-out').hidden=false;msg.textContent='';
+    }catch(e){msg.textContent=sampleMsg(e)}
+    finally{$('v-stop').hidden=true;syncQuery()}
+  });
+  $('v-stop').addEventListener('click',function(){if(visCtl)visCtl.abort()});
+
+  /* ---------- Campaign Record ---------- */
+  var GOALS=['More online orders','More table bookings','Grand opening','Seasonal promotion','Event or special night','Win back past guests'];
+  var CHANNELS=['Google Ads','Meta ads','Instagram or TikTok posts','Email','Text messages','In person event','Local partners'];
+  var rec={biz:'Corner Table (example)',name:'Spring patio launch',goal:'More online orders',start:'2026-03-02',end:'2026-03-29',budget:1000,
+    metric:'Online orders',target:150,
+    aud:'Neighbors within three miles, lunch and early dinner crowd, existing regulars who have not ordered in 60 days.',
+    offer:'Free dessert with any online order over $30 while the new patio opens. Message: the patio is open, dinner outside tonight.',
+    ch:['Google Ads','Instagram or TikTok posts','Email'],
+    creative:'Short clips of the patio at golden hour and the dessert being plated. Photos of the two best sellers. Same offer line on every ad and post.',
+    changed:'Paused the weakest ad group after week one and moved the budget to search ads for dinner near me. Added a happy hour line to the email in week three.',
+    close:'Search ads brought the cheapest orders, the patio clips drove the most saves and shares. Next time start search ads on day one and send the email list offer a week earlier.'};
+  var weeks=[
+    {l:'Week 1',s:220,r:31,n:'Launch posts and search ads live'},
+    {l:'Week 2',s:240,r:38,n:'Paused weak ad group'},
+    {l:'Week 3',s:235,r:47,n:'Added happy hour offer to email'},
+    {l:'Week 4',s:200,r:52,n:'Best week, ended with patio night'}];
+  $('r-goal').innerHTML=GOALS.map(function(g){return '<option>'+esc(g)+'</option>'}).join('');
+  $('r-channels').innerHTML=CHANNELS.map(function(c,i){return '<label><input type="checkbox" id="rc'+i+'" value="'+esc(c)+'">'+esc(c)+'</label>'}).join('');
+  document.querySelectorAll('[data-rk]').forEach(function(el){el.value=rec[el.getAttribute('data-rk')]});
+  CHANNELS.forEach(function(c,i){$('rc'+i).checked=rec.ch.indexOf(c)>-1});
+  function renderWeeks(){
+    $('r-weeks').innerHTML=weeks.map(function(w,i){
+      return '<tr><td><input type="text" id="rw'+i+'l" data-i="'+i+'" data-k="l" value="'+esc(w.l)+'" aria-label="Week label"></td>'+
+        '<td><input class="num" type="number" inputmode="decimal" min="0" step="1" id="rw'+i+'s" data-i="'+i+'" data-k="s" value="'+w.s+'" aria-label="Spend"></td>'+
+        '<td><input class="num" type="number" inputmode="numeric" min="0" step="1" id="rw'+i+'r" data-i="'+i+'" data-k="r" value="'+w.r+'" aria-label="Results"></td>'+
+        '<td><input type="text" id="rw'+i+'n" data-i="'+i+'" data-k="n" value="'+esc(w.n)+'" aria-label="Notes"></td>'+
+        '<td><button class="rm" type="button" data-rm="'+i+'" aria-label="Remove week">&times;</button></td></tr>';
+    }).join('');
+    renderRecord();
+  }
+  var fd=function(v){if(!v)return 'Not set';var d=new Date(v+'T00:00:00');return isNaN(d)?v:d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})};
+  var blank=function(v){return String(v||'').trim()||'Not filled in'};
+  function recSections(){
+    var spend=weeks.reduce(function(a,w){return a+w.s},0), res=weeks.reduce(function(a,w){return a+w.r},0);
+    var cpr=res>0?spend/res:0, pct=rec.target>0?res/rec.target*100:0;
+    var metric=(rec.metric||'results').toLowerCase();
+    return [
+      {h:'Brief and goal',rows:[['Business',blank(rec.biz)],['Campaign',blank(rec.name)],['Goal',rec.goal],['Dates',fd(rec.start)+' to '+fd(rec.end)],['Budget',usd(rec.budget,0)],
+        ['Success target',rec.target+' '+metric],['Audience',blank(rec.aud)],['Offer and message',blank(rec.offer)],['Channels',rec.ch.length?rec.ch.join(', '):'Not set']]},
+      {h:'Creative notes',text:blank(rec.creative)},
+      {h:'Weekly numbers',table:{head:['Week','Spend','Results','Cost per result','Notes'],
+        rows:weeks.map(function(w){return [blank(w.l),usd(w.s,0),String(w.r),w.r>0?usd(w.s/w.r):'n/a',w.n||'']}),
+        foot:['Total',usd(spend,0),String(res),res>0?usd(cpr):'n/a',pct0(pct)+' of target']}},
+      {h:'What changed',text:blank(rec.changed)},
+      {h:'Closing summary',text:blank(rec.close)}];
+  }
+  function recHTML(secs){
+    return '<p class="rec-title">'+esc(blank(rec.name))+'</p><p class="minor" style="margin:0 0 14px">Campaign Record</p>'+secs.map(function(s){
+      var body='';
+      if(s.rows)body=s.rows.map(function(r){return '<div class="kvr"><span>'+esc(r[0])+'</span><span>'+esc(r[1])+'</span></div>'}).join('');
+      else if(s.text!=null)body='<p class="rtext">'+esc(s.text)+'</p>';
+      else if(s.table){
+        var t=s.table;
+        body='<div class="scroll"><table><thead><tr>'+t.head.map(function(h,i){return '<th'+(i>0&&i<4?' class="num"':'')+'>'+esc(h)+'</th>'}).join('')+'</tr></thead><tbody>'+
+          t.rows.map(function(r){return '<tr>'+r.map(function(c,i){return '<td'+(i>0&&i<4?' class="num"':'')+'>'+esc(c)+'</td>'}).join('')+'</tr>'}).join('')+
+          '<tr>'+t.foot.map(function(c,i){return '<td'+(i>0&&i<4?' class="num"':'')+'><b>'+esc(c)+'</b></td>'}).join('')+'</tr></tbody></table></div>';
+      }
+      return '<h3>'+esc(s.h)+'</h3>'+body;
+    }).join('');
+  }
+  function recText(secs){
+    var out=['# '+blank(rec.name),'Campaign Record',''];
+    secs.forEach(function(s){
+      out.push('## '+s.h);
+      if(s.rows)s.rows.forEach(function(r){out.push('- '+r[0]+': '+r[1])});
+      else if(s.text!=null)out.push(s.text);
+      else if(s.table){
+        var t=s.table;
+        out.push('| '+t.head.join(' | ')+' |');out.push('| '+t.head.map(function(){return '---'}).join(' | ')+' |');
+        t.rows.forEach(function(r){out.push('| '+r.join(' | ')+' |')});
+        out.push('| '+t.foot.map(function(c){return '**'+c+'**'}).join(' | ')+' |');
+      }
+      out.push('');
+    });
+    return out.join('\n');
+  }
+  function renderRecord(){$('r-preview').innerHTML=recHTML(recSections())}
+  document.querySelectorAll('[data-rk]').forEach(function(el){
+    el.addEventListener('input',function(){
+      var k=el.getAttribute('data-rk');
+      rec[k]=el.type==='number'?(parseFloat(el.value)||0):el.value;
+      renderRecord();
+    });
+  });
+  $('r-channels').addEventListener('change',function(){
+    rec.ch=CHANNELS.filter(function(c,i){return $('rc'+i).checked});renderRecord();
+  });
+  $('r-weeks').addEventListener('input',function(e){
+    var t=e.target,i=t.getAttribute('data-i');if(i==null)return;
+    var k=t.getAttribute('data-k');weeks[i][k]=(k==='l'||k==='n')?t.value:(parseFloat(t.value)||0);renderRecord();
+  });
+  $('r-weeks').addEventListener('click',function(e){
+    var b=e.target.closest('[data-rm]');if(!b)return;
+    weeks.splice(parseInt(b.getAttribute('data-rm'),10),1);renderWeeks();
+  });
+  $('r-addweek').addEventListener('click',function(){weeks.push({l:'Week '+(weeks.length+1),s:0,r:0,n:''});renderWeeks();var el=$('rw'+(weeks.length-1)+'s');if(el)el.focus()});
+  $('r-copy').addEventListener('click',async function(){
+    var txt=recText(recSections()), msg=$('r-msg');
+    try{await navigator.clipboard.writeText(txt);msg.textContent='Record copied.'}
+    catch(e){
+      var sel=window.getSelection(),range=document.createRange();range.selectNodeContents($('r-preview'));sel.removeAllRanges();sel.addRange(range);
+      msg.textContent='Copy was blocked here. The record is selected, so press your copy shortcut.';
+    }
+  });
+  $('r-dl').addEventListener('click',async function(){
+    if(!dlFn)return;var msg=$('r-msg');
+    try{await dlFn.save({filename:'campaign-record.md',data:recText(recSections())});msg.textContent='Saved.'}
+    catch(e){msg.textContent=(e&&e.code==='declined')?'':'Saving is not available in this view. Use Copy record instead.'}
+  });
+
+  /* ---------- Tech stack ---------- */
+  var FUNCS=['Point of sale','Online ordering','Reservations','Loyalty or rewards','Email and text marketing','Delivery marketplace','Reviews and reputation','Website','Scheduling and payroll','Inventory and accounting','Other'];
+  var LINKS=[['pos','This is the POS'],['yes','Yes'],['no','No'],['unsure','Not sure']];
+  var stack=[
+    {f:'Point of sale',n:'Main POS',c:165,k:'pos'},
+    {f:'Online ordering',n:'Ordering app',c:99,k:'no'},
+    {f:'Reservations',n:'Booking tool',c:129,k:'yes'},
+    {f:'Loyalty or rewards',n:'Rewards app',c:75,k:'no'},
+    {f:'Email and text marketing',n:'Email tool',c:60,k:'no'},
+    {f:'Email and text marketing',n:'Text message tool',c:45,k:'unsure'},
+    {f:'Website',n:'Site builder',c:40,k:'yes'},
+    {f:'Scheduling and payroll',n:'Payroll tool',c:80,k:'yes'}];
+  function renderStack(){
+    $('s-body').innerHTML=stack.map(function(r,i){
+      return '<tr><td><select class="sel-sm" id="st'+i+'f" data-i="'+i+'" data-k="f" aria-label="What it does">'+FUNCS.map(function(f){return '<option'+(f===r.f?' selected':'')+'>'+esc(f)+'</option>'}).join('')+'</select></td>'+
+        '<td><input type="text" id="st'+i+'n" data-i="'+i+'" data-k="n" value="'+esc(r.n)+'" aria-label="Tool name"></td>'+
+        '<td><input class="num" type="number" inputmode="decimal" min="0" step="1" id="st'+i+'c" data-i="'+i+'" data-k="c" value="'+r.c+'" aria-label="Cost per month"></td>'+
+        '<td><select class="sel-sm" id="st'+i+'k" data-i="'+i+'" data-k="k" aria-label="Connects to POS">'+LINKS.map(function(l){return '<option value="'+l[0]+'"'+(l[0]===r.k?' selected':'')+'>'+l[1]+'</option>'}).join('')+'</select></td>'+
+        '<td><button class="rm" type="button" data-rm="'+i+'" aria-label="Remove tool">&times;</button></td></tr>';
+    }).join('');
+    calcStack();
+  }
+  function calcStack(){
+    var rows=stack.filter(function(r){return r.c>0||r.n.trim()!==''});
+    var total=rows.reduce(function(a,r){return a+r.c},0), sales=val('s-sales');
+    $('s-total').textContent=usd(total,0);$('s-annual').textContent=usd(total*12,0);$('s-count').textContent=rows.length;
+    $('s-share').textContent=sales>0?(total/sales*100).toFixed(1)+'%':'n/a';
+    var others=rows.filter(function(r){return r.k!=='pos'}), linked=others.filter(function(r){return r.k==='yes'});
+    var disc=others.filter(function(r){return r.k==='no'}), discCost=disc.reduce(function(a,r){return a+r.c},0);
+    $('s-conn').textContent=linked.length+' of '+others.length;
+    $('s-disc').textContent=usd(discCost,0)+' a month';
+    var by={};rows.forEach(function(r){by[r.f]=(by[r.f]||0)+r.c});
+    var keys=Object.keys(by).sort(function(a,b){return by[b]-by[a]}), max=keys.length?by[keys[0]]:0;
+    $('s-bars').innerHTML=keys.map(function(k){
+      return '<div class="bar-row" style="grid-template-columns:130px 1fr 60px"><span>'+esc(k)+'</span><div class="bar"><i style="width:'+(max>0?by[k]/max*100:0)+'%"></i></div><span>'+usd(by[k],0)+'</span></div>';
+    }).join('');
+    var flags=[];
+    FUNCS.forEach(function(f){
+      if(f==='Other')return;
+      var g=rows.filter(function(r){return r.f===f});
+      if(g.length>1){
+        var sum=g.reduce(function(a,r){return a+r.c},0), mx=Math.max.apply(null,g.map(function(r){return r.c}));
+        flags.push('<b>Overlap in '+esc(f.toLowerCase())+':</b> you pay for '+g.length+' tools. Keeping only the priciest one would save at least '+usd(sum-mx,0)+' a month.');
+      }
+    });
+    if(disc.length)flags.push('<b>'+disc.length+' tool'+(disc.length>1?'s':'')+' not connected to your POS</b> ('+usd(discCost,0)+' a month). Ask each vendor for a POS integration, or a scheduled export, so numbers do not live in separate places.');
+    var unsure=others.filter(function(r){return r.k==='unsure'}).length;
+    if(unsure)flags.push('<b>'+unsure+' tool'+(unsure>1?'s':'')+' marked not sure.</b> Find out whether they connect, since that decides whether you can see sales and campaigns together.');
+    if(others.length>0)flags.push('<b>Before you renew anything,</b> ask your POS vendor which of these jobs it already covers. Online ordering, loyalty, and email are common add ons.');
+    $('s-flags').innerHTML=flags.length?flags.map(function(f){return '<li>'+f+'</li>'}).join(''):'<li>Add your tools to see overlaps and gaps.</li>';
+  }
+  $('s-body').addEventListener('input',function(e){
+    var t=e.target,i=t.getAttribute('data-i');if(i==null)return;
+    var k=t.getAttribute('data-k');stack[i][k]=k==='c'?(parseFloat(t.value)||0):t.value;calcStack();
+  });
+  $('s-body').addEventListener('change',function(e){
+    var t=e.target,i=t.getAttribute('data-i');if(i==null||t.tagName!=='SELECT')return;
+    stack[i][t.getAttribute('data-k')]=t.value;calcStack();
+  });
+  $('s-body').addEventListener('click',function(e){
+    var b=e.target.closest('[data-rm]');if(!b)return;
+    stack.splice(parseInt(b.getAttribute('data-rm'),10),1);renderStack();
+  });
+  $('s-add').addEventListener('click',function(){stack.push({f:'Other',n:'',c:0,k:'no'});renderStack();var el=$('st'+(stack.length-1)+'n');if(el)el.focus()});
+  $('s-sales').addEventListener('input',calcStack);
+
+  /* ---------- start ---------- */
+  claudeUse('sample').then(function(s){
+    sampleFn=s;
+    $('a-ai').hidden=!s;$('v-unavailable').hidden=!!s;syncQuery();
+  });
+  claudeUse('downloads').then(function(d){dlFn=d;$('r-dl').hidden=!d});
+  calcDelivery();renderPlate();renderMenu();calcAudit();syncQuery();renderWeeks();renderStack();route();
+})();
+</script>
+
+</body></html>
